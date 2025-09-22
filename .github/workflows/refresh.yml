@@ -1,19 +1,19 @@
-name: Nightly Data Refresh (GA4 + Sheets tab + WEX WP)
+name: Nightly Data Refresh (GA4 + Sheets + WEX)
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
   schedule:
-    - cron: '10 11 * * *'   # daily ~11:10 UTC
-
-concurrency:
-  group: data-refresh
-  cancel-in-progress: true
+    - cron: "0 7 * * *"   # 07:00 UTC daily
+  push:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/refresh.yml"
+      - "package.json"
+      - "package-lock.json"
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout
@@ -22,70 +22,51 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: scripts/package.json
+          node-version: 20
 
-      - name: Install script deps
-        run: |
-          cd scripts
-          npm ci || npm i
+      - name: Install deps
+        run: npm ci
 
-      - name: Restore Service Account JSON
+      - name: Write service account key
         run: |
-          echo "$GCP_SA_JSON" | base64 -d > scripts/sa.json
-        env:
-          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
+          echo "${{ secrets.GCP_SA_JSON }}" | base64 -d > service-account.json
+        shell: bash
 
-      # --- GA4 (last 7 days ending yesterday) ---
-      - name: Fetch GA4
-        run: |
-          node scripts/fetch_ga4.js \
-            --property $GA4_PROPERTY_ID \
-            --out data/ga4.json
+      # ---------- GA4 ----------
+      - name: Build data/ga4.json
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
-
-      # --- Google Sheets (ONE tab only) ---
-      # Set SHEETS_RANGE secret like:  'Master - 2022'!A:Z   (keep single quotes)
-      - name: Fetch Sheets (tab-specific)
         run: |
-          node scripts/fetch_sheets.js \
-            --sheet $SHEETS_ID \
-            --range "$SHEETS_RANGE" \
-            --out data/sheets.json
+          node scripts/fetch_ga4.js \
+            --property "$GA4_PROPERTY_ID" \
+            --sa ./service-account.json \
+            --out data/ga4.json
+
+      # ---------- Google Sheets (optional) ----------
+      - name: Build data/sheets.json
         env:
           SHEETS_ID: ${{ secrets.SHEETS_ID }}
           SHEETS_RANGE: ${{ secrets.SHEETS_RANGE }}
-
-      # --- WEX WordPress REST: quick smoke test (prints first ~800 chars) ---
-      - name: WEX curl smoke test
         run: |
-          echo "GET $WEX_API_URL/wp-json/wp/v2/posts?per_page=5&_embed=1"
-          curl -sS -A "wex-analytics-dashboard/1.0" "$WEX_API_URL/wp-json/wp/v2/posts?per_page=5&_embed=1" | head -c 800
+          node scripts/fetch_sheets.js \
+            --sheetsId "$SHEETS_ID" \
+            --range "$SHEETS_RANGE" \
+            --sa ./service-account.json \
+            --out data/sheets.json
+
+      # ---------- WEX topics (optional) ----------
+      - name: Build data/topics.json
         env:
           WEX_API_URL: ${{ secrets.WEX_API_URL }}
-
-      # --- WEX via WordPress REST (last 24h, with fallbacks) ---
-      - name: Fetch WEX (WP REST)
         run: |
           node scripts/fetch_wex.js \
-            --api $WEX_API_URL \
-            --out data/topics.json \
-            --sinceHours 24 \
-            --path "/wp-json/wp/v2/posts" \
-            --pageParam "page" \
-            --limitParam "per_page" \
-            --embed \
-            --debug
-        env:
-          WEX_API_URL: ${{ secrets.WEX_API_URL }}
+            --base "${{ env.WEX_API_URL }}" \
+            --out data/topics.json
 
-      - name: Commit JSON outputs
-        if: always()
+      - name: Commit & push
         run: |
           git config user.name "github-actions"
-          git config user.email "actions@users.noreply.github.com"
-          git add data/*.json || true
-          git commit -m "chore: nightly GA4+Sheets+WEX refresh" || echo "No changes to commit"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add data/ga4.json data/sheets.json data/topics.json || true
+          git commit -m "chore: refresh data" || echo "No changes to commit"
           git push

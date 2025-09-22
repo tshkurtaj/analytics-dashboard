@@ -4,50 +4,34 @@ import { hideBin } from 'yargs/helpers';
 import fetch from 'node-fetch';
 
 const argv = yargs(hideBin(process.argv))
-  .option('api', { type: 'string', demandOption: true, desc: 'Base API URL, e.g. https://api.washingtonexaminer.com' })
-  .option('out', { type: 'string', demandOption: true })
+  .option('api', { type: 'string', demandOption: true })                 // e.g. https://www.washingtonexaminer.com
+  .option('out', { type: 'string', demandOption: true })                // e.g. data/topics.json
   .option('sinceHours', { type: 'number', default: 24 })
-  .option('path', { type: 'string', default: '/articles', desc: 'Endpoint path' })
-
-  // Param names (tweakable without code changes)
-  .option('sinceParam', { type: 'string', default: 'since' })          // e.g. since | from | published_after
-  .option('pageParam',  { type: 'string', default: 'page' })           // e.g. page | offset
-  .option('limitParam', { type: 'string', default: 'limit' })          // e.g. limit | per_page | page_size
-  .option('fieldsParam',{ type: 'string', default: 'fields' })         // if unsupported, pass empty string via --fieldsParam ""
-
-  // Where are items in the response?
-  .option('itemsKey',   { type: 'string', default: '', desc: 'If response is an object, the key holding the array (e.g. items, results, data). Leave empty if API returns an array directly.' })
-
-  // Optional auth (if you later need it)
-  .option('token',      { type: 'string', demandOption: false })
-  .option('headerName', { type: 'string', default: 'Authorization' })
-  .option('headerScheme',{ type: 'string', default: 'Bearer' })
-
-  // Debug
+  .option('path', { type: 'string', default: '/wp-json/wp/v2/posts' })  // WP posts endpoint
+  .option('sinceParam', { type: 'string', default: 'after' })           // WP uses ?after=ISO8601
+  .option('pageParam',  { type: 'string', default: 'page' })
+  .option('limitParam', { type: 'string', default: 'per_page' })
+  .option('itemsKey',   { type: 'string', default: '' })                // WP returns an array; leave empty
+  .option('embed',      { type: 'boolean', default: true })             // add &_embed=1 to get tag names
   .option('debug',      { type: 'boolean', default: false })
-  .option('maxPages',   { type: 'number', default: 20 })
+  .option('maxPages',   { type: 'number', default: 5 })
   .argv;
 
-const FIELDS = 'title,slug,publishedAt,tags,authors,section';
-
-function buildUrl(base, path, { sinceISO, page, limit, sinceParam, pageParam, limitParam, fieldsParam }) {
+function buildUrl(base, path, { sinceISO, page, limit, sinceParam, pageParam, limitParam, embed }) {
   const u = new URL(path, base);
   u.searchParams.set(sinceParam, sinceISO);
   if (pageParam)  u.searchParams.set(pageParam, String(page));
   if (limitParam) u.searchParams.set(limitParam, String(limit));
-  if (fieldsParam) u.searchParams.set(fieldsParam, FIELDS);
+  if (embed)      u.searchParams.set('_embed', '1');  // expand authors, terms
+  u.searchParams.set('orderby', 'date');
+  u.searchParams.set('order', 'desc');
   return u.toString();
 }
 
-function normalizeTags(tags) {
-  if (!tags) return [];
-  if (Array.isArray(tags)) return tags.map(t => String(t).trim()).filter(Boolean);
-  return String(tags).split(',').map(t => t.trim()).filter(Boolean);
-}
 function normalizeAuthors(authors) {
   if (!authors) return [];
   if (Array.isArray(authors)) return authors.map(a => (a?.name ?? a).toString());
-  return String(authors).split(',').map(a => a.trim()).filter(Boolean);
+  return [String(authors)];
 }
 
 async function fetchJson(url, headers) {
@@ -62,19 +46,16 @@ async function main() {
   const toISO = new Date().toISOString();
   const fromISO = new Date(Date.now() - argv.sinceHours * 3600 * 1000).toISOString();
 
-  const headers = { Accept: 'application/json' };
-  if (argv.token) {
-    headers[argv.headerName] = argv.headerScheme ? `${argv.headerScheme} ${argv.token}` : argv.token;
-  }
+  const headers = { Accept: 'application/json' }; // WP is public; no auth
 
   const conf = {
     sinceISO: fromISO,
     page: 1,
     limit: 100,
     sinceParam: argv.sinceParam,
-    pageParam: argv.pageParam || '',
-    limitParam: argv.limitParam || '',
-    fieldsParam: argv.fieldsParam
+    pageParam: argv.pageParam,
+    limitParam: argv.limitParam,
+    embed: argv.embed
   };
 
   const all = [];
@@ -83,61 +64,56 @@ async function main() {
   while (page <= argv.maxPages) {
     conf.page = page;
     const url = buildUrl(argv.api, argv.path, conf);
-
-    // DEBUG: print the URL and first part of the response
-    if (argv.debug) {
-      console.log('[WEX DEBUG] URL:', url);
-    }
+    if (argv.debug) console.log('[WEX DEBUG] URL:', url);
 
     const { ok, status, statusText, text, json } = await fetchJson(url, headers);
     if (!ok) {
       console.error(`[WEX ERROR] HTTP ${status} ${statusText}`);
-      if (argv.debug) console.error('[WEX DEBUG] Body head:', text.slice(0, 600));
-      break;
-    }
-    if (argv.debug) {
-      const head = text.slice(0, 600).replace(/\n/g, ' ');
-      console.log('[WEX DEBUG] Response head:', head);
-    }
-
-    let items = [];
-    if (Array.isArray(json)) {
-      items = json;
-    } else if (json && argv.itemsKey && Array.isArray(json[argv.itemsKey])) {
-      items = json[argv.itemsKey];
-    } else if (json) {
-      // Try common keys if itemsKey not provided
-      const guess = json.items || json.results || json.data;
-      if (Array.isArray(guess)) items = guess;
-    }
-
-    if (!items.length) {
-      if (argv.debug) console.log('[WEX DEBUG] No items on this page; stopping.');
+      if (argv.debug) console.error('[WEX DEBUG] Body head:', text.slice(0, 400));
       break;
     }
 
-    for (const it of items) {
-      const tags = normalizeTags(it.tags);
+    if (!Array.isArray(json)) {
+      if (argv.debug) console.error('[WEX DEBUG] Expected array, got:', typeof json);
+      break;
+    }
+    if (argv.debug) console.log('[WEX DEBUG] Items:', json.length);
+
+    for (const it of json) {
+      // Pull tag NAMES from _embedded terms
+      const terms = it?._embedded?.['wp:term'] ?? [];
+      const tagNames = [];
+      for (const group of terms) {
+        for (const term of group || []) {
+          if (term?.taxonomy === 'post_tag' && term?.name) tagNames.push(term.name);
+        }
+      }
+
+      // Author names (embedded)
+      const authorNames = (it?._embedded?.author || [])
+        .map(a => a?.name)
+        .filter(Boolean);
+
       all.push({
-        title: it.title || it.headline || '',
-        slug: it.slug || it.id || '',
-        publishedAt: it.publishedAt || it.published_at || it.date || '',
-        section: it.section || it.channel || '',
-        authors: normalizeAuthors(it.authors),
-        tags
+        title: it?.title?.rendered ?? it?.title ?? '',
+        slug: it?.slug ?? String(it?.id ?? ''),
+        publishedAt: it?.date ?? it?.date_gmt ?? '',
+        section: '', // WP posts don’t have a single "section" by default
+        authors: normalizeAuthors(authorNames.length ? authorNames : it?.author),
+        tags: tagNames.length ? tagNames : []
       });
     }
 
-    // pagination heuristics
-    if (items.length < conf.limit) break;
+    if (json.length < conf.limit) break; // last page
     page += 1;
   }
 
-  // Build topics aggregation
+  // Aggregate by tag
   const byTag = new Map();
   for (const a of all) {
     for (const t of a.tags) {
       const key = String(t).trim();
+      if (!key) continue;
       const obj = byTag.get(key) || { name: key, count: 0, sampleTitles: new Set(), sections: new Set() };
       obj.count += 1;
       if (obj.sampleTitles.size < 3 && a.title) obj.sampleTitles.add(a.title);
@@ -161,7 +137,7 @@ async function main() {
     toISO,
     totalArticles: all.length,
     topics,
-    sampleArticles: all.slice(0, 10).map(a => ({ title: a.title, publishedAt: a.publishedAt, section: a.section }))
+    sampleArticles: all.slice(0, 10).map(a => ({ title: a.title, publishedAt: a.publishedAt }))
   };
 
   fs.mkdirSync('data', { recursive: true });

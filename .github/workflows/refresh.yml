@@ -3,8 +3,7 @@ name: Refresh GA4 (daily + manual)
 on:
   workflow_dispatch:
   schedule:
-    # 6:15am UTC daily (adjust as you like)
-    - cron: "15 6 * * *"
+    - cron: "15 6 * * *"  # 6:15am UTC daily
 
 permissions:
   contents: write
@@ -23,7 +22,7 @@ jobs:
         with:
           node-version: '20'
 
-      # Create a minimal package.json the first time (no heredocs to avoid quoting issues)
+      # Make sure we have a minimal package.json to install the GA client
       - name: Ensure package.json exists
         run: |
           if [ ! -f package.json ]; then
@@ -37,7 +36,7 @@ jobs:
 
       - name: Decode GCP service account key
         env:
-          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}   # base64 of your service-account json
+          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}   # base64 of your service-account JSON
         run: |
           test -n "$GCP_SA_JSON"
           echo "$GCP_SA_JSON" | base64 -d > sa.json
@@ -48,7 +47,7 @@ jobs:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
         run: |
           mkdir -p scripts data
-          node scripts/fetch_ga4.js
+          node scripts/fetch_ga4.cjs
 
       - name: Commit updated data
         run: |

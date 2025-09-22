@@ -1,37 +1,40 @@
 // scripts/fetch_ga4.js
-// Builds data/ga4.json with daily KPIs + top referrers + top authors (per day)
+// Creates data/ga4.json with daily KPIs + top referrers + top authors
 
 import fs from "node:fs";
 import path from "node:path";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
-/**
- * Required env:
- * - GA4_PROPERTY_ID   (e.g. 123456789)
- * - GCP_SA_JSON       (base64-encoded service account JSON)
- * Optional:
- * - GA4_AUTHORS_DIM   (default "customEvent:authors")
- */
-
+// ---- required env ----
 const PROPERTY_ID = process.env.GA4_PROPERTY_ID;
 const SA_B64 = process.env.GCP_SA_JSON || "";
-const AUTHORS_DIM = process.env.GA4_AUTHORS_DIM || "customEvent:authors";
+
+// Preferred authors dimension; we’ll fall back if it yields 0 rows.
+const PREFERRED_AUTHORS_DIM = process.env.GA4_AUTHORS_DIM || "customEvent:authors";
+// Fallbacks we’ll try in order if authors rows are empty:
+const AUTHOR_DIM_CANDIDATES = [
+  PREFERRED_AUTHORS_DIM,          // first: your explicit choice
+  "customEvent:authors",          // common
+  "customEvent:authorName",       // common alt
+  "customEvent:author",           // sometimes used
+  "customEvent:byline",           // rare, but try
+];
 
 if (!PROPERTY_ID) {
-  console.error("Missing GA4_PROPERTY_ID env.");
+  console.error("❌ Missing GA4_PROPERTY_ID env.");
   process.exit(1);
 }
 if (!SA_B64) {
-  console.error("Missing GCP_SA_JSON (base64) env.");
+  console.error("❌ Missing GCP_SA_JSON (base64) env.");
   process.exit(1);
 }
 
-// Decode service account
+// decode service account
 let sa;
 try {
   sa = JSON.parse(Buffer.from(SA_B64, "base64").toString("utf8"));
 } catch (e) {
-  console.error("Failed to decode GCP_SA_JSON:", e.message);
+  console.error("❌ Failed to decode GCP_SA_JSON:", e.message);
   process.exit(1);
 }
 
@@ -42,14 +45,14 @@ const client = new BetaAnalyticsDataClient({
   },
 });
 
-// -------- date helpers (we use "last 7 days" ending yesterday) ----------
+// ---- date helpers (last 7 days ending yesterday) ----
 function toYMD(d) {
   const y = d.getFullYear();
   const m = String(d.getMonth() + 1).padStart(2, "0");
   const day = String(d.getDate()).padStart(2, "0");
   return `${y}-${m}-${day}`;
 }
-function ymdCompact(d) {
+function yyyymmdd(d) {
   const y = d.getFullYear();
   const m = String(d.getMonth() + 1).padStart(2, "0");
   const day = String(d.getDate()).padStart(2, "0");
@@ -60,12 +63,12 @@ const today = new Date();
 const end = new Date(today);
 end.setDate(end.getDate() - 1); // yesterday
 const start = new Date(end);
-start.setDate(start.getDate() - 6); // last 7 days (incl yesterday)
+start.setDate(start.getDate() - 6); // 7 days total
 
 const startYMD = toYMD(start);
 const endYMD = toYMD(end);
 
-// ------------- generic runner -----------------
+// ---- GA4 runner ----
 async function runReport({ dimensions, metrics, limit, orderBys }) {
   const [resp] = await client.runReport({
     property: `properties/${PROPERTY_ID}`,
@@ -78,8 +81,7 @@ async function runReport({ dimensions, metrics, limit, orderBys }) {
   return resp.rows || [];
 }
 
-// ------------- 1) KPIs by date ----------------
-// Metrics: totalUsers, newUsers, views, sessions, bounceRate, averageSessionDuration
+// ---- 1) KPIs per day ----
 async function fetchDailyKPIs() {
   const rows = await runReport({
     dimensions: ["date"],
@@ -92,14 +94,15 @@ async function fetchDailyKPIs() {
       "averageSessionDuration",
     ],
   });
-  const out = {};
+
+  const map = {};
   for (const r of rows) {
     const d = r.dimensionValues[0].value; // YYYYMMDD
-    out[d] = {
+    map[d] = {
       date: d,
       totalUsers: r.metricValues[0].value || "0",
       newUsers: r.metricValues[1].value || "0",
-      pageviews: r.metricValues[2].value || "0", // we store under "pageviews" to match front-end expectations
+      pageviews: r.metricValues[2].value || "0", // store as 'pageviews'
       sessions: r.metricValues[3].value || "0",
       bounceRate: r.metricValues[4].value || "0",
       averageSessionDuration: r.metricValues[5].value || "0",
@@ -107,83 +110,92 @@ async function fetchDailyKPIs() {
       authors: [],
     };
   }
-  return out; // keyed by YYYYMMDD
+  return map; // keyed by date
 }
 
-// ------------- 2) Top referrers (sessionSource) per date ---------------
+// ---- 2) Referrers per day ----
 async function fetchReferrersPerDay() {
-  // We’ll group by date + sessionSource and compute totalUsers per group
   const rows = await runReport({
     dimensions: ["date", "sessionSource"],
     metrics: ["totalUsers"],
   });
-
-  const map = new Map(); // date -> array of { source, users }
+  const map = new Map(); // date -> [{source, users}]
   for (const r of rows) {
     const d = r.dimensionValues[0].value;
     const source = r.dimensionValues[1].value || "(not set)";
     const users = r.metricValues[0].value || "0";
     if (!map.has(d)) map.set(d, []);
-    map.get(d).push({ source, users: users });
+    map.get(d).push({ source, users });
   }
-  // take top 5 per date
   for (const [d, arr] of map) {
     arr.sort((a, b) => (+b.users || 0) - (+a.users || 0));
     map.set(d, arr.slice(0, 5));
   }
-  return map; // Map<date, [{source, users}]>
+  return map;
 }
 
-// ------------- 3) Top authors per date (customEvent:authors) ----------
+// ---- 3) Authors per day (try candidates) ----
 async function fetchAuthorsPerDay() {
-  // If your custom dimension appears on events, use customEvent:authors.
-  // If it’s registered differently, set GA4_AUTHORS_DIM env to that API name.
-  const rows = await runReport({
-    dimensions: ["date", AUTHORS_DIM],
-    metrics: ["totalUsers", "views"],
-  });
+  for (const dim of AUTHOR_DIM_CANDIDATES) {
+    try {
+      const rows = await runReport({
+        dimensions: ["date", dim],
+        metrics: ["totalUsers", "views"],
+      });
 
-  const map = new Map(); // date -> array of { author, users, views }
-  for (const r of rows) {
-    const d = r.dimensionValues[0].value;
-    const author = r.dimensionValues[1].value || "(not set)";
-    const users = r.metricValues[0].value || "0";
-    const views = r.metricValues[1].value || "0";
-    if (!map.has(d)) map.set(d, []);
-    map.get(d).push({ author, users, views });
+      // count non-empty author rows
+      const nonEmpty = rows.filter(
+        (r) => (r.dimensionValues?.[1]?.value || "").trim() !== ""
+      );
+      console.log(`Authors probe using "${dim}": ${nonEmpty.length} rows`);
+
+      if (nonEmpty.length > 0) {
+        const map = new Map(); // date -> [{author, users, views}]
+        for (const r of nonEmpty) {
+          const d = r.dimensionValues[0].value;
+          const author = r.dimensionValues[1].value || "(not set)";
+          const users = r.metricValues[0].value || "0";
+          const views = r.metricValues[1].value || "0";
+          if (!map.has(d)) map.set(d, []);
+          map.get(d).push({ author, users, views });
+        }
+        for (const [d, arr] of map) {
+          arr.sort((a, b) => (+b.users || 0) - (+a.users || 0)).reverse();
+          map.set(d, arr.slice(0, 10));
+        }
+        return map;
+      }
+    } catch (e) {
+      console.log(`Authors probe failed for "${dim}": ${e.message}`);
+    }
   }
-  // take top 10 per date by users
-  for (const [d, arr] of map) {
-    arr.sort((a, b) => (+b.users || 0) - (+a.users || 0)).reverse();
-    map.set(d, arr.slice(0, 10));
-  }
-  return map; // Map<date, [{author, users, views}]>
+  // nothing worked
+  return new Map();
 }
 
-// ---------------- main -----------------------
+// ---- main ----
 (async () => {
   try {
     console.log(
-      `Fetching GA4: ${PROPERTY_ID}  ${startYMD} → ${endYMD}  (authors dim: ${AUTHORS_DIM})`
+      `GA4 pull (property=${PROPERTY_ID}) ${startYMD} → ${endYMD}`
     );
 
-    const [kpisByDate, refsMap, authMap] = await Promise.all([
+    const [kpis, refMap, authMap] = await Promise.all([
       fetchDailyKPIs(),
       fetchReferrersPerDay(),
       fetchAuthorsPerDay(),
     ]);
 
-    // merge
+    // Merge and ensure keys exist
     for (
       let d = new Date(start);
       d <= end;
       d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1)
     ) {
-      const yyyymmdd = ymdCompact(d);
-      if (!kpisByDate[yyyymmdd]) {
-        // ensure placeholder if GA returns sparse dates
-        kpisByDate[yyyymmdd] = {
-          date: yyyymmdd,
+      const key = yyyymmdd(d);
+      if (!kpis[key]) {
+        kpis[key] = {
+          date: key,
           totalUsers: "0",
           newUsers: "0",
           pageviews: "0",
@@ -194,13 +206,11 @@ async function fetchAuthorsPerDay() {
           authors: [],
         };
       }
-      kpisByDate[yyyymmdd].referrers = refsMap.get(yyyymmdd) || [];
-      kpisByDate[yyyymmdd].authors = authMap.get(yyyymmdd) || [];
+      kpis[key].referrers = refMap.get(key) || [];
+      kpis[key].authors = authMap.get(key) || [];
     }
 
-    const rows = Object.values(kpisByDate).sort(
-      (a, b) => a.date.localeCompare(b.date)
-    );
+    const rows = Object.values(kpis).sort((a, b) => a.date.localeCompare(b.date));
 
     const out = {
       updatedAt: new Date().toISOString(),
@@ -208,15 +218,15 @@ async function fetchAuthorsPerDay() {
       rows,
     };
 
-    // ensure data folder
     const outDir = path.join(process.cwd(), "data");
     if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-
-    const outFile = path.join(outDir, "ga4.json");
-    fs.writeFileSync(outFile, JSON.stringify(out, null, 2));
-    console.log(`Wrote ${outFile}  (rows=${rows.length})`);
+    fs.writeFileSync(
+      path.join(outDir, "ga4.json"),
+      JSON.stringify(out, null, 2)
+    );
+    console.log(`✅ Wrote data/ga4.json (rows=${rows.length})`);
   } catch (err) {
-    console.error("GA4 fetch failed:", err?.message || err);
+    console.error("❌ GA4 fetch failed:", err?.message || err);
     process.exit(1);
   }
 })();

@@ -2,379 +2,404 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Analytics Assistant</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Washington Examiner — Analytics Assistant</title>
+  <meta name="color-scheme" content="light dark" />
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    /* Reset & layout */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh; color:#333;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(1000px 500px at 10% 0%, #7ea2ff 0%, #6f63e8 35%, #6c51c8 100%);
+      color: #1e293b;
     }
+    a { color: #0d6efd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
     .container {
-      max-width: 480px; margin:0 auto; min-height:100vh; background:#fff;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1); display:flex; flex-direction:column;
+      max-width: 960px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 16px;
+      padding: 24px 16px 32px;
     }
-    .header { background:#000; color:#fff; padding:20px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-    .header-logo { max-width:200px; height:auto; margin-bottom:10px; }
-    .header h1 { font-size:24px; font-weight:600; margin-bottom:5px; display:none; }
-    .header p { opacity:.9; font-size:14px; }
-    .quick-actions { padding:20px; background:#f8f9fa; border-bottom:1px solid #e9ecef; }
-    .quick-actions h3 { font-size:16px; margin-bottom:15px; color:#495057; }
-    .action-buttons { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-    .action-btn {
-      background:#fff; border:1px solid #dee2e6; border-radius:8px; padding:12px 8px;
-      font-size:13px; color:#495057; cursor:pointer; transition:all .2s; text-align:center;
-    }
-    .action-btn:hover { background:#e9ecef; transform:translateY(-1px); }
 
-    /* ======== NEW: data panels ======== */
-    .panel { padding:20px; border-bottom:1px solid #e9ecef; }
-    .panel h3 { font-size:16px; margin-bottom:10px; color:#495057; }
-    .hint { color:#6c757d; font-size:12px; margin-bottom:10px; }
-    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-    .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
+    /* Header */
+    .header {
+      background: #0b0b0b;
+      color: #fff;
+      border-radius: 16px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    .header img {
+      height: 36px; width: auto; display: block;
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,.25));
+    }
+    .header h1 {
+      font-size: 18px; font-weight: 600; letter-spacing: .2px; opacity: .92;
+    }
+
+    /* Quick actions */
+    .quick {
+      background: #ffffffcc;
+      backdrop-filter: saturate(160%) blur(6px);
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    }
+    .quick h3 { font-size: 14px; color: #475569; margin-bottom: 8px; }
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .qbtn {
+      border: 1px solid #e2e8f0;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: #334155;
+      cursor: pointer;
+      transition: .18s ease;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .qbtn:hover { background: #f1f5f9; transform: translateY(-1px); }
+
+    /* Dashboard cards */
+    .dash {
+      display: grid;
+      grid-template-columns: 1.2fr .9fr;
+      gap: 16px;
+    }
+    @media (max-width: 860px) { .dash { grid-template-columns: 1fr; } }
+
     .card {
-      background:#f8f9fa; border:1px solid #e9ecef; border-radius:10px; padding:10px;
+      background: #fff;
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
     }
+    .card h2 {
+      font-size: 16px; color: #0f172a; margin-bottom: 10px; font-weight: 700;
+    }
+    .muted { color: #64748b; font-size: 12px; }
+    .split { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+
+    .kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .kpi {
-      background:#fff; border:1px solid #e9ecef; border-radius:10px; padding:12px;
-      display:flex; flex-direction:column; gap:6px;
+      border: 1px solid #eef2f7; border-radius: 12px; padding: 12px; background: #fcfdff;
     }
-    .kpi .label { font-size:12px; color:#6c757d; }
-    .kpi .value { font-size:18px; font-weight:700; }
-    .small { font-size:12px; color:#6c757d; }
+    .kpi .label { font-size: 12px; color: #64748b; margin-bottom: 6px; }
+    .kpi .value { font-size: 20px; font-weight: 700; color: #0f172a; }
+    .kpi .delta { font-size: 12px; margin-top: 2px; }
+    .up { color: #16a34a; } .down { color: #dc2626; }
 
-    .list { display:flex; flex-direction:column; gap:8px; }
+    .topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .topic-pill {
+      border: 1px solid #e2e8f0; border-radius: 999px; padding: 8px 12px; background: #fafbff;
+      display: flex; justify-content: space-between; gap: 10px; font-size: 13px;
+    }
+    .topic-pill b { color: #0f172a; }
+
+    .articles { display: grid; gap: 10px; }
     .article {
-      border:1px solid #e9ecef; border-radius:10px; padding:10px; background:#fff;
+      border: 1px solid #eef2f7; border-radius: 12px; padding: 10px 12px; background: #fcfdff;
     }
-    .article .title { font-weight:600; font-size:14px; margin-bottom:4px; }
-    .article .meta { font-size:12px; color:#6c757d; }
+    .article .title { font-size: 14px; color: #0f172a; font-weight: 600; margin-bottom: 2px; }
+    .article .meta { font-size: 12px; color: #64748b; }
 
-    .pill {
-      display:inline-block; padding:4px 8px; border-radius:999px;
-      background:#f1f3f4; border:1px solid #e9ecef; font-size:12px; color:#495057;
+    /* Chat */
+    .chat {
+      background: #fff; border: 1px solid #e9ecef; border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06); display: grid; grid-template-rows: 1fr auto;
+      min-height: 260px; overflow: hidden;
     }
-
-    /* ======== chat (unchanged) ======== */
-    .chat-container { flex:1; padding:20px; overflow-y:auto; }
-    .message { margin-bottom:15px; animation:fadeIn .3s ease-in; }
-    .message.user { text-align:right; }
-    .message.assistant { text-align:left; }
-    .message-bubble { display:inline-block; max-width:85%; padding:12px 16px; border-radius:18px; font-size:14px; line-height:1.4; }
-    .message.user .message-bubble { background:#007bff; color:#fff; border-bottom-right-radius:4px; }
-    .message.assistant .message-bubble { background:#f1f3f4; color:#333; border-bottom-left-radius:4px; }
-    .input-container { padding:20px; background:#fff; border-top:1px solid #e9ecef; }
-    .input-row { display:flex; gap:10px; align-items:flex-end; }
-    .input-field {
-      flex:1; border:1px solid #dee2e6; border-radius:20px; padding:12px 16px; font-size:14px; outline:none;
-      transition:border-color .2s; resize:none; min-height:44px; max-height:100px; font-family:inherit;
+    .chatlog {
+      padding: 16px; overflow-y: auto; max-height: 420px;
     }
-    .input-field:focus { border-color:#007bff; }
-    .send-btn { background:#007bff; color:#fff; border:none; border-radius:50%; width:44px; height:44px; cursor:pointer;
-      transition:all .2s; display:flex; align-items:center; justify-content:center; font-size:18px; }
-    .send-btn:hover { background:#0056b3; transform:scale(1.05); }
-    .send-btn:disabled { background:#6c757d; cursor:not-allowed; transform:none; }
-    .loading { display:flex; align-items:center; gap:8px; color:#6c757d; font-size:14px; }
-    .typing-indicator { display:flex; gap:2px; }
-    .dot { width:6px; height:6px; background:#6c757d; border-radius:50%; animation:typing 1.4s infinite; }
-    .dot:nth-child(2){ animation-delay:.2s; } .dot:nth-child(3){ animation-delay:.4s; }
-    @keyframes typing { 0%,60%,100%{ transform:translateY(0);} 30%{ transform:translateY(-10px);} }
-    @keyframes fadeIn { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+    .msg { margin: 8px 0; display: flex; }
+    .msg.user { justify-content: flex-end; }
+    .bubble {
+      max-width: 80%; padding: 12px 14px; border-radius: 16px; line-height: 1.4; font-size: 14px;
+      word-wrap: break-word; white-space: pre-wrap;
+    }
+    .msg.user .bubble { background: #0d6efd; color: #fff; border-bottom-right-radius: 6px; }
+    .msg.bot .bubble  { background: #f6f7fb; color: #0f172a; border-bottom-left-radius: 6px; }
+    .error {
+      background: #fde2e4; color: #b42318; border: 1px solid #f6c2c0; padding: 10px 12px;
+      border-radius: 10px; margin: 8px 0; font-size: 14px;
+    }
+    .input {
+      display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 12px; border-top: 1px solid #e9ecef;
+    }
+    textarea {
+      resize: none; min-height: 42px; max-height: 120px; padding: 12px 14px; border-radius: 12px;
+      border: 1px solid #cbd5e1; outline: none; font-size: 14px; line-height: 1.3;
+    }
+    textarea:focus { border-color: #0d6efd; box-shadow: 0 0 0 3px rgba(13,110,253,.12); }
+    .send {
+      width: 46px; height: 46px; border-radius: 50%; border: none; background: #0d6efd; color: #fff;
+      font-size: 18px; cursor: pointer; transition: .16s ease;
+    }
+    .send:disabled { background: #94a3b8; cursor: not-allowed; }
+    .send:hover:not(:disabled) { transform: translateY(-1px); }
 
-    .error-message { background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; border-radius:8px; padding:12px; margin:10px 0; font-size:14px; }
-    .response-content { white-space:pre-wrap; line-height:1.5; }
-
-    /* PWA */
-    .install-prompt { background:#fff3cd; color:#856404; padding:12px 20px; text-align:center; font-size:13px; display:none; }
-    .install-btn { background:#007bff; color:#fff; border:none; padding:6px 12px; border-radius:4px; font-size:12px; margin-left:8px; cursor:pointer; }
+    /* Footer */
+    .foot { text-align: center; color: #94a3b8; font-size: 12px; padding-bottom: 8px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="install-prompt" id="installPrompt">
-      Add to home screen for quick access
-      <button class="install-btn" id="installBtn">Install</button>
-    </div>
 
+    <!-- Header -->
     <div class="header">
-      <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" alt="Washington Examiner" class="header-logo">
+      <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" alt="Washington Examiner" />
       <h1>Analytics Assistant</h1>
-      <p>Ask questions about your data</p>
     </div>
 
-    <div class="quick-actions">
-      <h3>Quick Actions</h3>
-      <div class="action-buttons">
-        <button class="action-btn" onclick="sendQuickMessage('show me yesterday kpis')">Yesterday's KPIs</button>
-        <button class="action-btn" onclick="sendQuickMessage('top 10 articles this week')">Top Articles</button>
-        <button class="action-btn" onclick="sendQuickMessage('how many users today')">Today's Users</button>
-        <button class="action-btn" onclick="sendQuickMessage('best performing authors')">Top Authors</button>
+    <!-- Quick actions -->
+    <div class="quick">
+      <h3>Quick actions</h3>
+      <div class="quick-grid">
+        <button class="qbtn" onclick="sendQuick('show me yesterday kpis')">Yesterday’s KPIs</button>
+        <button class="qbtn" onclick="sendQuick('top topics')">Top Topics</button>
+        <button class="qbtn" onclick="sendQuick('best performing authors')">Top Authors</button>
+        <button class="qbtn" onclick="sendQuick('latest 10 articles')">Latest Articles</button>
       </div>
     </div>
 
-    <!-- NEW: Topics panel -->
-    <div class="panel" id="topicsPanel">
-      <h3>Top Topics (last 24h)</h3>
-      <div class="hint small" id="topicsMeta"></div>
-      <div id="topicsList" class="grid-2"></div>
+    <!-- Dashboard -->
+    <div class="dash">
+      <!-- Left: Topics + Articles -->
+      <div class="card">
+        <h2>Top Topics <span class="muted" id="topicsMeta"></span></h2>
+        <div id="topics" class="topic-list" style="margin-top:8px;"></div>
+
+        <div class="split" style="margin-top:16px;">
+          <h2 style="margin:0">Latest Articles</h2>
+          <span class="muted" id="articlesMeta"></span>
+        </div>
+        <div id="articles" class="articles" style="margin-top:8px;"></div>
+      </div>
+
+      <!-- Right: KPIs -->
+      <div class="card">
+        <div class="split">
+          <h2>Yesterday’s KPIs</h2>
+          <span class="muted" id="kpiMeta"></span>
+        </div>
+        <div class="kpis" id="kpis" style="margin-top:10px;"></div>
+        <div class="muted" style="margin-top:8px" id="kpiNote"></div>
+      </div>
     </div>
 
-    <!-- NEW: GA4 KPIs -->
-    <div class="panel" id="kpisPanel">
-      <h3>Yesterday’s KPIs</h3>
-      <div class="hint small" id="kpisMeta"></div>
-      <div id="kpisGrid" class="grid-2"></div>
-    </div>
-
-    <!-- NEW: Latest Articles from Sheets -->
-    <div class="panel" id="articlesPanel">
-      <h3>Latest Articles</h3>
-      <div class="hint small" id="articlesMeta"></div>
-      <div class="list" id="articlesList"></div>
-    </div>
-
-    <!-- chat (kept; will work if you point API_ENDPOINT to your worker) -->
-    <div class="chat-container" id="chatContainer">
-      <div class="message assistant">
-        <div class="message-bubble">
-          👋 Hi! I'm your analytics assistant. Ask me anything about your website data - like "show me yesterday's traffic" or "top articles this week".
+    <!-- Chat -->
+    <div class="chat">
+      <div class="chatlog" id="log">
+        <div class="msg bot">
+          <div class="bubble">
+            👋 Hi! Ask about your data — try “show me yesterday KPIs”, “top topics”, or “best performing authors”.
+          </div>
         </div>
       </div>
+      <div class="input">
+        <textarea id="box" rows="1" placeholder="Ask about your analytics data…"></textarea>
+        <button id="send" class="send" title="Send">➤</button>
+      </div>
     </div>
 
-    <div class="input-container">
-      <div class="input-row">
-        <textarea class="input-field" id="messageInput" placeholder="Ask about your analytics data..." rows="1"></textarea>
-        <button class="send-btn" id="sendBtn" onclick="sendMessage()">➤</button>
-      </div>
+    <div class="foot">
+      Data refresh comes from <code>data/ga4.json</code>, <code>data/sheets.json</code>, <code>data/topics.json</code>.
     </div>
   </div>
 
   <script>
-    /* ========= CONFIG ========= */
-    // When your Cloudflare Worker is ready, put its URL here:
-    const API_ENDPOINT = 'https://wex-analytics-bot.tshkurtaj.workers.dev/query'; // e.g. 'https://your-worker.your-subdomain.workers.dev/query'
+    /* ====== CONFIG ====== */
+    // Your Cloudflare Worker endpoint (already live)
+    const API_ENDPOINT = 'https://wex-analytics-bot.tshkurtaj.workers.dev/query';
 
-    // Data files live in this repo's Pages site:
+    // Feeds (served by GitHub Pages)
     const GA4_URL    = 'data/ga4.json';
     const SHEETS_URL = 'data/sheets.json';
     const TOPICS_URL = 'data/topics.json';
 
-    /* ========= UTIL ========= */
-    function decodeHTML(s) {
-      const p = new DOMParser().parseFromString(String(s ?? ''), 'text/html');
-      return p.documentElement.textContent || '';
-    }
-    async function fetchJSON(url) {
-      const res = await fetch(`${url}?t=${Date.now()}`);
-      if (!res.ok) throw new Error(`${url} -> ${res.status}`);
-      return res.json();
-    }
-    function fmt(n) { return Intl.NumberFormat().format(Number(n||0)); }
-    function safeDate(s) { try { return new Date(s); } catch { return null; } }
+    /* ====== UTIL ====== */
+    const $ = (s) => document.querySelector(s);
+    const fmt = (n) => new Intl.NumberFormat().format(+n || 0);
+    const pct = (a, b) => (b ? ((a - b) / b) * 100 : null);
+    const pctStr = (p) => p === null ? '—' : `${(p >= 0 ? '+' : '')}${p.toFixed(1)}%`;
+    const safe = (s) => (s ?? '').toString();
 
-    /* ========= TOPICS ========= */
-    async function loadTopics() {
+    /* ====== LOAD DASHBOARD DATA ====== */
+    async function loadAll() {
       try {
-        const data = await fetchJSON(TOPICS_URL);
-        const meta = document.getElementById('topicsMeta');
-        meta.textContent = `Window: ${data.fromISO?.slice(0,19)} → ${data.toISO?.slice(0,19)} • Articles: ${data.totalArticles ?? 0}`;
-        const list = document.getElementById('topicsList');
-        list.innerHTML = '';
-        const top = (data.topics || []).slice(0, 10);
-        top.forEach(t => {
-          const card = document.createElement('div');
-          card.className = 'card';
-          const samples = (t.sampleTitles || []).slice(0,2).map(decodeHTML).join('<br>');
-          card.innerHTML = `
-            <div style="font-weight:600;margin-bottom:6px;">
-              ${decodeHTML(t.name)} <span class="small">(${fmt(t.count)})</span>
-            </div>
-            <div class="small" style="line-height:1.4">${samples}</div>
-          `;
-          list.appendChild(card);
-        });
-        if (top.length === 0) list.innerHTML = '<div class="small">No topics found in the window.</div>';
+        const [ga4, sheets, topics] = await Promise.all([
+          fetch(GA4_URL, { cache: 'no-cache' }).then(r => r.json()).catch(() => null),
+          fetch(SHEETS_URL, { cache: 'no-cache' }).then(r => r.json()).catch(() => null),
+          fetch(TOPICS_URL, { cache: 'no-cache' }).then(r => r.json()).catch(() => null),
+        ]);
+        renderKPIs(ga4);
+        renderTopics(topics);
+        renderArticles(sheets);
       } catch (e) {
         console.error(e);
-        document.getElementById('topicsList').innerHTML = '<div class="error-message">Failed to load topics.</div>';
       }
     }
 
-    /* ========= GA4 KPIs ========= */
-    async function loadKPIs() {
+    function renderKPIs(ga4) {
+      const kpis = $('#kpis'); kpis.innerHTML = '';
+      if (!ga4 || !Array.isArray(ga4.rows) || !ga4.rows.length) {
+        kpis.innerHTML = `<div class="muted">No GA4 data yet.</div>`;
+        return;
+      }
+      const rows = ga4.rows;
+      const last = rows[rows.length - 1];
+      const prev = rows[rows.length - 2] || null;
+      $('#kpiMeta').textContent = `(date: ${last.date})`;
+
+      const defs = [
+        { key: 'totalUsers', label: 'Users' },
+        { key: 'newUsers',   label: 'New users' },
+        { key: 'pageviews',  label: 'Pageviews' },
+        { key: 'sessions',   label: 'Sessions' },
+      ];
+
+      defs.forEach(d => {
+        const cur = +last[d.key] || 0;
+        const pv = prev ? +prev[d.key] || 0 : null;
+        const p = prev ? pct(cur, pv) : null;
+        const div = document.createElement('div');
+        div.className = 'kpi';
+        div.innerHTML = `
+          <div class="label">${d.label}</div>
+          <div class="value">${fmt(cur)}</div>
+          <div class="delta ${p === null ? '' : (p >= 0 ? 'up' : 'down')}">${pctStr(p)}</div>
+        `;
+        kpis.appendChild(div);
+      });
+
+      $('#kpiNote').textContent = ga4.range ? `Range: ${ga4.range.start} → ${ga4.range.end}` : '';
+    }
+
+    function renderTopics(t) {
+      const root = $('#topics'); root.innerHTML = '';
+      if (!t || !Array.isArray(t.topics)) {
+        root.innerHTML = `<div class="muted">No topics found.</div>`;
+        return;
+      }
+      $('#topicsMeta').textContent = `(last 24h · ${fmt(t.totalArticles || 0)} articles)`;
+      t.topics.slice(0, 12).forEach(x => {
+        const pill = document.createElement('div');
+        pill.className = 'topic-pill';
+        pill.innerHTML = `<span><b>${safe(x.name)}</b></span><span class="muted">${fmt(x.count)}</span>`;
+        root.appendChild(pill);
+      });
+    }
+
+    function renderArticles(s) {
+      const root = $('#articles'); root.innerHTML = '';
+      if (!s || !Array.isArray(s.data)) {
+        root.innerHTML = `<div class="muted">No articles available.</div>`;
+        return;
+      }
+      const rows = s.data.filter(r => (safe(r.Type).toLowerCase() === 'article'));
+      $('#articlesMeta').textContent = rows.length ? `(${Math.min(10, rows.length)} shown)` : '(none)';
+      rows.slice(0, 10).forEach(r => {
+        const div = document.createElement('div');
+        div.className = 'article';
+        const by = safe(r.Byline) || '—';
+        const sec = safe(r.Section) || '—';
+        const dt = safe(r.Date) || safe(r['Publish Date']) || '';
+        div.innerHTML = `
+          <div class="title">${safe(r.Label)}</div>
+          <div class="meta">${by} · ${sec} ${dt ? '· ' + dt : ''}</div>
+        `;
+        root.appendChild(div);
+      });
+    }
+
+    /* ====== CHAT ====== */
+    const log = $('#log'), box = $('#box'), btn = $('#send');
+
+    function addMsg(text, who='bot') {
+      const m = document.createElement('div');
+      m.className = `msg ${who}`;
+      const b = document.createElement('div');
+      b.className = 'bubble';
+      b.textContent = text;
+      m.appendChild(b);
+      log.appendChild(m);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    function addError(text) {
+      const div = document.createElement('div');
+      div.className = 'error';
+      div.textContent = text;
+      log.appendChild(div);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    async function send() {
+      const msg = box.value.trim();
+      if (!msg) return;
+      addMsg(msg, 'user');
+      box.value = '';
+      btn.disabled = true;
+
       try {
-        const data = await fetchJSON(GA4_URL);
-        const rows = data.rows || [];
-        // take the last row (latest date)
-        const last = rows[rows.length - 1] || null;
-        const meta = document.getElementById('kpisMeta');
-        meta.textContent = last ? `Date: ${last.date}` : 'No data';
-
-        const grid = document.getElementById('kpisGrid');
-        grid.innerHTML = '';
-
-        const kpis = last ? [
-          { label:'Users',     value:last.totalUsers },
-          { label:'New Users', value:last.newUsers },
-          { label:'Pageviews', value:last.pageviews },
-          { label:'Sessions',  value:last.sessions },
-        ] : [];
-
-        // if narrow screen, two columns feel better than four
-        grid.className = kpis.length > 2 ? 'grid-2' : 'grid-2';
-
-        kpis.forEach(k => {
-          const el = document.createElement('div');
-          el.className = 'kpi';
-          el.innerHTML = `<div class="label">${k.label}</div><div class="value">${fmt(k.value)}</div>`;
-          grid.appendChild(el);
+        const res = await fetch(API_ENDPOINT, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ message: msg })
         });
-
-        if (kpis.length === 0) grid.innerHTML = '<div class="small">No GA4 rows found.</div>';
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        addMsg(data.response || 'No response.');
       } catch (e) {
         console.error(e);
-        document.getElementById('kpisGrid').innerHTML = '<div class="error-message">Failed to load GA4 KPIs.</div>';
-      }
-    }
-
-    /* ========= ARTICLES (Sheets) ========= */
-    function tryGetDate(row) {
-      // prefer Publish Date; fallback to Date; both may be like "9/14/2025"
-      const d = row['Publish Date'] || row['Date'];
-      const dt = safeDate(d);
-      return dt && !isNaN(dt.getTime()) ? dt : null;
-    }
-
-    async function loadArticles() {
-      try {
-        const data = await fetchJSON(SHEETS_URL);
-        const meta = document.getElementById('articlesMeta');
-        meta.textContent = `Rows scanned: ${fmt(data.rowCount || (data.data||[]).length || 0)} • Sheet: ${data.sheet || ''}`;
-
-        const items = (data.data || []).filter(r => (r.Type || '').toLowerCase() === 'article');
-
-        // Sort by publish date desc if available
-        items.sort((a,b) => {
-          const da = tryGetDate(a), db = tryGetDate(b);
-          if (da && db) return db - da;
-          return 0;
-        });
-
-        const top = items.slice(0, 10);
-        const list = document.getElementById('articlesList');
-        list.innerHTML = '';
-        top.forEach(r => {
-          const title = decodeHTML(r.Label || '');
-          const by = r.Byline ? ` • ${r.Byline}` : '';
-          const when = tryGetDate(r);
-          const whenStr = when ? when.toLocaleDateString() : (r['Publish Date'] || r['Date'] || '');
-          const section = r.Section ? ` • ${r.Section}` : '';
-          const el = document.createElement('div');
-          el.className = 'article';
-          el.innerHTML = `
-            <div class="title">${title}</div>
-            <div class="meta">${whenStr}${by}${section}</div>
-          `;
-          list.appendChild(el);
-        });
-        if (top.length === 0) list.innerHTML = '<div class="small">No rows matched in the selected tab.</div>';
-      } catch (e) {
-        console.error(e);
-        document.getElementById('articlesList').innerHTML = '<div class="error-message">Failed to load articles from Sheets.</div>';
-      }
-    }
-
-    /* ========= CHAT (unchanged, safe to ignore until Worker is live) ========= */
-    const chatContainer = document.getElementById('chatContainer');
-    const messageInput  = document.getElementById('messageInput');
-    const sendBtn       = document.getElementById('sendBtn');
-
-    messageInput.addEventListener('input', function() {
-      this.style.height = 'auto';
-      this.style.height = Math.min(this.scrollHeight, 100) + 'px';
-    });
-    messageInput.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault(); sendMessage();
-      }
-    });
-
-    function addMessage(content, isUser=false) {
-      const messageDiv = document.createElement('div');
-      messageDiv.className = `message ${isUser ? 'user' : 'assistant'}`;
-      const bubbleDiv = document.createElement('div');
-      bubbleDiv.className = 'message-bubble';
-      if (isUser) {
-        bubbleDiv.textContent = content;
-      } else {
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'response-content';
-        contentDiv.textContent = content;
-        bubbleDiv.appendChild(contentDiv);
-      }
-      messageDiv.appendChild(bubbleDiv);
-      chatContainer.appendChild(messageDiv);
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-
-    function showLoading() {
-      const loadingDiv = document.createElement('div');
-      loadingDiv.className = 'message assistant'; loadingDiv.id = 'loadingMessage';
-      const bubbleDiv = document.createElement('div');
-      bubbleDiv.className = 'message-bubble loading';
-      bubbleDiv.innerHTML = `
-        <span>Analyzing data</span>
-        <div class="typing-indicator"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-      `;
-      loadingDiv.appendChild(bubbleDiv);
-      chatContainer.appendChild(loadingDiv);
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-    function hideLoading(){ const n=document.getElementById('loadingMessage'); if(n) n.remove(); }
-    function showError(msg){
-      const d=document.createElement('div'); d.className='error-message';
-      d.textContent=`Error: ${msg}`; chatContainer.appendChild(d); chatContainer.scrollTop=chatContainer.scrollHeight;
-    }
-
-    async function sendMessage() {
-      const message = messageInput.value.trim(); if (!message) return;
-      addMessage(message, true); messageInput.value=''; messageInput.style.height='auto'; sendBtn.disabled=true; showLoading();
-      try {
-        if (!API_ENDPOINT) throw new Error('Chat backend not configured yet.');
-        const response = await fetch(API_ENDPOINT, {
-          method:'POST', headers:{'Content-Type':'application/json'},
-          body: JSON.stringify({ message })
-        });
-        hideLoading();
-        if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        const data = await response.json();
-        let responseText = data.response || data.message || (typeof data==='string' ? data : 'No response');
-        addMessage(responseText);
-      } catch (err) {
-        hideLoading(); console.error(err); showError(err.message);
+        addError('Error: could not reach analytics assistant.');
       } finally {
-        sendBtn.disabled=false; messageInput.focus();
+        btn.disabled = false;
+        box.focus();
       }
     }
-    function sendQuickMessage(m){ messageInput.value=m; sendMessage(); }
 
-    // PWA install
-    let deferredPrompt=null;
-    window.addEventListener('beforeinstallprompt', (e)=>{ e.preventDefault(); deferredPrompt=e; document.getElementById('installPrompt').style.display='block'; });
-    document.getElementById('installBtn').addEventListener('click', async ()=>{
-      if (deferredPrompt){ deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; document.getElementById('installPrompt').style.display='none'; }
+    btn.addEventListener('click', send);
+    box.addEventListener('keydown', (e) => {
+      // Enter to send, Shift+Enter for newline
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        send();
+      }
+      // autoresize
+      setTimeout(() => {
+        box.style.height = 'auto';
+        box.style.height = Math.min(box.scrollHeight, 120) + 'px';
+      }, 0);
     });
 
-    // kick things
-    window.addEventListener('load', () => {
-      messageInput.focus();
-      loadTopics();
-      loadKPIs();
-      loadArticles();
-    });
+    function sendQuick(text) {
+      box.value = text;
+      send();
+    }
+
+    // Init
+    loadAll();
+    box.focus();
   </script>
 </body>
 </html>

@@ -1,72 +1,54 @@
-name: Nightly Data Refresh (GA4 + Sheets + WEX)
+name: Refresh GA4 (daily + manual)
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 7 * * *"   # 07:00 UTC daily
-  push:
-    paths:
-      - "scripts/**"
-      - ".github/workflows/refresh.yml"
-      - "package.json"
-      - "package-lock.json"
+    - cron: "8 6 * * *" # 06:08 UTC daily (adjust if you like)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-ga4
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
+          cache: "npm"
 
-      - name: Install deps
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
 
-      - name: Write service account key
-        run: |
-          echo "${{ secrets.GCP_SA_JSON }}" | base64 -d > service-account.json
-        shell: bash
-
-      # ---------- GA4 ----------
-      - name: Build data/ga4.json
+      # Run the GA4 fetcher. It will decode the base64 service-account JSON
+      # we pass in GCP_SA_JSON and write data/ga4.json
+      - name: Run GA4 fetch script
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
-        run: |
-          node scripts/fetch_ga4.js \
-            --property "$GA4_PROPERTY_ID" \
-            --sa ./service-account.json \
-            --out data/ga4.json
+          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
+          # If your GA4 API dimension name for "authors" differs, override here:
+          # e.g. "customEvent:authors", "customEvent:authorName", etc.
+          GA4_AUTHORS_DIM: customEvent:authors
+        run: node scripts/fetch_ga4.js
 
-      # ---------- Google Sheets (optional) ----------
-      - name: Build data/sheets.json
-        env:
-          SHEETS_ID: ${{ secrets.SHEETS_ID }}
-          SHEETS_RANGE: ${{ secrets.SHEETS_RANGE }}
+      - name: Commit & push if changed
         run: |
-          node scripts/fetch_sheets.js \
-            --sheetsId "$SHEETS_ID" \
-            --range "$SHEETS_RANGE" \
-            --sa ./service-account.json \
-            --out data/sheets.json
-
-      # ---------- WEX topics (optional) ----------
-      - name: Build data/topics.json
-        env:
-          WEX_API_URL: ${{ secrets.WEX_API_URL }}
-        run: |
-          node scripts/fetch_wex.js \
-            --base "${{ env.WEX_API_URL }}" \
-            --out data/topics.json
-
-      - name: Commit & push
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          git add data/ga4.json data/sheets.json data/topics.json || true
-          git commit -m "chore: refresh data" || echo "No changes to commit"
-          git push
+          set -e
+          if [[ -n "$(git status --porcelain data/ga4.json)" ]]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/ga4.json
+            git commit -m "chore: refresh GA4 data (daily) [skip ci]"
+            git push
+          else
+            echo "No changes in data/ga4.json"
+          fi

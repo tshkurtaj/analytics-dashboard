@@ -1,75 +1,251 @@
 name: Refresh GA4 (daily + manual)
 
 on:
-  workflow_dispatch: {}          # <-- this makes the "Run workflow" button appear
+  workflow_dispatch: {}           # <— gives you the “Run workflow” button
   schedule:
-    - cron: "20 07 * * *"        # run daily @ 07:20 UTC (change if you want)
+    - cron: "15 7 * * *"          # run daily at 07:15 UTC (change if you want)
 
 permissions:
-  contents: write
+  contents: write                 # we commit data/ga4.json back to the repo
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    env:
+      GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20.x"
-          cache: npm
+          node-version: "20"
+          cache: "npm"
 
-      # Create a minimal package.json and force CommonJS so node can require() .cjs cleanly
-      - name: Ensure package.json exists
+      - name: Ensure package.json
         run: |
           if [ ! -f package.json ]; then
-            cat > package.json <<'EOF'
-          {
-            "name": "analytics-refresh",
-            "private": true,
-            "version": "1.0.0",
-            "license": "UNLICENSED",
-            "type": "commonjs",
-            "dependencies": {
-              "@google-analytics/data": "^5.0.4"
+            cat > package.json <<'JSON'
+            {
+              "name": "analytics-refresh",
+              "private": true,
+              "version": "1.0.0",
+              "license": "UNLICENSED",
+              "type": "commonjs",
+              "dependencies": {
+                "@google-analytics/data": "^5.0.4"
+              }
             }
-          }
-EOF
+            JSON
           fi
 
       - name: Install deps
-        run: npm i --no-audit --no-fund
+        run: npm i --no-fund --no-audit
 
       - name: Decode GCP service account key
-        env:
-          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
         run: |
           mkdir -p .secrets
-          echo "$GCP_SA_JSON" | base64 --decode > .secrets/gcp.json
-          test -s .secrets/gcp.json || (echo "GCP key missing/empty" && exit 1)
+          echo '${{ secrets.GCP_SA_JSON }}' | base64 -d > .secrets/gcp.json
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/.secrets/gcp.json" >> $GITHUB_ENV
 
       - name: Build GA4 JSON (KPIs + referrers + authors)
-        env:
-          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
-          GCP_SA_FILE: .secrets/gcp.json
         run: |
-          mkdir -p data
-          node scripts/fetch_ga4.cjs
+          mkdir -p scripts data
+          cat > scripts/fetch_ga4.cjs <<'NODE'
+          /**
+           * scripts/fetch_ga4.cjs
+           * Builds data/ga4.json with:
+           *   - daily KPIs (users, newUsers, pageviews, sessions, bounceRate, avg session duration)
+           *   - top referrers per day
+           *   - top authors per day (custom dimension: authors)
+           *
+           * Output matches the structure you asked for, e.g.:
+           * {
+           *   "rows": [
+           *     {
+           *       "date": "20231026",
+           *       "totalUsers": "12345",
+           *       "newUsers": "10000",
+           *       "pageviews": "54321",
+           *       "sessions": "23456",
+           *       "bounceRate": "0.45",
+           *       "averageSessionDuration": "123.45",
+           *       "referrers": [ { "source": "google", "users": "5000" }, ... ],
+           *       "authors":   [ { "author": "Asher Notheis", "users": "11703", "views": "12047" }, ... ]
+           *     },
+           *     ...
+           *   ]
+           * }
+           */
 
-      # If you also build sheets.json/topics.json, keep those steps here.
+          const fs = require("fs");
+          const path = require("path");
+          const { BetaAnalyticsDataClient } = require("@google-analytics/data");
+
+          const propertyId = process.env.GA4_PROPERTY_ID;
+          if (!propertyId) {
+            throw new Error("GA4_PROPERTY_ID env var is missing.");
+          }
+
+          const client = new BetaAnalyticsDataClient();
+
+          // Helpers
+          const pad = (n) => String(n).padStart(2, "0");
+          const yyyymmdd = (d) =>
+            `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}`;
+          const ymd = (d) =>
+            `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+
+          // Date range: last 7 complete days (end = yesterday)
+          const now = new Date();
+          const end = new Date(now); end.setDate(end.getDate() - 1);
+          const start = new Date(end); start.setDate(start.getDate() - 6);
+
+          const startISO = ymd(start);
+          const endISO   = ymd(end);
+
+          const property = `properties/${propertyId}`;
+
+          async function runReport({ dimensions, metrics, orderBys, limit }) {
+            const [res] = await client.runReport({
+              property,
+              dateRanges: [{ startDate: startISO, endDate: endISO }],
+              dimensions: dimensions.map((name) => ({ name })),
+              metrics: metrics.map((name) => ({ name })),
+              orderBys,
+              limit,
+            });
+            return res;
+          }
+
+          // 1) Daily KPIs
+          async function getDailyKPIs() {
+            const res = await runReport({
+              dimensions: ["date"],
+              metrics: [
+                "totalUsers",
+                "newUsers",
+                "screenPageViews",     // we'll map to "pageviews"
+                "sessions",
+                "bounceRate",
+                "averageSessionDuration",
+              ],
+            });
+
+            const byDate = {};
+            for (const row of res.rows ?? []) {
+              const date = row.dimensionValues?.[0]?.value || "";
+              const m = (i) => row.metricValues?.[i]?.value || "0";
+              byDate[date] = {
+                date,
+                totalUsers: m(0),
+                newUsers: m(1),
+                pageviews: m(2),           // screenPageViews -> pageviews in output
+                sessions: m(3),
+                bounceRate: m(4),
+                averageSessionDuration: m(5),
+              };
+            }
+            return byDate;
+          }
+
+          // 2) Referrers per day (top sources by users)
+          async function getReferrers() {
+            const res = await runReport({
+              dimensions: ["date", "firstUserSource"], // gives values like google, (direct), facebook.com
+              metrics: ["totalUsers"],
+              orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
+              limit: 10000,
+            });
+
+            const map = {};
+            for (const row of res.rows ?? []) {
+              const d = row.dimensionValues?.[0]?.value || "";
+              const src = row.dimensionValues?.[1]?.value || "";
+              const users = row.metricValues?.[0]?.value || "0";
+              if (!map[d]) map[d] = [];
+              map[d].push({ source: src, users });
+            }
+            // take top 5
+            for (const k of Object.keys(map)) {
+              map[k] = map[k].slice(0, 5);
+            }
+            return map;
+          }
+
+          // 3) Authors per day (custom dimension)
+          // API name for the custom event parameter is "customEvent:authors"
+          async function getAuthors() {
+            const res = await runReport({
+              dimensions: ["date", "customEvent:authors"],
+              metrics: ["totalUsers", "screenPageViews"],
+              orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
+              limit: 20000,
+            });
+
+            const map = {};
+            for (const row of res.rows ?? []) {
+              const d = row.dimensionValues?.[0]?.value || "";
+              const name = row.dimensionValues?.[1]?.value || "";
+              if (!name || name === "(not set)") continue;
+
+              const users = row.metricValues?.[0]?.value || "0";
+              const views = row.metricValues?.[1]?.value || "0";
+
+              if (!map[d]) map[d] = [];
+              map[d].push({ author: name, users, views });
+            }
+            // top 10 authors per day
+            for (const k of Object.keys(map)) {
+              map[k] = map[k].slice(0, 10);
+            }
+            return map;
+          }
+
+          (async () => {
+            console.log(`[GA4] Range ${startISO} → ${endISO}`);
+
+            const [kpis, refs, auths] = await Promise.all([
+              getDailyKPIs(),
+              getReferrers(),
+              getAuthors()
+            ]);
+
+            // Build per-day rows in ascending date order
+            const days = [];
+            for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+              const ds = yyyymmdd(d);
+              const base = kpis[ds] || { date: ds };
+              base.referrers = refs[ds] || [];
+              base.authors   = auths[ds] || [];
+              days.push(base);
+            }
+
+            const out = {
+              updatedAt: new Date().toISOString(),
+              range: { start: startISO, end: endISO },
+              rows: days,
+            };
+
+            fs.writeFileSync(path.join("data", "ga4.json"), JSON.stringify(out, null, 2));
+            console.log(`Wrote data/ga4.json (rows=${days.length})`);
+          })().catch((e) => {
+            console.error(e);
+            process.exit(1);
+          });
+          NODE
+          node scripts/fetch_ga4.cjs
 
       - name: Commit updated data
         run: |
-          git config user.name  "gh-actions"
-          git config user.email "actions@github.com"
-          if [ -n "$(git status --porcelain data/)" ]; then
-            git add data
-            git commit -m "chore: refresh GA4 data"
+          if git status --porcelain | grep -q "^ M data/ga4.json\|^?? data/ga4.json"; then
+            git config user.name  "github-actions"
+            git config user.email "actions@github.com"
+            git add data/ga4.json
+            git commit -m "data: refresh ga4.json (KPIs + referrers + authors)"
             git push
           else
-            echo "No changes to commit."
+            echo "No data changes to commit."
           fi

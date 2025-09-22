@@ -1,16 +1,15 @@
 name: Refresh GA4 (daily + manual)
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
   schedule:
-    - cron: "17 2 * * *"   # daily
-
-permissions:
-  contents: write
+    # run once daily at 09:15 UTC (adjust if you want)
+    - cron: '15 9 * * *'
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,21 +17,29 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
+          cache: 'npm'
 
+      # ⬇️ CHANGE: use npm i (no lockfile required)
       - name: Install deps
-        run: npm ci
-        # If you don't have a lockfile yet, use: npm i
+        run: npm i
 
       - name: Build GA4 JSON (KPIs + referrers + authors)
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
-          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
-          GA4_AUTHORS_DIM: customEvent:authors   # if yours is different, change here or set a secret
+          GCP_SA_JSON_B64: ${{ secrets.GCP_SA_JSON }}
+          # Optional — if you set it in repo secrets; otherwise script defaults to customEvent:authors
+          GA4_AUTHORS_DIM: ${{ secrets.GA4_AUTHORS_DIM }}
         run: node scripts/fetch_ga4.js
 
       - name: Commit updated data
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: refresh GA4 data"
-          file_pattern: data/ga4.json
+        run: |
+          if ! git diff --quiet data/ga4.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/ga4.json
+            git commit -m "Update GA4 JSON (KPIs + referrers + authors)"
+            git push
+          else
+            echo "No changes to commit."
+          fi

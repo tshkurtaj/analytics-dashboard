@@ -3,7 +3,7 @@ name: Refresh GA4 (daily + manual)
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "15 7 * * *"  # daily at 07:15 UTC
+    - cron: "15 7 * * *"  # daily 07:15 UTC
 
 permissions:
   contents: write
@@ -23,13 +23,11 @@ jobs:
         with:
           node-version: "20"
 
-      # Create a local package.json in the runner (no heredocs, no commit)
       - name: Create package.json
         run: |
           test -f package.json || npm init -y
           npm pkg set type=commonjs
 
-      # Install only what we need
       - name: Install deps
         run: npm i --no-fund --no-audit @google-analytics/data@^5.0.4
 
@@ -75,6 +73,7 @@ jobs:
             return res;
           }
 
+          // ---------- KPIs (daily) ----------
           async function getDailyKPIs() {
             const r = await runReport({
               dimensions: ["date"],
@@ -90,7 +89,7 @@ jobs:
             const map = {};
             for (const row of r.rows ?? []) {
               const d = row.dimensionValues?.[0]?.value || "";
-              const m = i => row.metricValues?.[i]?.value || "0";
+              const m = i => Number(row.metricValues?.[i]?.value || 0);
               map[d] = {
                 date: d,
                 totalUsers: m(0),
@@ -101,45 +100,68 @@ jobs:
                 averageSessionDuration: m(5)
               };
             }
+            console.log(`[KPI] days: ${Object.keys(map).length}`);
             return map;
           }
 
+          // ---------- Referrers (daily top 5) ----------
           async function getReferrers() {
             const r = await runReport({
               dimensions: ["date","firstUserSource"],
               metrics: ["totalUsers"],
               orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-              limit: 10000
-            });
-            const map = {};
-            for (const row of r.rows ?? []) {
-              const d = row.dimensionValues?.[0]?.value || "";
-              const src = row.dimensionValues?.[1]?.value || "";
-              const users = row.metricValues?.[0]?.value || "0";
-              (map[d] ||= []).push({ source: src, users });
-            }
-            for (const k of Object.keys(map)) map[k] = map[k].slice(0,5);
-            return map;
-          }
-
-          async function getAuthors() {
-            const r = await runReport({
-              dimensions: ["date","customEvent:authors"],
-              metrics: ["totalUsers","screenPageViews"],
-              orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
               limit: 20000
             });
             const map = {};
             for (const row of r.rows ?? []) {
-              const d = row.dimensionValues?.[0]?.value || "";
-              const name = row.dimensionValues?.[1]?.value || "";
-              if (!name || name === "(not set)") continue;
-              const users = row.metricValues?.[0]?.value || "0";
-              const views = row.metricValues?.[1]?.value || "0";
-              (map[d] ||= []).push({ author: name, users, views });
+              const d   = row.dimensionValues?.[0]?.value || "";
+              const src = row.dimensionValues?.[1]?.value || "";
+              const users = Number(row.metricValues?.[0]?.value || 0);
+              (map[d] ||= []).push({ source: src, users });
             }
-            for (const k of Object.keys(map)) map[k] = map[k].slice(0,10);
+            for (const k of Object.keys(map)) {
+              map[k].sort((a,b)=>b.users-a.users);
+              map[k] = map[k].slice(0,5);
+            }
+            console.log(`[REF] days: ${Object.keys(map).length}`);
             return map;
+          }
+
+          // ---------- Authors (daily top 10) ----------
+          async function tryAuthors(dim) {
+            const r = await runReport({
+              dimensions: ["date", `customEvent:${dim}`],
+              metrics: ["totalUsers","screenPageViews"],
+              orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
+              limit: 25000
+            });
+            const map = {};
+            let rows = 0;
+            for (const row of r.rows ?? []) {
+              const d   = row.dimensionValues?.[0]?.value || "";
+              const nm  = row.dimensionValues?.[1]?.value || "";
+              if (!nm || nm === "(not set)") continue;
+              const users = Number(row.metricValues?.[0]?.value || 0);
+              const views = Number(row.metricValues?.[1]?.value || 0);
+              (map[d] ||= []).push({ author: nm, users, views });
+              rows++;
+            }
+            for (const k of Object.keys(map)) {
+              map[k].sort((a,b)=>b.users-a.users);
+              map[k] = map[k].slice(0,10);
+            }
+            return { map, rows };
+          }
+
+          async function getAuthors() {
+            // Probe both common parameter names seen in your property
+            const candidates = ["authors","authorName"];
+            for (const dim of candidates) {
+              const { map, rows } = await tryAuthors(dim);
+              console.log(`[AUTH] probe customEvent:${dim} -> rows=${rows}, days=${Object.keys(map).length}`);
+              if (rows > 0) return map;
+            }
+            return {};
           }
 
           (async () => {
@@ -158,6 +180,7 @@ jobs:
               base.authors   = auths[ds] || [];
               rows.push(base);
             }
+
             const out = { updatedAt: new Date().toISOString(), range: { start: startISO, end: endISO }, rows };
             fs.writeFileSync(path.join("data","ga4.json"), JSON.stringify(out, null, 2));
             console.log(`Wrote data/ga4.json (rows=${rows.length})`);

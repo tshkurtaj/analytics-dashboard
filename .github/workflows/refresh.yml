@@ -3,44 +3,50 @@ name: Refresh GA4 (daily + manual)
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 6 * * *"  # 6:15am UTC daily
-
-permissions:
-  contents: write
+    - cron: "15 07 * * *"   # 07:15 UTC daily (adjust if you want)
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
-      # Make sure we have a minimal package.json to install the GA client
+      # Minimal package.json so we can install the GA Data API client
       - name: Ensure package.json exists
         run: |
           if [ ! -f package.json ]; then
-            node -e "require('fs').writeFileSync('package.json', JSON.stringify({ name:'analytics-refresh', version:'1.0.0', private:true, license:'UNLICENSED', dependencies:{ '@google-analytics/data':'^5.0.4' } }, null, 2))"
+            cat > package.json <<'JSON'
+            {
+              "name": "analytics-refresh",
+              "private": true,
+              "version": "1.0.0",
+              "license": "UNLICENSED",
+              "dependencies": {
+                "@google-analytics/data": "^5.0.4"
+              }
+            }
+JSON
           fi
-          cat package.json
 
       - name: Install deps
-        run: |
-          npm i --no-audit --no-fund
+        run: npm ci || npm i
 
       - name: Decode GCP service account key
         env:
-          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}   # base64 of your service-account JSON
+          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
         run: |
-          test -n "$GCP_SA_JSON"
-          echo "$GCP_SA_JSON" | base64 -d > sa.json
-          echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/sa.json" >> $GITHUB_ENV
+          echo "$GCP_SA_JSON" | base64 -d > /tmp/sa.json
+          echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa.json" >> $GITHUB_ENV
 
       - name: Build GA4 JSON (KPIs + referrers + authors)
         env:
@@ -51,12 +57,12 @@ jobs:
 
       - name: Commit updated data
         run: |
-          if ! git diff --quiet -- data/ga4.json; then
+          if [ -n "$(git status --porcelain data/ga4.json)" ]; then
             git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/ga4.json
-            git commit -m "Update data/ga4.json (KPIs + referrers + authors)"
+            git commit -m "Update GA4 JSON (KPIs + referrers + authors)"
             git push
           else
-            echo "No changes to commit."
+            echo "No changes in data/ga4.json"
           fi

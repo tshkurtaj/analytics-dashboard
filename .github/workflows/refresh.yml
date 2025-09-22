@@ -1,4 +1,4 @@
-name: Nightly Data Refresh (GA4 + Sheets tab + WEX debug)
+name: Nightly Data Refresh (GA4 + Sheets tab + WEX WP)
 
 on:
   workflow_dispatch: {}
@@ -37,7 +37,7 @@ jobs:
         env:
           GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
 
-      # --- GA4 (7 days ending yesterday) ---
+      # --- GA4 (last 7 days ending yesterday) ---
       - name: Fetch GA4
         run: |
           node scripts/fetch_ga4.js \
@@ -46,7 +46,8 @@ jobs:
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
 
-      # --- Sheets (one tab) ---
+      # --- Google Sheets (ONE tab only) ---
+      # Set SHEETS_RANGE secret like:  'Master - 2022'!A:Z   (keep single quotes)
       - name: Fetch Sheets (tab-specific)
         run: |
           node scripts/fetch_sheets.js \
@@ -57,39 +58,29 @@ jobs:
           SHEETS_ID: ${{ secrets.SHEETS_ID }}
           SHEETS_RANGE: ${{ secrets.SHEETS_RANGE }}
 
-      # --- WEX Debug (prints the URL and response head to logs) ---
-      - name: WEX debug probe
-        continue-on-error: true
+      # --- WEX via WordPress REST (last 24h) ---
+      # Uses public WP API, no token. Pulls tag NAMES via _embed=1.
+      - name: Fetch WEX (WP REST)
         run: |
           node scripts/fetch_wex.js \
             --api $WEX_API_URL \
             --out data/topics.json \
             --sinceHours 24 \
-            --path "${WEX_API_PATH:-/articles}" \
-            --sinceParam "${WEX_SINCE_PARAM:-since}" \
-            --pageParam "${WEX_PAGE_PARAM:-page}" \
-            --limitParam "${WEX_LIMIT_PARAM:-limit}" \
-            --itemsKey "${WEX_ITEMS_KEY:-}" \
-            --fieldsParam "${WEX_FIELDS_PARAM:-fields}" \
+            --path "/wp-json/wp/v2/posts" \
+            --sinceParam "after" \
+            --pageParam "page" \
+            --limitParam "per_page" \
+            --itemsKey "" \
+            --embed \
             --debug
         env:
           WEX_API_URL: ${{ secrets.WEX_API_URL }}
-          # The ones below are optional; add them as repo secrets only if you need to override defaults.
-          WEX_API_PATH: ${{ secrets.WEX_API_PATH }}
-          WEX_SINCE_PARAM: ${{ secrets.WEX_SINCE_PARAM }}
-          WEX_PAGE_PARAM: ${{ secrets.WEX_PAGE_PARAM }}
-          WEX_LIMIT_PARAM: ${{ secrets.WEX_LIMIT_PARAM }}
-          WEX_ITEMS_KEY: ${{ secrets.WEX_ITEMS_KEY }}
-          WEX_FIELDS_PARAM: ${{ secrets.WEX_FIELDS_PARAM }}
-          # If you ever need a token later, add WEX_API_TOKEN and uncomment these:
-          # WEX_API_TOKEN: ${{ secrets.WEX_API_TOKEN }}
-          # WEX_HEADER_NAME: ${{ secrets.WEX_HEADER_NAME }}
-          # WEX_HEADER_SCHEME: ${{ secrets.WEX_HEADER_SCHEME }}
 
       - name: Commit JSON outputs
+        if: always()
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
           git add data/*.json || true
-          git commit -m "chore: nightly GA4+Sheets+WEX refresh (with debug)" || echo "No changes to commit"
+          git commit -m "chore: nightly GA4+Sheets+WEX refresh" || echo "No changes to commit"
           git push

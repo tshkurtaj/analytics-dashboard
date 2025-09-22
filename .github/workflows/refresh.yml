@@ -3,59 +3,60 @@ name: Refresh GA4 (daily + manual)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 9 * * *' # daily at 09:15 UTC
+    # 6:15am UTC daily (adjust as you like)
+    - cron: "15 6 * * *"
+
+permissions:
+  contents: write
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # NOTE: no cache: 'npm' here (it needs a lockfile). Keep it simple.
-      - name: Setup Node
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # Safety: if package.json isn't in the repo yet, create a minimal one
+      # Create a minimal package.json the first time (no heredocs to avoid quoting issues)
       - name: Ensure package.json exists
         run: |
           if [ ! -f package.json ]; then
-            cat > package.json <<'JSON'
-            {
-              "name": "analytics-refresh",
-              "version": "1.0.0",
-              "private": true,
-              "license": "UNLICENSED",
-              "dependencies": {
-                "@google-analytics/data": "^5.0.4"
-              }
-            }
-            JSON
+            node -e "require('fs').writeFileSync('package.json', JSON.stringify({ name:'analytics-refresh', version:'1.0.0', private:true, license:'UNLICENSED', dependencies:{ '@google-analytics/data':'^5.0.4' } }, null, 2))"
           fi
+          cat package.json
 
       - name: Install deps
-        run: npm i
+        run: |
+          npm i --no-audit --no-fund
+
+      - name: Decode GCP service account key
+        env:
+          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}   # base64 of your service-account json
+        run: |
+          test -n "$GCP_SA_JSON"
+          echo "$GCP_SA_JSON" | base64 -d > sa.json
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/sa.json" >> $GITHUB_ENV
 
       - name: Build GA4 JSON (KPIs + referrers + authors)
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
-          GCP_SA_JSON_B64: ${{ secrets.GCP_SA_JSON }}
-          # optional; defaults to customEvent:authors if not set
-          GA4_AUTHORS_DIM: ${{ secrets.GA4_AUTHORS_DIM }}
-        run: node scripts/fetch_ga4.js
+        run: |
+          mkdir -p scripts data
+          node scripts/fetch_ga4.js
 
       - name: Commit updated data
         run: |
-          if ! git diff --quiet data/ga4.json; then
+          if ! git diff --quiet -- data/ga4.json; then
             git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
             git add data/ga4.json
-            git commit -m "Update GA4 JSON (KPIs + referrers + authors)"
+            git commit -m "Update data/ga4.json (KPIs + referrers + authors)"
             git push
           else
             echo "No changes to commit."

@@ -1,0 +1,14 @@
+{
+  "name": "analytics-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch:ga4": "node scripts/fetch_ga4.js",
+    "fetch:sheets": "node scripts/fetch_sheets.js",
+    "fetch:wex": "node scripts/fetch_wex.js"
+  },
+  "dependencies": {
+    "google-auth-library": "^9.14.2",
+    "node-fetch": "^3.3.2"
+  }
+}

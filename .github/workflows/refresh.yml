@@ -1,16 +1,17 @@
 name: Refresh GA4 (daily + manual)
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}          # <-- this makes the "Run workflow" button appear
   schedule:
-    - cron: "15 07 * * *"   # 07:15 UTC daily (adjust if you want)
+    - cron: "20 07 * * *"        # run daily @ 07:20 UTC (adjust if you like)
+
+permissions:
+  contents: write                # needed to commit data changes
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
@@ -19,50 +20,58 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "20.x"
+          cache: npm
 
-      # Minimal package.json so we can install the GA Data API client
+      # Create a minimal package.json so npm install works and CommonJS is used.
       - name: Ensure package.json exists
         run: |
           if [ ! -f package.json ]; then
-            cat > package.json <<'JSON'
-            {
-              "name": "analytics-refresh",
-              "private": true,
-              "version": "1.0.0",
-              "license": "UNLICENSED",
-              "dependencies": {
-                "@google-analytics/data": "^5.0.4"
-              }
+            cat > package.json <<'EOF'
+          {
+            "name": "analytics-refresh",
+            "private": true,
+            "version": "1.0.0",
+            "license": "UNLICENSED",
+            "type": "commonjs",
+            "dependencies": {
+              "@google-analytics/data": "^5.0.4"
             }
-JSON
+          }
+EOF
           fi
 
       - name: Install deps
-        run: npm ci || npm i
+        run: npm i --no-audit --no-fund
 
       - name: Decode GCP service account key
         env:
           GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
         run: |
-          echo "$GCP_SA_JSON" | base64 -d > /tmp/sa.json
-          echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/sa.json" >> $GITHUB_ENV
+          mkdir -p .secrets
+          # Secret is base64-encoded JSON
+          echo "$GCP_SA_JSON" | base64 --decode > .secrets/gcp.json
+          test -s .secrets/gcp.json || (echo "GCP key missing/empty" && exit 1)
 
       - name: Build GA4 JSON (KPIs + referrers + authors)
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GCP_SA_FILE: .secrets/gcp.json
         run: |
-          mkdir -p scripts data
+          mkdir -p data
           node scripts/fetch_ga4.cjs
+
+      # (Optional) If your workflow also writes sheets.json/topics.json,
+      # keep those steps here as you had them.
 
       - name: Commit updated data
         run: |
-          if [ -n "$(git status --porcelain data/ga4.json)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/ga4.json
-            git commit -m "Update GA4 JSON (KPIs + referrers + authors)"
+          git config user.name  "gh-actions"
+          git config user.email "actions@github.com"
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git add data
+            git commit -m "chore: refresh GA4 data"
             git push
           else
-            echo "No changes in data/ga4.json"
+            echo "No changes to commit."
           fi

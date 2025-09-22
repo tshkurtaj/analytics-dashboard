@@ -1,9 +1,13 @@
-name: Nightly Data Refresh (GA4 + Sheets tab)
+name: Nightly Data Refresh (GA4 + Sheets tab + WEX)
 
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: '10 11 * * *'   # runs daily ~11:10 UTC; adjust if you want
+    - cron: '10 11 * * *'   # daily ~11:10 UTC; change if you want
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: true
 
 jobs:
   refresh:
@@ -19,6 +23,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: scripts/package.json
 
       - name: Install script deps
         run: |
@@ -31,8 +37,8 @@ jobs:
         env:
           GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
 
-      # --- GA4 ---
-      - name: Fetch GA4 (last 7 days, ending yesterday)
+      # --- GA4 (last 7 days ending yesterday) ---
+      - name: Fetch GA4
         run: |
           node scripts/fetch_ga4.js \
             --property $GA4_PROPERTY_ID \
@@ -40,8 +46,8 @@ jobs:
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
 
-      # --- SHEETS (one tab only) ---
-      # Provide a secret SHEETS_RANGE like:  'Master - 2022'!A:Z
+      # --- Google Sheets (one tab only) ---
+      # Provide SHEETS_RANGE like:  'Master - 2022'!A:Z   (keep the single quotes)
       - name: Fetch Sheets (tab-specific)
         run: |
           node scripts/fetch_sheets.js \
@@ -52,12 +58,24 @@ jobs:
           SHEETS_ID: ${{ secrets.SHEETS_ID }}
           SHEETS_RANGE: ${{ secrets.SHEETS_RANGE }}
 
-      # (Optional) Later we’ll add WEX + summarize steps here
+      # --- WEX content (last 24h) ---
+      - name: Fetch WEX (last 24h)
+        run: |
+          node scripts/fetch_wex.js \
+            --api $WEX_API_URL \
+            --token $WEX_API_TOKEN \
+            --out data/topics.json \
+            --sinceHours 24
+        env:
+          WEX_API_URL: ${{ secrets.WEX_API_URL }}
+          WEX_API_TOKEN: ${{ secrets.WEX_API_TOKEN }}
+
+      # (Optional) If you later add scripts/summarize.js, you can append a step here to write data/summaries.json
 
       - name: Commit JSON outputs
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
           git add data/*.json || true
-          git commit -m "chore: nightly data refresh" || echo "No changes"
+          git commit -m "chore: nightly GA4+Sheets+WEX refresh" || echo "No changes to commit"
           git push

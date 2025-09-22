@@ -48,139 +48,188 @@ jobs:
           const property = `properties/${propertyId}`;
           const yesterday = new Date();
           yesterday.setDate(yesterday.getDate() - 1);
-          const dateStr = yesterday.toISOString().slice(0, 10);
+          const pad = n => String(n).padStart(2, "0");
+          const dateStr = `${yesterday.getFullYear()}-${pad(yesterday.getMonth() + 1)}-${pad(yesterday.getDate())}`;
 
           console.log(`🔍 DEBUGGING GA4 DATA for ${dateStr}`);
           console.log(`📊 Property: ${propertyId}`);
 
           async function runReport(config) {
-            const [res] = await client.runReport({
+            const request = {
               property,
               dateRanges: [{ startDate: dateStr, endDate: dateStr }],
               ...config
-            });
+            };
+            const [res] = await client.runReport(request);
             return res;
           }
 
-          // 1. Check what events exist
-          console.log('\n📋 STEP 1: Available Events');
-          try {
-            const events = await runReport({
-              dimensions: [{ name: "eventName" }],
-              metrics: [{ name: "eventCount" }],
-              orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
-              limit: 20
-            });
-            
-            console.log('Top events:');
-            for (const row of events.rows || []) {
-              const event = row.dimensionValues[0].value;
-              const count = row.metricValues[0].value;
-              console.log(`  ${event}: ${count}`);
-            }
-          } catch (error) {
-            console.log('❌ Failed to get events:', error.message);
-          }
-
-          // 2. Try each author parameter specifically
-          console.log('\n👤 STEP 2: Testing Author Parameters');
-          
-          const authorParams = ['authors', 'authorName', 'authorDesignation'];
-          
-          for (const param of authorParams) {
-            console.log(`\n🔍 Testing customEvent:${param}`);
+          async function main() {
             try {
-              const result = await runReport({
-                dimensions: [{ name: `customEvent:${param}` }],
+              // 1. Check what events exist
+              console.log('\n📋 STEP 1: Available Events');
+              const events = await runReport({
+                dimensions: [{ name: "eventName" }],
                 metrics: [{ name: "eventCount" }],
-                limit: 50
+                orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
+                limit: 20
               });
+              
+              console.log('Top events:');
+              for (const row of events.rows || []) {
+                const event = row.dimensionValues[0].value;
+                const count = row.metricValues[0].value;
+                console.log(`  ${event}: ${count}`);
+              }
 
-              if (result.rows && result.rows.length > 0) {
-                console.log(`✅ Found ${result.rows.length} entries for ${param}:`);
-                for (const row of result.rows.slice(0, 10)) {
-                  const value = row.dimensionValues[0].value;
-                  const count = row.metricValues[0].value;
-                  if (value && value !== "(not set)") {
-                    console.log(`  "${value}": ${count} events`);
+              // 2. Try each author parameter specifically
+              console.log('\n👤 STEP 2: Testing Author Parameters');
+              
+              const authorParams = ['authors', 'authorName', 'authorDesignation'];
+              
+              for (const param of authorParams) {
+                console.log(`\n🔍 Testing customEvent:${param}`);
+                try {
+                  const result = await runReport({
+                    dimensions: [{ name: `customEvent:${param}` }],
+                    metrics: [{ name: "eventCount" }],
+                    limit: 50
+                  });
+
+                  if (result.rows && result.rows.length > 0) {
+                    console.log(`✅ Found ${result.rows.length} entries for ${param}:`);
+                    for (const row of result.rows.slice(0, 10)) {
+                      const value = row.dimensionValues[0].value;
+                      const count = row.metricValues[0].value;
+                      if (value && value !== "(not set)") {
+                        console.log(`  "${value}": ${count} events`);
+                      }
+                    }
+                  } else {
+                    console.log(`❌ No data found for customEvent:${param}`);
+                  }
+                } catch (error) {
+                  console.log(`❌ Error testing ${param}: ${error.message}`);
+                }
+              }
+
+              // 3. Check page titles for author patterns
+              console.log('\n📄 STEP 3: Page Title Analysis');
+              try {
+                const pageTitles = await runReport({
+                  dimensions: [{ name: "pageTitle" }],
+                  metrics: [{ name: "screenPageViews" }],
+                  orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
+                  limit: 20
+                });
+
+                console.log('Top page titles (looking for author patterns):');
+                for (const row of pageTitles.rows || []) {
+                  const title = row.dimensionValues[0].value;
+                  const views = row.metricValues[0].value;
+                  
+                  // Check for common author patterns
+                  const authorPatterns = [
+                    /By\s+([^|•\-]+)/i,
+                    /Author:\s*([^|•\-]+)/i,
+                    /Written by\s+([^|•\-]+)/i,
+                    /\|\s*([^|•\-]+)\s*$/,
+                    /•\s*([^|•\-]+)\s*$/
+                  ];
+                  
+                  let foundAuthor = null;
+                  for (const pattern of authorPatterns) {
+                    const match = title.match(pattern);
+                    if (match) {
+                      foundAuthor = match[1].trim();
+                      break;
+                    }
+                  }
+                  
+                  if (foundAuthor) {
+                    console.log(`  📝 "${title}" → Author: "${foundAuthor}" (${views} views)`);
+                  } else if (title.length < 100) {
+                    console.log(`  📄 "${title}" (${views} views)`);
                   }
                 }
-              } else {
-                console.log(`❌ No data found for customEvent:${param}`);
+              } catch (error) {
+                console.log('❌ Failed to get page titles:', error.message);
               }
-            } catch (error) {
-              console.log(`❌ Error testing ${param}: ${error.message}`);
-            }
-          }
 
-          // 3. Check page titles for author patterns
-          console.log('\n📄 STEP 3: Page Title Analysis');
-          try {
-            const pageTitles = await runReport({
-              dimensions: [{ name: "pageTitle" }],
-              metrics: [{ name: "screenPageViews" }],
-              orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
-              limit: 20
-            });
+              // 4. Try to get custom dimensions metadata
+              console.log('\n🔧 STEP 4: Checking Custom Dimensions');
+              try {
+                // Try a broader search for any custom event parameters
+                const customEvents = await runReport({
+                  dimensions: [{ name: "eventName" }],
+                  metrics: [{ name: "eventCount" }],
+                  dimensionFilter: {
+                    filter: {
+                      fieldName: "eventName",
+                      stringFilter: {
+                        matchType: "CONTAINS",
+                        value: "page_view"
+                      }
+                    }
+                  },
+                  limit: 10
+                });
+                
+                console.log('Page view events found:');
+                for (const row of customEvents.rows || []) {
+                  const event = row.dimensionValues[0].value;
+                  const count = row.metricValues[0].value;
+                  console.log(`  ${event}: ${count}`);
+                }
+                
+              } catch (error) {
+                console.log('❌ Could not check custom dimensions:', error.message);
+              }
 
-            console.log('Top page titles (looking for author patterns):');
-            for (const row of pageTitles.rows || []) {
-              const title = row.dimensionValues[0].value;
-              const views = row.metricValues[0].value;
-              
-              // Check for common author patterns
-              const authorPatterns = [
-                /By\s+([^|•\-]+)/i,
-                /Author:\s*([^|•\-]+)/i,
-                /Written by\s+([^|•\-]+)/i,
-                /\|\s*([^|•\-]+)\s*$/,
-                /•\s*([^|•\-]+)\s*$/
+              // 5. Check if there are any custom parameters at all
+              console.log('\n🔍 STEP 5: Looking for ANY custom parameters');
+              const testParams = [
+                'customEvent:category',
+                'customEvent:content_group1', 
+                'customEvent:content_group2',
+                'customEvent:page_author',
+                'customEvent:byline'
               ];
               
-              let foundAuthor = null;
-              for (const pattern of authorPatterns) {
-                const match = title.match(pattern);
-                if (match) {
-                  foundAuthor = match[1].trim();
-                  break;
+              for (const param of testParams) {
+                try {
+                  const test = await runReport({
+                    dimensions: [{ name: param }],
+                    metrics: [{ name: "eventCount" }],
+                    limit: 5
+                  });
+                  
+                  if (test.rows && test.rows.length > 0) {
+                    console.log(`✅ Found data for ${param}:`);
+                    for (const row of test.rows.slice(0, 3)) {
+                      const value = row.dimensionValues[0].value;
+                      const count = row.metricValues[0].value;
+                      console.log(`  "${value}": ${count}`);
+                    }
+                  }
+                } catch (error) {
+                  // Silently continue - most will fail
                 }
               }
-              
-              if (foundAuthor) {
-                console.log(`  📝 "${title}" → Author: "${foundAuthor}" (${views} views)`);
-              } else if (title.length < 100) {
-                console.log(`  📄 "${title}" (${views} views)`);
-              }
+
+              console.log('\n📊 DIAGNOSIS:');
+              console.log('✅ If you see author data above, we can use it!');
+              console.log('❌ If no author data appears, your website needs to send author info to GA4');
+              console.log('📝 If page titles contain authors, we can extract them');
+              console.log('🔧 Check your website\'s GA4 tracking code');
+
+            } catch (error) {
+              console.error('❌ Fatal error:', error);
+              process.exit(1);
             }
-          } catch (error) {
-            console.log('❌ Failed to get page titles:', error.message);
           }
 
-          // 4. Try to find any custom parameters
-          console.log('\n🔧 STEP 4: All Custom Parameters');
-          try {
-            // Get metadata about available dimensions
-            const metadata = await client.getMetadata({
-              name: property + '/metadata'
-            });
-            
-            console.log('Available custom dimensions:');
-            const customDims = metadata[0].dimensions?.filter(d => 
-              d.apiName?.includes('customEvent:') || d.apiName?.includes('custom')
-            ) || [];
-            
-            for (const dim of customDims.slice(0, 10)) {
-              console.log(`  ${dim.apiName}: ${dim.uiName}`);
-            }
-            
-          } catch (error) {
-            console.log('❌ Could not get metadata:', error.message);
-          }
-
-          console.log('\n📊 DIAGNOSIS:');
-          console.log('If you see author data above, the parameters work but need proper filtering.');
-          console.log('If no author data appears, your website is not sending author info to GA4.');
-          console.log('Check your GA4 tracking code to ensure author parameters are being sent.');
+          main();
           NODE
           
           node scripts/debug_ga4.cjs

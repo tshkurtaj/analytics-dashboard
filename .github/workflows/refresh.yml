@@ -1,12 +1,12 @@
 name: Refresh GA4 (daily + manual)
 
 on:
-  workflow_dispatch: {}           # <— gives you the “Run workflow” button
+  workflow_dispatch: {}
   schedule:
-    - cron: "15 7 * * *"          # run daily at 07:15 UTC (change if you want)
+    - cron: "15 7 * * *"   # daily at 07:15 UTC; change if you like
 
 permissions:
-  contents: write                 # we commit data/ga4.json back to the repo
+  contents: write
 
 jobs:
   refresh:
@@ -18,11 +18,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # IMPORTANT: no cache here (it requires a lockfile that we don't have yet)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
 
       - name: Ensure package.json
         run: |
@@ -56,110 +56,79 @@ jobs:
           cat > scripts/fetch_ga4.cjs <<'NODE'
           /**
            * scripts/fetch_ga4.cjs
-           * Builds data/ga4.json with:
-           *   - daily KPIs (users, newUsers, pageviews, sessions, bounceRate, avg session duration)
-           *   - top referrers per day
-           *   - top authors per day (custom dimension: authors)
-           *
-           * Output matches the structure you asked for, e.g.:
-           * {
-           *   "rows": [
-           *     {
-           *       "date": "20231026",
-           *       "totalUsers": "12345",
-           *       "newUsers": "10000",
-           *       "pageviews": "54321",
-           *       "sessions": "23456",
-           *       "bounceRate": "0.45",
-           *       "averageSessionDuration": "123.45",
-           *       "referrers": [ { "source": "google", "users": "5000" }, ... ],
-           *       "authors":   [ { "author": "Asher Notheis", "users": "11703", "views": "12047" }, ... ]
-           *     },
-           *     ...
-           *   ]
-           * }
+           * Writes data/ga4.json with daily KPIs + referrers + authors.
+           * "authors" comes from GA4 custom event parameter: customEvent:authors
            */
-
           const fs = require("fs");
           const path = require("path");
           const { BetaAnalyticsDataClient } = require("@google-analytics/data");
 
           const propertyId = process.env.GA4_PROPERTY_ID;
-          if (!propertyId) {
-            throw new Error("GA4_PROPERTY_ID env var is missing.");
-          }
+          if (!propertyId) throw new Error("Missing GA4_PROPERTY_ID");
 
           const client = new BetaAnalyticsDataClient();
 
-          // Helpers
-          const pad = (n) => String(n).padStart(2, "0");
-          const yyyymmdd = (d) =>
-            `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}`;
-          const ymd = (d) =>
-            `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+          const pad = n => String(n).padStart(2,"0");
+          const ymd = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+          const yyyymmdd = d => `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}`;
 
-          // Date range: last 7 complete days (end = yesterday)
+          // last 7 complete days (end=yesterday)
           const now = new Date();
-          const end = new Date(now); end.setDate(end.getDate() - 1);
-          const start = new Date(end); start.setDate(start.getDate() - 6);
+          const end = new Date(now); end.setDate(end.getDate()-1);
+          const start = new Date(end); start.setDate(start.getDate()-6);
 
           const startISO = ymd(start);
           const endISO   = ymd(end);
-
           const property = `properties/${propertyId}`;
 
-          async function runReport({ dimensions, metrics, orderBys, limit }) {
+          async function runReport({dimensions, metrics, orderBys, limit}) {
             const [res] = await client.runReport({
               property,
               dateRanges: [{ startDate: startISO, endDate: endISO }],
-              dimensions: dimensions.map((name) => ({ name })),
-              metrics: metrics.map((name) => ({ name })),
+              dimensions: dimensions.map(name => ({ name })),
+              metrics: metrics.map(name => ({ name })),
               orderBys,
-              limit,
+              limit
             });
             return res;
           }
 
-          // 1) Daily KPIs
           async function getDailyKPIs() {
             const res = await runReport({
               dimensions: ["date"],
               metrics: [
                 "totalUsers",
                 "newUsers",
-                "screenPageViews",     // we'll map to "pageviews"
+                "screenPageViews",   // mapped to "pageviews"
                 "sessions",
                 "bounceRate",
-                "averageSessionDuration",
-              ],
+                "averageSessionDuration"
+              ]
             });
-
-            const byDate = {};
+            const map = {};
             for (const row of res.rows ?? []) {
               const date = row.dimensionValues?.[0]?.value || "";
-              const m = (i) => row.metricValues?.[i]?.value || "0";
-              byDate[date] = {
+              const m = i => row.metricValues?.[i]?.value || "0";
+              map[date] = {
                 date,
                 totalUsers: m(0),
                 newUsers: m(1),
-                pageviews: m(2),           // screenPageViews -> pageviews in output
+                pageviews: m(2),
                 sessions: m(3),
                 bounceRate: m(4),
-                averageSessionDuration: m(5),
+                averageSessionDuration: m(5)
               };
             }
-            return byDate;
+            return map;
           }
 
-          // 2) Referrers per day (top sources by users)
           async function getReferrers() {
             const res = await runReport({
-              dimensions: ["date", "firstUserSource"], // gives values like google, (direct), facebook.com
+              dimensions: ["date","firstUserSource"],
               metrics: ["totalUsers"],
               orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-              limit: 10000,
+              limit: 10000
             });
-
             const map = {};
             for (const row of res.rows ?? []) {
               const d = row.dimensionValues?.[0]?.value || "";
@@ -168,73 +137,50 @@ jobs:
               if (!map[d]) map[d] = [];
               map[d].push({ source: src, users });
             }
-            // take top 5
-            for (const k of Object.keys(map)) {
-              map[k] = map[k].slice(0, 5);
-            }
+            for (const k of Object.keys(map)) map[k] = map[k].slice(0,5);
             return map;
           }
 
-          // 3) Authors per day (custom dimension)
-          // API name for the custom event parameter is "customEvent:authors"
           async function getAuthors() {
             const res = await runReport({
-              dimensions: ["date", "customEvent:authors"],
-              metrics: ["totalUsers", "screenPageViews"],
+              dimensions: ["date","customEvent:authors"],
+              metrics: ["totalUsers","screenPageViews"],
               orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-              limit: 20000,
+              limit: 20000
             });
-
             const map = {};
             for (const row of res.rows ?? []) {
               const d = row.dimensionValues?.[0]?.value || "";
               const name = row.dimensionValues?.[1]?.value || "";
               if (!name || name === "(not set)") continue;
-
               const users = row.metricValues?.[0]?.value || "0";
               const views = row.metricValues?.[1]?.value || "0";
-
               if (!map[d]) map[d] = [];
               map[d].push({ author: name, users, views });
             }
-            // top 10 authors per day
-            for (const k of Object.keys(map)) {
-              map[k] = map[k].slice(0, 10);
-            }
+            for (const k of Object.keys(map)) map[k] = map[k].slice(0,10);
             return map;
           }
 
           (async () => {
             console.log(`[GA4] Range ${startISO} → ${endISO}`);
-
             const [kpis, refs, auths] = await Promise.all([
               getDailyKPIs(),
               getReferrers(),
               getAuthors()
             ]);
-
-            // Build per-day rows in ascending date order
-            const days = [];
-            for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+            const rows = [];
+            for (let d = new Date(start); d <= end; d.setDate(d.getDate()+1)) {
               const ds = yyyymmdd(d);
               const base = kpis[ds] || { date: ds };
               base.referrers = refs[ds] || [];
               base.authors   = auths[ds] || [];
-              days.push(base);
+              rows.push(base);
             }
-
-            const out = {
-              updatedAt: new Date().toISOString(),
-              range: { start: startISO, end: endISO },
-              rows: days,
-            };
-
-            fs.writeFileSync(path.join("data", "ga4.json"), JSON.stringify(out, null, 2));
-            console.log(`Wrote data/ga4.json (rows=${days.length})`);
-          })().catch((e) => {
-            console.error(e);
-            process.exit(1);
-          });
+            const out = { updatedAt: new Date().toISOString(), range: { start: startISO, end: endISO }, rows };
+            require("fs").writeFileSync(path.join("data","ga4.json"), JSON.stringify(out, null, 2));
+            console.log(`Wrote data/ga4.json (rows=${rows.length})`);
+          })().catch(err => { console.error(err); process.exit(1); });
           NODE
           node scripts/fetch_ga4.cjs
 

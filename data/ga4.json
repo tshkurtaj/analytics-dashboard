@@ -1,1 +1,65 @@
-{ "updatedAt": "", "rows": [], "yesterday": null }
+{
+  "updatedAt": "2025-09-22T00:30:21.947Z",
+  "range": {
+    "start": "2025-09-15",
+    "end": "2025-09-21"
+  },
+  "rows": [
+    {
+      "date": "20250919",
+      "totalUsers": 239587,
+      "newUsers": 122990,
+      "pageviews": 282764,
+      "sessions": 270623
+    },
+    {
+      "date": "20250915",
+      "totalUsers": 201992,
+      "newUsers": 108526,
+      "pageviews": 241462,
+      "sessions": 230669
+    },
+    {
+      "date": "20250916",
+      "totalUsers": 196982,
+      "newUsers": 99392,
+      "pageviews": 233614,
+      "sessions": 221644
+    },
+    {
+      "date": "20250917",
+      "totalUsers": 175189,
+      "newUsers": 93341,
+      "pageviews": 208424,
+      "sessions": 198797
+    },
+    {
+      "date": "20250918",
+      "totalUsers": 167671,
+      "newUsers": 84635,
+      "pageviews": 205313,
+      "sessions": 191114
+    },
+    {
+      "date": "20250920",
+      "totalUsers": 139645,
+      "newUsers": 67485,
+      "pageviews": 162590,
+      "sessions": 157801
+    },
+    {
+      "date": "20250921",
+      "totalUsers": 115716,
+      "newUsers": 48365,
+      "pageviews": 128387,
+      "sessions": 128513
+    }
+  ],
+  "yesterday": {
+    "date": "20250921",
+    "totalUsers": 115716,
+    "newUsers": 48365,
+    "pageviews": 128387,
+    "sessions": 128513
+  }
+}

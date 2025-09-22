@@ -37,7 +37,7 @@ jobs:
           echo '${{ secrets.GCP_SA_JSON }}' | base64 -d > .secrets/gcp.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/.secrets/gcp.json" >> $GITHUB_ENV
 
-      - name: Build GA4 JSON (Washington Examiner - Fixed)
+      - name: Build GA4 JSON (Complete Washington Examiner Data)
         run: |
           mkdir -p scripts data
           cat > scripts/fetch_ga4.cjs <<'NODE'
@@ -61,7 +61,7 @@ jobs:
           const endISO = ymd(end);
           const property = `properties/${propertyId}`;
 
-          console.log(`[GA4] Fetching ${startISO} → ${endISO}`);
+          console.log(`[GA4] Fetching comprehensive data ${startISO} → ${endISO}`);
 
           async function runReport(config) {
             const [res] = await client.runReport({
@@ -125,7 +125,6 @@ jobs:
               map[date].push({ source, users });
             }
 
-            // Keep top 15 per day
             for (const date of Object.keys(map)) {
               map[date] = map[date].slice(0, 15);
             }
@@ -134,9 +133,9 @@ jobs:
             return map;
           }
 
-          // Authors - The working version!
+          // Authors
           async function getAuthors() {
-            console.log('[AUTH] Fetching author data using customEvent:authors...');
+            console.log('[AUTHORS] Fetching author data...');
             
             try {
               const r = await runReport({
@@ -149,17 +148,13 @@ jobs:
               const map = {};
               let validEntries = 0;
 
-              console.log(`[AUTH] Processing ${r.rows?.length || 0} raw rows...`);
-
               for (const row of r.rows || []) {
                 const date = row.dimensionValues[0].value;
                 const author = row.dimensionValues[1].value;
                 const users = parseInt(row.metricValues[0].value);
                 const views = parseInt(row.metricValues[1].value);
 
-                // Skip invalid entries
-                if (!author || author === "(not set)" || author === "null" || 
-                    author === "undefined" || author.trim() === "" || users === 0) {
+                if (!author || author === "(not set)" || author.trim() === "" || users === 0) {
                   continue;
                 }
 
@@ -172,38 +167,129 @@ jobs:
                 validEntries++;
               }
 
-              // Sort and limit to top 10 per day
               for (const date of Object.keys(map)) {
                 map[date].sort((a, b) => parseInt(b.users) - parseInt(a.users));
                 map[date] = map[date].slice(0, 10);
               }
 
-              console.log(`[AUTH] Success! ${validEntries} valid entries across ${Object.keys(map).length} days`);
-              
-              // Show sample data
-              const allAuthors = Object.values(map).flat();
-              if (allAuthors.length > 0) {
-                const samples = allAuthors.slice(0, 5).map(a => `${a.author} (${a.users})`);
-                console.log(`[AUTH] Sample: ${samples.join(', ')}`);
-              }
-              
+              console.log(`[AUTHORS] Success! ${validEntries} entries across ${Object.keys(map).length} days`);
               return map;
 
             } catch (error) {
-              console.log(`[AUTH] Error: ${error.message}`);
+              console.log(`[AUTHORS] Error: ${error.message}`);
+              return {};
+            }
+          }
+
+          // Articles/Stories
+          async function getTopArticles() {
+            console.log('[ARTICLES] Fetching top articles...');
+            
+            try {
+              const r = await runReport({
+                dimensions: [{ name: "date" }, { name: "customEvent:articleTitle" }],
+                metrics: [{ name: "totalUsers" }, { name: "screenPageViews" }, { name: "sessions" }],
+                orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
+                limit: 3000
+              });
+
+              const map = {};
+              let validEntries = 0;
+
+              for (const row of r.rows || []) {
+                const date = row.dimensionValues[0].value;
+                const title = row.dimensionValues[1].value;
+                const users = parseInt(row.metricValues[0].value);
+                const views = parseInt(row.metricValues[1].value);
+                const sessions = parseInt(row.metricValues[2].value);
+
+                if (!title || title === "(not set)" || title.length < 10 || users < 10) {
+                  continue;
+                }
+
+                const cleanTitle = title.trim();
+                if (!map[date]) map[date] = [];
+                map[date].push({ 
+                  title: cleanTitle.length > 120 ? cleanTitle.substring(0, 117) + "..." : cleanTitle,
+                  users: users.toString(), 
+                  views: views.toString(),
+                  sessions: sessions.toString()
+                });
+                validEntries++;
+              }
+
+              for (const date of Object.keys(map)) {
+                map[date].sort((a, b) => parseInt(b.users) - parseInt(a.users));
+                map[date] = map[date].slice(0, 15);
+              }
+
+              console.log(`[ARTICLES] Success! ${validEntries} entries across ${Object.keys(map).length} days`);
+              return map;
+
+            } catch (error) {
+              console.log(`[ARTICLES] Error: ${error.message}`);
+              return {};
+            }
+          }
+
+          // Sections Performance
+          async function getSections() {
+            console.log('[SECTIONS] Fetching section data...');
+            
+            try {
+              const r = await runReport({
+                dimensions: [{ name: "date" }, { name: "customEvent:section" }],
+                metrics: [{ name: "totalUsers" }, { name: "screenPageViews" }],
+                orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
+                limit: 1000
+              });
+
+              const map = {};
+              let validEntries = 0;
+
+              for (const row of r.rows || []) {
+                const date = row.dimensionValues[0].value;
+                const section = row.dimensionValues[1].value;
+                const users = parseInt(row.metricValues[0].value);
+                const views = parseInt(row.metricValues[1].value);
+
+                if (!section || section === "(not set)" || section.trim() === "" || users === 0) {
+                  continue;
+                }
+
+                if (!map[date]) map[date] = [];
+                map[date].push({ 
+                  section: section.trim(), 
+                  users: users.toString(), 
+                  views: views.toString() 
+                });
+                validEntries++;
+              }
+
+              for (const date of Object.keys(map)) {
+                map[date].sort((a, b) => parseInt(b.users) - parseInt(a.users));
+                map[date] = map[date].slice(0, 10);
+              }
+
+              console.log(`[SECTIONS] Success! ${validEntries} entries across ${Object.keys(map).length} days`);
+              return map;
+
+            } catch (error) {
+              console.log(`[SECTIONS] Error: ${error.message}`);
               return {};
             }
           }
 
           async function main() {
             try {
-              const [kpis, referrers, authors] = await Promise.all([
+              const [kpis, referrers, authors, articles, sections] = await Promise.all([
                 getDailyKPIs(),
                 getReferrers(),
-                getAuthors()
+                getAuthors(),
+                getTopArticles(),
+                getSections()
               ]);
 
-              // Build final data structure
               const rows = [];
               for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
                 const dateKey = yyyymmdd(d);
@@ -217,22 +303,24 @@ jobs:
                   bounceRate: kpis[dateKey]?.bounceRate || 0,
                   averageSessionDuration: kpis[dateKey]?.averageSessionDuration || 0,
                   referrers: referrers[dateKey] || [],
-                  authors: authors[dateKey] || []
+                  authors: authors[dateKey] || [],
+                  articles: articles[dateKey] || [],
+                  sections: sections[dateKey] || []
                 };
                 
                 rows.push(dayData);
               }
 
-              // Calculate summary stats
               const totalAuthorEntries = rows.reduce((sum, row) => sum + row.authors.length, 0);
+              const totalArticleEntries = rows.reduce((sum, row) => sum + row.articles.length, 0);
+              const totalSectionEntries = rows.reduce((sum, row) => sum + row.sections.length, 0);
+              
               const uniqueAuthors = new Set();
-              rows.forEach(row => row.authors.forEach(a => uniqueAuthors.add(a.author)));
-
-              console.log(`[DEBUG] Final data structure:`);
-              console.log(`  Total rows: ${rows.length}`);
-              console.log(`  Total author entries: ${totalAuthorEntries}`);
-              console.log(`  Unique authors: ${uniqueAuthors.size}`);
-              console.log(`  Sample final row:`, JSON.stringify(rows[rows.length - 1], null, 2));
+              const uniqueSections = new Set();
+              rows.forEach(row => {
+                row.authors.forEach(a => uniqueAuthors.add(a.author));
+                row.sections.forEach(s => uniqueSections.add(s.section));
+              });
 
               const output = {
                 updatedAt: new Date().toISOString(),
@@ -241,20 +329,22 @@ jobs:
                 meta: {
                   totalDays: rows.length,
                   totalAuthorEntries,
+                  totalArticleEntries,
+                  totalSectionEntries,
                   uniqueAuthors: uniqueAuthors.size,
-                  sampleAuthors: Array.from(uniqueAuthors).slice(0, 8)
+                  uniqueSections: uniqueSections.size,
+                  sampleAuthors: Array.from(uniqueAuthors).slice(0, 5),
+                  sampleSections: Array.from(uniqueSections).slice(0, 5)
                 }
               };
 
-              // Write file
               fs.writeFileSync(path.join("data", "ga4.json"), JSON.stringify(output, null, 2));
               
-              console.log(`✅ SUCCESS! Wrote data/ga4.json`);
-              console.log(`📊 ${rows.length} days, ${totalAuthorEntries} author entries, ${uniqueAuthors.size} unique authors`);
-              
-              if (uniqueAuthors.size > 0) {
-                console.log(`📝 Top authors: ${Array.from(uniqueAuthors).slice(0, 5).join(', ')}`);
-              }
+              console.log(`✅ COMPREHENSIVE SUCCESS!`);
+              console.log(`📊 ${rows.length} days collected`);
+              console.log(`👥 ${totalAuthorEntries} author entries, ${uniqueAuthors.size} unique authors`);
+              console.log(`📰 ${totalArticleEntries} article entries`);
+              console.log(`📁 ${totalSectionEntries} section entries, ${uniqueSections.size} unique sections`);
 
             } catch (error) {
               console.error('❌ Fatal error:', error);
@@ -269,36 +359,25 @@ jobs:
 
       - name: Commit updated data
         run: |
-          echo "Force updating data/ga4.json with author data..."
+          echo "Updating comprehensive GA4 data..."
           
-          # Show file contents first
-          echo "Current file size: $(wc -c < data/ga4.json) bytes"
-          echo "Checking if authors are in the file:"
-          grep -c '"authors"' data/ga4.json || echo "No authors array found"
+          echo "File size: $(wc -c < data/ga4.json) bytes"
+          echo "Content summary:"
+          grep -c '"authors"' data/ga4.json || echo "No authors"
+          grep -c '"articles"' data/ga4.json || echo "No articles"
+          grep -c '"sections"' data/ga4.json || echo "No sections"
           
-          # Show a sample of the file content
-          echo "Last 20 lines of the file:"
-          tail -20 data/ga4.json
-          
-          # Always add and commit the file, even if git thinks there are no changes
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           
-          # Add timestamp to ensure the file changes
           if command -v jq >/dev/null 2>&1; then
             temp_file=$(mktemp)
             jq --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ)" '.updatedAt = $timestamp' data/ga4.json > "$temp_file"
             mv "$temp_file" data/ga4.json
-          else
-            echo "jq not available, using timestamp in commit message only"
           fi
           
           git add data/ga4.json
-          
-          # Force commit with timestamp
-          git commit -m "data: force update ga4.json with authors ($(date '+%Y-%m-%d %H:%M:%S UTC'))" || echo "Nothing to commit"
+          git commit -m "data: comprehensive update - authors, articles, sections ($(date '+%Y-%m-%d %H:%M:%S UTC'))" || echo "Nothing to commit"
           git push || echo "Nothing to push"
           
-          echo "Final file check:"
-          echo "File size after commit: $(wc -c < data/ga4.json) bytes"
-          echo "Authors arrays in file: $(grep -c '"authors"' data/ga4.json || echo 'No authors found')"
+          echo "✅ Update complete"

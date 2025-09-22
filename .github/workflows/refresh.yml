@@ -58,8 +58,15 @@ jobs:
           SHEETS_ID: ${{ secrets.SHEETS_ID }}
           SHEETS_RANGE: ${{ secrets.SHEETS_RANGE }}
 
-      # --- WEX via WordPress REST (last 24h) ---
-      # Uses public WP API, no token. Pulls tag NAMES via _embed=1.
+      # --- WEX WordPress REST: quick smoke test (prints first ~800 chars) ---
+      - name: WEX curl smoke test
+        run: |
+          echo "GET $WEX_API_URL/wp-json/wp/v2/posts?per_page=5&_embed=1"
+          curl -sS -A "wex-analytics-dashboard/1.0" "$WEX_API_URL/wp-json/wp/v2/posts?per_page=5&_embed=1" | head -c 800
+        env:
+          WEX_API_URL: ${{ secrets.WEX_API_URL }}
+
+      # --- WEX via WordPress REST (last 24h, with fallbacks) ---
       - name: Fetch WEX (WP REST)
         run: |
           node scripts/fetch_wex.js \
@@ -67,10 +74,8 @@ jobs:
             --out data/topics.json \
             --sinceHours 24 \
             --path "/wp-json/wp/v2/posts" \
-            --sinceParam "after" \
             --pageParam "page" \
             --limitParam "per_page" \
-            --itemsKey "" \
             --embed \
             --debug
         env:

@@ -1,15 +1,16 @@
-name: Nightly Data Refresh (GA4 + Sheets)
+name: Nightly Data Refresh (GA4 + Sheets tab)
 
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: '10 11 * * *'
+    - cron: '10 11 * * *'   # runs daily ~11:10 UTC; adjust if you want
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,22 +31,33 @@ jobs:
         env:
           GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
 
-      - name: Fetch GA4
+      # --- GA4 ---
+      - name: Fetch GA4 (last 7 days, ending yesterday)
         run: |
-          node scripts/fetch_ga4.js --property $GA4_PROPERTY_ID --out data/ga4.json
+          node scripts/fetch_ga4.js \
+            --property $GA4_PROPERTY_ID \
+            --out data/ga4.json
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
 
-      - name: Fetch Sheets
+      # --- SHEETS (one tab only) ---
+      # Provide a secret SHEETS_RANGE like:  'Master - 2022'!A:Z
+      - name: Fetch Sheets (tab-specific)
         run: |
-          node scripts/fetch_sheets.js --sheet $SHEETS_ID --out data/sheets.json
+          node scripts/fetch_sheets.js \
+            --sheet $SHEETS_ID \
+            --range "$SHEETS_RANGE" \
+            --out data/sheets.json
         env:
           SHEETS_ID: ${{ secrets.SHEETS_ID }}
+          SHEETS_RANGE: ${{ secrets.SHEETS_RANGE }}
 
-      - name: Commit JSON output
+      # (Optional) Later we’ll add WEX + summarize steps here
+
+      - name: Commit JSON outputs
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add data/*.json
-          git commit -m "chore: GA4 + Sheets refresh" || echo "no changes"
+          git add data/*.json || true
+          git commit -m "chore: nightly data refresh" || echo "No changes"
           git push

@@ -5,41 +5,43 @@ import fetch from 'node-fetch';
 
 const argv = yargs(hideBin(process.argv))
   .option('api', { type: 'string', demandOption: true, desc: 'Base API URL, e.g. https://api.washingtonexaminer.com' })
-  .option('token', { type: 'string', demandOption: true, desc: 'Bearer token' })
   .option('out', { type: 'string', demandOption: true })
   .option('sinceHours', { type: 'number', default: 24 })
   .option('path', { type: 'string', default: '/articles', desc: 'Endpoint path if different' })
+  // OPTIONAL auth (only used if provided)
+  .option('token', { type: 'string', demandOption: false })
+  .option('headerName', { type: 'string', default: 'Authorization' })
+  .option('headerScheme', { type: 'string', default: 'Bearer' })
+  // OPTIONAL param names if your API differs
+  .option('sinceParam', { type: 'string', default: 'since' })
+  .option('fieldsParam', { type: 'string', default: 'fields' })
   .argv;
 
 /**
- * This script assumes an endpoint like:
+ * Expected shape (adjust via flags if needed):
  *   GET {api}{path}?since=ISO&limit=100&page=1&fields=title,slug,publishedAt,tags,authors,section
- * …and Authorization: Bearer <token>
- *
- * If your API uses different param names or headers, tweak buildUrl() or headers below.
+ * Returns array or {items|results|data: []}.
  */
 
 const FIELDS = 'title,slug,publishedAt,tags,authors,section';
 
-function buildUrl(base, path, sinceISO, page, limit = 100) {
+function buildUrl(base, path, sinceISO, page, limit, sinceParam, fieldsParam) {
   const u = new URL(path, base);
-  u.searchParams.set('since', sinceISO);
+  u.searchParams.set(sinceParam, sinceISO);
   u.searchParams.set('limit', String(limit));
   u.searchParams.set('page', String(page));
-  u.searchParams.set('fields', FIELDS);
+  u.searchParams.set(fieldsParam, FIELDS);
   return u.toString();
 }
 
 function normalizeTags(tags) {
   if (!tags) return [];
   if (Array.isArray(tags)) return tags.map(t => String(t).trim()).filter(Boolean);
-  // comma-separated string fallback
   return String(tags).split(',').map(t => t.trim()).filter(Boolean);
 }
-
 function normalizeAuthors(authors) {
   if (!authors) return [];
-  if (Array.isArray(authors)) return authors.map(a => (a.name || a).toString());
+  if (Array.isArray(authors)) return authors.map(a => (a?.name ?? a).toString());
   return String(authors).split(',').map(a => a.trim()).filter(Boolean);
 }
 
@@ -48,29 +50,27 @@ async function fetchAllSince() {
   const from = new Date(Date.now() - argv.sinceHours * 3600 * 1000);
   const fromISO = from.toISOString();
 
-  const headers = {
-    'Authorization': `Bearer ${argv.token}`,
-    'Accept': 'application/json'
-    // If your API wants X-API-Key instead, replace the line above with:
-    // 'X-API-Key': argv.token
-  };
+  const headers = { Accept: 'application/json' };
+  if (argv.token) {
+    // Only attach auth if provided
+    headers[argv.headerName] = argv.headerScheme
+      ? `${argv.headerScheme} ${argv.token}`
+      : argv.token;
+  }
 
   let page = 1;
   const all = [];
-  const MAX_PAGES = 20; // safety
-
+  const MAX_PAGES = 20;
   while (page <= MAX_PAGES) {
-    const url = buildUrl(argv.api, argv.path, fromISO, page, 100);
+    const url = buildUrl(argv.api, argv.path, fromISO, page, 100, argv.sinceParam, argv.fieldsParam);
     const res = await fetch(url, { headers });
     if (!res.ok) {
       const txt = await res.text().catch(() => '');
-      throw new Error(`WEX HTTP ${res.status} ${res.statusText}: ${txt.slice(0, 300)}`);
+      throw new Error(`WEX HTTP ${res.status} ${res.statusText} for ${url}\n${txt.slice(0, 300)}`);
     }
     const data = await res.json();
-
-    // Accept either {items: []} or array directly
     const items = Array.isArray(data) ? data : (data.items || data.results || data.data || []);
-    if (items.length === 0) break;
+    if (!items.length) break;
 
     for (const it of items) {
       const tags = normalizeTags(it.tags);
@@ -84,28 +84,22 @@ async function fetchAllSince() {
       });
     }
 
-    // stop if API indicates no more pages
     const total = (data.total || data.count || 0);
     const limit = (data.limit || 100);
     if (total && page * limit >= total) break;
-
-    // if returned fewer than limit, assume last page
     if (items.length < 100) break;
-
     page += 1;
   }
 
-  // Aggregate by tag
   const byTag = new Map();
   for (const a of all) {
-    if (!a.tags.length) continue;
     for (const t of a.tags) {
-      const key = t.toString().trim();
-      if (!byTag.has(key)) byTag.set(key, { name: key, count: 0, sampleTitles: new Set(), sections: new Set() });
-      const obj = byTag.get(key);
+      const key = String(t).trim();
+      const obj = byTag.get(key) || { name: key, count: 0, sampleTitles: new Set(), sections: new Set() };
       obj.count += 1;
       if (obj.sampleTitles.size < 3 && a.title) obj.sampleTitles.add(a.title);
       if (a.section) obj.sections.add(a.section);
+      byTag.set(key, obj);
     }
   }
 
@@ -124,7 +118,6 @@ async function fetchAllSince() {
     toISO,
     totalArticles: all.length,
     topics,
-    // keep a very small article list for debug/spot checks (titles only)
     sampleArticles: all.slice(0, 20).map(a => ({ title: a.title, publishedAt: a.publishedAt, section: a.section }))
   };
 }

@@ -3,79 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Analytics Assistant</title>
+  <title>Washington Examiner Analytics Assistant</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;display:flex;align-items:center;justify-content:center}
     .container{width:100%;max-width:980px;background:#fff;border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.15);overflow:hidden}
-    .header{padding:20px;border-bottom:1px solid #eee;background:#000;color:#fff}
+    .header{padding:20px;border-bottom:1px solid #eee;background:#000;color:#fff;display:flex;align-items:center;justify-content:space-between}
     .header img{height:28px}
+    .status{font-size:12px;padding:4px 8px;border-radius:12px;background:#333}
+    .status.online{background:#22c55e;color:#fff}
+    .status.offline{background:#ef4444;color:#fff}
     .chat{padding:20px;height:70vh;overflow:auto}
-    .bubble{background:#f1f3f4;border-radius:14px;padding:14px 16px;margin:10px 0;max-width:70%;line-height:1.5;white-space:pre-wrap}
+    .bubble{background:#f1f3f4;border-radius:14px;padding:14px 16px;margin:10px 0;max-width:85%;line-height:1.5;white-space:pre-wrap;font-size:14px}
     .me{margin-left:auto;background:#1971ff;color:#fff}
-    .sys{background:#f8f9ff}
+    .sys{background:#f8f9ff;border-left:4px solid #1971ff}
+    .error{background:#fee;border-left:4px solid #ef4444;color:#991b1b}
     .input{display:flex;gap:10px;padding:16px;border-top:1px solid #eee}
-    textarea{flex:1;padding:12px 14px;border:1px solid #ddd;border-radius:12px;min-height:48px;resize:vertical;font-size:16px}
-    button{width:56px;height:48px;border:none;border-radius:50%;background:#1971ff;color:#fff;font-size:18px;cursor:pointer}
+    textarea{flex:1;padding:12px 14px;border:1px solid #ddd;border-radius:12px;min-height:48px;resize:vertical;font-size:16px;font-family:inherit}
+    button{width:56px;height:48px;border:none;border-radius:50%;background:#1971ff;color:#fff;font-size:18px;cursor:pointer;transition:background 0.2s}
+    button:hover{background:#1557cc}
+    button:disabled{background:#ccc;cursor:not-allowed}
     .note{padding:8px 16px;color:#666;border-top:1px dashed #eee;font-size:12px;text-align:center}
+    .suggestions{padding:10px 20px;background:#f8f9ff;border-top:1px dashed #e5e7eb}
+    .suggestion-chip{display:inline-block;background:#e5e7eb;color:#374151;padding:4px 12px;border-radius:16px;font-size:12px;margin:2px 4px 2px 0;cursor:pointer;transition:background 0.2s}
+    .suggestion-chip:hover{background:#d1d5db}
+    .loading{opacity:0.7}
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" alt="Washington Examiner"/>
+      <div id="status" class="status offline">Checking...</div>
     </div>
-
     <div id="chat" class="chat">
-      <div class="bubble sys">👋 Hi! Ask about your data — try “show me yesterday KPIs”, “top referrers”, or “best performing authors”.</div>
+      <div class="bubble sys">👋 Hi! I'm your Washington Examiner analytics assistant. Ask me about KPIs, author performance, traffic sources, or trends!</div>
     </div>
-
+    <div class="suggestions">
+      <strong>Try asking:</strong>
+      <span class="suggestion-chip" onclick="askQuestion('Show me yesterday\\'s KPIs')">Yesterday's KPIs</span>
+      <span class="suggestion-chip" onclick="askQuestion('Top performing authors')">Top Authors</span>
+      <span class="suggestion-chip" onclick="askQuestion('Show me Asher Notheis performance')">Asher's Performance</span>
+      <span class="suggestion-chip" onclick="askQuestion('Traffic sources')">Traffic Sources</span>
+      <span class="suggestion-chip" onclick="askQuestion('Weekly trends')">Weekly Trends</span>
+    </div>
     <div class="input">
-      <textarea id="msg" placeholder="Ask about your analytics data…"></textarea>
+      <textarea id="msg" placeholder="Ask about your analytics data…" rows="1"></textarea>
       <button id="send">➤</button>
     </div>
-
-    <div class="note">Data refresh comes from <code>data/ga4.json</code>, <code>data/sheets.json</code>, <code>data/topics.json</code>.</div>
+    <div class="note">
+      Data refreshes daily from GA4. Last update from <code>data/ga4.json</code>
+    </div>
   </div>
 
   <script>
+    // UPDATE THIS URL TO YOUR ACTUAL CLOUDFLARE WORKER URL
     const BACKEND_URL = 'https://wex-analytics-bot.tshkurtaj.workers.dev/query';
-
+    
     const chat = document.getElementById('chat');
-    const msg  = document.getElementById('msg');
+    const msg = document.getElementById('msg');
     const send = document.getElementById('send');
+    const status = document.getElementById('status');
+    
+    let isLoading = false;
 
-    function add(text, me=false){
-      const b = document.createElement('div');
-      b.className = 'bubble' + (me ? ' me' : '');
-      b.textContent = text;
-      chat.appendChild(b);
+    // Auto-resize textarea
+    msg.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+    });
+
+    function addMessage(text, isUser = false, isError = false) {
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble' + (isUser ? ' me' : '') + (isError ? ' error' : '');
+      bubble.textContent = text;
+      chat.appendChild(bubble);
       chat.scrollTop = chat.scrollHeight;
     }
 
-    async function ask(){
-      const q = msg.value.trim();
-      if (!q) return;
-      add(q, true);
-      msg.value = '';
-      try{
-        const res = await fetch(BACKEND_URL, {
-          method:'POST',
-          headers:{'Content-Type':'application/json'},
-          body: JSON.stringify({ message: q })
-        });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        add(data.response || 'No response.');
-      }catch(e){
-        add('Error: ' + e.message);
+    function askQuestion(question) {
+      msg.value = question;
+      ask();
+    }
+
+    function setLoading(loading) {
+      isLoading = loading;
+      send.disabled = loading;
+      send.textContent = loading ? '⏳' : '➤';
+      if (loading) {
+        chat.classList.add('loading');
+      } else {
+        chat.classList.remove('loading');
       }
     }
 
+    function updateStatus(online) {
+      status.className = 'status ' + (online ? 'online' : 'offline');
+      status.textContent = online ? 'Online' : 'Offline';
+    }
+
+    async function checkHealth() {
+      try {
+        const response = await fetch(BACKEND_URL.replace('/query', '/health'), {
+          method: 'GET',
+          signal: AbortSignal.timeout(5000)
+        });
+        updateStatus(response.ok);
+      } catch (error) {
+        updateStatus(false);
+      }
+    }
+
+    async function ask() {
+      const question = msg.value.trim();
+      if (!question || isLoading) return;
+
+      addMessage(question, true);
+      msg.value = '';
+      msg.style.height = 'auto';
+      setLoading(true);
+
+      try {
+        const response = await fetch(BACKEND_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: question }),
+          signal: AbortSignal.timeout(30000) // 30 second timeout
+        });
+
+        if (!response.ok) {
+          throw new Error(`Server error: ${response.status} ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        addMessage(data.response || 'No response received.');
+        updateStatus(true);
+
+      } catch (error) {
+        console.error('Request failed:', error);
+        
+        let errorMessage = 'Sorry, I encountered an error: ';
+        if (error.name === 'AbortError') {
+          errorMessage += 'Request timed out. Please try again.';
+        } else if (error.message.includes('Failed to fetch')) {
+          errorMessage += 'Cannot connect to analytics service. Please check your connection.';
+        } else {
+          errorMessage += error.message;
+        }
+        
+        addMessage(errorMessage, false, true);
+        updateStatus(false);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    // Event listeners
     send.addEventListener('click', ask);
-    msg.addEventListener('keydown', e => {
-      if (e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); ask(); }
+    
+    msg.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey && !isLoading) {
+        e.preventDefault();
+        ask();
+      }
     });
+
+    // Initial health check
+    checkHealth();
+    
+    // Check health every 30 seconds
+    setInterval(checkHealth, 30000);
+
+    // Welcome message with actual suggestions
+    setTimeout(() => {
+      addMessage("💡 I can help you with:\n\n• Author performance (Asher Notheis, Anna Giaritelli, Adisa Hargett-Robinson)\n• Daily KPIs and metrics\n• Traffic source analysis\n• Weekly trends and comparisons\n\nJust ask me in plain English!");
+    }, 1500);
   </script>
 </body>
 </html>

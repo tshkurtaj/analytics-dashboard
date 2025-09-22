@@ -1,5 +1,6 @@
 // scripts/fetch_ga4.js
 // Build data/ga4.json with KPIs + authors + referrers per day
+
 import fs from 'fs/promises';
 import { readFileSync } from 'fs';
 import fetch from 'node-fetch';
@@ -15,15 +16,14 @@ const argv = Object.fromEntries(
 const PROPERTY_ID = argv.property || process.env.GA4_PROPERTY_ID;
 const SA_PATH     = argv.sa || './service-account.json';
 const OUT_PATH    = argv.out || 'data/ga4.json';
+const DAYS        = Number(argv.days || 7);
 
-// how many days of rows to keep (yesterday back)
-const DAYS = Number(argv.days || 7);
-
-// ---------- auth ----------
 if (!PROPERTY_ID) {
   console.error('Missing --property GA4 property id');
   process.exit(1);
 }
+
+// ---------- auth ----------
 const sa = JSON.parse(readFileSync(SA_PATH, 'utf8'));
 const jwt = new JWT({
   email: sa.client_email,
@@ -56,15 +56,10 @@ function ymd(d) {
   const day = String(d.getDate()).padStart(2, '0');
   return `${y}-${m}-${day}`;
 }
-function yyyymmdd(ymdStr) {
-  return ymdStr.replaceAll('-', '');
-}
 
 const today = new Date();
-const end = new Date(today);
-end.setDate(end.getDate() - 1);
-const start = new Date(end);
-start.setDate(start.getDate() - (DAYS - 1));
+const end = new Date(today); end.setDate(end.getDate() - 1);
+const start = new Date(end); start.setDate(start.getDate() - (DAYS - 1));
 
 const startYMD = ymd(start);
 const endYMD = ymd(end);
@@ -77,7 +72,7 @@ async function fetchKPIs() {
     metrics: [
       { name: 'totalUsers' },
       { name: 'newUsers' },
-      { name: 'screenPageViews' },  // GA4 metric; we’ll expose as "pageviews"
+      { name: 'screenPageViews' },  // expose as pageviews
       { name: 'sessions' },
       { name: 'bounceRate' },
       { name: 'averageSessionDuration' }
@@ -91,14 +86,12 @@ async function fetchReferrers() {
     dateRanges: [{ startDate: startYMD, endDate: endYMD }],
     dimensions: [{ name: 'date' }, { name: 'sessionSource' }],
     metrics: [{ name: 'totalUsers' }],
-    orderBys: [
-      { metric: { metricName: 'totalUsers' }, desc: true }
-    ],
+    orderBys: [{ metric: { metricName: 'totalUsers' }, desc: true }],
     limit: 5000
   });
 }
 
-// IMPORTANT: your custom dimension is event-scoped "authors" -> customEvent:authors
+// your custom dimension is event-scoped "authors" => customEvent:authors
 async function fetchAuthors() {
   return runReport({
     dateRanges: [{ startDate: startYMD, endDate: endYMD }],
@@ -107,9 +100,7 @@ async function fetchAuthors() {
       { name: 'totalUsers' },
       { name: 'screenPageViews' }
     ],
-    orderBys: [
-      { metric: { metricName: 'totalUsers' }, desc: true }
-    ],
+    orderBys: [{ metric: { metricName: 'totalUsers' }, desc: true }],
     limit: 50000
   });
 }
@@ -139,43 +130,39 @@ async function main() {
     fetchAuthors()
   ]);
 
-  // KPI rows by date
   const kpiRows = (kpis.rows || []).map(r => {
     const d = r.dimensionValues?.[0]?.value || '';
-    const m = (name) => r.metricValues?.find((_, i) => kpis.metricHeaders[i].name === name)?.value;
+    const g = (name) => {
+      const idx = kpis.metricHeaders.findIndex(h => h.name === name);
+      return idx >= 0 ? r.metricValues?.[idx]?.value : 0;
+    };
     return {
       date: d, // yyyymmdd
-      totalUsers: asNumber(m('totalUsers')),
-      newUsers: asNumber(m('newUsers')),
-      pageviews: asNumber(m('screenPageViews')),
-      sessions: asNumber(m('sessions')),
-      bounceRate: asNumber(m('bounceRate')),                    // 0.x
-      averageSessionDuration: asNumber(m('averageSessionDuration')) // seconds
+      totalUsers: asNumber(g('totalUsers')),
+      newUsers: asNumber(g('newUsers')),
+      pageviews: asNumber(g('screenPageViews')),
+      sessions: asNumber(g('sessions')),
+      bounceRate: asNumber(g('bounceRate')),
+      averageSessionDuration: asNumber(g('averageSessionDuration'))
     };
   });
 
-  // Referrers grouped by date
-  const refRows = refs.rows || [];
-  const refGrouped = groupBy(refRows, r => r.dimensionValues?.[0]?.value || '');
-  // Authors grouped by date
-  const authRows = auth.rows || [];
-  const authGrouped = groupBy(authRows, r => r.dimensionValues?.[0]?.value || '');
+  const refGrouped  = groupBy((refs.rows || []), r => r.dimensionValues?.[0]?.value || '');
+  const authGrouped = groupBy((auth.rows || []), r => r.dimensionValues?.[0]?.value || '');
 
   const rows = kpiRows.map(base => {
     const d = base.date;
 
-    // attach referrers
     const refForDay = (refGrouped.get(d) || []).map(r => {
       const source = r.dimensionValues?.[1]?.value || '(unknown)';
       const users  = asNumber(r.metricValues?.[0]?.value);
       return { source, users };
     }).sort((a,b) => b.users - a.users).slice(0, 10);
 
-    // attach authors
     const authForDay = (authGrouped.get(d) || []).map(r => {
       const author = r.dimensionValues?.[1]?.value || '(unknown)';
       const users  = asNumber(r.metricValues?.[0]?.value);
-      const views  = asNumber(r.metricValues?.[1]?.value); // screenPageViews
+      const views  = asNumber(r.metricValues?.[1]?.value);
       return { author, users, views };
     }).sort((a,b) => b.users - a.users).slice(0, 20);
 

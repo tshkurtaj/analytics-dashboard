@@ -1,9 +1,9 @@
-name: Nightly Data Refresh (stub)
+name: Nightly Data Refresh (GA4 test)
 
 on:
+  workflow_dispatch: {}
   schedule:
-    - cron: '10 11 * * *'   # runs daily ~11:10 UTC (adjust later)
-  workflow_dispatch: {}      # lets you run it manually now
+    - cron: '10 11 * * *'
 
 jobs:
   refresh:
@@ -14,15 +14,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update summaries.json timestamp
-        run: |
-          mkdir -p data
-          node -e "const fs=require('fs'); const obj={updatedAt:new Date().toISOString(), topTags:[], kpis:null}; fs.writeFileSync('data/summaries.json', JSON.stringify(obj,null,2));"
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-      - name: Commit JSON
+      - name: Install script deps
+        run: |
+          cd scripts
+          npm ci || npm i
+
+      - name: Restore Service Account JSON
+        run: |
+          echo "$GCP_SA_JSON" | base64 -d > scripts/sa.json
+        env:
+          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
+
+      - name: Fetch GA4
+        run: |
+          node scripts/fetch_ga4.js --property $GA4_PROPERTY_ID --out data/ga4.json
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+
+      - name: Commit JSON output
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add data/summaries.json
-          git commit -m "chore: refresh timestamp" || echo "no changes"
+          git add data/ga4.json
+          git commit -m "chore: GA4 refresh" || echo "no changes"
           git push

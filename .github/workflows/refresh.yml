@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+      GOOGLE_SHEETS_ID: ${{ secrets.GOOGLE_SHEETS_ID }}
 
     steps:
       - name: Checkout repo
@@ -349,7 +350,7 @@ jobs:
 
               fs.writeFileSync(path.join("data", "ga4.json"), JSON.stringify(output, null, 2));
               
-              console.log(`✅ COMPREHENSIVE SUCCESS!`);
+              console.log(`✅ GA4 SUCCESS!`);
               console.log(`📊 ${rows.length} days collected`);
               console.log(`👥 Authors: ${totalAuthorEntries} entries, ${uniqueAuthors.size} unique`);
               console.log(`📰 Articles: ${totalArticleEntries} entries (from pageTitle)`);
@@ -366,27 +367,171 @@ jobs:
           
           node scripts/fetch_ga4.cjs
 
+      - name: Fetch Google Sheets Production Data
+        run: |
+          cat > scripts/fetch_sheets.cjs <<'NODE'
+          const fs = require("fs");
+          const path = require("path");
+
+          const SHEET_ID = process.env.GOOGLE_SHEETS_ID || "1wHU4ZKWL5V2oMvUoZjpVhO8mFe1N4EcQPzO0hzKgI7o";
+          const SHEET_NAME = "Master - 2022";
+          
+          const csvUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
+
+          console.log('[SHEETS] Fetching content production data...');
+
+          async function fetchProductionData() {
+            try {
+              const response = await fetch(csvUrl);
+              if (!response.ok) {
+                throw new Error(`Failed to fetch sheets data: ${response.status}`);
+              }
+              
+              const csvText = await response.text();
+              const lines = csvText.split('\n');
+              const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim().toLowerCase());
+              
+              console.log(`[SHEETS] Headers found: ${headers.join(', ')}`);
+              
+              const labelIndex = headers.findIndex(h => h.includes('label') || h.includes('title') || h.includes('article'));
+              const authorIndex = headers.findIndex(h => h.includes('author') || h.includes('byline'));
+              const sectionIndex = headers.findIndex(h => h.includes('section'));
+              const dateIndex = headers.findIndex(h => h.includes('date') || h.includes('publish'));
+
+              console.log(`[SHEETS] Column indices - Label: ${labelIndex}, Author: ${authorIndex}, Section: ${sectionIndex}, Date: ${dateIndex}`);
+
+              if (labelIndex === -1 || dateIndex === -1) {
+                throw new Error('Could not find required columns (label/title and date)');
+              }
+
+              const articles = [];
+              const now = new Date();
+              const thirtyDaysAgo = new Date(now.getTime() - (30 * 24 * 60 * 60 * 1000));
+
+              for (let i = 1; i < lines.length && i < 1000; i++) {
+                try {
+                  const cells = lines[i].split(',').map(c => c.replace(/"/g, '').trim());
+                  
+                  if (cells.length <= Math.max(labelIndex, authorIndex, sectionIndex, dateIndex)) {
+                    continue;
+                  }
+
+                  const title = cells[labelIndex] || '';
+                  const author = authorIndex >= 0 ? (cells[authorIndex] || '') : 'Unknown';
+                  const section = sectionIndex >= 0 ? (cells[sectionIndex] || '') : 'General';
+                  const dateStr = cells[dateIndex] || '';
+
+                  if (!title || !dateStr || title.length < 5) {
+                    continue;
+                  }
+
+                  let articleDate;
+                  try {
+                    articleDate = new Date(dateStr);
+                    if (isNaN(articleDate.getTime())) {
+                      continue;
+                    }
+                  } catch (error) {
+                    continue;
+                  }
+
+                  if (articleDate >= thirtyDaysAgo && articleDate <= now) {
+                    articles.push({
+                      title: title.trim(),
+                      author: author.trim() || 'Unknown',
+                      section: section.trim() || 'General',
+                      date: articleDate.toISOString(),
+                      dateStr: articleDate.toISOString().split('T')[0]
+                    });
+                  }
+                } catch (rowError) {
+                  continue; // Skip problematic rows
+                }
+              }
+
+              console.log(`[SHEETS] Processed ${articles.length} recent articles`);
+
+              const dailyProduction = {};
+              const authorProduction = {};
+              const sectionProduction = {};
+
+              articles.forEach(article => {
+                const dateKey = article.dateStr;
+                
+                if (!dailyProduction[dateKey]) {
+                  dailyProduction[dateKey] = {
+                    date: dateKey,
+                    totalArticles: 0,
+                    authors: {},
+                    sections: {}
+                  };
+                }
+                dailyProduction[dateKey].totalArticles++;
+                
+                if (!authorProduction[article.author]) {
+                  authorProduction[article.author] = 0;
+                }
+                authorProduction[article.author]++;
+                dailyProduction[dateKey].authors[article.author] = (dailyProduction[dateKey].authors[article.author] || 0) + 1;
+                
+                if (!sectionProduction[article.section]) {
+                  sectionProduction[article.section] = 0;
+                }
+                sectionProduction[article.section]++;
+                dailyProduction[dateKey].sections[article.section] = (dailyProduction[dateKey].sections[article.section] || 0) + 1;
+              });
+
+              const productionData = {
+                updatedAt: new Date().toISOString(),
+                totalArticles: articles.length,
+                dateRange: {
+                  start: thirtyDaysAgo.toISOString().split('T')[0],
+                  end: now.toISOString().split('T')[0]
+                },
+                dailyProduction: Object.values(dailyProduction).sort((a, b) => a.date.localeCompare(b.date)),
+                topAuthors: Object.entries(authorProduction)
+                  .sort((a, b) => b[1] - a[1])
+                  .slice(0, 20)
+                  .map(([author, count]) => ({ author, articles: count })),
+                topSections: Object.entries(sectionProduction)
+                  .sort((a, b) => b[1] - a[1])
+                  .slice(0, 15)
+                  .map(([section, count]) => ({ section, articles: count }))
+              };
+
+              fs.writeFileSync(path.join("data", "sheets.json"), JSON.stringify(productionData, null, 2));
+              console.log(`[SHEETS] ✅ SUCCESS! ${articles.length} articles, ${Object.keys(authorProduction).length} authors, ${Object.keys(sectionProduction).length} sections`);
+
+            } catch (error) {
+              console.error(`[SHEETS] Error: ${error.message}`);
+              fs.writeFileSync(path.join("data", "sheets.json"), JSON.stringify({
+                updatedAt: new Date().toISOString(),
+                error: error.message,
+                totalArticles: 0,
+                dailyProduction: [],
+                topAuthors: [],
+                topSections: []
+              }, null, 2));
+            }
+          }
+
+          fetchProductionData();
+          NODE
+          
+          node scripts/fetch_sheets.cjs
+
       - name: Commit updated data
         run: |
-          echo "Updating comprehensive GA4 data with fixed articles..."
+          echo "Updating comprehensive data - GA4 + Google Sheets..."
           
-          echo "File size: $(wc -c < data/ga4.json) bytes"
-          echo "Content summary:"
-          grep -c '"authors"' data/ga4.json || echo "No authors"
-          grep -c '"articles"' data/ga4.json || echo "No articles"  
-          grep -c '"sections"' data/ga4.json || echo "No sections"
+          echo "GA4 file size: $(wc -c < data/ga4.json) bytes"
+          echo "Sheets file size: $(wc -c < data/sheets.json) bytes"
           
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           
-          if command -v jq >/dev/null 2>&1; then
-            temp_file=$(mktemp)
-            jq --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ)" '.updatedAt = $timestamp' data/ga4.json > "$temp_file"
-            mv "$temp_file" data/ga4.json
-          fi
-          
-          git add data/ga4.json
-          git commit -m "data: fixed articles collection - authors, articles, sections ($(date '+%Y-%m-%d %H:%M:%S UTC'))" || echo "Nothing to commit"
+          git add data/ga4.json data/sheets.json
+          git commit -m "data: comprehensive update - GA4 performance + Sheets production ($(date '+%Y-%m-%d %H:%M:%S UTC'))" || echo "Nothing to commit"
           git push || echo "Nothing to push"
           
-          echo "✅ Update complete with fixed articles collection"
+          echo "✅ Update complete - both GA4 and Sheets data"

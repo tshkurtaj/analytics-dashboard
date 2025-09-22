@@ -1,4 +1,4 @@
-name: Nightly Data Refresh (GA4 test)
+name: Nightly Data Refresh (GA4 + Sheets)
 
 on:
   workflow_dispatch: {}
@@ -36,10 +36,16 @@ jobs:
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
 
+      - name: Fetch Sheets
+        run: |
+          node scripts/fetch_sheets.js --sheet $SHEETS_ID --out data/sheets.json
+        env:
+          SHEETS_ID: ${{ secrets.SHEETS_ID }}
+
       - name: Commit JSON output
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add data/ga4.json
-          git commit -m "chore: GA4 refresh" || echo "no changes"
+          git add data/*.json
+          git commit -m "chore: GA4 + Sheets refresh" || echo "no changes"
           git push

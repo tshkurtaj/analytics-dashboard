@@ -1,383 +1,555 @@
-name: Refresh GA4 (daily + manual)
+// Washington Examiner Analytics Dashboard Worker - Complete Version
+export default {
+  async fetch(request, env, ctx) {
+    const corsHeaders = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    };
 
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: "15 7 * * *"  # daily 07:15 UTC
+    if (request.method === 'OPTIONS') {
+      return new Response(null, { headers: corsHeaders });
+    }
 
-permissions:
-  contents: write
+    if (request.method !== 'POST') {
+      return new Response('Method not allowed', { status: 405, headers: corsHeaders });
+    }
 
-jobs:
-  refresh:
-    runs-on: ubuntu-latest
-    env:
-      GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+    try {
+      const { message } = await request.json();
+      
+      const dataUrl = 'https://raw.githubusercontent.com/tshkurtaj/analytics-dashboard/main/data/ga4.json';
+      const dataResponse = await fetch(dataUrl, {
+        headers: {
+          'User-Agent': 'WashingtonExaminer-Analytics-Bot/1.0',
+          'Cache-Control': 'no-cache'
+        }
+      });
+      
+      if (!dataResponse.ok) {
+        throw new Error(`Failed to fetch analytics data: ${dataResponse.status}`);
+      }
+      
+      const data = await dataResponse.json();
+      const response = await processWEXQuery(message, data);
+      
+      return new Response(JSON.stringify({ response }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+      });
+      
+    } catch (error) {
+      console.error('Analytics Worker error:', error);
+      return new Response(JSON.stringify({ 
+        response: `I'm having trouble accessing the analytics data. Error: ${error.message}` 
+      }), {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+      });
+    }
+  }
+};
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+async function processWEXQuery(query, data) {
+  const queryLower = query.toLowerCase();
+  
+  if (!data.rows || data.rows.length === 0) {
+    return "No analytics data available.";
+  }
+  
+  const latestData = data.rows[data.rows.length - 1];
+  const allData = data.rows;
+  
+  // Article/Story queries
+  if (queryLower.includes('article') || queryLower.includes('story') || 
+      queryLower.includes('stories') || queryLower.includes('content')) {
+    return handleArticleQueries(queryLower, allData, latestData);
+  }
+  
+  // Section queries
+  if (queryLower.includes('section') || queryLower.includes('category') || 
+      queryLower.includes('topic')) {
+    return handleSectionQueries(queryLower, allData, latestData);
+  }
+  
+  // Author queries
+  if (queryLower.includes('author') || queryLower.includes('writer') || 
+      queryLower.includes('asher') || queryLower.includes('jenny') || 
+      queryLower.includes('molly') || queryLower.includes('lauren')) {
+    return handleAuthorQueries(queryLower, allData, latestData);
+  }
+  
+  // KPI queries
+  if (queryLower.includes('kpi') || queryLower.includes('yesterday') || 
+      queryLower.includes('metrics') || queryLower.includes('performance')) {
+    return handleKPIQueries(queryLower, latestData, allData);
+  }
+  
+  // Traffic queries
+  if (queryLower.includes('referrer') || queryLower.includes('traffic') || 
+      queryLower.includes('source')) {
+    return handleTrafficQueries(queryLower, latestData, allData);
+  }
+  
+  // Trend queries
+  if (queryLower.includes('trend') || queryLower.includes('week') || 
+      queryLower.includes('daily') || queryLower.includes('compare')) {
+    return handleTrendQueries(queryLower, allData);
+  }
+  
+  return handleOverviewQuery(latestData, allData, data);
+}
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+function handleArticleQueries(query, allData, latestData) {
+  const hasArticleData = allData.some(day => day.articles && day.articles.length > 0);
+  if (!hasArticleData) {
+    return "No article performance data available. This might indicate that article tracking needs to be configured in GA4.";
+  }
+  
+  // Yesterday's top articles
+  if (query.includes('yesterday') || query.includes('today')) {
+    return getYesterdayArticles(latestData);
+  }
+  
+  // Top performing articles over time
+  if (query.includes('top') || query.includes('best') || query.includes('performing')) {
+    return getTopArticles(allData);
+  }
+  
+  return getArticleOverview(allData, latestData);
+}
 
-      - name: Create package.json
-        run: |
-          test -f package.json || npm init -y
-          npm pkg set type=commonjs
+function getYesterdayArticles(latestData) {
+  if (!latestData.articles || latestData.articles.length === 0) {
+    return "No article performance data available for yesterday.";
+  }
+  
+  const date = latestData.date;
+  const formattedDate = `${date.slice(4,6)}/${date.slice(6,8)}/${date.slice(0,4)}`;
+  
+  let response = `📰 **Top Articles Yesterday** (${formattedDate})\n\n`;
+  
+  latestData.articles.slice(0, 10).forEach((article, index) => {
+    const users = parseInt(article.users) || 0;
+    const views = parseInt(article.views) || 0;
+    response += `${index + 1}. **${article.title}**\n`;
+    response += `   👥 ${users.toLocaleString()} users\n`;
+    response += `   📄 ${views.toLocaleString()} views\n\n`;
+  });
+  
+  return response;
+}
 
-      - name: Install deps
-        run: npm i --no-fund --no-audit @google-analytics/data@^5.0.4
+function getTopArticles(allData) {
+  const articleAggregates = {};
+  
+  for (const day of allData) {
+    if (!day.articles) continue;
+    
+    for (const article of day.articles) {
+      if (!articleAggregates[article.title]) {
+        articleAggregates[article.title] = {
+          title: article.title,
+          totalUsers: 0,
+          totalViews: 0,
+          appearances: 0
+        };
+      }
+      
+      articleAggregates[article.title].totalUsers += parseInt(article.users) || 0;
+      articleAggregates[article.title].totalViews += parseInt(article.views) || 0;
+      articleAggregates[article.title].appearances += 1;
+    }
+  }
+  
+  const topArticles = Object.values(articleAggregates)
+    .sort((a, b) => b.totalUsers - a.totalUsers)
+    .slice(0, 8);
+  
+  if (topArticles.length === 0) {
+    return "No article performance data found.";
+  }
+  
+  let response = `🏆 **Top Performing Articles** (7-day period)\n\n`;
+  
+  topArticles.forEach((article, index) => {
+    response += `${index + 1}. **${article.title}**\n`;
+    response += `   👥 ${article.totalUsers.toLocaleString()} total users\n`;
+    response += `   📄 ${article.totalViews.toLocaleString()} total views\n\n`;
+  });
+  
+  return response;
+}
 
-      - name: Decode GCP service account key
-        run: |
-          mkdir -p .secrets
-          echo '${{ secrets.GCP_SA_JSON }}' | base64 -d > .secrets/gcp.json
-          echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/.secrets/gcp.json" >> $GITHUB_ENV
+function getArticleOverview(allData, latestData) {
+  const totalArticleEntries = allData.reduce((sum, day) => sum + (day.articles?.length || 0), 0);
+  
+  let response = `📰 **Article Performance Overview**\n\n`;
+  response += `📊 **Stats:**\n`;
+  response += `• Total article entries: ${totalArticleEntries}\n`;
+  response += `• Data period: ${allData.length} days\n\n`;
+  
+  if (latestData.articles && latestData.articles.length > 0) {
+    response += `📅 **Yesterday's Top 3 Articles:**\n`;
+    latestData.articles.slice(0, 3).forEach((article, i) => {
+      const title = article.title.length > 60 ? article.title.substring(0, 57) + "..." : article.title;
+      response += `${i + 1}. ${title} - ${parseInt(article.users).toLocaleString()} users\n`;
+    });
+  }
+  
+  return response;
+}
 
-      - name: Build GA4 JSON (Complete Washington Examiner Data)
-        run: |
-          mkdir -p scripts data
-          cat > scripts/fetch_ga4.cjs <<'NODE'
-          const fs = require("fs");
-          const path = require("path");
-          const { BetaAnalyticsDataClient } = require("@google-analytics/data");
+function handleSectionQueries(query, allData, latestData) {
+  const hasSectionData = allData.some(day => day.sections && day.sections.length > 0);
+  if (!hasSectionData) {
+    return "No section performance data available. This might indicate that section tracking needs to be configured.";
+  }
+  
+  // Yesterday's section performance
+  if (query.includes('yesterday') || query.includes('today')) {
+    return getYesterdaySections(latestData);
+  }
+  
+  // Top sections over time
+  if (query.includes('top') || query.includes('best') || query.includes('performing')) {
+    return getTopSections(allData);
+  }
+  
+  return getSectionOverview(allData, latestData);
+}
 
-          const propertyId = process.env.GA4_PROPERTY_ID;
-          if (!propertyId) throw new Error("Missing GA4_PROPERTY_ID");
-          const client = new BetaAnalyticsDataClient();
+function getYesterdaySections(latestData) {
+  if (!latestData.sections || latestData.sections.length === 0) {
+    return "No section performance data available for yesterday.";
+  }
+  
+  const date = latestData.date;
+  const formattedDate = `${date.slice(4,6)}/${date.slice(6,8)}/${date.slice(0,4)}`;
+  
+  let response = `📁 **Top Sections Yesterday** (${formattedDate})\n\n`;
+  
+  latestData.sections.forEach((section, index) => {
+    const users = parseInt(section.users) || 0;
+    const views = parseInt(section.views) || 0;
+    response += `${index + 1}. **${section.section}**\n`;
+    response += `   👥 ${users.toLocaleString()} users\n`;
+    response += `   📄 ${views.toLocaleString()} views\n\n`;
+  });
+  
+  return response;
+}
 
-          const pad = n => String(n).padStart(2,"0");
-          const ymd = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
-          const yyyymmdd = d => `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}`;
+function getTopSections(allData) {
+  const sectionAggregates = {};
+  
+  for (const day of allData) {
+    if (!day.sections) continue;
+    
+    for (const section of day.sections) {
+      if (!sectionAggregates[section.section]) {
+        sectionAggregates[section.section] = {
+          name: section.section,
+          totalUsers: 0,
+          totalViews: 0,
+          appearances: 0
+        };
+      }
+      
+      sectionAggregates[section.section].totalUsers += parseInt(section.users) || 0;
+      sectionAggregates[section.section].totalViews += parseInt(section.views) || 0;
+      sectionAggregates[section.section].appearances += 1;
+    }
+  }
+  
+  const topSections = Object.values(sectionAggregates)
+    .sort((a, b) => b.totalUsers - a.totalUsers)
+    .slice(0, 8);
+  
+  if (topSections.length === 0) {
+    return "No section performance data found.";
+  }
+  
+  let response = `🏆 **Top Performing Sections** (7-day period)\n\n`;
+  
+  topSections.forEach((section, index) => {
+    const avgDaily = Math.round(section.totalUsers / section.appearances);
+    response += `${index + 1}. **${section.name}**\n`;
+    response += `   👥 ${section.totalUsers.toLocaleString()} total users\n`;
+    response += `   📄 ${section.totalViews.toLocaleString()} total views\n`;
+    response += `   📅 Active ${section.appearances}/7 days (${avgDaily.toLocaleString()} avg/day)\n\n`;
+  });
+  
+  return response;
+}
 
-          const now = new Date();
-          const end = new Date(now); end.setDate(end.getDate()-1);
-          const start = new Date(end); start.setDate(start.getDate()-6);
+function getSectionOverview(allData, latestData) {
+  const uniqueSections = new Set();
+  let totalSectionEntries = 0;
+  
+  for (const day of allData) {
+    if (day.sections) {
+      totalSectionEntries += day.sections.length;
+      day.sections.forEach(section => uniqueSections.add(section.section));
+    }
+  }
+  
+  let response = `📁 **Section Performance Overview**\n\n`;
+  response += `📊 **Stats:**\n`;
+  response += `• Unique sections tracked: ${uniqueSections.size}\n`;
+  response += `• Total section entries: ${totalSectionEntries}\n`;
+  response += `• Data period: ${allData.length} days\n\n`;
+  
+  if (latestData.sections && latestData.sections.length > 0) {
+    response += `📅 **Yesterday's Top 3 Sections:**\n`;
+    latestData.sections.slice(0, 3).forEach((section, i) => {
+      response += `${i + 1}. ${section.section} - ${parseInt(section.users).toLocaleString()} users\n`;
+    });
+  }
+  
+  return response;
+}
 
-          const startISO = ymd(start);
-          const endISO = ymd(end);
-          const property = `properties/${propertyId}`;
+function handleAuthorQueries(query, allData, latestData) {
+  const hasAuthorData = allData.some(day => day.authors && day.authors.length > 0);
+  if (!hasAuthorData) {
+    return "No author performance data available.";
+  }
+  
+  const authorNames = ['asher', 'jenny', 'molly', 'lauren', 'ross'];
+  const mentionedAuthor = authorNames.find(name => query.includes(name));
+  
+  if (mentionedAuthor) {
+    return getSpecificAuthorData(mentionedAuthor, allData);
+  }
+  
+  if (query.includes('yesterday') || query.includes('today')) {
+    return getYesterdayAuthors(latestData);
+  }
+  
+  if (query.includes('top') || query.includes('best')) {
+    return getTopAuthors(allData);
+  }
+  
+  return getAuthorOverview(allData, latestData);
+}
 
-          console.log(`[GA4] Fetching comprehensive data ${startISO} → ${endISO}`);
+function getSpecificAuthorData(authorName, allData) {
+  const authorMap = {};
+  let fullName = '';
+  
+  for (const day of allData) {
+    if (!day.authors) continue;
+    
+    for (const author of day.authors) {
+      const name = author.author.toLowerCase();
+      if (name.includes(authorName)) {
+        fullName = author.author;
+        if (!authorMap[day.date]) {
+          authorMap[day.date] = {
+            users: parseInt(author.users) || 0,
+            views: parseInt(author.views) || 0
+          };
+        }
+      }
+    }
+  }
+  
+  if (Object.keys(authorMap).length === 0) {
+    return `No recent data found for any author matching "${authorName}".`;
+  }
+  
+  const dates = Object.keys(authorMap).sort();
+  const totalUsers = Object.values(authorMap).reduce((sum, day) => sum + day.users, 0);
+  const totalViews = Object.values(authorMap).reduce((sum, day) => sum + day.views, 0);
+  
+  let response = `📝 **${fullName}** - Performance Report\n\n`;
+  response += `📊 **7-Day Summary:**\n`;
+  response += `• Total Users: ${totalUsers.toLocaleString()}\n`;
+  response += `• Total Views: ${totalViews.toLocaleString()}\n`;
+  response += `• Active Days: ${dates.length}/7\n\n`;
+  
+  response += `📅 **Recent Performance:**\n`;
+  dates.slice(-5).forEach(date => {
+    const day = authorMap[date];
+    const formattedDate = `${date.slice(4,6)}/${date.slice(6,8)}`;
+    response += `${formattedDate}: ${day.users.toLocaleString()} users, ${day.views.toLocaleString()} views\n`;
+  });
+  
+  return response;
+}
 
-          async function runReport(config) {
-            const [res] = await client.runReport({
-              property,
-              dateRanges: [{ startDate: startISO, endDate: endISO }],
-              ...config
-            });
-            return res;
-          }
+function getYesterdayAuthors(latestData) {
+  if (!latestData.authors || latestData.authors.length === 0) {
+    return "No author performance data available for yesterday.";
+  }
+  
+  let response = `📝 **Top Authors Yesterday**\n\n`;
+  
+  latestData.authors.slice(0, 8).forEach((author, index) => {
+    const users = parseInt(author.users) || 0;
+    const views = parseInt(author.views) || 0;
+    response += `${index + 1}. **${author.author}**\n`;
+    response += `   👥 ${users.toLocaleString()} users\n`;
+    response += `   📄 ${views.toLocaleString()} views\n\n`;
+  });
+  
+  return response;
+}
 
-          // KPIs
-          async function getDailyKPIs() {
-            console.log('[KPI] Fetching daily KPIs...');
-            const r = await runReport({
-              dimensions: [{ name: "date" }],
-              metrics: [
-                { name: "totalUsers" },
-                { name: "newUsers" },
-                { name: "screenPageViews" },
-                { name: "sessions" },
-                { name: "bounceRate" },
-                { name: "averageSessionDuration" }
-              ]
-            });
+function getTopAuthors(allData) {
+  const authorAggregates = {};
+  
+  for (const day of allData) {
+    if (!day.authors) continue;
+    
+    for (const author of day.authors) {
+      if (!authorAggregates[author.author]) {
+        authorAggregates[author.author] = {
+          name: author.author,
+          totalUsers: 0,
+          totalViews: 0,
+          appearances: 0
+        };
+      }
+      
+      authorAggregates[author.author].totalUsers += parseInt(author.users) || 0;
+      authorAggregates[author.author].totalViews += parseInt(author.views) || 0;
+      authorAggregates[author.author].appearances += 1;
+    }
+  }
+  
+  const topAuthors = Object.values(authorAggregates)
+    .sort((a, b) => b.totalUsers - a.totalUsers)
+    .slice(0, 8);
+  
+  let response = `🏆 **Top Performing Authors** (7-day period)\n\n`;
+  
+  topAuthors.forEach((author, index) => {
+    const avgDaily = Math.round(author.totalUsers / author.appearances);
+    response += `${index + 1}. **${author.name}**\n`;
+    response += `   👥 ${author.totalUsers.toLocaleString()} total users\n`;
+    response += `   📄 ${author.totalViews.toLocaleString()} total views\n`;
+    response += `   📅 ${author.appearances}/7 days (${avgDaily.toLocaleString()} avg/day)\n\n`;
+  });
+  
+  return response;
+}
 
-            const map = {};
-            for (const row of r.rows || []) {
-              const date = row.dimensionValues[0].value;
-              const m = row.metricValues;
-              map[date] = {
-                date,
-                totalUsers: parseInt(m[0].value),
-                newUsers: parseInt(m[1].value),
-                pageviews: parseInt(m[2].value),
-                sessions: parseInt(m[3].value),
-                bounceRate: parseFloat(m[4].value),
-                averageSessionDuration: parseFloat(m[5].value)
-              };
-            }
-            console.log(`[KPI] Found ${Object.keys(map).length} days`);
-            return map;
-          }
+function getAuthorOverview(allData, latestData) {
+  const uniqueAuthors = new Set();
+  let totalAuthorEntries = 0;
+  
+  for (const day of allData) {
+    if (day.authors) {
+      totalAuthorEntries += day.authors.length;
+      day.authors.forEach(author => uniqueAuthors.add(author.author));
+    }
+  }
+  
+  let response = `📝 **Author Performance Overview**\n\n`;
+  response += `📊 **Stats:**\n`;
+  response += `• Unique authors: ${uniqueAuthors.size}\n`;
+  response += `• Total entries: ${totalAuthorEntries}\n\n`;
+  
+  if (latestData.authors && latestData.authors.length > 0) {
+    response += `📅 **Yesterday's Top 3:**\n`;
+    latestData.authors.slice(0, 3).forEach((author, i) => {
+      response += `${i + 1}. ${author.author} - ${parseInt(author.users).toLocaleString()} users\n`;
+    });
+  }
+  
+  return response;
+}
 
-          // Referrers
-          async function getReferrers() {
-            console.log('[REF] Fetching referrers...');
-            const r = await runReport({
-              dimensions: [{ name: "date" }, { name: "firstUserSource" }],
-              metrics: [{ name: "totalUsers" }],
-              orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-              limit: 2000
-            });
+function handleKPIQueries(query, latestData, allData) {
+  const date = latestData.date;
+  const formattedDate = `${date.slice(4,6)}/${date.slice(6,8)}/${date.slice(0,4)}`;
+  
+  let response = `📊 **Washington Examiner Analytics** (${formattedDate})\n\n`;
+  
+  response += `**Key Metrics:**\n`;
+  response += `👥 Total Users: ${parseInt(latestData.totalUsers || 0).toLocaleString()}\n`;
+  response += `🆕 New Users: ${parseInt(latestData.newUsers || 0).toLocaleString()}\n`;
+  response += `📄 Page Views: ${parseInt(latestData.pageviews || 0).toLocaleString()}\n`;
+  response += `🔗 Sessions: ${parseInt(latestData.sessions || 0).toLocaleString()}\n`;
+  response += `⏱️ Avg Session: ${Math.round(parseFloat(latestData.averageSessionDuration || 0))}s\n`;
+  response += `📈 Bounce Rate: ${(parseFloat(latestData.bounceRate || 0) * 100).toFixed(1)}%\n\n`;
+  
+  if (allData.length > 1) {
+    const previousDay = allData[allData.length - 2];
+    const userChange = parseInt(latestData.totalUsers) - parseInt(previousDay.totalUsers || 0);
+    const viewChange = parseInt(latestData.pageviews) - parseInt(previousDay.pageviews || 0);
+    
+    response += `**Day-over-Day Change:**\n`;
+    response += `Users: ${userChange >= 0 ? '+' : ''}${userChange.toLocaleString()}\n`;
+    response += `Views: ${viewChange >= 0 ? '+' : ''}${viewChange.toLocaleString()}\n`;
+  }
+  
+  return response;
+}
 
-            const map = {};
-            for (const row of r.rows || []) {
-              const date = row.dimensionValues[0].value;
-              const source = row.dimensionValues[1].value;
-              const users = parseInt(row.metricValues[0].value);
-              
-              if (!map[date]) map[date] = [];
-              map[date].push({ source, users });
-            }
+function handleTrafficQueries(query, latestData, allData) {
+  if (!latestData.referrers || latestData.referrers.length === 0) {
+    return "No traffic source data available.";
+  }
+  
+  let response = `🌐 **Traffic Sources** (Yesterday)\n\n`;
+  
+  latestData.referrers.forEach((referrer, index) => {
+    const users = parseInt(referrer.users || 0);
+    response += `${index + 1}. **${referrer.source}** - ${users.toLocaleString()} users\n`;
+  });
+  
+  return response;
+}
 
-            for (const date of Object.keys(map)) {
-              map[date] = map[date].slice(0, 15);
-            }
-            
-            console.log(`[REF] Found ${Object.keys(map).length} days`);
-            return map;
-          }
+function handleTrendQueries(query, allData) {
+  if (allData.length < 2) {
+    return "Not enough data for trend analysis.";
+  }
+  
+  let response = `📈 **Trend Analysis** (7 days)\n\n`;
+  
+  response += `📅 **Daily Performance:**\n`;
+  allData.slice(-7).forEach(day => {
+    const date = `${day.date.slice(4,6)}/${day.date.slice(6,8)}`;
+    const users = parseInt(day.totalUsers || 0);
+    const views = parseInt(day.pageviews || 0);
+    response += `${date}: ${users.toLocaleString()} users, ${views.toLocaleString()} views\n`;
+  });
+  
+  return response;
+}
 
-          // Authors
-          async function getAuthors() {
-            console.log('[AUTHORS] Fetching author data...');
-            
-            try {
-              const r = await runReport({
-                dimensions: [{ name: "date" }, { name: "customEvent:authors" }],
-                metrics: [{ name: "totalUsers" }, { name: "screenPageViews" }],
-                orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-                limit: 5000
-              });
-
-              const map = {};
-              let validEntries = 0;
-
-              for (const row of r.rows || []) {
-                const date = row.dimensionValues[0].value;
-                const author = row.dimensionValues[1].value;
-                const users = parseInt(row.metricValues[0].value);
-                const views = parseInt(row.metricValues[1].value);
-
-                if (!author || author === "(not set)" || author.trim() === "" || users === 0) {
-                  continue;
-                }
-
-                if (!map[date]) map[date] = [];
-                map[date].push({ 
-                  author: author.trim(), 
-                  users: users.toString(), 
-                  views: views.toString() 
-                });
-                validEntries++;
-              }
-
-              for (const date of Object.keys(map)) {
-                map[date].sort((a, b) => parseInt(b.users) - parseInt(a.users));
-                map[date] = map[date].slice(0, 10);
-              }
-
-              console.log(`[AUTHORS] Success! ${validEntries} entries across ${Object.keys(map).length} days`);
-              return map;
-
-            } catch (error) {
-              console.log(`[AUTHORS] Error: ${error.message}`);
-              return {};
-            }
-          }
-
-          // Articles/Stories
-          async function getTopArticles() {
-            console.log('[ARTICLES] Fetching top articles...');
-            
-            try {
-              const r = await runReport({
-                dimensions: [{ name: "date" }, { name: "customEvent:articleTitle" }],
-                metrics: [{ name: "totalUsers" }, { name: "screenPageViews" }, { name: "sessions" }],
-                orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-                limit: 3000
-              });
-
-              const map = {};
-              let validEntries = 0;
-
-              for (const row of r.rows || []) {
-                const date = row.dimensionValues[0].value;
-                const title = row.dimensionValues[1].value;
-                const users = parseInt(row.metricValues[0].value);
-                const views = parseInt(row.metricValues[1].value);
-                const sessions = parseInt(row.metricValues[2].value);
-
-                if (!title || title === "(not set)" || title.length < 10 || users < 10) {
-                  continue;
-                }
-
-                const cleanTitle = title.trim();
-                if (!map[date]) map[date] = [];
-                map[date].push({ 
-                  title: cleanTitle.length > 120 ? cleanTitle.substring(0, 117) + "..." : cleanTitle,
-                  users: users.toString(), 
-                  views: views.toString(),
-                  sessions: sessions.toString()
-                });
-                validEntries++;
-              }
-
-              for (const date of Object.keys(map)) {
-                map[date].sort((a, b) => parseInt(b.users) - parseInt(a.users));
-                map[date] = map[date].slice(0, 15);
-              }
-
-              console.log(`[ARTICLES] Success! ${validEntries} entries across ${Object.keys(map).length} days`);
-              return map;
-
-            } catch (error) {
-              console.log(`[ARTICLES] Error: ${error.message}`);
-              return {};
-            }
-          }
-
-          // Sections Performance
-          async function getSections() {
-            console.log('[SECTIONS] Fetching section data...');
-            
-            try {
-              const r = await runReport({
-                dimensions: [{ name: "date" }, { name: "customEvent:section" }],
-                metrics: [{ name: "totalUsers" }, { name: "screenPageViews" }],
-                orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-                limit: 1000
-              });
-
-              const map = {};
-              let validEntries = 0;
-
-              for (const row of r.rows || []) {
-                const date = row.dimensionValues[0].value;
-                const section = row.dimensionValues[1].value;
-                const users = parseInt(row.metricValues[0].value);
-                const views = parseInt(row.metricValues[1].value);
-
-                if (!section || section === "(not set)" || section.trim() === "" || users === 0) {
-                  continue;
-                }
-
-                if (!map[date]) map[date] = [];
-                map[date].push({ 
-                  section: section.trim(), 
-                  users: users.toString(), 
-                  views: views.toString() 
-                });
-                validEntries++;
-              }
-
-              for (const date of Object.keys(map)) {
-                map[date].sort((a, b) => parseInt(b.users) - parseInt(a.users));
-                map[date] = map[date].slice(0, 10);
-              }
-
-              console.log(`[SECTIONS] Success! ${validEntries} entries across ${Object.keys(map).length} days`);
-              return map;
-
-            } catch (error) {
-              console.log(`[SECTIONS] Error: ${error.message}`);
-              return {};
-            }
-          }
-
-          async function main() {
-            try {
-              const [kpis, referrers, authors, articles, sections] = await Promise.all([
-                getDailyKPIs(),
-                getReferrers(),
-                getAuthors(),
-                getTopArticles(),
-                getSections()
-              ]);
-
-              const rows = [];
-              for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-                const dateKey = yyyymmdd(d);
-                
-                const dayData = {
-                  date: dateKey,
-                  totalUsers: kpis[dateKey]?.totalUsers || 0,
-                  newUsers: kpis[dateKey]?.newUsers || 0,
-                  pageviews: kpis[dateKey]?.pageviews || 0,
-                  sessions: kpis[dateKey]?.sessions || 0,
-                  bounceRate: kpis[dateKey]?.bounceRate || 0,
-                  averageSessionDuration: kpis[dateKey]?.averageSessionDuration || 0,
-                  referrers: referrers[dateKey] || [],
-                  authors: authors[dateKey] || [],
-                  articles: articles[dateKey] || [],
-                  sections: sections[dateKey] || []
-                };
-                
-                rows.push(dayData);
-              }
-
-              const totalAuthorEntries = rows.reduce((sum, row) => sum + row.authors.length, 0);
-              const totalArticleEntries = rows.reduce((sum, row) => sum + row.articles.length, 0);
-              const totalSectionEntries = rows.reduce((sum, row) => sum + row.sections.length, 0);
-              
-              const uniqueAuthors = new Set();
-              const uniqueSections = new Set();
-              rows.forEach(row => {
-                row.authors.forEach(a => uniqueAuthors.add(a.author));
-                row.sections.forEach(s => uniqueSections.add(s.section));
-              });
-
-              const output = {
-                updatedAt: new Date().toISOString(),
-                range: { start: startISO, end: endISO },
-                rows,
-                meta: {
-                  totalDays: rows.length,
-                  totalAuthorEntries,
-                  totalArticleEntries,
-                  totalSectionEntries,
-                  uniqueAuthors: uniqueAuthors.size,
-                  uniqueSections: uniqueSections.size,
-                  sampleAuthors: Array.from(uniqueAuthors).slice(0, 5),
-                  sampleSections: Array.from(uniqueSections).slice(0, 5)
-                }
-              };
-
-              fs.writeFileSync(path.join("data", "ga4.json"), JSON.stringify(output, null, 2));
-              
-              console.log(`✅ COMPREHENSIVE SUCCESS!`);
-              console.log(`📊 ${rows.length} days collected`);
-              console.log(`👥 ${totalAuthorEntries} author entries, ${uniqueAuthors.size} unique authors`);
-              console.log(`📰 ${totalArticleEntries} article entries`);
-              console.log(`📁 ${totalSectionEntries} section entries, ${uniqueSections.size} unique sections`);
-
-            } catch (error) {
-              console.error('❌ Fatal error:', error);
-              process.exit(1);
-            }
-          }
-
-          main();
-          NODE
-          
-          node scripts/fetch_ga4.cjs
-
-      - name: Commit updated data
-        run: |
-          echo "Updating comprehensive GA4 data..."
-          
-          echo "File size: $(wc -c < data/ga4.json) bytes"
-          echo "Content summary:"
-          grep -c '"authors"' data/ga4.json || echo "No authors"
-          grep -c '"articles"' data/ga4.json || echo "No articles"
-          grep -c '"sections"' data/ga4.json || echo "No sections"
-          
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          
-          if command -v jq >/dev/null 2>&1; then
-            temp_file=$(mktemp)
-            jq --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ)" '.updatedAt = $timestamp' data/ga4.json > "$temp_file"
-            mv "$temp_file" data/ga4.json
-          fi
-          
-          git add data/ga4.json
-          git commit -m "data: comprehensive update - authors, articles, sections ($(date '+%Y-%m-%d %H:%M:%S UTC'))" || echo "Nothing to commit"
-          git push || echo "Nothing to push"
-          
-          echo "✅ Update complete"
+function handleOverviewQuery(latestData, allData, data) {
+  const date = `${latestData.date.slice(4,6)}/${latestData.date.slice(6,8)}`;
+  
+  let response = `📊 **Washington Examiner Analytics Overview**\n\n`;
+  response += `📅 **Latest Data:** ${date}\n`;
+  response += `👥 **Users:** ${parseInt(latestData.totalUsers || 0).toLocaleString()}\n`;
+  response += `📄 **Views:** ${parseInt(latestData.pageviews || 0).toLocaleString()}\n\n`;
+  
+  const authorCount = latestData.authors?.length || 0;
+  const articleCount = latestData.articles?.length || 0;
+  const sectionCount = latestData.sections?.length || 0;
+  
+  if (authorCount > 0) {
+    response += `✍️ **Top Author:** ${latestData.authors[0].author}\n`;
+  }
+  if (articleCount > 0) {
+    const topTitle = latestData.articles[0].title;
+    const shortTitle = topTitle.length > 50 ? topTitle.substring(0, 47) + "..." : topTitle;
+    response += `📰 **Top Article:** ${shortTitle}\n`;
+  }
+  if (sectionCount > 0) {
+    response += `📁 **Top Section:** ${latestData.sections[0].section}\n`;
+  }
+  
+  response += `\n💬 **Try asking:**\n`;
+  response += `• "Top stories yesterday"\n`;
+  response += `• "Best performing sections"\n`;
+  response += `• "Show me Lauren Green's performance"\n`;
+  response += `• "What were yesterday's KPIs?"\n`;
+  
+  return response;
+}

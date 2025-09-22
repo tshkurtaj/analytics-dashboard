@@ -6,9 +6,9 @@
  *
  * Writes: data/ga4.json
  *
- * Requires:
- *   env.GA4_PROPERTY_ID
- *   env.GOOGLE_APPLICATION_CREDENTIALS (set by the workflow from sa.json)
+ * Requires env:
+ *   GA4_PROPERTY_ID
+ *   GOOGLE_APPLICATION_CREDENTIALS (set by the workflow from sa.json)
  */
 
 const fs = require('fs');
@@ -52,7 +52,7 @@ async function runReport(request) {
 }
 
 async function fetchDailyKpis(startDate, endDate) {
-  // GA4 uses "screenPageViews" as the page view metric (map to pageviews).
+  // Use screenPageViews to represent pageviews.
   const resp = await runReport({
     dateRanges: [{ startDate, endDate }],
     dimensions: [{ name: 'date' }],
@@ -95,9 +95,8 @@ async function fetchTopReferrers(forDate, limit = 10) {
   }));
 }
 
-async function fetchTopAuthors(forDate, limit = 20) {
-  // Custom event parameter dimension (event-scoped): "customEvent:authors"
-  // If your param name is different, change it here.
+async function fetchTopAuthors(forDate, limit = 50) {
+  // Your GA4 custom event param (event-scoped)
   const AUTHOR_DIM = 'customEvent:authors';
 
   const resp = await runReport({
@@ -105,13 +104,13 @@ async function fetchTopAuthors(forDate, limit = 20) {
     dimensions: [{ name: AUTHOR_DIM }],
     metrics: [
       { name: 'totalUsers' },
-      { name: 'screenPageViews' }, // we call it "views" in output to match the app expectation
+      { name: 'screenPageViews' }, // we output as "views"
     ],
     dimensionFilter: {
       filter: {
         fieldName: AUTHOR_DIM,
         stringFilter: { value: '(not set)', matchType: 'EXACT', caseSensitive: false },
-        notExpression: true, // exclude (not set)
+        notExpression: true, // exclude "(not set)"
       },
     },
     orderBys: [{ metric: { metricName: 'totalUsers' }, desc: true }],
@@ -153,6 +152,13 @@ async function main() {
   }
 
   if (kpiRows.length) {
+    // convert all date strings to yyyymmdd for consistency with your site
+    kpiRows.forEach(r => {
+      if (/^\d{4}-\d{2}-\d{2}$/.test(r.date)) {
+        r.date = r.date.replaceAll('-', '');
+      }
+    });
+
     kpiRows[kpiRows.length - 1].authors = authors;
     kpiRows[kpiRows.length - 1].referrers = referrers;
   }
@@ -166,8 +172,6 @@ async function main() {
   const outPath = path.join(process.cwd(), 'data', 'ga4.json');
   fs.writeFileSync(outPath, JSON.stringify(out, null, 2));
   console.log(`Wrote ${outPath} (rows=${kpiRows.length})`);
-
-  // Helpful console lines for your Action logs:
   console.log(`Authors probe (yesterday): ${authors.length} rows`);
   console.log(`Referrers probe (yesterday): ${referrers.length} rows`);
 }

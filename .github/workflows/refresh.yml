@@ -3,10 +3,10 @@ name: Refresh GA4 (daily + manual)
 on:
   workflow_dispatch: {}          # <-- this makes the "Run workflow" button appear
   schedule:
-    - cron: "20 07 * * *"        # run daily @ 07:20 UTC (adjust if you like)
+    - cron: "20 07 * * *"        # run daily @ 07:20 UTC (change if you want)
 
 permissions:
-  contents: write                # needed to commit data changes
+  contents: write
 
 jobs:
   refresh:
@@ -23,7 +23,7 @@ jobs:
           node-version: "20.x"
           cache: npm
 
-      # Create a minimal package.json so npm install works and CommonJS is used.
+      # Create a minimal package.json and force CommonJS so node can require() .cjs cleanly
       - name: Ensure package.json exists
         run: |
           if [ ! -f package.json ]; then
@@ -49,7 +49,6 @@ EOF
           GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
         run: |
           mkdir -p .secrets
-          # Secret is base64-encoded JSON
           echo "$GCP_SA_JSON" | base64 --decode > .secrets/gcp.json
           test -s .secrets/gcp.json || (echo "GCP key missing/empty" && exit 1)
 
@@ -61,8 +60,7 @@ EOF
           mkdir -p data
           node scripts/fetch_ga4.cjs
 
-      # (Optional) If your workflow also writes sheets.json/topics.json,
-      # keep those steps here as you had them.
+      # If you also build sheets.json/topics.json, keep those steps here.
 
       - name: Commit updated data
         run: |

@@ -216,7 +216,7 @@ jobs:
                 const views = parseInt(row.metricValues[1].value);
 
                 if (!title || title === "(not set)" || title === "Home" || 
-                    title.length < 10 || users < 100) {
+                    title.length < 10 || users < 10) {
                   continue;
                 }
 

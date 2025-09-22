@@ -26,4 +26,355 @@
       background:#fff; border:1px solid #dee2e6; border-radius:8px; padding:12px 8px;
       font-size:13px; color:#495057; cursor:pointer; transition:all .2s; text-align:center;
     }
-    .action-btn:hover { back
+    .action-btn:hover { background:#e9ecef; transform:translateY(-1px); }
+
+    /* ======== NEW: data panels ======== */
+    .panel { padding:20px; border-bottom:1px solid #e9ecef; }
+    .panel h3 { font-size:16px; margin-bottom:10px; color:#495057; }
+    .hint { color:#6c757d; font-size:12px; margin-bottom:10px; }
+    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
+    .card {
+      background:#f8f9fa; border:1px solid #e9ecef; border-radius:10px; padding:10px;
+    }
+    .kpi {
+      background:#fff; border:1px solid #e9ecef; border-radius:10px; padding:12px;
+      display:flex; flex-direction:column; gap:6px;
+    }
+    .kpi .label { font-size:12px; color:#6c757d; }
+    .kpi .value { font-size:18px; font-weight:700; }
+    .small { font-size:12px; color:#6c757d; }
+
+    .list { display:flex; flex-direction:column; gap:8px; }
+    .article {
+      border:1px solid #e9ecef; border-radius:10px; padding:10px; background:#fff;
+    }
+    .article .title { font-weight:600; font-size:14px; margin-bottom:4px; }
+    .article .meta { font-size:12px; color:#6c757d; }
+
+    .pill {
+      display:inline-block; padding:4px 8px; border-radius:999px;
+      background:#f1f3f4; border:1px solid #e9ecef; font-size:12px; color:#495057;
+    }
+
+    /* ======== chat (unchanged) ======== */
+    .chat-container { flex:1; padding:20px; overflow-y:auto; }
+    .message { margin-bottom:15px; animation:fadeIn .3s ease-in; }
+    .message.user { text-align:right; }
+    .message.assistant { text-align:left; }
+    .message-bubble { display:inline-block; max-width:85%; padding:12px 16px; border-radius:18px; font-size:14px; line-height:1.4; }
+    .message.user .message-bubble { background:#007bff; color:#fff; border-bottom-right-radius:4px; }
+    .message.assistant .message-bubble { background:#f1f3f4; color:#333; border-bottom-left-radius:4px; }
+    .input-container { padding:20px; background:#fff; border-top:1px solid #e9ecef; }
+    .input-row { display:flex; gap:10px; align-items:flex-end; }
+    .input-field {
+      flex:1; border:1px solid #dee2e6; border-radius:20px; padding:12px 16px; font-size:14px; outline:none;
+      transition:border-color .2s; resize:none; min-height:44px; max-height:100px; font-family:inherit;
+    }
+    .input-field:focus { border-color:#007bff; }
+    .send-btn { background:#007bff; color:#fff; border:none; border-radius:50%; width:44px; height:44px; cursor:pointer;
+      transition:all .2s; display:flex; align-items:center; justify-content:center; font-size:18px; }
+    .send-btn:hover { background:#0056b3; transform:scale(1.05); }
+    .send-btn:disabled { background:#6c757d; cursor:not-allowed; transform:none; }
+    .loading { display:flex; align-items:center; gap:8px; color:#6c757d; font-size:14px; }
+    .typing-indicator { display:flex; gap:2px; }
+    .dot { width:6px; height:6px; background:#6c757d; border-radius:50%; animation:typing 1.4s infinite; }
+    .dot:nth-child(2){ animation-delay:.2s; } .dot:nth-child(3){ animation-delay:.4s; }
+    @keyframes typing { 0%,60%,100%{ transform:translateY(0);} 30%{ transform:translateY(-10px);} }
+    @keyframes fadeIn { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+
+    .error-message { background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; border-radius:8px; padding:12px; margin:10px 0; font-size:14px; }
+    .response-content { white-space:pre-wrap; line-height:1.5; }
+
+    /* PWA */
+    .install-prompt { background:#fff3cd; color:#856404; padding:12px 20px; text-align:center; font-size:13px; display:none; }
+    .install-btn { background:#007bff; color:#fff; border:none; padding:6px 12px; border-radius:4px; font-size:12px; margin-left:8px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="install-prompt" id="installPrompt">
+      Add to home screen for quick access
+      <button class="install-btn" id="installBtn">Install</button>
+    </div>
+
+    <div class="header">
+      <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" alt="Washington Examiner" class="header-logo">
+      <h1>Analytics Assistant</h1>
+      <p>Ask questions about your data</p>
+    </div>
+
+    <div class="quick-actions">
+      <h3>Quick Actions</h3>
+      <div class="action-buttons">
+        <button class="action-btn" onclick="sendQuickMessage('show me yesterday kpis')">Yesterday's KPIs</button>
+        <button class="action-btn" onclick="sendQuickMessage('top 10 articles this week')">Top Articles</button>
+        <button class="action-btn" onclick="sendQuickMessage('how many users today')">Today's Users</button>
+        <button class="action-btn" onclick="sendQuickMessage('best performing authors')">Top Authors</button>
+      </div>
+    </div>
+
+    <!-- NEW: Topics panel -->
+    <div class="panel" id="topicsPanel">
+      <h3>Top Topics (last 24h)</h3>
+      <div class="hint small" id="topicsMeta"></div>
+      <div id="topicsList" class="grid-2"></div>
+    </div>
+
+    <!-- NEW: GA4 KPIs -->
+    <div class="panel" id="kpisPanel">
+      <h3>Yesterday’s KPIs</h3>
+      <div class="hint small" id="kpisMeta"></div>
+      <div id="kpisGrid" class="grid-2"></div>
+    </div>
+
+    <!-- NEW: Latest Articles from Sheets -->
+    <div class="panel" id="articlesPanel">
+      <h3>Latest Articles</h3>
+      <div class="hint small" id="articlesMeta"></div>
+      <div class="list" id="articlesList"></div>
+    </div>
+
+    <!-- chat (kept; will work if you point API_ENDPOINT to your worker) -->
+    <div class="chat-container" id="chatContainer">
+      <div class="message assistant">
+        <div class="message-bubble">
+          👋 Hi! I'm your analytics assistant. Ask me anything about your website data - like "show me yesterday's traffic" or "top articles this week".
+        </div>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <div class="input-row">
+        <textarea class="input-field" id="messageInput" placeholder="Ask about your analytics data..." rows="1"></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ========= CONFIG ========= */
+    // When your Cloudflare Worker is ready, put its URL here:
+    const API_ENDPOINT = ''; // e.g. 'https://your-worker.your-subdomain.workers.dev/query'
+
+    // Data files live in this repo's Pages site:
+    const GA4_URL    = 'data/ga4.json';
+    const SHEETS_URL = 'data/sheets.json';
+    const TOPICS_URL = 'data/topics.json';
+
+    /* ========= UTIL ========= */
+    function decodeHTML(s) {
+      const p = new DOMParser().parseFromString(String(s ?? ''), 'text/html');
+      return p.documentElement.textContent || '';
+    }
+    async function fetchJSON(url) {
+      const res = await fetch(`${url}?t=${Date.now()}`);
+      if (!res.ok) throw new Error(`${url} -> ${res.status}`);
+      return res.json();
+    }
+    function fmt(n) { return Intl.NumberFormat().format(Number(n||0)); }
+    function safeDate(s) { try { return new Date(s); } catch { return null; } }
+
+    /* ========= TOPICS ========= */
+    async function loadTopics() {
+      try {
+        const data = await fetchJSON(TOPICS_URL);
+        const meta = document.getElementById('topicsMeta');
+        meta.textContent = `Window: ${data.fromISO?.slice(0,19)} → ${data.toISO?.slice(0,19)} • Articles: ${data.totalArticles ?? 0}`;
+        const list = document.getElementById('topicsList');
+        list.innerHTML = '';
+        const top = (data.topics || []).slice(0, 10);
+        top.forEach(t => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          const samples = (t.sampleTitles || []).slice(0,2).map(decodeHTML).join('<br>');
+          card.innerHTML = `
+            <div style="font-weight:600;margin-bottom:6px;">
+              ${decodeHTML(t.name)} <span class="small">(${fmt(t.count)})</span>
+            </div>
+            <div class="small" style="line-height:1.4">${samples}</div>
+          `;
+          list.appendChild(card);
+        });
+        if (top.length === 0) list.innerHTML = '<div class="small">No topics found in the window.</div>';
+      } catch (e) {
+        console.error(e);
+        document.getElementById('topicsList').innerHTML = '<div class="error-message">Failed to load topics.</div>';
+      }
+    }
+
+    /* ========= GA4 KPIs ========= */
+    async function loadKPIs() {
+      try {
+        const data = await fetchJSON(GA4_URL);
+        const rows = data.rows || [];
+        // take the last row (latest date)
+        const last = rows[rows.length - 1] || null;
+        const meta = document.getElementById('kpisMeta');
+        meta.textContent = last ? `Date: ${last.date}` : 'No data';
+
+        const grid = document.getElementById('kpisGrid');
+        grid.innerHTML = '';
+
+        const kpis = last ? [
+          { label:'Users',     value:last.totalUsers },
+          { label:'New Users', value:last.newUsers },
+          { label:'Pageviews', value:last.pageviews },
+          { label:'Sessions',  value:last.sessions },
+        ] : [];
+
+        // if narrow screen, two columns feel better than four
+        grid.className = kpis.length > 2 ? 'grid-2' : 'grid-2';
+
+        kpis.forEach(k => {
+          const el = document.createElement('div');
+          el.className = 'kpi';
+          el.innerHTML = `<div class="label">${k.label}</div><div class="value">${fmt(k.value)}</div>`;
+          grid.appendChild(el);
+        });
+
+        if (kpis.length === 0) grid.innerHTML = '<div class="small">No GA4 rows found.</div>';
+      } catch (e) {
+        console.error(e);
+        document.getElementById('kpisGrid').innerHTML = '<div class="error-message">Failed to load GA4 KPIs.</div>';
+      }
+    }
+
+    /* ========= ARTICLES (Sheets) ========= */
+    function tryGetDate(row) {
+      // prefer Publish Date; fallback to Date; both may be like "9/14/2025"
+      const d = row['Publish Date'] || row['Date'];
+      const dt = safeDate(d);
+      return dt && !isNaN(dt.getTime()) ? dt : null;
+    }
+
+    async function loadArticles() {
+      try {
+        const data = await fetchJSON(SHEETS_URL);
+        const meta = document.getElementById('articlesMeta');
+        meta.textContent = `Rows scanned: ${fmt(data.rowCount || (data.data||[]).length || 0)} • Sheet: ${data.sheet || ''}`;
+
+        const items = (data.data || []).filter(r => (r.Type || '').toLowerCase() === 'article');
+
+        // Sort by publish date desc if available
+        items.sort((a,b) => {
+          const da = tryGetDate(a), db = tryGetDate(b);
+          if (da && db) return db - da;
+          return 0;
+        });
+
+        const top = items.slice(0, 10);
+        const list = document.getElementById('articlesList');
+        list.innerHTML = '';
+        top.forEach(r => {
+          const title = decodeHTML(r.Label || '');
+          const by = r.Byline ? ` • ${r.Byline}` : '';
+          const when = tryGetDate(r);
+          const whenStr = when ? when.toLocaleDateString() : (r['Publish Date'] || r['Date'] || '');
+          const section = r.Section ? ` • ${r.Section}` : '';
+          const el = document.createElement('div');
+          el.className = 'article';
+          el.innerHTML = `
+            <div class="title">${title}</div>
+            <div class="meta">${whenStr}${by}${section}</div>
+          `;
+          list.appendChild(el);
+        });
+        if (top.length === 0) list.innerHTML = '<div class="small">No rows matched in the selected tab.</div>';
+      } catch (e) {
+        console.error(e);
+        document.getElementById('articlesList').innerHTML = '<div class="error-message">Failed to load articles from Sheets.</div>';
+      }
+    }
+
+    /* ========= CHAT (unchanged, safe to ignore until Worker is live) ========= */
+    const chatContainer = document.getElementById('chatContainer');
+    const messageInput  = document.getElementById('messageInput');
+    const sendBtn       = document.getElementById('sendBtn');
+
+    messageInput.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+    });
+    messageInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault(); sendMessage();
+      }
+    });
+
+    function addMessage(content, isUser=false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${isUser ? 'user' : 'assistant'}`;
+      const bubbleDiv = document.createElement('div');
+      bubbleDiv.className = 'message-bubble';
+      if (isUser) {
+        bubbleDiv.textContent = content;
+      } else {
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'response-content';
+        contentDiv.textContent = content;
+        bubbleDiv.appendChild(contentDiv);
+      }
+      messageDiv.appendChild(bubbleDiv);
+      chatContainer.appendChild(messageDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function showLoading() {
+      const loadingDiv = document.createElement('div');
+      loadingDiv.className = 'message assistant'; loadingDiv.id = 'loadingMessage';
+      const bubbleDiv = document.createElement('div');
+      bubbleDiv.className = 'message-bubble loading';
+      bubbleDiv.innerHTML = `
+        <span>Analyzing data</span>
+        <div class="typing-indicator"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      `;
+      loadingDiv.appendChild(bubbleDiv);
+      chatContainer.appendChild(loadingDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+    function hideLoading(){ const n=document.getElementById('loadingMessage'); if(n) n.remove(); }
+    function showError(msg){
+      const d=document.createElement('div'); d.className='error-message';
+      d.textContent=`Error: ${msg}`; chatContainer.appendChild(d); chatContainer.scrollTop=chatContainer.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const message = messageInput.value.trim(); if (!message) return;
+      addMessage(message, true); messageInput.value=''; messageInput.style.height='auto'; sendBtn.disabled=true; showLoading();
+      try {
+        if (!API_ENDPOINT) throw new Error('Chat backend not configured yet.');
+        const response = await fetch(API_ENDPOINT, {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ message })
+        });
+        hideLoading();
+        if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        const data = await response.json();
+        let responseText = data.response || data.message || (typeof data==='string' ? data : 'No response');
+        addMessage(responseText);
+      } catch (err) {
+        hideLoading(); console.error(err); showError(err.message);
+      } finally {
+        sendBtn.disabled=false; messageInput.focus();
+      }
+    }
+    function sendQuickMessage(m){ messageInput.value=m; sendMessage(); }
+
+    // PWA install
+    let deferredPrompt=null;
+    window.addEventListener('beforeinstallprompt', (e)=>{ e.preventDefault(); deferredPrompt=e; document.getElementById('installPrompt').style.display='block'; });
+    document.getElementById('installBtn').addEventListener('click', async ()=>{
+      if (deferredPrompt){ deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; document.getElementById('installPrompt').style.display='none'; }
+    });
+
+    // kick things
+    window.addEventListener('load', () => {
+      messageInput.focus();
+      loadTopics();
+      loadKPIs();
+      loadArticles();
+    });
+  </script>
+</body>
+</html>

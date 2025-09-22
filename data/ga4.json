@@ -1,17 +1,10 @@
 {
-  "updatedAt": "2025-09-22T02:05:04.050Z",
+  "updatedAt": "2025-09-22T05:45:15.310Z",
   "range": {
     "start": "2025-09-15",
     "end": "2025-09-21"
   },
   "rows": [
-    {
-      "date": "20250919",
-      "totalUsers": 239587,
-      "newUsers": 122990,
-      "pageviews": 282764,
-      "sessions": 270623
-    },
     {
       "date": "20250915",
       "totalUsers": 201992,
@@ -41,6 +34,13 @@
       "sessions": 191114
     },
     {
+      "date": "20250919",
+      "totalUsers": 239587,
+      "newUsers": 122990,
+      "pageviews": 282764,
+      "sessions": 270623
+    },
+    {
       "date": "20250920",
       "totalUsers": 139645,
       "newUsers": 67485,
@@ -49,17 +49,73 @@
     },
     {
       "date": "20250921",
-      "totalUsers": 129166,
-      "newUsers": 54994,
-      "pageviews": 144359,
-      "sessions": 143649
+      "totalUsers": 147371,
+      "newUsers": 64414,
+      "pageviews": 165469,
+      "sessions": 165821,
+      "authors": [],
+      "referrers": [
+        {
+          "source": "(not set)",
+          "users": 57834
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 52614
+        },
+        {
+          "source": "smartnews.com",
+          "users": 42585
+        },
+        {
+          "source": "(direct)",
+          "users": 15266
+        },
+        {
+          "source": "google",
+          "users": 7549
+        },
+        {
+          "source": "newsbreak",
+          "users": 4372
+        },
+        {
+          "source": "(data not available)",
+          "users": 2286
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1482
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1325
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1221
+        },
+        {
+          "source": "bing",
+          "users": 1009
+        },
+        {
+          "source": "t.co",
+          "users": 713
+        },
+        {
+          "source": "newsshowcase",
+          "users": 665
+        },
+        {
+          "source": "paid.outbrain.com",
+          "users": 624
+        },
+        {
+          "source": "yahoo",
+          "users": 589
+        }
+      ]
     }
-  ],
-  "yesterday": {
-    "date": "20250921",
-    "totalUsers": 129166,
-    "newUsers": 54994,
-    "pageviews": 144359,
-    "sessions": 143649
-  }
+  ]
 }

@@ -7,30 +7,35 @@ const argv = yargs(hideBin(process.argv))
   .option('api', { type: 'string', demandOption: true, desc: 'Base API URL, e.g. https://api.washingtonexaminer.com' })
   .option('out', { type: 'string', demandOption: true })
   .option('sinceHours', { type: 'number', default: 24 })
-  .option('path', { type: 'string', default: '/articles', desc: 'Endpoint path if different' })
-  // OPTIONAL auth (only used if provided)
-  .option('token', { type: 'string', demandOption: false })
-  .option('headerName', { type: 'string', default: 'Authorization' })
-  .option('headerScheme', { type: 'string', default: 'Bearer' })
-  // OPTIONAL param names if your API differs
-  .option('sinceParam', { type: 'string', default: 'since' })
-  .option('fieldsParam', { type: 'string', default: 'fields' })
-  .argv;
+  .option('path', { type: 'string', default: '/articles', desc: 'Endpoint path' })
 
-/**
- * Expected shape (adjust via flags if needed):
- *   GET {api}{path}?since=ISO&limit=100&page=1&fields=title,slug,publishedAt,tags,authors,section
- * Returns array or {items|results|data: []}.
- */
+  // Param names (tweakable without code changes)
+  .option('sinceParam', { type: 'string', default: 'since' })          // e.g. since | from | published_after
+  .option('pageParam',  { type: 'string', default: 'page' })           // e.g. page | offset
+  .option('limitParam', { type: 'string', default: 'limit' })          // e.g. limit | per_page | page_size
+  .option('fieldsParam',{ type: 'string', default: 'fields' })         // if unsupported, pass empty string via --fieldsParam ""
+
+  // Where are items in the response?
+  .option('itemsKey',   { type: 'string', default: '', desc: 'If response is an object, the key holding the array (e.g. items, results, data). Leave empty if API returns an array directly.' })
+
+  // Optional auth (if you later need it)
+  .option('token',      { type: 'string', demandOption: false })
+  .option('headerName', { type: 'string', default: 'Authorization' })
+  .option('headerScheme',{ type: 'string', default: 'Bearer' })
+
+  // Debug
+  .option('debug',      { type: 'boolean', default: false })
+  .option('maxPages',   { type: 'number', default: 20 })
+  .argv;
 
 const FIELDS = 'title,slug,publishedAt,tags,authors,section';
 
-function buildUrl(base, path, sinceISO, page, limit, sinceParam, fieldsParam) {
+function buildUrl(base, path, { sinceISO, page, limit, sinceParam, pageParam, limitParam, fieldsParam }) {
   const u = new URL(path, base);
   u.searchParams.set(sinceParam, sinceISO);
-  u.searchParams.set('limit', String(limit));
-  u.searchParams.set('page', String(page));
-  u.searchParams.set(fieldsParam, FIELDS);
+  if (pageParam)  u.searchParams.set(pageParam, String(page));
+  if (limitParam) u.searchParams.set(limitParam, String(limit));
+  if (fieldsParam) u.searchParams.set(fieldsParam, FIELDS);
   return u.toString();
 }
 
@@ -45,32 +50,71 @@ function normalizeAuthors(authors) {
   return String(authors).split(',').map(a => a.trim()).filter(Boolean);
 }
 
-async function fetchAllSince() {
+async function fetchJson(url, headers) {
+  const res = await fetch(url, { headers });
+  const text = await res.text();
+  let json = null;
+  try { json = JSON.parse(text); } catch {}
+  return { ok: res.ok, status: res.status, statusText: res.statusText, text, json };
+}
+
+async function main() {
   const toISO = new Date().toISOString();
-  const from = new Date(Date.now() - argv.sinceHours * 3600 * 1000);
-  const fromISO = from.toISOString();
+  const fromISO = new Date(Date.now() - argv.sinceHours * 3600 * 1000).toISOString();
 
   const headers = { Accept: 'application/json' };
   if (argv.token) {
-    // Only attach auth if provided
-    headers[argv.headerName] = argv.headerScheme
-      ? `${argv.headerScheme} ${argv.token}`
-      : argv.token;
+    headers[argv.headerName] = argv.headerScheme ? `${argv.headerScheme} ${argv.token}` : argv.token;
   }
 
-  let page = 1;
+  const conf = {
+    sinceISO: fromISO,
+    page: 1,
+    limit: 100,
+    sinceParam: argv.sinceParam,
+    pageParam: argv.pageParam || '',
+    limitParam: argv.limitParam || '',
+    fieldsParam: argv.fieldsParam
+  };
+
   const all = [];
-  const MAX_PAGES = 20;
-  while (page <= MAX_PAGES) {
-    const url = buildUrl(argv.api, argv.path, fromISO, page, 100, argv.sinceParam, argv.fieldsParam);
-    const res = await fetch(url, { headers });
-    if (!res.ok) {
-      const txt = await res.text().catch(() => '');
-      throw new Error(`WEX HTTP ${res.status} ${res.statusText} for ${url}\n${txt.slice(0, 300)}`);
+  let page = 1;
+
+  while (page <= argv.maxPages) {
+    conf.page = page;
+    const url = buildUrl(argv.api, argv.path, conf);
+
+    // DEBUG: print the URL and first part of the response
+    if (argv.debug) {
+      console.log('[WEX DEBUG] URL:', url);
     }
-    const data = await res.json();
-    const items = Array.isArray(data) ? data : (data.items || data.results || data.data || []);
-    if (!items.length) break;
+
+    const { ok, status, statusText, text, json } = await fetchJson(url, headers);
+    if (!ok) {
+      console.error(`[WEX ERROR] HTTP ${status} ${statusText}`);
+      if (argv.debug) console.error('[WEX DEBUG] Body head:', text.slice(0, 600));
+      break;
+    }
+    if (argv.debug) {
+      const head = text.slice(0, 600).replace(/\n/g, ' ');
+      console.log('[WEX DEBUG] Response head:', head);
+    }
+
+    let items = [];
+    if (Array.isArray(json)) {
+      items = json;
+    } else if (json && argv.itemsKey && Array.isArray(json[argv.itemsKey])) {
+      items = json[argv.itemsKey];
+    } else if (json) {
+      // Try common keys if itemsKey not provided
+      const guess = json.items || json.results || json.data;
+      if (Array.isArray(guess)) items = guess;
+    }
+
+    if (!items.length) {
+      if (argv.debug) console.log('[WEX DEBUG] No items on this page; stopping.');
+      break;
+    }
 
     for (const it of items) {
       const tags = normalizeTags(it.tags);
@@ -84,13 +128,12 @@ async function fetchAllSince() {
       });
     }
 
-    const total = (data.total || data.count || 0);
-    const limit = (data.limit || 100);
-    if (total && page * limit >= total) break;
-    if (items.length < 100) break;
+    // pagination heuristics
+    if (items.length < conf.limit) break;
     page += 1;
   }
 
+  // Build topics aggregation
   const byTag = new Map();
   for (const a of all) {
     for (const t of a.tags) {
@@ -112,24 +155,18 @@ async function fetchAllSince() {
     }))
     .sort((a, b) => b.count - a.count);
 
-  return {
+  const out = {
     updatedAt: new Date().toISOString(),
     fromISO,
     toISO,
     totalArticles: all.length,
     topics,
-    sampleArticles: all.slice(0, 20).map(a => ({ title: a.title, publishedAt: a.publishedAt, section: a.section }))
+    sampleArticles: all.slice(0, 10).map(a => ({ title: a.title, publishedAt: a.publishedAt, section: a.section }))
   };
+
+  fs.mkdirSync('data', { recursive: true });
+  fs.writeFileSync(argv.out, JSON.stringify(out, null, 2));
+  console.log(`Wrote ${argv.out} (articles=${out.totalArticles}, topics=${out.topics.length})`);
 }
 
-(async () => {
-  try {
-    const out = await fetchAllSince();
-    fs.mkdirSync('data', { recursive: true });
-    fs.writeFileSync(argv.out, JSON.stringify(out, null, 2));
-    console.log(`Wrote ${argv.out} with ${out.totalArticles} articles and ${out.topics.length} tags`);
-  } catch (e) {
-    console.error(e);
-    process.exit(1);
-  }
-})();
+main().catch(err => { console.error(err); process.exit(1); });

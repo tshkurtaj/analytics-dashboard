@@ -37,7 +37,7 @@ jobs:
           echo '${{ secrets.GCP_SA_JSON }}' | base64 -d > .secrets/gcp.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/.secrets/gcp.json" >> $GITHUB_ENV
 
-      - name: Build GA4 JSON (Corrected - Page Title for Articles)
+      - name: Build GA4 JSON (Fixed Articles Collection)
         run: |
           mkdir -p scripts data
           cat > scripts/fetch_ga4.cjs <<'NODE'
@@ -61,7 +61,7 @@ jobs:
           const endISO = ymd(end);
           const property = `properties/${propertyId}`;
 
-          console.log(`[GA4] Fetching corrected data ${startISO} → ${endISO}`);
+          console.log(`[GA4] Fetching data ${startISO} → ${endISO}`);
 
           async function runReport(config) {
             const [res] = await client.runReport({
@@ -72,7 +72,6 @@ jobs:
             return res;
           }
 
-          // KPIs
           async function getDailyKPIs() {
             console.log('[KPI] Fetching daily KPIs...');
             const r = await runReport({
@@ -105,7 +104,6 @@ jobs:
             return map;
           }
 
-          // Referrers
           async function getReferrers() {
             console.log('[REF] Fetching referrers...');
             const r = await runReport({
@@ -133,7 +131,6 @@ jobs:
             return map;
           }
 
-          // Authors (existing - working)
           async function getAuthors() {
             console.log('[AUTHORS] Fetching author data...');
             
@@ -181,7 +178,6 @@ jobs:
             }
           }
 
-          // Articles/Stories - CORRECTED to use pageTitle
           async function getTopArticles() {
             console.log('[ARTICLES] Fetching top articles using pageTitle...');
             
@@ -190,18 +186,7 @@ jobs:
                 dimensions: [{ name: "date" }, { name: "pageTitle" }],
                 metrics: [{ name: "totalUsers" }, { name: "screenPageViews" }],
                 orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-                limit: 3000,
-                dimensionFilter: {
-                  filter: {
-                    fieldName: "pageTitle",
-                    stringFilter: {
-                      matchType: "EXACT",
-                      value: "Home",
-                      caseSensitive: false
-                    },
-                    notExpression: true
-                  }
-                }
+                limit: 500
               });
 
               const map = {};
@@ -215,8 +200,7 @@ jobs:
                 const users = parseInt(row.metricValues[0].value);
                 const views = parseInt(row.metricValues[1].value);
 
-                if (!title || title === "(not set)" || title === "Home" || 
-                    title.length < 10 || users < 10) {
+                if (!title || title === "(not set)" || title === "Home" || users < 50) {
                   continue;
                 }
 
@@ -258,7 +242,6 @@ jobs:
             }
           }
 
-          // Sections
           async function getSections() {
             console.log('[SECTIONS] Fetching section data...');
             
@@ -385,7 +368,7 @@ jobs:
 
       - name: Commit updated data
         run: |
-          echo "Updating comprehensive GA4 data with corrected articles..."
+          echo "Updating comprehensive GA4 data with fixed articles..."
           
           echo "File size: $(wc -c < data/ga4.json) bytes"
           echo "Content summary:"
@@ -403,7 +386,7 @@ jobs:
           fi
           
           git add data/ga4.json
-          git commit -m "data: corrected update - authors, articles (pageTitle), sections ($(date '+%Y-%m-%d %H:%M:%S UTC'))" || echo "Nothing to commit"
+          git commit -m "data: fixed articles collection - authors, articles, sections ($(date '+%Y-%m-%d %H:%M:%S UTC'))" || echo "Nothing to commit"
           git push || echo "Nothing to push"
           
-          echo "✅ Update complete with corrected articles from pageTitle"
+          echo "✅ Update complete with fixed articles collection"

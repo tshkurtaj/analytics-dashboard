@@ -37,7 +37,7 @@ jobs:
           echo '${{ secrets.GCP_SA_JSON }}' | base64 -d > .secrets/gcp.json
           echo "GOOGLE_APPLICATION_CREDENTIALS=$PWD/.secrets/gcp.json" >> $GITHUB_ENV
 
-      - name: Build GA4 JSON (Washington Examiner)
+      - name: Build GA4 JSON (Washington Examiner - Fixed)
         run: |
           mkdir -p scripts data
           cat > scripts/fetch_ga4.cjs <<'NODE'
@@ -61,7 +61,7 @@ jobs:
           const endISO = ymd(end);
           const property = `properties/${propertyId}`;
 
-          console.log(`[GA4] ${startISO} → ${endISO}`);
+          console.log(`[GA4] Fetching ${startISO} → ${endISO}`);
 
           async function runReport(config) {
             const [res] = await client.runReport({
@@ -74,7 +74,7 @@ jobs:
 
           // KPIs
           async function getDailyKPIs() {
-            console.log('[KPI] Fetching...');
+            console.log('[KPI] Fetching daily KPIs...');
             const r = await runReport({
               dimensions: [{ name: "date" }],
               metrics: [
@@ -101,18 +101,18 @@ jobs:
                 averageSessionDuration: parseFloat(m[5].value)
               };
             }
-            console.log(`[KPI] ${Object.keys(map).length} days`);
+            console.log(`[KPI] Found ${Object.keys(map).length} days`);
             return map;
           }
 
           // Referrers
           async function getReferrers() {
-            console.log('[REF] Fetching...');
+            console.log('[REF] Fetching referrers...');
             const r = await runReport({
               dimensions: [{ name: "date" }, { name: "firstUserSource" }],
               metrics: [{ name: "totalUsers" }],
               orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-              limit: 1000
+              limit: 2000
             });
 
             const map = {};
@@ -125,146 +125,77 @@ jobs:
               map[date].push({ source, users });
             }
 
+            // Keep top 15 per day
             for (const date of Object.keys(map)) {
-              map[date] = map[date].slice(0, 15); // Keep top 15
+              map[date] = map[date].slice(0, 15);
             }
             
-            console.log(`[REF] ${Object.keys(map).length} days`);
+            console.log(`[REF] Found ${Object.keys(map).length} days`);
             return map;
           }
 
-          // Authors - Washington Examiner specific
+          // Authors - The working version!
           async function getAuthors() {
-            console.log('[AUTH] Trying Washington Examiner parameters...');
+            console.log('[AUTH] Fetching author data using customEvent:authors...');
             
-            // Your exact GA4 custom parameters
-            const wexParams = ['authors', 'authorName', 'authorDesignation'];
-            
-            for (const param of wexParams) {
-              console.log(`[AUTH] Testing customEvent:${param}...`);
-              
-              try {
-                const r = await runReport({
-                  dimensions: [{ name: "date" }, { name: `customEvent:${param}` }],
-                  metrics: [{ name: "totalUsers" }, { name: "screenPageViews" }],
-                  orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-                  limit: 1000
-                });
-
-                const map = {};
-                let validRows = 0;
-
-                for (const row of r.rows || []) {
-                  const date = row.dimensionValues[0].value;
-                  const author = row.dimensionValues[1].value;
-                  const users = parseInt(row.metricValues[0].value);
-                  const views = parseInt(row.metricValues[1].value);
-
-                  // Skip empty/invalid values
-                  if (!author || author === "(not set)" || author === "null" || 
-                      author === "undefined" || author === "" || users === 0) {
-                    continue;
-                  }
-
-                  if (!map[date]) map[date] = [];
-                  map[date].push({ author, users, views });
-                  validRows++;
-                }
-
-                // Sort and limit
-                for (const date of Object.keys(map)) {
-                  map[date].sort((a, b) => b.users - a.users);
-                  map[date] = map[date].slice(0, 10);
-                }
-
-                console.log(`[AUTH] ${param}: ${validRows} valid entries, ${Object.keys(map).length} days`);
-                
-                if (validRows > 0) {
-                  // Show sample data
-                  const samples = Object.values(map).flat().slice(0, 3);
-                  console.log(`[AUTH] Sample: ${samples.map(s => s.author).join(', ')}`);
-                  return map;
-                }
-
-              } catch (error) {
-                console.log(`[AUTH] ${param} error: ${error.message}`);
-              }
-            }
-
-            // Fallback: Try page title parsing
-            console.log('[AUTH] Trying page title extraction...');
             try {
               const r = await runReport({
-                dimensions: [{ name: "date" }, { name: "pageTitle" }],
+                dimensions: [{ name: "date" }, { name: "customEvent:authors" }],
                 metrics: [{ name: "totalUsers" }, { name: "screenPageViews" }],
                 orderBys: [{ metric: { metricName: "totalUsers" }, desc: true }],
-                limit: 2000
+                limit: 5000
               });
 
               const map = {};
-              let extracted = 0;
+              let validEntries = 0;
 
-              const authorPatterns = [
-                /By\s+([A-Za-z\s]+?)(?:\s*\||$)/i,
-                /Author:\s*([A-Za-z\s]+?)(?:\s*\||$)/i,
-                /Written by\s+([A-Za-z\s]+?)(?:\s*\||$)/i,
-                /-\s*([A-Za-z\s]{4,25})\s*$/i
-              ];
+              console.log(`[AUTH] Processing ${r.rows?.length || 0} raw rows...`);
 
               for (const row of r.rows || []) {
                 const date = row.dimensionValues[0].value;
-                const title = row.dimensionValues[1].value;
+                const author = row.dimensionValues[1].value;
                 const users = parseInt(row.metricValues[0].value);
                 const views = parseInt(row.metricValues[1].value);
 
-                let author = null;
-                for (const pattern of authorPatterns) {
-                  const match = title.match(pattern);
-                  if (match) {
-                    author = match[1].trim();
-                    if (author.length > 3 && author.length < 30) {
-                      break;
-                    }
-                    author = null;
-                  }
+                // Skip invalid entries
+                if (!author || author === "(not set)" || author === "null" || 
+                    author === "undefined" || author.trim() === "" || users === 0) {
+                  continue;
                 }
 
-                if (author) {
-                  if (!map[date]) map[date] = {};
-                  if (!map[date][author]) {
-                    map[date][author] = { author, users: 0, views: 0 };
-                  }
-                  map[date][author].users += users;
-                  map[date][author].views += views;
-                  extracted++;
-                }
+                if (!map[date]) map[date] = [];
+                map[date].push({ 
+                  author: author.trim(), 
+                  users: users.toString(), 
+                  views: views.toString() 
+                });
+                validEntries++;
               }
 
-              // Convert to array format
-              const finalMap = {};
-              for (const [date, authors] of Object.entries(map)) {
-                finalMap[date] = Object.values(authors)
-                  .sort((a, b) => b.users - a.users)
-                  .slice(0, 10);
+              // Sort and limit to top 10 per day
+              for (const date of Object.keys(map)) {
+                map[date].sort((a, b) => parseInt(b.users) - parseInt(a.users));
+                map[date] = map[date].slice(0, 10);
               }
 
-              console.log(`[AUTH] Page title extraction: ${extracted} entries, ${Object.keys(finalMap).length} days`);
+              console.log(`[AUTH] Success! ${validEntries} valid entries across ${Object.keys(map).length} days`);
               
-              if (extracted > 0) {
-                const samples = Object.values(finalMap).flat().slice(0, 3);
-                console.log(`[AUTH] Extracted: ${samples.map(s => s.author).join(', ')}`);
-                return finalMap;
+              // Show sample data
+              const allAuthors = Object.values(map).flat();
+              if (allAuthors.length > 0) {
+                const samples = allAuthors.slice(0, 5).map(a => `${a.author} (${a.users})`);
+                console.log(`[AUTH] Sample: ${samples.join(', ')}`);
               }
+              
+              return map;
 
             } catch (error) {
-              console.log(`[AUTH] Page title error: ${error.message}`);
+              console.log(`[AUTH] Error: ${error.message}`);
+              return {};
             }
-
-            console.log('[AUTH] No author data found with any method');
-            return {};
           }
 
-          (async () => {
+          async function main() {
             try {
               const [kpis, referrers, authors] = await Promise.all([
                 getDailyKPIs(),
@@ -272,9 +203,11 @@ jobs:
                 getAuthors()
               ]);
 
+              // Build final data structure
               const rows = [];
               for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
                 const dateKey = yyyymmdd(d);
+                
                 const dayData = {
                   date: dateKey,
                   totalUsers: kpis[dateKey]?.totalUsers || 0,
@@ -286,9 +219,11 @@ jobs:
                   referrers: referrers[dateKey] || [],
                   authors: authors[dateKey] || []
                 };
+                
                 rows.push(dayData);
               }
 
+              // Calculate summary stats
               const totalAuthorEntries = rows.reduce((sum, row) => sum + row.authors.length, 0);
               const uniqueAuthors = new Set();
               rows.forEach(row => row.authors.forEach(a => uniqueAuthors.add(a.author)));
@@ -301,18 +236,27 @@ jobs:
                   totalDays: rows.length,
                   totalAuthorEntries,
                   uniqueAuthors: uniqueAuthors.size,
-                  sampleAuthors: Array.from(uniqueAuthors).slice(0, 5)
+                  sampleAuthors: Array.from(uniqueAuthors).slice(0, 8)
                 }
               };
 
+              // Write file
               fs.writeFileSync(path.join("data", "ga4.json"), JSON.stringify(output, null, 2));
-              console.log(`✅ Wrote data/ga4.json - ${rows.length} days, ${totalAuthorEntries} author entries`);
+              
+              console.log(`✅ SUCCESS! Wrote data/ga4.json`);
+              console.log(`📊 ${rows.length} days, ${totalAuthorEntries} author entries, ${uniqueAuthors.size} unique authors`);
+              
+              if (uniqueAuthors.size > 0) {
+                console.log(`📝 Top authors: ${Array.from(uniqueAuthors).slice(0, 5).join(', ')}`);
+              }
 
             } catch (error) {
-              console.error('❌ Error:', error);
+              console.error('❌ Fatal error:', error);
               process.exit(1);
             }
-          })();
+          }
+
+          main();
           NODE
           
           node scripts/fetch_ga4.cjs
@@ -323,7 +267,7 @@ jobs:
             git config user.name "github-actions"
             git config user.email "actions@github.com"
             git add data/ga4.json
-            git commit -m "data: refresh ga4.json ($(date '+%Y-%m-%d %H:%M'))"
+            git commit -m "data: refresh ga4.json with authors ($(date '+%Y-%m-%d %H:%M'))"
             git push
           else
             echo "No changes to commit."

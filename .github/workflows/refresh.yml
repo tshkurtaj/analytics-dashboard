@@ -228,6 +228,12 @@ jobs:
               const uniqueAuthors = new Set();
               rows.forEach(row => row.authors.forEach(a => uniqueAuthors.add(a.author)));
 
+              console.log(`[DEBUG] Final data structure:`);
+              console.log(`  Total rows: ${rows.length}`);
+              console.log(`  Total author entries: ${totalAuthorEntries}`);
+              console.log(`  Unique authors: ${uniqueAuthors.size}`);
+              console.log(`  Sample final row:`, JSON.stringify(rows[rows.length - 1], null, 2));
+
               const output = {
                 updatedAt: new Date().toISOString(),
                 range: { start: startISO, end: endISO },
@@ -263,12 +269,36 @@ jobs:
 
       - name: Commit updated data
         run: |
-          if git status --porcelain | grep -E '^( M|??) data/ga4.json'; then
-            git config user.name "github-actions"
-            git config user.email "actions@github.com"
-            git add data/ga4.json
-            git commit -m "data: refresh ga4.json with authors ($(date '+%Y-%m-%d %H:%M'))"
-            git push
+          echo "Force updating data/ga4.json with author data..."
+          
+          # Show file contents first
+          echo "Current file size: $(wc -c < data/ga4.json) bytes"
+          echo "Checking if authors are in the file:"
+          grep -c '"authors"' data/ga4.json || echo "No authors array found"
+          
+          # Show a sample of the file content
+          echo "Last 20 lines of the file:"
+          tail -20 data/ga4.json
+          
+          # Always add and commit the file, even if git thinks there are no changes
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          
+          # Add timestamp to ensure the file changes
+          if command -v jq >/dev/null 2>&1; then
+            temp_file=$(mktemp)
+            jq --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ)" '.updatedAt = $timestamp' data/ga4.json > "$temp_file"
+            mv "$temp_file" data/ga4.json
           else
-            echo "No changes to commit."
+            echo "jq not available, using timestamp in commit message only"
           fi
+          
+          git add data/ga4.json
+          
+          # Force commit with timestamp
+          git commit -m "data: force update ga4.json with authors ($(date '+%Y-%m-%d %H:%M:%S UTC'))" || echo "Nothing to commit"
+          git push || echo "Nothing to push"
+          
+          echo "Final file check:"
+          echo "File size after commit: $(wc -c < data/ga4.json) bytes"
+          echo "Authors arrays in file: $(grep -c '"authors"' data/ga4.json || echo 'No authors found')"

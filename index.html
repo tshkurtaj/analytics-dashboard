@@ -2,404 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Washington Examiner — Analytics Assistant</title>
-  <meta name="color-scheme" content="light dark" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytics Assistant</title>
   <style>
-    /* Reset & layout */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
-      min-height: 100vh;
-      background: radial-gradient(1000px 500px at 10% 0%, #7ea2ff 0%, #6f63e8 35%, #6c51c8 100%);
-      color: #1e293b;
-    }
-    a { color: #0d6efd; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: auto auto 1fr auto;
-      gap: 16px;
-      padding: 24px 16px 32px;
-    }
-
-    /* Header */
-    .header {
-      background: #0b0b0b;
-      color: #fff;
-      border-radius: 16px;
-      padding: 18px 20px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.25);
-    }
-    .header img {
-      height: 36px; width: auto; display: block;
-      filter: drop-shadow(0 2px 2px rgba(0,0,0,.25));
-    }
-    .header h1 {
-      font-size: 18px; font-weight: 600; letter-spacing: .2px; opacity: .92;
-    }
-
-    /* Quick actions */
-    .quick {
-      background: #ffffffcc;
-      backdrop-filter: saturate(160%) blur(6px);
-      border: 1px solid #e9ecef;
-      border-radius: 16px;
-      padding: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.06);
-    }
-    .quick h3 { font-size: 14px; color: #475569; margin-bottom: 8px; }
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-    }
-    .qbtn {
-      border: 1px solid #e2e8f0;
-      background: #fff;
-      border-radius: 10px;
-      padding: 10px 12px;
-      font-size: 13px;
-      color: #334155;
-      cursor: pointer;
-      transition: .18s ease;
-      text-align: center;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .qbtn:hover { background: #f1f5f9; transform: translateY(-1px); }
-
-    /* Dashboard cards */
-    .dash {
-      display: grid;
-      grid-template-columns: 1.2fr .9fr;
-      gap: 16px;
-    }
-    @media (max-width: 860px) { .dash { grid-template-columns: 1fr; } }
-
-    .card {
-      background: #fff;
-      border: 1px solid #e9ecef;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.06);
-    }
-    .card h2 {
-      font-size: 16px; color: #0f172a; margin-bottom: 10px; font-weight: 700;
-    }
-    .muted { color: #64748b; font-size: 12px; }
-    .split { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
-
-    .kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-    .kpi {
-      border: 1px solid #eef2f7; border-radius: 12px; padding: 12px; background: #fcfdff;
-    }
-    .kpi .label { font-size: 12px; color: #64748b; margin-bottom: 6px; }
-    .kpi .value { font-size: 20px; font-weight: 700; color: #0f172a; }
-    .kpi .delta { font-size: 12px; margin-top: 2px; }
-    .up { color: #16a34a; } .down { color: #dc2626; }
-
-    .topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-    .topic-pill {
-      border: 1px solid #e2e8f0; border-radius: 999px; padding: 8px 12px; background: #fafbff;
-      display: flex; justify-content: space-between; gap: 10px; font-size: 13px;
-    }
-    .topic-pill b { color: #0f172a; }
-
-    .articles { display: grid; gap: 10px; }
-    .article {
-      border: 1px solid #eef2f7; border-radius: 12px; padding: 10px 12px; background: #fcfdff;
-    }
-    .article .title { font-size: 14px; color: #0f172a; font-weight: 600; margin-bottom: 2px; }
-    .article .meta { font-size: 12px; color: #64748b; }
-
-    /* Chat */
-    .chat {
-      background: #fff; border: 1px solid #e9ecef; border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.06); display: grid; grid-template-rows: 1fr auto;
-      min-height: 260px; overflow: hidden;
-    }
-    .chatlog {
-      padding: 16px; overflow-y: auto; max-height: 420px;
-    }
-    .msg { margin: 8px 0; display: flex; }
-    .msg.user { justify-content: flex-end; }
-    .bubble {
-      max-width: 80%; padding: 12px 14px; border-radius: 16px; line-height: 1.4; font-size: 14px;
-      word-wrap: break-word; white-space: pre-wrap;
-    }
-    .msg.user .bubble { background: #0d6efd; color: #fff; border-bottom-right-radius: 6px; }
-    .msg.bot .bubble  { background: #f6f7fb; color: #0f172a; border-bottom-left-radius: 6px; }
-    .error {
-      background: #fde2e4; color: #b42318; border: 1px solid #f6c2c0; padding: 10px 12px;
-      border-radius: 10px; margin: 8px 0; font-size: 14px;
-    }
-    .input {
-      display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 12px; border-top: 1px solid #e9ecef;
-    }
-    textarea {
-      resize: none; min-height: 42px; max-height: 120px; padding: 12px 14px; border-radius: 12px;
-      border: 1px solid #cbd5e1; outline: none; font-size: 14px; line-height: 1.3;
-    }
-    textarea:focus { border-color: #0d6efd; box-shadow: 0 0 0 3px rgba(13,110,253,.12); }
-    .send {
-      width: 46px; height: 46px; border-radius: 50%; border: none; background: #0d6efd; color: #fff;
-      font-size: 18px; cursor: pointer; transition: .16s ease;
-    }
-    .send:disabled { background: #94a3b8; cursor: not-allowed; }
-    .send:hover:not(:disabled) { transform: translateY(-1px); }
-
-    /* Footer */
-    .foot { text-align: center; color: #94a3b8; font-size: 12px; padding-bottom: 8px; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;display:flex;align-items:center;justify-content:center}
+    .container{width:100%;max-width:980px;background:#fff;border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.15);overflow:hidden}
+    .header{padding:20px;border-bottom:1px solid #eee;background:#000;color:#fff}
+    .header img{height:28px}
+    .chat{padding:20px;height:70vh;overflow:auto}
+    .bubble{background:#f1f3f4;border-radius:14px;padding:14px 16px;margin:10px 0;max-width:70%;line-height:1.5;white-space:pre-wrap}
+    .me{margin-left:auto;background:#1971ff;color:#fff}
+    .sys{background:#f8f9ff}
+    .input{display:flex;gap:10px;padding:16px;border-top:1px solid #eee}
+    textarea{flex:1;padding:12px 14px;border:1px solid #ddd;border-radius:12px;min-height:48px;resize:vertical;font-size:16px}
+    button{width:56px;height:48px;border:none;border-radius:50%;background:#1971ff;color:#fff;font-size:18px;cursor:pointer}
+    .note{padding:8px 16px;color:#666;border-top:1px dashed #eee;font-size:12px;text-align:center}
   </style>
 </head>
 <body>
   <div class="container">
-
-    <!-- Header -->
     <div class="header">
-      <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" alt="Washington Examiner" />
-      <h1>Analytics Assistant</h1>
+      <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" alt="Washington Examiner"/>
     </div>
 
-    <!-- Quick actions -->
-    <div class="quick">
-      <h3>Quick actions</h3>
-      <div class="quick-grid">
-        <button class="qbtn" onclick="sendQuick('show me yesterday kpis')">Yesterday’s KPIs</button>
-        <button class="qbtn" onclick="sendQuick('top topics')">Top Topics</button>
-        <button class="qbtn" onclick="sendQuick('best performing authors')">Top Authors</button>
-        <button class="qbtn" onclick="sendQuick('latest 10 articles')">Latest Articles</button>
-      </div>
+    <div id="chat" class="chat">
+      <div class="bubble sys">👋 Hi! Ask about your data — try “show me yesterday KPIs”, “top referrers”, or “best performing authors”.</div>
     </div>
 
-    <!-- Dashboard -->
-    <div class="dash">
-      <!-- Left: Topics + Articles -->
-      <div class="card">
-        <h2>Top Topics <span class="muted" id="topicsMeta"></span></h2>
-        <div id="topics" class="topic-list" style="margin-top:8px;"></div>
-
-        <div class="split" style="margin-top:16px;">
-          <h2 style="margin:0">Latest Articles</h2>
-          <span class="muted" id="articlesMeta"></span>
-        </div>
-        <div id="articles" class="articles" style="margin-top:8px;"></div>
-      </div>
-
-      <!-- Right: KPIs -->
-      <div class="card">
-        <div class="split">
-          <h2>Yesterday’s KPIs</h2>
-          <span class="muted" id="kpiMeta"></span>
-        </div>
-        <div class="kpis" id="kpis" style="margin-top:10px;"></div>
-        <div class="muted" style="margin-top:8px" id="kpiNote"></div>
-      </div>
+    <div class="input">
+      <textarea id="msg" placeholder="Ask about your analytics data…"></textarea>
+      <button id="send">➤</button>
     </div>
 
-    <!-- Chat -->
-    <div class="chat">
-      <div class="chatlog" id="log">
-        <div class="msg bot">
-          <div class="bubble">
-            👋 Hi! Ask about your data — try “show me yesterday KPIs”, “top topics”, or “best performing authors”.
-          </div>
-        </div>
-      </div>
-      <div class="input">
-        <textarea id="box" rows="1" placeholder="Ask about your analytics data…"></textarea>
-        <button id="send" class="send" title="Send">➤</button>
-      </div>
-    </div>
-
-    <div class="foot">
-      Data refresh comes from <code>data/ga4.json</code>, <code>data/sheets.json</code>, <code>data/topics.json</code>.
-    </div>
+    <div class="note">Data refresh comes from <code>data/ga4.json</code>, <code>data/sheets.json</code>, <code>data/topics.json</code>.</div>
   </div>
 
   <script>
-    /* ====== CONFIG ====== */
-    // Your Cloudflare Worker endpoint (already live)
-    const API_ENDPOINT = 'https://wex-analytics-bot.tshkurtaj.workers.dev/query';
+    const BACKEND_URL = 'https://wex-analytics-bot.tshkurtaj.workers.dev/query';
 
-    // Feeds (served by GitHub Pages)
-    const GA4_URL    = 'data/ga4.json';
-    const SHEETS_URL = 'data/sheets.json';
-    const TOPICS_URL = 'data/topics.json';
+    const chat = document.getElementById('chat');
+    const msg  = document.getElementById('msg');
+    const send = document.getElementById('send');
 
-    /* ====== UTIL ====== */
-    const $ = (s) => document.querySelector(s);
-    const fmt = (n) => new Intl.NumberFormat().format(+n || 0);
-    const pct = (a, b) => (b ? ((a - b) / b) * 100 : null);
-    const pctStr = (p) => p === null ? '—' : `${(p >= 0 ? '+' : '')}${p.toFixed(1)}%`;
-    const safe = (s) => (s ?? '').toString();
-
-    /* ====== LOAD DASHBOARD DATA ====== */
-    async function loadAll() {
-      try {
-        const [ga4, sheets, topics] = await Promise.all([
-          fetch(GA4_URL, { cache: 'no-cache' }).then(r => r.json()).catch(() => null),
-          fetch(SHEETS_URL, { cache: 'no-cache' }).then(r => r.json()).catch(() => null),
-          fetch(TOPICS_URL, { cache: 'no-cache' }).then(r => r.json()).catch(() => null),
-        ]);
-        renderKPIs(ga4);
-        renderTopics(topics);
-        renderArticles(sheets);
-      } catch (e) {
-        console.error(e);
-      }
-    }
-
-    function renderKPIs(ga4) {
-      const kpis = $('#kpis'); kpis.innerHTML = '';
-      if (!ga4 || !Array.isArray(ga4.rows) || !ga4.rows.length) {
-        kpis.innerHTML = `<div class="muted">No GA4 data yet.</div>`;
-        return;
-      }
-      const rows = ga4.rows;
-      const last = rows[rows.length - 1];
-      const prev = rows[rows.length - 2] || null;
-      $('#kpiMeta').textContent = `(date: ${last.date})`;
-
-      const defs = [
-        { key: 'totalUsers', label: 'Users' },
-        { key: 'newUsers',   label: 'New users' },
-        { key: 'pageviews',  label: 'Pageviews' },
-        { key: 'sessions',   label: 'Sessions' },
-      ];
-
-      defs.forEach(d => {
-        const cur = +last[d.key] || 0;
-        const pv = prev ? +prev[d.key] || 0 : null;
-        const p = prev ? pct(cur, pv) : null;
-        const div = document.createElement('div');
-        div.className = 'kpi';
-        div.innerHTML = `
-          <div class="label">${d.label}</div>
-          <div class="value">${fmt(cur)}</div>
-          <div class="delta ${p === null ? '' : (p >= 0 ? 'up' : 'down')}">${pctStr(p)}</div>
-        `;
-        kpis.appendChild(div);
-      });
-
-      $('#kpiNote').textContent = ga4.range ? `Range: ${ga4.range.start} → ${ga4.range.end}` : '';
-    }
-
-    function renderTopics(t) {
-      const root = $('#topics'); root.innerHTML = '';
-      if (!t || !Array.isArray(t.topics)) {
-        root.innerHTML = `<div class="muted">No topics found.</div>`;
-        return;
-      }
-      $('#topicsMeta').textContent = `(last 24h · ${fmt(t.totalArticles || 0)} articles)`;
-      t.topics.slice(0, 12).forEach(x => {
-        const pill = document.createElement('div');
-        pill.className = 'topic-pill';
-        pill.innerHTML = `<span><b>${safe(x.name)}</b></span><span class="muted">${fmt(x.count)}</span>`;
-        root.appendChild(pill);
-      });
-    }
-
-    function renderArticles(s) {
-      const root = $('#articles'); root.innerHTML = '';
-      if (!s || !Array.isArray(s.data)) {
-        root.innerHTML = `<div class="muted">No articles available.</div>`;
-        return;
-      }
-      const rows = s.data.filter(r => (safe(r.Type).toLowerCase() === 'article'));
-      $('#articlesMeta').textContent = rows.length ? `(${Math.min(10, rows.length)} shown)` : '(none)';
-      rows.slice(0, 10).forEach(r => {
-        const div = document.createElement('div');
-        div.className = 'article';
-        const by = safe(r.Byline) || '—';
-        const sec = safe(r.Section) || '—';
-        const dt = safe(r.Date) || safe(r['Publish Date']) || '';
-        div.innerHTML = `
-          <div class="title">${safe(r.Label)}</div>
-          <div class="meta">${by} · ${sec} ${dt ? '· ' + dt : ''}</div>
-        `;
-        root.appendChild(div);
-      });
-    }
-
-    /* ====== CHAT ====== */
-    const log = $('#log'), box = $('#box'), btn = $('#send');
-
-    function addMsg(text, who='bot') {
-      const m = document.createElement('div');
-      m.className = `msg ${who}`;
+    function add(text, me=false){
       const b = document.createElement('div');
-      b.className = 'bubble';
+      b.className = 'bubble' + (me ? ' me' : '');
       b.textContent = text;
-      m.appendChild(b);
-      log.appendChild(m);
-      log.scrollTop = log.scrollHeight;
+      chat.appendChild(b);
+      chat.scrollTop = chat.scrollHeight;
     }
 
-    function addError(text) {
-      const div = document.createElement('div');
-      div.className = 'error';
-      div.textContent = text;
-      log.appendChild(div);
-      log.scrollTop = log.scrollHeight;
-    }
-
-    async function send() {
-      const msg = box.value.trim();
-      if (!msg) return;
-      addMsg(msg, 'user');
-      box.value = '';
-      btn.disabled = true;
-
-      try {
-        const res = await fetch(API_ENDPOINT, {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ message: msg })
+    async function ask(){
+      const q = msg.value.trim();
+      if (!q) return;
+      add(q, true);
+      msg.value = '';
+      try{
+        const res = await fetch(BACKEND_URL, {
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ message: q })
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-        addMsg(data.response || 'No response.');
-      } catch (e) {
-        console.error(e);
-        addError('Error: could not reach analytics assistant.');
-      } finally {
-        btn.disabled = false;
-        box.focus();
+        add(data.response || 'No response.');
+      }catch(e){
+        add('Error: ' + e.message);
       }
     }
 
-    btn.addEventListener('click', send);
-    box.addEventListener('keydown', (e) => {
-      // Enter to send, Shift+Enter for newline
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        send();
-      }
-      // autoresize
-      setTimeout(() => {
-        box.style.height = 'auto';
-        box.style.height = Math.min(box.scrollHeight, 120) + 'px';
-      }, 0);
+    send.addEventListener('click', ask);
+    msg.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); ask(); }
     });
-
-    function sendQuick(text) {
-      box.value = text;
-      send();
-    }
-
-    // Init
-    loadAll();
-    box.focus();
   </script>
 </body>
 </html>

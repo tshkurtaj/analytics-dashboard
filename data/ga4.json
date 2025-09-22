@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2025-09-22T06:24:57.130Z",
+  "updatedAt": "2025-09-22T13:58:45.457Z",
   "range": {
     "start": "2025-09-15",
     "end": "2025-09-21"
@@ -10,112 +10,876 @@
       "totalUsers": 201992,
       "newUsers": 108526,
       "pageviews": 241462,
-      "sessions": 230669
+      "sessions": 230669,
+      "bounceRate": 0.675010512899436,
+      "averageSessionDuration": 96.2867645514525,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 89023
+        },
+        {
+          "source": "smartnews.com",
+          "users": 44017
+        },
+        {
+          "source": "(direct)",
+          "users": 24616
+        },
+        {
+          "source": "google",
+          "users": 18757
+        },
+        {
+          "source": "newsbreak",
+          "users": 3054
+        },
+        {
+          "source": "deployer",
+          "users": 2283
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 2268
+        },
+        {
+          "source": "duckduckgo",
+          "users": 2115
+        },
+        {
+          "source": "t.co",
+          "users": 2032
+        },
+        {
+          "source": "bing",
+          "users": 1917
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1412
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1288
+        },
+        {
+          "source": "newsshowcase",
+          "users": 991
+        },
+        {
+          "source": "yahoo",
+          "users": 737
+        },
+        {
+          "source": "news.google.com",
+          "users": 717
+        }
+      ],
+      "authors": [
+        {
+          "author": "Jenny Goldsberry",
+          "users": "40514",
+          "views": "40911"
+        },
+        {
+          "author": "Jon Miltimore",
+          "users": "25147",
+          "views": "25742"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "22963",
+          "views": "23757"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "10660",
+          "views": "11129"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "6694",
+          "views": "6832"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "5497",
+          "views": "5619"
+        },
+        {
+          "author": "Zach LaChance",
+          "users": "4845",
+          "views": "4960"
+        },
+        {
+          "author": "Jamie McIntyre",
+          "users": "3723",
+          "views": "3796"
+        },
+        {
+          "author": "Ross O'Keefe",
+          "users": "3463",
+          "views": "3592"
+        },
+        {
+          "author": "Paul Bedard",
+          "users": "3380",
+          "views": "3447"
+        }
+      ]
     },
     {
       "date": "20250916",
       "totalUsers": 196982,
       "newUsers": 99392,
       "pageviews": 233614,
-      "sessions": 221644
+      "sessions": 221644,
+      "bounceRate": 0.5528234466080743,
+      "averageSessionDuration": 142.31519344183016,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 57235
+        },
+        {
+          "source": "smartnews.com",
+          "users": 42025
+        },
+        {
+          "source": "(direct)",
+          "users": 28745
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 22477
+        },
+        {
+          "source": "google",
+          "users": 16359
+        },
+        {
+          "source": "powerlineblog.com",
+          "users": 4372
+        },
+        {
+          "source": "t.co",
+          "users": 2967
+        },
+        {
+          "source": "deployer",
+          "users": 2012
+        },
+        {
+          "source": "newsbreak",
+          "users": 1949
+        },
+        {
+          "source": "bing",
+          "users": 1770
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1705
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1687
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1605
+        },
+        {
+          "source": "instapundit.com",
+          "users": 1094
+        },
+        {
+          "source": "newsshowcase",
+          "users": 784
+        }
+      ],
+      "authors": [
+        {
+          "author": "Asher Notheis",
+          "users": "16360",
+          "views": "16744"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "16043",
+          "views": "16673"
+        },
+        {
+          "author": "Maydeen Merino",
+          "users": "9350",
+          "views": "9555"
+        },
+        {
+          "author": "Annabella Rosciglione",
+          "users": "7800",
+          "views": "7842"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "7285",
+          "views": "7422"
+        },
+        {
+          "author": "Christian Datoc",
+          "users": "6513",
+          "views": "6705"
+        },
+        {
+          "author": "Brady Knox",
+          "users": "5821",
+          "views": "6021"
+        },
+        {
+          "author": "Paul Bedard",
+          "users": "4715",
+          "views": "4880"
+        },
+        {
+          "author": "Jenny Goldsberry",
+          "users": "4403",
+          "views": "4450"
+        },
+        {
+          "author": "Timothy P. Carney",
+          "users": "3267",
+          "views": "3366"
+        }
+      ]
     },
     {
       "date": "20250917",
       "totalUsers": 175189,
       "newUsers": 93341,
       "pageviews": 208424,
-      "sessions": 198797
+      "sessions": 198797,
+      "bounceRate": 0.646961473261669,
+      "averageSessionDuration": 103.14416808541375,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 67857
+        },
+        {
+          "source": "smartnews.com",
+          "users": 35205
+        },
+        {
+          "source": "(direct)",
+          "users": 26388
+        },
+        {
+          "source": "google",
+          "users": 16709
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 3958
+        },
+        {
+          "source": "t.co",
+          "users": 2626
+        },
+        {
+          "source": "newsbreak",
+          "users": 1994
+        },
+        {
+          "source": "bing",
+          "users": 1846
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1840
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1673
+        },
+        {
+          "source": "instapundit.com",
+          "users": 1610
+        },
+        {
+          "source": "deployer",
+          "users": 1464
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1458
+        },
+        {
+          "source": "powerlineblog.com",
+          "users": 847
+        },
+        {
+          "source": "newsshowcase",
+          "users": 676
+        }
+      ],
+      "authors": [
+        {
+          "author": "Asher Notheis",
+          "users": "17670",
+          "views": "18489"
+        },
+        {
+          "author": "Annabella Rosciglione",
+          "users": "13747",
+          "views": "13871"
+        },
+        {
+          "author": "Washington Examiner Staff",
+          "users": "13220",
+          "views": "13302"
+        },
+        {
+          "author": "Maydeen Merino",
+          "users": "8636",
+          "views": "8844"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "7811",
+          "views": "8148"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "5351",
+          "views": "5480"
+        },
+        {
+          "author": "Mike Brest",
+          "users": "4855",
+          "views": "5004"
+        },
+        {
+          "author": "Heather Hunter",
+          "users": "4813",
+          "views": "4964"
+        },
+        {
+          "author": "Anna Giaritelli",
+          "users": "3563",
+          "views": "3704"
+        },
+        {
+          "author": "Christian Datoc",
+          "users": "3353",
+          "views": "3465"
+        }
+      ]
     },
     {
       "date": "20250918",
       "totalUsers": 167671,
       "newUsers": 84635,
       "pageviews": 205313,
-      "sessions": 191114
+      "sessions": 191114,
+      "bounceRate": 0.6209278231840681,
+      "averageSessionDuration": 114.43678398706531,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 63328
+        },
+        {
+          "source": "smartnews.com",
+          "users": 35287
+        },
+        {
+          "source": "(direct)",
+          "users": 26419
+        },
+        {
+          "source": "google",
+          "users": 15805
+        },
+        {
+          "source": "newsbreak",
+          "users": 3473
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 2862
+        },
+        {
+          "source": "t.co",
+          "users": 2035
+        },
+        {
+          "source": "bing",
+          "users": 1913
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1646
+        },
+        {
+          "source": "deployer",
+          "users": 1618
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1556
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1535
+        },
+        {
+          "source": "msn",
+          "users": 756
+        },
+        {
+          "source": "yahoo",
+          "users": 611
+        },
+        {
+          "source": "facebook.com",
+          "users": 605
+        }
+      ],
+      "authors": [
+        {
+          "author": "Anna Giaritelli",
+          "users": "17371",
+          "views": "18051"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "16309",
+          "views": "16952"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "15525",
+          "views": "15979"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "9342",
+          "views": "9913"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "9148",
+          "views": "9312"
+        },
+        {
+          "author": "Christopher Tremoglie",
+          "users": "5508",
+          "views": "5683"
+        },
+        {
+          "author": "Adisa Hargett-Robinson",
+          "users": "4857",
+          "views": "5080"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "4379",
+          "views": "4504"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "4037",
+          "views": "4098"
+        },
+        {
+          "author": "Sydney Topf",
+          "users": "3207",
+          "views": "3289"
+        }
+      ]
     },
     {
       "date": "20250919",
       "totalUsers": 239587,
       "newUsers": 122990,
       "pageviews": 282764,
-      "sessions": 270623
+      "sessions": 270623,
+      "bounceRate": 0.7006204202894802,
+      "averageSessionDuration": 95.61575275834278,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 115656
+        },
+        {
+          "source": "smartnews.com",
+          "users": 50860
+        },
+        {
+          "source": "(direct)",
+          "users": 27033
+        },
+        {
+          "source": "google",
+          "users": 14083
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 7310
+        },
+        {
+          "source": "newsbreak",
+          "users": 4603
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 2037
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1972
+        },
+        {
+          "source": "t.co",
+          "users": 1801
+        },
+        {
+          "source": "bing",
+          "users": 1743
+        },
+        {
+          "source": "deployer",
+          "users": 1679
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1626
+        },
+        {
+          "source": "powerlineblog.com",
+          "users": 1209
+        },
+        {
+          "source": "msn",
+          "users": 643
+        },
+        {
+          "source": "paid.outbrain.com",
+          "users": 602
+        }
+      ],
+      "authors": [
+        {
+          "author": "Anna Giaritelli",
+          "users": "32942",
+          "views": "33725"
+        },
+        {
+          "author": "Lauren Green",
+          "users": "27488",
+          "views": "27991"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "20646",
+          "views": "21322"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "19891",
+          "views": "20411"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "15275",
+          "views": "15893"
+        },
+        {
+          "author": "Zachary Faria",
+          "users": "12411",
+          "views": "12760"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "9466",
+          "views": "9819"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "6396",
+          "views": "6580"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "6373",
+          "views": "6482"
+        },
+        {
+          "author": "Ross O'Keefe",
+          "users": "6276",
+          "views": "6821"
+        }
+      ]
     },
     {
       "date": "20250920",
       "totalUsers": 139645,
       "newUsers": 67485,
       "pageviews": 162590,
-      "sessions": 157801
-    },
-    {
-      "date": "20250921",
-      "totalUsers": 147411,
-      "newUsers": 64659,
-      "pageviews": 166015,
-      "sessions": 165883,
-      "authors": [],
+      "sessions": 157801,
+      "bounceRate": 0.651542132179137,
+      "averageSessionDuration": 99.98557874622468,
       "referrers": [
         {
-          "source": "(not set)",
-          "users": 57863
-        },
-        {
           "source": "newsbreak.com",
-          "users": 52764
+          "users": 48271
         },
         {
           "source": "smartnews.com",
-          "users": 42722
+          "users": 37499
         },
         {
           "source": "(direct)",
-          "users": 15339
+          "users": 19784
         },
         {
           "source": "google",
-          "users": 7575
-        },
-        {
-          "source": "newsbreak",
-          "users": 4391
-        },
-        {
-          "source": "(data not available)",
-          "users": 2286
-        },
-        {
-          "source": "duckduckgo",
-          "users": 1489
+          "users": 10221
         },
         {
           "source": "realclearpolitics.com",
-          "users": 1326
+          "users": 6314
+        },
+        {
+          "source": "newsbreak",
+          "users": 2456
+        },
+        {
+          "source": "deployer",
+          "users": 1768
+        },
+        {
+          "source": "t.co",
+          "users": 1285
         },
         {
           "source": "m.facebook.com",
-          "users": 1222
+          "users": 1227
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1214
+        },
+        {
+          "source": "bing",
+          "users": 1190
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1053
+        },
+        {
+          "source": "powerlineblog.com",
+          "users": 1046
+        },
+        {
+          "source": "paid.outbrain.com",
+          "users": 594
+        },
+        {
+          "source": "instapundit.com",
+          "users": 577
+        }
+      ],
+      "authors": [
+        {
+          "author": "Asher Notheis",
+          "users": "11703",
+          "views": "12047"
+        },
+        {
+          "author": "Ross O'Keefe",
+          "users": "10696",
+          "views": "11505"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "6871",
+          "views": "7049"
+        },
+        {
+          "author": "David Sivak",
+          "users": "6749",
+          "views": "6907"
+        },
+        {
+          "author": "Adisa Hargett-Robinson",
+          "users": "6607",
+          "views": "6766"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "5498",
+          "views": "5652"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "5425",
+          "views": "5578"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "4855",
+          "views": "4976"
+        },
+        {
+          "author": "Anna Giaritelli",
+          "users": "4248",
+          "views": "4344"
+        },
+        {
+          "author": "Robert Schmad",
+          "users": "3996",
+          "views": "4041"
+        }
+      ]
+    },
+    {
+      "date": "20250921",
+      "totalUsers": 147510,
+      "newUsers": 65079,
+      "pageviews": 166925,
+      "sessions": 166007,
+      "bounceRate": 0.8080080960441427,
+      "averageSessionDuration": 136.8653550239026,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 54917
+        },
+        {
+          "source": "smartnews.com",
+          "users": 43836
+        },
+        {
+          "source": "(not set)",
+          "users": 24124
+        },
+        {
+          "source": "(direct)",
+          "users": 18819
+        },
+        {
+          "source": "google",
+          "users": 7212
+        },
+        {
+          "source": "newsbreak",
+          "users": 3305
+        },
+        {
+          "source": "(data not available)",
+          "users": 2196
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1462
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1447
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1257
         },
         {
           "source": "bing",
           "users": 1011
         },
         {
+          "source": "realclearpolitics.com",
+          "users": 911
+        },
+        {
           "source": "t.co",
-          "users": 715
+          "users": 704
         },
         {
           "source": "newsshowcase",
-          "users": 665
+          "users": 677
         },
         {
           "source": "paid.outbrain.com",
-          "users": 627
+          "users": 592
+        }
+      ],
+      "authors": [
+        {
+          "author": "Asher Notheis",
+          "users": "20633",
+          "views": "20148"
         },
         {
-          "source": "yahoo",
-          "users": 591
+          "author": "Lauren Green",
+          "users": "17134",
+          "views": "16274"
+        },
+        {
+          "author": "Ross O'Keefe",
+          "users": "9106",
+          "views": "9026"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "8736",
+          "views": "9034"
+        },
+        {
+          "author": "Washington Examiner",
+          "users": "5767",
+          "views": "5552"
+        },
+        {
+          "author": "Adisa Hargett-Robinson",
+          "users": "5194",
+          "views": "5042"
+        },
+        {
+          "author": "Peter Laffin",
+          "users": "5175",
+          "views": "5103"
+        },
+        {
+          "author": "Zach LaChance",
+          "users": "4331",
+          "views": "4318"
+        },
+        {
+          "author": "Sydney Topf",
+          "users": "4008",
+          "views": "3847"
+        },
+        {
+          "author": "David Sivak",
+          "users": "3905",
+          "views": "3716"
         }
       ]
     }
-  ]
+  ],
+  "meta": {
+    "totalDays": 7,
+    "totalAuthorEntries": 70,
+    "uniqueAuthors": 30,
+    "sampleAuthors": [
+      "Jenny Goldsberry",
+      "Jon Miltimore",
+      "Molly Parks",
+      "Asher Notheis",
+      "David Zimmermann",
+      "Samantha-Jo Roth",
+      "Zach LaChance",
+      "Jamie McIntyre"
+    ]
+  }
 }

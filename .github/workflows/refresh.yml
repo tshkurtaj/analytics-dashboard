@@ -1,54 +1,38 @@
 name: Refresh GA4 (daily + manual)
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
   schedule:
-    - cron: "8 6 * * *" # 06:08 UTC daily (adjust if you like)
+    - cron: "17 2 * * *"   # daily
 
 permissions:
   contents: write
 
-concurrency:
-  group: refresh-ga4
-  cancel-in-progress: false
-
 jobs:
   refresh:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: 20
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install deps
+        run: npm ci
+        # If you don't have a lockfile yet, use: npm i
 
-      # Run the GA4 fetcher. It will decode the base64 service-account JSON
-      # we pass in GCP_SA_JSON and write data/ga4.json
-      - name: Run GA4 fetch script
+      - name: Build GA4 JSON (KPIs + referrers + authors)
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
           GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
-          # If your GA4 API dimension name for "authors" differs, override here:
-          # e.g. "customEvent:authors", "customEvent:authorName", etc.
-          GA4_AUTHORS_DIM: customEvent:authors
+          GA4_AUTHORS_DIM: customEvent:authors   # if yours is different, change here or set a secret
         run: node scripts/fetch_ga4.js
 
-      - name: Commit & push if changed
-        run: |
-          set -e
-          if [[ -n "$(git status --porcelain data/ga4.json)" ]]; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/ga4.json
-            git commit -m "chore: refresh GA4 data (daily) [skip ci]"
-            git push
-          else
-            echo "No changes in data/ga4.json"
-          fi
+      - name: Commit updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh GA4 data"
+          file_pattern: data/ga4.json

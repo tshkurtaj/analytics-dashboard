@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2025-09-22T20:35:41.332Z",
+  "updatedAt": "2025-09-23T07:22:44.875Z",
   "range": {
-    "start": "2025-09-15",
-    "end": "2025-09-21"
+    "start": "2025-09-16",
+    "end": "2025-09-22"
   },
   "rows": [
-    {
-      "date": "20250915",
-      "totalUsers": 201992,
-      "newUsers": 108526,
-      "pageviews": 241462,
-      "sessions": 230669,
-      "bounceRate": 0.675010512899436,
-      "averageSessionDuration": 96.2867645514525,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 89023
-        },
-        {
-          "source": "smartnews.com",
-          "users": 44017
-        },
-        {
-          "source": "(direct)",
-          "users": 24616
-        },
-        {
-          "source": "google",
-          "users": 18757
-        },
-        {
-          "source": "newsbreak",
-          "users": 3054
-        },
-        {
-          "source": "deployer",
-          "users": 2283
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 2268
-        },
-        {
-          "source": "duckduckgo",
-          "users": 2115
-        },
-        {
-          "source": "t.co",
-          "users": 2032
-        },
-        {
-          "source": "bing",
-          "users": 1917
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 1412
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1288
-        },
-        {
-          "source": "newsshowcase",
-          "users": 991
-        },
-        {
-          "source": "yahoo",
-          "users": 737
-        },
-        {
-          "source": "news.google.com",
-          "users": 717
-        }
-      ],
-      "authors": [
-        {
-          "author": "Jenny Goldsberry",
-          "users": "40514",
-          "views": "40911"
-        },
-        {
-          "author": "Jon Miltimore",
-          "users": "25147",
-          "views": "25742"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "22963",
-          "views": "23757"
-        },
-        {
-          "author": "Asher Notheis",
-          "users": "10660",
-          "views": "11129"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "6694",
-          "views": "6832"
-        },
-        {
-          "author": "Samantha-Jo Roth",
-          "users": "5497",
-          "views": "5619"
-        },
-        {
-          "author": "Zach LaChance",
-          "users": "4845",
-          "views": "4960"
-        },
-        {
-          "author": "Jamie McIntyre",
-          "users": "3723",
-          "views": "3796"
-        },
-        {
-          "author": "Ross O'Keefe",
-          "users": "3463",
-          "views": "3592"
-        },
-        {
-          "author": "Paul Bedard",
-          "users": "3380",
-          "views": "3447"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Hunter Biden wants arrest warrant for Overstock CEO in defamation case",
-          "users": "35971",
-          "views": "36196"
-        },
-        {
-          "title": "Now we know why Fauci got a pardon",
-          "users": "27904",
-          "views": "28490"
-        },
-        {
-          "title": "Eric Trump says ‘sleeping enemy’ has been awoken after Kirk assassination",
-          "users": "10626",
-          "views": "10824"
-        },
-        {
-          "title": "Schiff report details thousands spent on Trump posters hanging from federal buildings",
-          "users": "6702",
-          "views": "6902"
-        },
-        {
-          "title": "October Social Security direct payment worth $967 goes out in 16 days",
-          "users": "5612",
-          "views": "5700"
-        },
-        {
-          "title": "Manchin memoir exposes secret Schumer deal that blindsided Pelosi and split Democrats",
-          "users": "5446",
-          "views": "5564"
-        },
-        {
-          "title": "Spanberger lead against Earle-Sears for Virginia governor now in single digits",
-          "users": "5073",
-          "views": "5175"
-        },
-        {
-          "title": "Buttigieg says ‘we might have been better off’ if Biden dropped reelection bid sooner",
-          "users": "4318",
-          "views": "4353"
-        },
-        {
-          "title": "Blame NATO: Trump’s newest ultimatum and latest way to avoid sanctioning Russia",
-          "users": "3901",
-          "views": "3957"
-        },
-        {
-          "title": "California Democrat trashed after falsely claiming Kirk suspect is Trump supporter",
-          "users": "3839",
-          "views": "3618"
-        },
-        {
-          "title": "Left spews more hate and targets Erika Kirk after Charlie’s murder",
-          "users": "3790",
-          "views": "3375"
-        },
-        {
-          "title": "Martha Raddatz went 0-3 swinging for Trump hate: Liberal Media Scream",
-          "users": "3321",
-          "views": "3384"
-        },
-        {
-          "title": "Lankford says firings over Kirk death celebrations proof ‘cancel culture still persists’",
-          "users": "3068",
-          "views": "3128"
-        },
-        {
-          "title": "Virginia school board member resigns over Charlie Kirk assassination post",
-          "users": "2482",
-          "views": "2392"
-        },
-        {
-          "title": "Letitia James fined for fence height on NYC property being investigated in mortgage case",
-          "users": "2407",
-          "views": "1720"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Justice",
-          "users": "36782",
-          "views": "37413"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "28550",
-          "views": "30421"
-        },
-        {
-          "section": "Senate",
-          "users": "14307",
-          "views": "15605"
-        },
-        {
-          "section": "Crime",
-          "users": "13171",
-          "views": "13700"
-        },
-        {
-          "section": "Finance",
-          "users": "9647",
-          "views": "10062"
-        },
-        {
-          "section": "News",
-          "users": "6641",
-          "views": "7039"
-        },
-        {
-          "section": "House",
-          "users": "6288",
-          "views": "6562"
-        },
-        {
-          "section": "Campaigns",
-          "users": "5162",
-          "views": "5277"
-        },
-        {
-          "section": "Presidential",
-          "users": "4295",
-          "views": "4329"
-        },
-        {
-          "section": "Daily on Defense",
-          "users": "3719",
-          "views": "3793"
-        }
-      ]
-    },
     {
       "date": "20250916",
       "totalUsers": 196982,
@@ -382,78 +130,78 @@
       "articles": [
         {
           "title": "The awakening few see coming",
-          "users": "21712",
-          "views": "16680"
+          "users": "21740",
+          "views": "16711"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 15 days",
-          "users": "14295",
-          "views": "14496"
+          "users": "14327",
+          "views": "14492"
         },
         {
           "title": "New York on the brink",
-          "users": "11170",
-          "views": "9182"
+          "users": "11221",
+          "views": "9183"
         },
         {
           "title": "Migrant crime and the Dallas beheading",
-          "users": "10637",
-          "views": "8280"
+          "users": "10602",
+          "views": "8275"
         },
         {
           "title": "Schiff report details thousands spent on Trump posters hanging from federal buildings",
-          "users": "10272",
-          "views": "10404"
+          "users": "10292",
+          "views": "10425"
         },
         {
           "title": "Democrats call Marjorie Taylor Greene out for DOGE hearing on weather modification",
-          "users": "9401",
-          "views": "9587"
+          "users": "9368",
+          "views": "9548"
         },
         {
           "title": "Colorado minority leader resigns following scandal over picture secretly taken by former lawmaker",
-          "users": "7221",
-          "views": "7323"
+          "users": "7207",
+          "views": "7297"
         },
         {
           "title": "Manchin memoir exposes secret Schumer deal that blindsided Pelosi and split Democrats",
-          "users": "6957",
-          "views": "7017"
+          "users": "6950",
+          "views": "7006"
         },
         {
           "title": "Londoners cheekily react to Trump’s red carpet welcome: ‘You’ve got to do what you’ve got to do’",
-          "users": "6543",
-          "views": "6747"
+          "users": "6481",
+          "views": "6694"
         },
         {
           "title": "Trump says he’s ‘not familiar’ with assassinated Democrat Hortman when asked about lowering flags",
-          "users": "4131",
-          "views": "4239"
+          "users": "4129",
+          "views": "4236"
         },
         {
           "title": "Martha Raddatz went 0-3 swinging for Trump hate: Liberal Media Scream",
-          "users": "4075",
-          "views": "4152"
+          "users": "4060",
+          "views": "4137"
         },
         {
           "title": "Virginia school board member resigns over Charlie Kirk assassination post",
-          "users": "3994",
-          "views": "4028"
+          "users": "4008",
+          "views": "4042"
         },
         {
           "title": "Charlie Kirk and this watershed moment for American renewal",
-          "users": "3843",
-          "views": "3630"
+          "users": "3839",
+          "views": "3631"
         },
         {
           "title": "‘The black hole of Pennsylvania’",
-          "users": "3413",
-          "views": "3230"
+          "users": "3420",
+          "views": "3236"
         },
         {
           "title": "Left spews more hate and targets Erika Kirk after Charlie’s murder",
-          "users": "2913",
-          "views": "2857"
+          "users": "2946",
+          "views": "2883"
         }
       ],
       "sections": [
@@ -634,78 +382,78 @@
       "articles": [
         {
           "title": "Colorado minority leader resigns following scandal over picture secretly taken by former lawmaker",
-          "users": "13540",
-          "views": "13645"
+          "users": "13592",
+          "views": "13703"
         },
         {
           "title": "Democrat wins special election to replace assassinated Minnesota politician",
-          "users": "12784",
-          "views": "12905"
+          "users": "12768",
+          "views": "12934"
         },
         {
           "title": "Democrats call Marjorie Taylor Greene out for DOGE hearing on weather modification",
-          "users": "8606",
-          "views": "8811"
+          "users": "8602",
+          "views": "8816"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 14 days",
-          "users": "7540",
-          "views": "7441"
+          "users": "7530",
+          "views": "7431"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 15 days",
-          "users": "6219",
-          "views": "6323"
+          "users": "6199",
+          "views": "6325"
         },
         {
           "title": "Alexei Navalny’s widow says two labs have confirmed Putin dissenter was poisoned",
-          "users": "5505",
-          "views": "5575"
+          "users": "5474",
+          "views": "5544"
         },
         {
           "title": "The awakening few see coming",
-          "users": "5209",
-          "views": "3440"
+          "users": "5224",
+          "views": "3446"
         },
         {
           "title": "Second round of September Social Security payments issues today",
-          "users": "4367",
-          "views": "4376"
+          "users": "4360",
+          "views": "4370"
         },
         {
           "title": "Russia may be forced to slash oil output: Report",
-          "users": "3384",
-          "views": "3445"
-        },
-        {
-          "title": "New York on the brink",
-          "users": "3025",
-          "views": "2452"
+          "users": "3380",
+          "views": "3440"
         },
         {
           "title": "Winsome Earle-Sears blasts Spanberger’s silence after supporter justifies Kirk assassination",
-          "users": "3018",
-          "views": "3096"
+          "users": "3015",
+          "views": "3095"
         },
         {
           "title": "Londoners cheekily react to Trump’s red carpet welcome: ‘You’ve got to do what you’ve got to do’",
-          "users": "3013",
-          "views": "3091"
+          "users": "3008",
+          "views": "3089"
+        },
+        {
+          "title": "New York on the brink",
+          "users": "3005",
+          "views": "2443"
         },
         {
           "title": "Manchin memoir exposes secret Schumer deal that blindsided Pelosi and split Democrats",
-          "users": "2665",
-          "views": "2714"
+          "users": "2655",
+          "views": "2701"
         },
         {
           "title": "US strikes on Venezuela drug smugglers raise legal questions about lethal force",
-          "users": "2641",
-          "views": "2697"
+          "users": "2645",
+          "views": "2703"
         },
         {
           "title": "Obama takes second crack at Kirk killing condemnation after taking criticism for initial reaction",
-          "users": "2457",
-          "views": "2256"
+          "users": "2469",
+          "views": "2271"
         }
       ],
       "sections": [
@@ -886,78 +634,78 @@
       "articles": [
         {
           "title": "Israeli minister says negotiations ‘have started’ with US to turn Gaza into ‘real estate bonanza’",
-          "users": "10272",
-          "views": "10442"
+          "users": "10260",
+          "views": "10438"
         },
         {
           "title": "Trump DHS locates 22,000 missing migrant children who crossed border under Biden",
-          "users": "7890",
-          "views": "8036"
+          "users": "7876",
+          "views": "8025"
         },
         {
           "title": "Did Democrats forget about Disney firing Gina Carano and Roseanne Barr?",
-          "users": "7636",
-          "views": "6724"
+          "users": "7645",
+          "views": "6727"
         },
         {
           "title": "Biden’s chief of staff gave most damning testimony yet in autopen probe",
-          "users": "7528",
-          "views": "7391"
+          "users": "7522",
+          "views": "7389"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 13 days",
-          "users": "6395",
-          "views": "6580"
+          "users": "6384",
+          "views": "6564"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 14 days",
-          "users": "5768",
-          "views": "5857"
+          "users": "5797",
+          "views": "5881"
         },
         {
           "title": "Pope Leo urges Trump administration to have respect for ‘human dignity’ in first interview",
-          "users": "4945",
-          "views": "4955"
+          "users": "4957",
+          "views": "4959"
         },
         {
           "title": "More than 1,000 police agencies agree to help ICE arrest illegal immigrants: DHS",
-          "users": "4930",
-          "views": "5011"
+          "users": "4905",
+          "views": "4992"
         },
         {
           "title": "Byron York Calls ABC’s decision to pull ‘Jimmy Kimmel Live’ a “Market Response” to Reckless Commentary",
-          "users": "4643",
-          "views": "4731"
+          "users": "4662",
+          "views": "4753"
         },
         {
           "title": "Trump's Marine One makes emergency landing in England",
-          "users": "3863",
-          "views": "2741"
+          "users": "3872",
+          "views": "2740"
         },
         {
           "title": "Biden-era FBI targeted 92 conservative groups and figures, including Charlie Kirk’s Turning Point",
-          "users": "3675",
-          "views": "3783"
+          "users": "3672",
+          "views": "3779"
         },
         {
           "title": "Obama takes second crack at Kirk killing condemnation after taking criticism for initial reaction",
-          "users": "3613",
-          "views": "2871"
+          "users": "3592",
+          "views": "2838"
         },
         {
           "title": "Activists deliver 80,000 petitions urging Schumer and Jeffries to back Mamdani",
-          "users": "3135",
-          "views": "3158"
+          "users": "3136",
+          "views": "3161"
         },
         {
           "title": "Democrats ‘look stupid’ trying to shut down the government after Kirk’s death: Byron York",
-          "users": "2986",
-          "views": "3031"
+          "users": "2987",
+          "views": "3039"
         },
         {
           "title": "Man suspected of shooting five Pennsylvania police officers, killing three, has been identified",
-          "users": "2847",
-          "views": "2912"
+          "users": "2869",
+          "views": "2942"
         }
       ],
       "sections": [
@@ -1138,78 +886,78 @@
       "articles": [
         {
           "title": "Billion-dollar Chinese marijuana grow operations have infiltrated the US, experts say",
-          "users": "28643",
-          "views": "29100"
+          "users": "28762",
+          "views": "29104"
         },
         {
           "title": "Charlie Kirk resolution vote puts House Democrats in the spotlight",
-          "users": "26377",
-          "views": "26632"
+          "users": "26399",
+          "views": "26645"
         },
         {
           "title": "Biden’s chief of staff gave most damning testimony yet in autopen probe",
-          "users": "14757",
-          "views": "14426"
+          "users": "14747",
+          "views": "14423"
         },
         {
           "title": "Israeli minister says negotiations ‘have started’ with US to turn Gaza into ‘real estate bonanza’",
-          "users": "13692",
-          "views": "13918"
+          "users": "13714",
+          "views": "13935"
         },
         {
           "title": "Mazie Hirono suddenly remembers there are biological differences between men and women",
-          "users": "12253",
-          "views": "12559"
+          "users": "12310",
+          "views": "12554"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 12 days",
-          "users": "11644",
-          "views": "11954"
+          "users": "11577",
+          "views": "11952"
         },
         {
           "title": "The forgotten Trump assassination attempt",
-          "users": "9286",
-          "views": "7273"
+          "users": "9246",
+          "views": "7271"
         },
         {
           "title": "Paxton calls out Texas university for punishing student who denounced Kirk assassination",
-          "users": "5232",
-          "views": "5337"
+          "users": "5238",
+          "views": "5341"
         },
         {
           "title": "Activists deliver 80,000 petitions urging Schumer and Jeffries to back Mamdani",
-          "users": "5035",
-          "views": "5088"
+          "users": "5054",
+          "views": "5107"
         },
         {
           "title": "Democrats went to El Salvador for Abrego Garcia, but who visited Iryna Zarutska’s family?",
-          "users": "4603",
-          "views": "4679"
+          "users": "4594",
+          "views": "4669"
         },
         {
           "title": "Pope Leo urges Trump administration to have respect for ‘human dignity’ in first interview",
-          "users": "4276",
-          "views": "4275"
+          "users": "4293",
+          "views": "4285"
         },
         {
           "title": "Trump says ‘scum’ Omar should be impeached, claims she married her brother",
-          "users": "4241",
-          "views": "4356"
+          "users": "4245",
+          "views": "4358"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 13 days",
-          "users": "3782",
-          "views": "3886"
+          "users": "3798",
+          "views": "3897"
         },
         {
           "title": "Third round of September Social Security payments out in five days",
-          "users": "3606",
-          "views": "3659"
+          "users": "3573",
+          "views": "3620"
         },
         {
           "title": "Man suspected of shooting five Pennsylvania police officers, killing three, identified",
-          "users": "3268",
-          "views": "3332"
+          "users": "3251",
+          "views": "3312"
         }
       ],
       "sections": [
@@ -1390,78 +1138,78 @@
       "articles": [
         {
           "title": "October Social Security direct payment worth $967 goes out in 11 days",
-          "users": "9091",
-          "views": "9376"
+          "users": "9072",
+          "views": "9341"
         },
         {
           "title": "Democratic NJ governor candidate claims Charlie Kirk wanted to ‘roll back rights of women and black people’",
-          "users": "7194",
-          "views": "7298"
+          "users": "7238",
+          "views": "7325"
         },
         {
           "title": "Flint Republican courts black Trump voters to flip Michigan House seat",
-          "users": "6698",
-          "views": "6887"
+          "users": "6730",
+          "views": "6906"
         },
         {
           "title": "Paxton calls out Texas university for punishing student who denounced Kirk assassination",
-          "users": "6332",
-          "views": "6494"
+          "users": "6275",
+          "views": "6452"
         },
         {
           "title": "The forgotten Trump assassination attempt",
-          "users": "6089",
-          "views": "4374"
+          "users": "6022",
+          "views": "4383"
         },
         {
           "title": "Kristin Chenoweth responds to backlash over Charlie Kirk comment: ‘I had a human moment’",
-          "users": "5696",
-          "views": "5773"
+          "users": "5699",
+          "views": "5776"
         },
         {
           "title": "Congress is investigating this company for aiding the CCP. Its leaders have cut large checks to Democrats",
-          "users": "3991",
-          "views": "4034"
+          "users": "3989",
+          "views": "4033"
         },
         {
           "title": "Charges against Trump electors were a laughable political stunt",
-          "users": "3670",
-          "views": "2978"
+          "users": "3654",
+          "views": "2969"
         },
         {
           "title": "DOJ seeks 30-year prison sentence for attempted Kavanaugh assassin",
-          "users": "3333",
-          "views": "3333"
-        },
-        {
-          "title": "Republicans redefine boundaries of free speech",
-          "users": "3198",
-          "views": "3295"
+          "users": "3332",
+          "views": "3338"
         },
         {
           "title": "Israeli minister says negotiations ‘have started’ with US to turn Gaza into ‘real estate bonanza’",
-          "users": "3182",
-          "views": "3246"
+          "users": "3196",
+          "views": "3260"
+        },
+        {
+          "title": "Republicans redefine boundaries of free speech",
+          "users": "3194",
+          "views": "3292"
         },
         {
           "title": "Billion-dollar Chinese marijuana grow operations have infiltrated the US, experts say",
-          "users": "2563",
-          "views": "2624"
+          "users": "2564",
+          "views": "2628"
         },
         {
           "title": "Bondi names new Virginia prosecutor after earlier Trump firing",
-          "users": "2201",
-          "views": "2120"
+          "users": "2205",
+          "views": "2124"
         },
         {
           "title": "Abigail Spanberger smells victory in Virginia in early voting kickoff event",
-          "users": "2077",
-          "views": "2109"
+          "users": "2074",
+          "views": "2105"
         },
         {
           "title": "Buttigieg is right: Democrats’ obsession with identity politics cost them in 2024",
-          "users": "1822",
-          "views": "1850"
+          "users": "1821",
+          "views": "1848"
         }
       ],
       "sections": [
@@ -1642,78 +1390,78 @@
       "articles": [
         {
           "title": "Major House Republican players head for the exits leaving gaps in the lower chamber",
-          "users": "17486",
-          "views": "17672"
+          "users": "17529",
+          "views": "17704"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 10 days",
-          "users": "9788",
-          "views": "9865"
+          "users": "9708",
+          "views": "9836"
         },
         {
           "title": "Democratic NJ governor candidate claims Charlie Kirk wanted to ‘roll back rights of women and black people’",
-          "users": "8105",
-          "views": "8276"
+          "users": "8102",
+          "views": "8267"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in 11 days",
-          "users": "6967",
-          "views": "7201"
+          "users": "7008",
+          "views": "7223"
         },
         {
           "title": "The Democratic Party’s free speech hypocrisy",
-          "users": "6413",
-          "views": "6578"
+          "users": "6447",
+          "views": "6603"
         },
         {
           "title": "ABC’s Jonathan Karl insists Kirk’s assassination ‘wasn’t political’",
-          "users": "4820",
-          "views": "4905"
+          "users": "4846",
+          "views": "4928"
         },
         {
           "title": "Kristin Chenoweth responds to backlash over Charlie Kirk comment: ‘I had a human moment’",
-          "users": "4393",
-          "views": "4460"
+          "users": "4399",
+          "views": "4472"
         },
         {
           "title": "Flint Republican courts black Trump voters to flip Michigan House seat",
-          "users": "4034",
-          "views": "4111"
+          "users": "4048",
+          "views": "4127"
         },
         {
           "title": "ABC affiliates and Jimmy Kimmel’s comments are to blame for firing, not the FCC: Joe Concha",
-          "users": "3869",
-          "views": "3922"
+          "users": "3892",
+          "views": "3944"
         },
         {
           "title": "Crockett says it’s ‘unfortunate’ more Democrats didn’t vote against resolution honoring Kirk",
-          "users": "3598",
-          "views": "3695"
+          "users": "3591",
+          "views": "3685"
         },
         {
           "title": "Trump says Pentagon should not decide what information journalists can report",
-          "users": "3133",
-          "views": "3151"
+          "users": "3124",
+          "views": "3143"
         },
         {
           "title": "Congress is investigating this company for aiding the CCP. Its leaders have cut large checks to Democrats",
-          "users": "2583",
-          "views": "2630"
+          "users": "2587",
+          "views": "2634"
         },
         {
           "title": "Third round of September Social Security payments issue in three days",
-          "users": "2371",
-          "views": "1938"
+          "users": "2346",
+          "views": "1923"
         },
         {
           "title": "What a Mamdani win would mean for law enforcement",
-          "users": "2290",
-          "views": "2303"
+          "users": "2288",
+          "views": "2299"
         },
         {
           "title": "Newsom signs bill banning ICE agents from wearing face coverings",
-          "users": "2062",
-          "views": "2071"
+          "users": "2071",
+          "views": "2077"
         }
       ],
       "sections": [
@@ -1768,6 +1516,258 @@
           "views": "4184"
         }
       ]
+    },
+    {
+      "date": "20250922",
+      "totalUsers": 217079,
+      "newUsers": 107709,
+      "pageviews": 237521,
+      "sessions": 242464,
+      "bounceRate": 0.8128216972416523,
+      "averageSessionDuration": 130.56477257882406,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 101577
+        },
+        {
+          "source": "smartnews.com",
+          "users": 48615
+        },
+        {
+          "source": "(not set)",
+          "users": 36053
+        },
+        {
+          "source": "(direct)",
+          "users": 23226
+        },
+        {
+          "source": "google",
+          "users": 8784
+        },
+        {
+          "source": "t.co",
+          "users": 3292
+        },
+        {
+          "source": "newsbreak",
+          "users": 2916
+        },
+        {
+          "source": "(data not available)",
+          "users": 2676
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1659
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1427
+        },
+        {
+          "source": "deployer",
+          "users": 1409
+        },
+        {
+          "source": "bing",
+          "users": 1380
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1375
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1312
+        },
+        {
+          "source": "msn",
+          "users": 669
+        }
+      ],
+      "authors": [
+        {
+          "author": "Molly Parks",
+          "users": "57382",
+          "views": "54837"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "40816",
+          "views": "38921"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "20591",
+          "views": "19843"
+        },
+        {
+          "author": "Associated Press",
+          "users": "8289",
+          "views": "7879"
+        },
+        {
+          "author": "Lauren Green",
+          "users": "4616",
+          "views": "4378"
+        },
+        {
+          "author": "Ross O'Keefe",
+          "users": "3378",
+          "views": "3292"
+        },
+        {
+          "author": "David Sivak",
+          "users": "2761",
+          "views": "2590"
+        },
+        {
+          "author": "Adisa Hargett-Robinson",
+          "users": "2698",
+          "views": "2551"
+        },
+        {
+          "author": "Jared Whitley",
+          "users": "2528",
+          "views": "2360"
+        },
+        {
+          "author": "Peter Laffin",
+          "users": "1993",
+          "views": "1936"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Supreme Court poised to shake up midterm elections",
+          "users": "18170",
+          "views": "16867"
+        },
+        {
+          "title": "October Social Security direct payment worth $967 goes out in 10 days",
+          "users": "11255",
+          "views": "10604"
+        },
+        {
+          "title": "Trump says Pentagon should not decide what information journalists can report",
+          "users": "8561",
+          "views": "7837"
+        },
+        {
+          "title": "Dozens arrested and hurt in clashes with police near Philippine presidential palace",
+          "users": "5270",
+          "views": "4879"
+        },
+        {
+          "title": "Major House Republican players head for the exits leaving gaps in the lower chamber",
+          "users": "3554",
+          "views": "3352"
+        },
+        {
+          "title": "Dominican Republic confirms boat destroyed by US was carrying 2,000 pounds of cocaine",
+          "users": "3202",
+          "views": "3013"
+        },
+        {
+          "title": "October Social Security direct payment worth $967 goes out in nine days",
+          "users": "2873",
+          "views": "2687"
+        },
+        {
+          "title": "Kristin Chenoweth responds to backlash over Charlie Kirk comment: ‘I had a human moment’",
+          "users": "2679",
+          "views": "2529"
+        },
+        {
+          "title": "Hospitals worry their drug scam may be exposed",
+          "users": "2565",
+          "views": "2332"
+        },
+        {
+          "title": "Democratic NJ governor candidate claims Charlie Kirk wanted to ‘roll back rights of women and black people’",
+          "users": "2489",
+          "views": "2407"
+        },
+        {
+          "title": "Crockett says it’s ‘unfortunate’ more Democrats didn’t vote against resolution honoring Kirk",
+          "users": "2487",
+          "views": "2388"
+        },
+        {
+          "title": "Mullin says Trump being ‘open and transparent’ asking Bondi to target political enemies",
+          "users": "1936",
+          "views": "1819"
+        },
+        {
+          "title": "A new day for TV: Jimmy Kimmel faces the music",
+          "users": "1896",
+          "views": "1759"
+        },
+        {
+          "title": "The shoddy efforts to pin political violence on the Right",
+          "users": "1713",
+          "views": "1082"
+        },
+        {
+          "title": "How Supreme Court is poised to shake up the midterms",
+          "users": "1705",
+          "views": "1500"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Defense",
+          "users": "52009",
+          "views": "49270"
+        },
+        {
+          "section": "In Focus",
+          "users": "39843",
+          "views": "37699"
+        },
+        {
+          "section": "Finance",
+          "users": "18617",
+          "views": "17960"
+        },
+        {
+          "section": "Congressional",
+          "users": "8727",
+          "views": "8602"
+        },
+        {
+          "section": "World",
+          "users": "8241",
+          "views": "7834"
+        },
+        {
+          "section": "Justice",
+          "users": "4616",
+          "views": "4406"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "4113",
+          "views": "4019"
+        },
+        {
+          "section": "Entertainment",
+          "users": "3497",
+          "views": "3323"
+        },
+        {
+          "section": "News",
+          "users": "3323",
+          "views": "3219"
+        },
+        {
+          "section": "House",
+          "users": "2998",
+          "views": "2919"
+        }
+      ]
     }
   ],
   "meta": {
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 30,
-    "uniqueSections": 24,
+    "uniqueAuthors": 31,
+    "uniqueSections": 23,
     "sampleAuthors": [
-      "Jenny Goldsberry",
-      "Jon Miltimore",
-      "Molly Parks",
       "Asher Notheis",
-      "David Zimmermann"
+      "Molly Parks",
+      "Maydeen Merino",
+      "Annabella Rosciglione",
+      "Samantha-Jo Roth"
     ],
     "sampleSections": [
-      "Justice",
-      "Beltway Confidential",
       "Senate",
-      "Crime",
-      "Finance"
+      "Finance and Economy",
+      "News",
+      "White House",
+      "Energy and Environment"
     ]
   }
 }

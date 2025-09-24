@@ -1,185 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Washington Examiner Analytics Assistant</title>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;display:flex;align-items:center;justify-content:center}
-    .container{width:100%;max-width:980px;background:#fff;border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.15);overflow:hidden}
-    .header{padding:20px;border-bottom:1px solid #eee;background:#000;color:#fff;display:flex;align-items:center;justify-content:space-between}
-    .header img{height:28px}
-    .status{font-size:12px;padding:4px 8px;border-radius:12px;background:#333}
-    .status.online{background:#22c55e;color:#fff}
-    .status.offline{background:#ef4444;color:#fff}
-    .chat{padding:20px;height:70vh;overflow:auto}
-    .bubble{background:#f1f3f4;border-radius:14px;padding:14px 16px;margin:10px 0;max-width:85%;line-height:1.5;white-space:pre-wrap;font-size:14px}
-    .me{margin-left:auto;background:#1971ff;color:#fff}
-    .sys{background:#f8f9ff;border-left:4px solid #1971ff}
-    .error{background:#fee;border-left:4px solid #ef4444;color:#991b1b}
-    .input{display:flex;gap:10px;padding:16px;border-top:1px solid #eee}
-    textarea{flex:1;padding:12px 14px;border:1px solid #ddd;border-radius:12px;min-height:48px;resize:vertical;font-size:16px;font-family:inherit}
-    button{width:56px;height:48px;border:none;border-radius:50%;background:#1971ff;color:#fff;font-size:18px;cursor:pointer;transition:background 0.2s}
-    button:hover{background:#1557cc}
-    button:disabled{background:#ccc;cursor:not-allowed}
-    .note{padding:8px 16px;color:#666;border-top:1px dashed #eee;font-size:12px;text-align:center}
-    .suggestions{padding:10px 20px;background:#f8f9ff;border-top:1px dashed #e5e7eb}
-    .suggestion-chip{display:inline-block;background:#e5e7eb;color:#374151;padding:4px 12px;border-radius:16px;font-size:12px;margin:2px 4px 2px 0;cursor:pointer;transition:background 0.2s}
-    .suggestion-chip:hover{background:#d1d5db}
-    .loading{opacity:0.7}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washington Examiner Analytics Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            width: 90%;
+            max-width: 800px;
+            height: 85vh;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #1a365d, #2d3748);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .chat-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .chat-header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8fafc;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            animation: fadeInUp 0.3s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .user .message-avatar {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .assistant .message-avatar {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 16px 20px;
+            border-radius: 18px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .user .message-content {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .assistant .message-content {
+            background: white;
+            color: #374151;
+            border: 1px solid #e5e7eb;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+            padding: 16px 20px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .typing-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #9ca3af;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        .chat-input {
+            flex: 1;
+            min-height: 50px;
+            max-height: 120px;
+            padding: 15px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 25px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: none;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .chat-input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .send-button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .send-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .send-button:active {
+            transform: scale(0.95);
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .quick-action {
+            padding: 8px 14px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #64748b;
+        }
+
+        .quick-action:hover {
+            background: #e2e8f0;
+            border-color: #cbd5e1;
+        }
+
+        .quick-action.content-analysis {
+            background: #fef3c7;
+            border-color: #f59e0b;
+            color: #d97706;
+        }
+
+        .quick-action.content-analysis:hover {
+            background: #fed7aa;
+        }
+
+        .welcome-message {
+            text-align: center;
+            color: #64748b;
+            padding: 40px 20px;
+        }
+
+        .welcome-message h2 {
+            margin-bottom: 12px;
+            color: #374151;
+        }
+
+        .error-message {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .feature-highlight {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #0369a1;
+        }
+
+        @media (max-width: 768px) {
+            .chat-container {
+                width: 95%;
+                height: 90vh;
+            }
+
+            .message-content {
+                max-width: 85%;
+            }
+
+            .quick-actions {
+                gap: 6px;
+            }
+
+            .quick-action {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" alt="Washington Examiner"/>
-      <div id="status" class="status offline">Checking...</div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>📊 Washington Examiner Analytics</h1>
+            <p>Your intelligent analytics assistant - Performance metrics, content analysis, and editorial insights</p>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="welcome-message">
+                <h2>👋 Hello! I'm your analytics assistant</h2>
+                <p>Ask me about performance metrics, content analysis, trending topics, or anything about your data. I can analyze both the numbers AND the content!</p>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="message-avatar assistant">WE</div>
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <div class="quick-actions">
+                <!-- Performance Analytics -->
+                <button class="quick-action" onclick="sendQuickMessage('yesterday\'s metrics')">Yesterday's Metrics</button>
+                <button class="quick-action" onclick="sendQuickMessage('top articles')">Top Articles</button>
+                <button class="quick-action" onclick="sendQuickMessage('author performance')">Author Performance</button>
+                
+                <!-- Content Analysis -->
+                <button class="quick-action content-analysis" onclick="sendQuickMessage('what were our main topics yesterday?')">Coverage Topics</button>
+                <button class="quick-action content-analysis" onclick="sendQuickMessage('editorial focus')">Editorial Focus</button>
+                <button class="quick-action content-analysis" onclick="sendQuickMessage('trending stories')">Latest Stories</button>
+            </div>
+            
+            <div class="chat-input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    class="chat-input" 
+                    placeholder="Ask me about analytics, content topics, author performance, trending stories..."
+                    rows="1"
+                ></textarea>
+                <button id="sendButton" class="send-button" onclick="sendMessage()">
+                    ➤
+                </button>
+            </div>
+        </div>
     </div>
-    <div id="chat" class="chat">
-      <div class="bubble sys">👋 Hi! I'm your Washington Examiner analytics assistant. Ask me about KPIs, author performance, traffic sources, or trends!</div>
-    </div>
-    <div class="suggestions">
-      <strong>Try asking:</strong>
-      <span class="suggestion-chip" onclick="askQuestion('Show me yesterday\\'s KPIs')">Yesterday's KPIs</span>
-      <span class="suggestion-chip" onclick="askQuestion('Top performing authors')">Top Authors</span>
-      <span class="suggestion-chip" onclick="askQuestion('Show me Asher Notheis performance')">Asher's Performance</span>
-      <span class="suggestion-chip" onclick="askQuestion('Traffic sources')">Traffic Sources</span>
-      <span class="suggestion-chip" onclick="askQuestion('Weekly trends')">Weekly Trends</span>
-    </div>
-    <div class="input">
-      <textarea id="msg" placeholder="Ask about your analytics data…" rows="1"></textarea>
-      <button id="send">➤</button>
-    </div>
-    <div class="note">
-      Data refreshes daily from GA4. Last update from <code>data/ga4.json</code>
-    </div>
-  </div>
 
-  <script>
-    // UPDATE THIS URL TO YOUR ACTUAL CLOUDFLARE WORKER URL
-    const BACKEND_URL = 'https://wex-analytics-bot.tshkurtaj.workers.dev/query';
-    
-    const chat = document.getElementById('chat');
-    const msg = document.getElementById('msg');
-    const send = document.getElementById('send');
-    const status = document.getElementById('status');
-    
-    let isLoading = false;
+    <script>
+        // Configuration - UPDATE THIS URL WITH YOUR CLOUDFLARE WORKER URL
+        const WORKER_URL = 'YOUR_CLOUDFLARE_WORKER_URL_HERE';
+        
+        // State
+        let conversationHistory = [];
+        let isLoading = false;
 
-    // Auto-resize textarea
-    msg.addEventListener('input', function() {
-      this.style.height = 'auto';
-      this.style.height = Math.min(this.scrollHeight, 120) + 'px';
-    });
+        // DOM elements
+        const chatMessages = document.getElementById('chatMessages');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+        const typingIndicator = document.getElementById('typingIndicator');
 
-    function addMessage(text, isUser = false, isError = false) {
-      const bubble = document.createElement('div');
-      bubble.className = 'bubble' + (isUser ? ' me' : '') + (isError ? ' error' : '');
-      bubble.textContent = text;
-      chat.appendChild(bubble);
-      chat.scrollTop = chat.scrollHeight;
-    }
-
-    function askQuestion(question) {
-      msg.value = question;
-      ask();
-    }
-
-    function setLoading(loading) {
-      isLoading = loading;
-      send.disabled = loading;
-      send.textContent = loading ? '⏳' : '➤';
-      if (loading) {
-        chat.classList.add('loading');
-      } else {
-        chat.classList.remove('loading');
-      }
-    }
-
-    function updateStatus(online) {
-      status.className = 'status ' + (online ? 'online' : 'offline');
-      status.textContent = online ? 'Online' : 'Offline';
-    }
-
-    async function checkHealth() {
-      try {
-        const response = await fetch(BACKEND_URL.replace('/query', '/health'), {
-          method: 'GET',
-          signal: AbortSignal.timeout(5000)
-        });
-        updateStatus(response.ok);
-      } catch (error) {
-        updateStatus(false);
-      }
-    }
-
-    async function ask() {
-      const question = msg.value.trim();
-      if (!question || isLoading) return;
-
-      addMessage(question, true);
-      msg.value = '';
-      msg.style.height = 'auto';
-      setLoading(true);
-
-      try {
-        const response = await fetch(BACKEND_URL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ message: question }),
-          signal: AbortSignal.timeout(30000) // 30 second timeout
+        // Auto-resize textarea
+        messageInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
         });
 
-        if (!response.ok) {
-          throw new Error(`Server error: ${response.status} ${response.statusText}`);
+        // Send message on Enter (but allow Shift+Enter for new lines)
+        messageInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Quick message function
+        function sendQuickMessage(message) {
+            messageInput.value = message;
+            sendMessage();
         }
 
-        const data = await response.json();
-        addMessage(data.response || 'No response received.');
-        updateStatus(true);
+        // Main send message function
+        async function sendMessage() {
+            const message = messageInput.value.trim();
+            if (!message || isLoading) return;
 
-      } catch (error) {
-        console.error('Request failed:', error);
-        
-        let errorMessage = 'Sorry, I encountered an error: ';
-        if (error.name === 'AbortError') {
-          errorMessage += 'Request timed out. Please try again.';
-        } else if (error.message.includes('Failed to fetch')) {
-          errorMessage += 'Cannot connect to analytics service. Please check your connection.';
-        } else {
-          errorMessage += error.message;
+            // Clear input and disable send button
+            messageInput.value = '';
+            messageInput.style.height = 'auto';
+            setLoading(true);
+
+            // Add user message to chat
+            addMessage(message, 'user');
+
+            try {
+                // Show typing indicator
+                showTypingIndicator();
+
+                // Send to analytics worker
+                const response = await fetch(WORKER_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                // Hide typing indicator and show response
+                hideTypingIndicator();
+                addMessage(data.response || 'Sorry, I couldn\'t process that request.', 'assistant');
+
+            } catch (error) {
+                console.error('Error:', error);
+                hideTypingIndicator();
+                
+                let errorMessage = 'I\'m having trouble connecting right now. ';
+                
+                if (error.message.includes('Failed to fetch')) {
+                    errorMessage += 'Please check if your Cloudflare Worker URL is set correctly.';
+                } else {
+                    errorMessage += `Error: ${error.message}`;
+                }
+                
+                addMessage(errorMessage, 'assistant');
+            }
+
+            setLoading(false);
         }
-        
-        addMessage(errorMessage, false, true);
-        updateStatus(false);
-      } finally {
-        setLoading(false);
-      }
-    }
 
-    // Event listeners
-    send.addEventListener('click', ask);
-    
-    msg.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && !e.shiftKey && !isLoading) {
-        e.preventDefault();
-        ask();
-      }
-    });
+        // Add message to chat
+        function addMessage(content, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
 
-    // Initial health check
-    checkHealth();
-    
-    // Check health every 30 seconds
-    setInterval(checkHealth, 30000);
+            const avatar = document.createElement('div');
+            avatar.className = 'message-avatar';
+            avatar.textContent = sender === 'user' ? 'You' : 'WE';
 
-    // Welcome message with actual suggestions
-    setTimeout(() => {
-      addMessage("💡 I can help you with:\n\n• Author performance (Asher Notheis, Anna Giaritelli, Adisa Hargett-Robinson)\n• Daily KPIs and metrics\n• Traffic source analysis\n• Weekly trends and comparisons\n\nJust ask me in plain English!");
-    }, 1500);
-  </script>
+            const messageContent = document.createElement('div');
+            messageContent.className = 'message-content';
+            messageContent.textContent = content;
+
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(messageContent);
+
+            // Remove welcome message if it exists
+            const welcomeMessage = chatMessages.querySelector('.welcome-message');
+            if (welcomeMessage) {
+                welcomeMessage.remove();
+            }
+
+            chatMessages.appendChild(messageDiv);
+            scrollToBottom();
+
+            // Store in conversation history
+            conversationHistory.push({ content, sender, timestamp: new Date() });
+        }
+
+        // Show typing indicator
+        function showTypingIndicator() {
+            typingIndicator.style.display = 'flex';
+            scrollToBottom();
+        }
+
+        // Hide typing indicator
+        function hideTypingIndicator() {
+            typingIndicator.style.display = 'none';
+        }
+
+        // Set loading state
+        function setLoading(loading) {
+            isLoading = loading;
+            sendButton.disabled = loading;
+            messageInput.disabled = loading;
+            
+            if (loading) {
+                sendButton.style.opacity = '0.5';
+            } else {
+                sendButton.style.opacity = '1';
+                messageInput.focus();
+            }
+        }
+
+        // Scroll to bottom of chat
+        function scrollToBottom() {
+            setTimeout(() => {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 100);
+        }
+
+        // Check worker URL on page load
+        window.addEventListener('load', function() {
+            if (WORKER_URL === 'YOUR_CLOUDFLARE_WORKER_URL_HERE') {
+                const warningDiv = document.createElement('div');
+                warningDiv.className = 'error-message';
+                warningDiv.innerHTML = `
+                    <strong>⚠️ Setup Required:</strong> Please replace 'YOUR_CLOUDFLARE_WORKER_URL_HERE' with your actual Cloudflare Worker URL in line 175.
+                `;
+                chatMessages.appendChild(warningDiv);
+            } else {
+                // Show feature highlight
+                const featureDiv = document.createElement('div');
+                featureDiv.className = 'feature-highlight';
+                featureDiv.innerHTML = `
+                    <strong>🎯 NEW: Content Analysis!</strong> Try asking "What were our main topics yesterday?" or "Editorial focus" to analyze your actual articles alongside performance metrics.
+                `;
+                chatMessages.appendChild(featureDiv);
+            }
+            
+            messageInput.focus();
+        });
+
+        // Suggest example queries
+        function showExampleQueries() {
+            const examples = [
+                "What were our main topics yesterday?",
+                "Show me editorial focus analysis",
+                "Yesterday's performance metrics",
+                "Which authors covered what topics?",
+                "Top performing articles"
+            ];
+            
+            const randomExample = examples[Math.floor(Math.random() * examples.length)];
+            addMessage(`Try asking: "${randomExample}"`, 'assistant');
+        }
+
+        // Optional: Show example after a delay
+        setTimeout(() => {
+            if (conversationHistory.length === 0 && WORKER_URL !== 'YOUR_CLOUDFLARE_WORKER_URL_HERE') {
+                showExampleQueries();
+            }
+        }, 5000);
+    </script>
 </body>
 </html>

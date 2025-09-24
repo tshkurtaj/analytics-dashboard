@@ -35,44 +35,57 @@
         .chat-header {
             background: linear-gradient(135deg, #1a365d, #2d3748);
             color: white;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             border-radius: 20px 20px 0 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 15px;
         }
 
         .logo-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
         .we-logo {
-            width: 40px;
-            height: 40px;
-            background: #dc2626;
-            color: white;
+            width: 120px;
+            height: 80px;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
-            font-size: 16px;
             flex-shrink: 0;
+            overflow: hidden;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .we-logo img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: 75px;
+        }
+
+        .we-logo-fallback {
+            color: white;
+            font-weight: 800;
+            font-size: 24px;
         }
 
         .header-content h1 {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin: 0;
+            color: white;
         }
 
         .header-content p {
-            opacity: 0.9;
-            font-size: 13px;
+            display: none;
         }
 
         .chat-messages {
@@ -367,10 +380,14 @@
     <div class="chat-container">
         <div class="chat-header">
             <div class="logo-container">
-                <div class="we-logo">WE</div>
+                <div class="we-logo">
+                    <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" 
+                         alt="Washington Examiner Logo" 
+                         onload="this.style.display='block';"
+                         onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;we-logo-fallback&quot;>WE</div>';">
+                </div>
                 <div class="header-content">
-                    <h1>Washington Examiner Analytics</h1>
-                    <p>Performance metrics • Content production • Editorial insights • RSS analysis</p>
+                    <h1>Washington Examiner Official Assistant</h1>
                 </div>
             </div>
         </div>

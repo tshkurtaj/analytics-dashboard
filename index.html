@@ -309,13 +309,13 @@
     <div class="chat-container">
         <div class="chat-header">
             <h1>📊 Washington Examiner Analytics</h1>
-            <p>Your intelligent analytics assistant - Performance metrics, content analysis, and editorial insights</p>
+            <p>Editorial insights, story analysis, and performance metrics - powered by RSS feeds and analytics</p>
         </div>
         
         <div class="chat-messages" id="chatMessages">
             <div class="welcome-message">
-                <h2>👋 Hello! I'm your analytics assistant</h2>
-                <p>Ask me about performance metrics, content analysis, trending topics, or anything about your data. I can analyze both the numbers AND the content!</p>
+                <h2>Hello! I'm your editorial and analytics assistant</h2>
+                <p>Ask me about recent stories, coverage themes, editorial focus, or performance metrics. I analyze content from RSS feeds and provide analytics insights!</p>
             </div>
         </div>
 
@@ -330,22 +330,22 @@
 
         <div class="chat-input-container">
             <div class="quick-actions">
-                <!-- Performance Analytics -->
-                <button class="quick-action" onclick="sendQuickMessage('yesterday\'s metrics')">Yesterday's Metrics</button>
-                <button class="quick-action" onclick="sendQuickMessage('top articles')">Top Articles</button>
-                <button class="quick-action" onclick="sendQuickMessage('author performance')">Author Performance</button>
+                <!-- Editorial Content Analysis -->
+                <button class="quick-action content-analysis" onclick="sendQuickMessage('what stories did we publish yesterday?')">Recent Stories</button>
+                <button class="quick-action content-analysis" onclick="sendQuickMessage('what were our main coverage topics?')">Coverage Topics</button>
+                <button class="quick-action content-analysis" onclick="sendQuickMessage('top stories report')">Top Stories</button>
                 
-                <!-- Content Analysis -->
-                <button class="quick-action content-analysis" onclick="sendQuickMessage('what were our main topics yesterday?')">Coverage Topics</button>
-                <button class="quick-action content-analysis" onclick="sendQuickMessage('editorial focus')">Editorial Focus</button>
-                <button class="quick-action content-analysis" onclick="sendQuickMessage('trending stories')">Latest Stories</button>
+                <!-- Performance Analytics -->
+                <button class="quick-action" onclick="sendQuickMessage('yesterday\'s metrics')">Performance Metrics</button>
+                <button class="quick-action" onclick="sendQuickMessage('author performance')">Author Performance</button>
+                <button class="quick-action" onclick="sendQuickMessage('traffic sources')">Traffic Sources</button>
             </div>
             
             <div class="chat-input-wrapper">
                 <textarea 
                     id="messageInput" 
                     class="chat-input" 
-                    placeholder="Ask me about analytics, content topics, author performance, trending stories..."
+                    placeholder="Ask me about recent stories, coverage topics, analytics, or performance metrics..."
                     rows="1"
                 ></textarea>
                 <button id="sendButton" class="send-button" onclick="sendMessage()">
@@ -356,8 +356,8 @@
     </div>
 
     <script>
-        // Configuration - UPDATE THIS URL WITH YOUR CLOUDFLARE WORKER URL
-        const WORKER_URL = 'YOUR_CLOUDFLARE_WORKER_URL_HERE';
+        // Configuration - YOUR ACTUAL WORKER URL
+        const WORKER_URL = 'https://wex-analytics-bot.tshkurtaj.workers.dev/';
         
         // State
         let conversationHistory = [];
@@ -432,7 +432,7 @@
                 let errorMessage = 'I\'m having trouble connecting right now. ';
                 
                 if (error.message.includes('Failed to fetch')) {
-                    errorMessage += 'Please check if your Cloudflare Worker URL is set correctly.';
+                    errorMessage += 'Please check your internet connection or try again.';
                 } else {
                     errorMessage += `Error: ${error.message}`;
                 }
@@ -504,24 +504,15 @@
             }, 100);
         }
 
-        // Check worker URL on page load
+        // Show feature highlight on load
         window.addEventListener('load', function() {
-            if (WORKER_URL === 'YOUR_CLOUDFLARE_WORKER_URL_HERE') {
-                const warningDiv = document.createElement('div');
-                warningDiv.className = 'error-message';
-                warningDiv.innerHTML = `
-                    <strong>⚠️ Setup Required:</strong> Please replace 'YOUR_CLOUDFLARE_WORKER_URL_HERE' with your actual Cloudflare Worker URL in line 175.
-                `;
-                chatMessages.appendChild(warningDiv);
-            } else {
-                // Show feature highlight
-                const featureDiv = document.createElement('div');
-                featureDiv.className = 'feature-highlight';
-                featureDiv.innerHTML = `
-                    <strong>🎯 NEW: Content Analysis!</strong> Try asking "What were our main topics yesterday?" or "Editorial focus" to analyze your actual articles alongside performance metrics.
-                `;
-                chatMessages.appendChild(featureDiv);
-            }
+            // Show feature highlight
+            const featureDiv = document.createElement('div');
+            featureDiv.className = 'feature-highlight';
+            featureDiv.innerHTML = `
+                <strong>🎯 Editorial Analysis Ready!</strong> Try asking "What stories did we publish yesterday?" or "What were our main coverage topics?" to analyze your actual Washington Examiner content alongside performance metrics.
+            `;
+            chatMessages.appendChild(featureDiv);
             
             messageInput.focus();
         });
@@ -529,11 +520,11 @@
         // Suggest example queries
         function showExampleQueries() {
             const examples = [
-                "What were our main topics yesterday?",
-                "Show me editorial focus analysis",
+                "What stories did we publish yesterday?",
+                "What were our main coverage topics?",
+                "Top stories report",
                 "Yesterday's performance metrics",
-                "Which authors covered what topics?",
-                "Top performing articles"
+                "Reporter coverage analysis"
             ];
             
             const randomExample = examples[Math.floor(Math.random() * examples.length)];
@@ -542,7 +533,7 @@
 
         // Optional: Show example after a delay
         setTimeout(() => {
-            if (conversationHistory.length === 0 && WORKER_URL !== 'YOUR_CLOUDFLARE_WORKER_URL_HERE') {
+            if (conversationHistory.length === 0) {
                 showExampleQueries();
             }
         }, 5000);

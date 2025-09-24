@@ -38,17 +38,44 @@
             padding: 20px;
             text-align: center;
             border-radius: 20px 20px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
         }
 
-        .chat-header h1 {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .we-logo {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .we-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .header-content h1 {
             font-size: 24px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
-        .chat-header p {
+        .header-content p {
             opacity: 0.9;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .chat-messages {
@@ -99,7 +126,7 @@
         }
 
         .assistant .message-avatar {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
             color: white;
         }
 
@@ -222,17 +249,17 @@
 
         .quick-actions {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             margin-bottom: 15px;
             flex-wrap: wrap;
         }
 
         .quick-action {
-            padding: 8px 14px;
+            padding: 7px 12px;
             background: #f1f5f9;
             border: 1px solid #e2e8f0;
-            border-radius: 20px;
-            font-size: 13px;
+            border-radius: 18px;
+            font-size: 12px;
             cursor: pointer;
             transition: all 0.2s ease;
             color: #64748b;
@@ -243,14 +270,34 @@
             border-color: #cbd5e1;
         }
 
-        .quick-action.content-analysis {
+        .quick-action.production {
+            background: #dcfce7;
+            border-color: #16a34a;
+            color: #15803d;
+        }
+
+        .quick-action.production:hover {
+            background: #bbf7d0;
+        }
+
+        .quick-action.editorial {
             background: #fef3c7;
             border-color: #f59e0b;
             color: #d97706;
         }
 
-        .quick-action.content-analysis:hover {
+        .quick-action.editorial:hover {
             background: #fed7aa;
+        }
+
+        .quick-action.analytics {
+            background: #dbeafe;
+            border-color: #3b82f6;
+            color: #2563eb;
+        }
+
+        .quick-action.analytics:hover {
+            background: #bfdbfe;
         }
 
         .welcome-message {
@@ -295,12 +342,26 @@
             }
 
             .quick-actions {
-                gap: 6px;
+                gap: 4px;
             }
 
             .quick-action {
+                font-size: 11px;
+                padding: 6px 8px;
+            }
+
+            .chat-header {
+                padding: 15px;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .header-content h1 {
+                font-size: 20px;
+            }
+
+            .header-content p {
                 font-size: 12px;
-                padding: 6px 10px;
             }
         }
     </style>
@@ -308,14 +369,23 @@
 <body>
     <div class="chat-container">
         <div class="chat-header">
-            <h1>📊 Washington Examiner Analytics</h1>
-            <p>Editorial insights, story analysis, and performance metrics - powered by RSS feeds and analytics</p>
+            <div class="logo-container">
+                <div class="we-logo">
+                    <img src="https://www.washingtonexaminer.com/wp-content/uploads/2024/05/2023-Examiner-logo-white-color-eagle-1.webp" 
+                         alt="Washington Examiner" 
+                         onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;color: white; font-weight: 800; font-size: 16px;&quot;>WE</div>'">
+                </div>
+                <div class="header-content">
+                    <h1>Washington Examiner Analytics</h1>
+                    <p>Performance metrics • Content production • Editorial insights • RSS analysis</p>
+                </div>
+            </div>
         </div>
         
         <div class="chat-messages" id="chatMessages">
             <div class="welcome-message">
-                <h2>Hello! I'm your editorial and analytics assistant</h2>
-                <p>Ask me about recent stories, coverage themes, editorial focus, or performance metrics. I analyze content from RSS feeds and provide analytics insights!</p>
+                <h2>Welcome to your complete analytics dashboard</h2>
+                <p>Ask me about performance metrics, content production from Google Sheets, or recent stories from RSS feeds. I combine all your data sources for comprehensive insights!</p>
             </div>
         </div>
 
@@ -330,22 +400,27 @@
 
         <div class="chat-input-container">
             <div class="quick-actions">
-                <!-- Editorial Content Analysis -->
-                <button class="quick-action content-analysis" onclick="sendQuickMessage('what stories did we publish yesterday?')">Recent Stories</button>
-                <button class="quick-action content-analysis" onclick="sendQuickMessage('what were our main coverage topics?')">Coverage Topics</button>
-                <button class="quick-action content-analysis" onclick="sendQuickMessage('top stories report')">Top Stories</button>
+                <!-- Production Analytics (Google Sheets) -->
+                <button class="quick-action production" onclick="sendQuickMessage('how many stories we produced yesterday')">Stories Produced</button>
+                <button class="quick-action production" onclick="sendQuickMessage('production by author')">Author Production</button>
+                <button class="quick-action production" onclick="sendQuickMessage('production by section')">Section Production</button>
                 
-                <!-- Performance Analytics -->
-                <button class="quick-action" onclick="sendQuickMessage('yesterday\'s metrics')">Performance Metrics</button>
-                <button class="quick-action" onclick="sendQuickMessage('author performance')">Author Performance</button>
-                <button class="quick-action" onclick="sendQuickMessage('traffic sources')">Traffic Sources</button>
+                <!-- Editorial Analysis (RSS) -->
+                <button class="quick-action editorial" onclick="sendQuickMessage('what stories did we publish yesterday?')">Recent Stories</button>
+                <button class="quick-action editorial" onclick="sendQuickMessage('coverage topics')">Coverage Topics</button>
+                <button class="quick-action editorial" onclick="sendQuickMessage('top stories report')">Top Stories</button>
+                
+                <!-- Performance Analytics (GA4) -->
+                <button class="quick-action analytics" onclick="sendQuickMessage('yesterday\'s metrics')">Performance Metrics</button>
+                <button class="quick-action analytics" onclick="sendQuickMessage('author performance')">Author Performance</button>
+                <button class="quick-action analytics" onclick="sendQuickMessage('traffic sources')">Traffic Sources</button>
             </div>
             
             <div class="chat-input-wrapper">
                 <textarea 
                     id="messageInput" 
                     class="chat-input" 
-                    placeholder="Ask me about recent stories, coverage topics, analytics, or performance metrics..."
+                    placeholder="Ask me about story production, performance metrics, coverage topics, or analytics..."
                     rows="1"
                 ></textarea>
                 <button id="sendButton" class="send-button" onclick="sendMessage()">
@@ -506,11 +581,14 @@
 
         // Show feature highlight on load
         window.addEventListener('load', function() {
-            // Show feature highlight
+            // Show comprehensive feature highlight
             const featureDiv = document.createElement('div');
             featureDiv.className = 'feature-highlight';
             featureDiv.innerHTML = `
-                <strong>🎯 Editorial Analysis Ready!</strong> Try asking "What stories did we publish yesterday?" or "What were our main coverage topics?" to analyze your actual Washington Examiner content alongside performance metrics.
+                <strong>Complete Analytics System Ready!</strong><br>
+                <span style="color: #15803d;">🟢 Production:</span> "How many stories we produced yesterday?"<br>
+                <span style="color: #d97706;">🟡 Editorial:</span> "What stories did we publish yesterday?"<br>
+                <span style="color: #2563eb;">🔵 Analytics:</span> "Yesterday's performance metrics"
             `;
             chatMessages.appendChild(featureDiv);
             
@@ -520,11 +598,11 @@
         // Suggest example queries
         function showExampleQueries() {
             const examples = [
-                "What stories did we publish yesterday?",
-                "What were our main coverage topics?",
-                "Top stories report",
+                "How many stories we produced yesterday?",
+                "What stories did we publish yesterday?", 
+                "Coverage topics analysis",
                 "Yesterday's performance metrics",
-                "Reporter coverage analysis"
+                "Production by author"
             ];
             
             const randomExample = examples[Math.floor(Math.random() * examples.length)];
@@ -536,7 +614,7 @@
             if (conversationHistory.length === 0) {
                 showExampleQueries();
             }
-        }, 5000);
+        }, 7000);
     </script>
 </body>
 </html>

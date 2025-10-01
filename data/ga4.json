@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2025-09-30T07:22:51.224Z",
+  "updatedAt": "2025-10-01T07:22:03.068Z",
   "range": {
-    "start": "2025-09-23",
-    "end": "2025-09-29"
+    "start": "2025-09-24",
+    "end": "2025-09-30"
   },
   "rows": [
-    {
-      "date": "20250923",
-      "totalUsers": 215516,
-      "newUsers": 111352,
-      "pageviews": 247360,
-      "sessions": 235637,
-      "bounceRate": 0.6613901891468658,
-      "averageSessionDuration": 101.53031021103648,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 80497
-        },
-        {
-          "source": "smartnews.com",
-          "users": 58256
-        },
-        {
-          "source": "(direct)",
-          "users": 26712
-        },
-        {
-          "source": "google",
-          "users": 13266
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 9725
-        },
-        {
-          "source": "t.co",
-          "users": 2242
-        },
-        {
-          "source": "deployer",
-          "users": 2030
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1853
-        },
-        {
-          "source": "newsbreak",
-          "users": 1672
-        },
-        {
-          "source": "bing",
-          "users": 1639
-        },
-        {
-          "source": "duckduckgo",
-          "users": 1338
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1020
-        },
-        {
-          "source": "msn",
-          "users": 840
-        },
-        {
-          "source": "newsshowcase",
-          "users": 742
-        },
-        {
-          "source": "paid.outbrain.com",
-          "users": 680
-        }
-      ],
-      "authors": [
-        {
-          "author": "Molly Parks",
-          "users": "61761",
-          "views": "61926"
-        },
-        {
-          "author": "Asher Notheis",
-          "users": "13045",
-          "views": "13394"
-        },
-        {
-          "author": "Benjamin Osborne",
-          "users": "8938",
-          "views": "9204"
-        },
-        {
-          "author": "Washington Examiner Staff",
-          "users": "8231",
-          "views": "8447"
-        },
-        {
-          "author": "Jack Birle",
-          "users": "7949",
-          "views": "8098"
-        },
-        {
-          "author": "John Roberts",
-          "users": "6569",
-          "views": "6747"
-        },
-        {
-          "author": "Zach Halaschak",
-          "users": "3662",
-          "views": "3706"
-        },
-        {
-          "author": "Anna Giaritelli",
-          "users": "3462",
-          "views": "3543"
-        },
-        {
-          "author": "Lauren Green",
-          "users": "3399",
-          "views": "3526"
-        },
-        {
-          "author": "Sen. John Cornyn",
-          "users": "3352",
-          "views": "3423"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Dominican Republic confirms boat destroyed by US was carrying 2,000 pounds of cocaine",
-          "users": "60478",
-          "views": "60981"
-        },
-        {
-          "title": "Our counterculture revolution is here and it is a revival",
-          "users": "10325",
-          "views": "8457"
-        },
-        {
-          "title": "The president can remove the Fed chairman",
-          "users": "9588",
-          "views": "9740"
-        },
-        {
-          "title": "October Social Security direct payment worth $967 goes out in eight days",
-          "users": "9353",
-          "views": "9335"
-        },
-        {
-          "title": "Return of the self-deluding Barack Obama",
-          "users": "7643",
-          "views": "7376"
-        },
-        {
-          "title": "Supreme Court poised to shake up midterm elections",
-          "users": "6589",
-          "views": "6666"
-        },
-        {
-          "title": "Homan says approximately 2 million illegal immigrants are out of US",
-          "users": "5615",
-          "views": "5594"
-        },
-        {
-          "title": "Trump goes scorched earth on UN and accuses it of not being fit for purpose",
-          "users": "3910",
-          "views": "3316"
-        },
-        {
-          "title": "Jerome Powell, under siege by Trump, says it’s a ‘cheap shot’ to call Fed political",
-          "users": "3651",
-          "views": "3694"
-        },
-        {
-          "title": "LETITIA Act will hold politicians accountable for fraud",
-          "users": "3620",
-          "views": "3593"
-        },
-        {
-          "title": "DHS: 2 million illegal immigrants have left US under Trump",
-          "users": "3007",
-          "views": "3072"
-        },
-        {
-          "title": "Homan says that approximately two million illegal aliens are out of U.S.",
-          "users": "2899",
-          "views": "2925"
-        },
-        {
-          "title": "The media’s go-to antifa ‘expert’ is a financial backer of antifa",
-          "users": "2891",
-          "views": "2899"
-        },
-        {
-          "title": "Trump bashes medical group for pushback over Tylenol and autism risk",
-          "users": "2844",
-          "views": "2944"
-        },
-        {
-          "title": "Kamala Harris continues her dangerous, deceitful, and inflammatory rhetoric",
-          "users": "2502",
-          "views": "2423"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Defense",
-          "users": "61397",
-          "views": "61501"
-        },
-        {
-          "section": "Finance",
-          "users": "12482",
-          "views": "12800"
-        },
-        {
-          "section": "News",
-          "users": "9287",
-          "views": "9553"
-        },
-        {
-          "section": "In Focus",
-          "users": "6730",
-          "views": "6786"
-        },
-        {
-          "section": "Fairness & Justice",
-          "users": "6444",
-          "views": "6639"
-        },
-        {
-          "section": "Faith, Freedom &amp; Self-Reliance",
-          "users": "6278",
-          "views": "6512"
-        },
-        {
-          "section": "Immigration",
-          "users": "4335",
-          "views": "4474"
-        },
-        {
-          "section": "Investigations",
-          "users": "4279",
-          "views": "4424"
-        },
-        {
-          "section": "House",
-          "users": "4134",
-          "views": "4252"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "3946",
-          "views": "4127"
-        }
-      ]
-    },
     {
       "date": "20250924",
       "totalUsers": 159740,
@@ -382,78 +130,78 @@
       "articles": [
         {
           "title": "Kimmel says ‘we should follow’ Erika Kirk’s ‘example’ in monologue in return to show",
-          "users": "11239",
-          "views": "11281"
+          "users": "11226",
+          "views": "11265"
         },
         {
           "title": "For Harris, the ultimate diss: She ‘doesn’t matter’",
-          "users": "10003",
-          "views": "7756"
+          "users": "9980",
+          "views": "7751"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in seven days",
-          "users": "7728",
-          "views": "7881"
+          "users": "7731",
+          "views": "7877"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in eight days",
-          "users": "7278",
-          "views": "7373"
+          "users": "7288",
+          "views": "7397"
         },
         {
           "title": "Cassidy investigates Virginia school after officials accused of coercing girls into getting abortions",
-          "users": "5375",
-          "views": "5441"
+          "users": "5379",
+          "views": "5445"
         },
         {
           "title": "In Harris book, why the petty slurs and slights?",
-          "users": "4955",
-          "views": "3935"
+          "users": "4950",
+          "views": "3936"
         },
         {
           "title": "What to know about Joshua Jahn, the alleged Dallas ICE shooter",
-          "users": "3941",
-          "views": "2497"
+          "users": "3937",
+          "views": "2494"
         },
         {
           "title": "Piers Morgan shreds Jimmy Kimmel: ‘Hard to feel sympathy for his crocodile tears’",
-          "users": "3812",
-          "views": "3810"
+          "users": "3815",
+          "views": "3813"
         },
         {
           "title": "Byron York predicts TPUSA will find it ‘hard to continue’ after being ‘built on the talents’ of Charlie Kirk",
-          "users": "3375",
-          "views": "3380"
+          "users": "3379",
+          "views": "3384"
         },
         {
           "title": "Return of the self-deluding Barack Obama",
-          "users": "2721",
-          "views": "2700"
+          "users": "2714",
+          "views": "2693"
         },
         {
           "title": "Democrats look to win Arizona’s special election and secure Epstein vote",
-          "users": "2682",
-          "views": "709"
+          "users": "2690",
+          "views": "711"
         },
         {
           "title": "Trump's epic UN address",
-          "users": "2484",
-          "views": "2163"
+          "users": "2485",
+          "views": "2166"
         },
         {
           "title": "Fox News pulls 90% of cable news audience during Charlie Kirk memorial",
-          "users": "2412",
-          "views": "2458"
+          "users": "2416",
+          "views": "2462"
         },
         {
           "title": "New York City schools to lose millions in funding after missing Title IX deadline",
-          "users": "2320",
-          "views": "2366"
+          "users": "2322",
+          "views": "2368"
         },
         {
           "title": "Newsom’s California police cannot arrest masked ICE officers: Former cops",
-          "users": "2024",
-          "views": "2060"
+          "users": "2017",
+          "views": "2052"
         }
       ],
       "sections": [
@@ -634,78 +382,78 @@
       "articles": [
         {
           "title": "Grand jury indicts former FBI director James Comey",
-          "users": "19338",
-          "views": "6977"
+          "users": "19334",
+          "views": "6966"
         },
         {
           "title": "Trump's epic UN address",
-          "users": "13026",
-          "views": "11024"
+          "users": "13007",
+          "views": "11020"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in seven days",
-          "users": "7333",
-          "views": "7373"
+          "users": "7331",
+          "views": "7380"
         },
         {
           "title": "Piers Morgan shreds Jimmy Kimmel: ‘Hard to feel sympathy for his crocodile tears’",
-          "users": "6936",
-          "views": "7059"
+          "users": "6934",
+          "views": "7065"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in six days",
-          "users": "6697",
-          "views": "6798"
+          "users": "6684",
+          "views": "6809"
         },
         {
           "title": "Dominican Republic confirms boat destroyed by US was carrying 2,000 pounds of cocaine",
-          "users": "4732",
-          "views": "4770"
+          "users": "4739",
+          "views": "4776"
         },
         {
           "title": "Democratic Party isolation is getting worse",
           "users": "3561",
-          "views": "3650"
+          "views": "3648"
         },
         {
           "title": "Fundraiser for women who defaced Kirk memorial surpasses initial goal",
-          "users": "3469",
-          "views": "3537"
+          "users": "3477",
+          "views": "3546"
         },
         {
           "title": "Republican Jason Dickerson wins special election in Georgia state Senate race",
-          "users": "3005",
-          "views": "3024"
+          "users": "3004",
+          "views": "3021"
         },
         {
           "title": "For Harris, the ultimate diss: She ‘doesn’t matter’",
-          "users": "2983",
-          "views": "2180"
+          "users": "2986",
+          "views": "2175"
         },
         {
           "title": "Antifa calls for further attacks on ICE facilities",
-          "users": "2943",
-          "views": "2938"
-        },
-        {
-          "title": "Megyn Kelly gets into heated exchange with student at Virginia Tech TPUSA event",
-          "users": "2699",
-          "views": "1912"
+          "users": "2935",
+          "views": "2931"
         },
         {
           "title": "What to know about Joshua Jahn, the alleged Dallas ICE shooter",
-          "users": "2692",
-          "views": "2243"
+          "users": "2701",
+          "views": "2256"
+        },
+        {
+          "title": "Megyn Kelly gets into heated exchange with student at Virginia Tech TPUSA event",
+          "users": "2681",
+          "views": "1900"
         },
         {
           "title": "Saudi Arabia blocks Florida man from leaving country until 2026 over his social media posts",
-          "users": "2478",
-          "views": "2511"
+          "users": "2475",
+          "views": "2508"
         },
         {
           "title": "‘Hey, fascist! Catch!’ flyers posted throughout Georgetown University",
-          "users": "2245",
-          "views": "2042"
+          "users": "2241",
+          "views": "2037"
         }
       ],
       "sections": [
@@ -886,78 +634,78 @@
       "articles": [
         {
           "title": "‘Terrorism cannot be tolerated’: Judge makes example out of antifa arsonist in federal firebombing case",
-          "users": "17371",
-          "views": "17646"
+          "users": "17373",
+          "views": "17679"
         },
         {
           "title": "Antifa calls for further attacks on ICE facilities",
-          "users": "12645",
-          "views": "12802"
+          "users": "12625",
+          "views": "12809"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in six days",
-          "users": "10705",
-          "views": "10922"
+          "users": "10722",
+          "views": "10929"
         },
         {
           "title": "The violent resistance to enforcing immigration law",
-          "users": "7289",
-          "views": "6366"
+          "users": "7275",
+          "views": "6356"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in five days",
-          "users": "6327",
-          "views": "6418"
+          "users": "6338",
+          "views": "6426"
         },
         {
           "title": "First round of October Social Security payments issues in 12 days",
-          "users": "5929",
-          "views": "6011"
+          "users": "5922",
+          "views": "6002"
         },
         {
           "title": "Fundraiser for women who defaced Kirk memorial surpasses initial goal",
-          "users": "5655",
-          "views": "5771"
+          "users": "5680",
+          "views": "5796"
         },
         {
           "title": "Meet the new Jimmy Carter, worse than the old one",
-          "users": "4514",
-          "views": "4591"
+          "users": "4538",
+          "views": "4615"
         },
         {
           "title": "Kentucky Republicans break with party leadership on town hall hiatus",
-          "users": "3616",
-          "views": "3674"
+          "users": "3620",
+          "views": "3677"
         },
         {
           "title": "James Comey indicted for making false statements and obstruction of justice",
           "users": "2661",
-          "views": "1495"
+          "views": "1500"
         },
         {
           "title": "Jeffries backs criminal investigation into ‘illegal’ release of Mikie Sherrill’s records",
-          "users": "2579",
-          "views": "2631"
+          "users": "2564",
+          "views": "2616"
         },
         {
           "title": "Trump reportedly considering lifting restrictions on Ukraine use of US-made weapons",
-          "users": "2314",
-          "views": "2354"
+          "users": "2317",
+          "views": "2357"
         },
         {
           "title": "Piers Morgan shreds Jimmy Kimmel: ‘Hard to feel sympathy for his crocodile tears’",
-          "users": "2103",
-          "views": "2177"
+          "users": "2100",
+          "views": "2173"
         },
         {
           "title": "Carlson, Kelly, and GOP governors headlining Turning Point tour",
-          "users": "1646",
-          "views": "58"
+          "users": "1638",
+          "views": "57"
         },
         {
           "title": "Chuck’s in luck? Warning signs ahead for Republicans in next year’s Senate races",
-          "users": "1627",
-          "views": "1670"
+          "users": "1634",
+          "views": "1676"
         }
       ],
       "sections": [
@@ -1138,78 +886,78 @@
       "articles": [
         {
           "title": "Schumer coordinating shutdown strategy with liberal groups after caving before",
-          "users": "17738",
-          "views": "18001"
+          "users": "17736",
+          "views": "17991"
         },
         {
           "title": "Government shutdown and mass layoff fears threaten to upend Virginia governor race",
-          "users": "8421",
-          "views": "8572"
+          "users": "8403",
+          "views": "8558"
         },
         {
           "title": "We are not OK, but there is hope",
-          "users": "6437",
-          "views": "5524"
+          "users": "6441",
+          "views": "5519"
         },
         {
           "title": "Trump reportedly considering lifting restrictions on Ukraine use of US-made weapons",
-          "users": "5935",
-          "views": "6026"
+          "users": "5940",
+          "views": "6033"
         },
         {
           "title": "‘Terrorism cannot be tolerated’: Judge makes example out of antifa arsonist in federal firebombing case",
-          "users": "5693",
-          "views": "5795"
+          "users": "5698",
+          "views": "5802"
         },
         {
           "title": "Fundraiser for women who defaced Kirk memorial surpasses initial goal",
-          "users": "5499",
-          "views": "5607"
+          "users": "5497",
+          "views": "5606"
         },
         {
           "title": "Trump signs executive order seeking death penalty for murder in DC",
-          "users": "4765",
-          "views": "4839"
+          "users": "4761",
+          "views": "4834"
         },
         {
           "title": "Meet the new Jimmy Carter, worse than the old one",
-          "users": "4449",
-          "views": "4268"
+          "users": "4446",
+          "views": "4264"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in five days",
-          "users": "3977",
-          "views": "4051"
+          "users": "3983",
+          "views": "4056"
         },
         {
           "title": "Attorney General Jason Miyares calls on Virginia prosecutor to resign",
-          "users": "3620",
-          "views": "1211"
+          "users": "3627",
+          "views": "1219"
         },
         {
           "title": "YouTube censorship scandal reveals Democratic free speech hypocrisy",
-          "users": "3540",
-          "views": "3582"
+          "users": "3536",
+          "views": "3579"
         },
         {
           "title": "Love or hate him, Trump tells ‘uncomfortable truths’: White House Report Card",
-          "users": "2810",
-          "views": "2873"
+          "users": "2813",
+          "views": "2875"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in four days",
-          "users": "2659",
+          "users": "2661",
           "views": "2652"
         },
         {
           "title": "Unions cut checks to this watchdog group in exchange for support",
-          "users": "2208",
-          "views": "2235"
+          "users": "2221",
+          "views": "2247"
         },
         {
           "title": "Kentucky Republicans break with party leadership on town hall hiatus",
-          "users": "2012",
-          "views": "2039"
+          "users": "2014",
+          "views": "2040"
         }
       ],
       "sections": [
@@ -1390,78 +1138,78 @@
       "articles": [
         {
           "title": "Multiple people shot by active shooter at Michigan Mormon church",
-          "users": "40581",
-          "views": "14015"
+          "users": "40506",
+          "views": "13993"
         },
         {
           "title": "Pam Bondi says the \"weaponization\" of DOJ is over under Trump",
-          "users": "19482",
-          "views": "19586"
+          "users": "19466",
+          "views": "19585"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in three days",
-          "users": "14137",
-          "views": "14299"
+          "users": "14219",
+          "views": "14312"
         },
         {
           "title": "Trump signs executive order seeking death penalty for murder in DC",
-          "users": "8158",
-          "views": "8399"
+          "users": "8165",
+          "views": "8404"
         },
         {
           "title": "One dead, more fatalities expected from fire in Michigan Mormon church shooting",
-          "users": "7588",
-          "views": "3909"
+          "users": "7569",
+          "views": "3912"
         },
         {
           "title": "Teachers smuggle in pro-Palestinian lessons despite official curriculum saying nothing about Palestine",
-          "users": "5596",
-          "views": "5738"
+          "users": "5606",
+          "views": "5749"
         },
         {
           "title": "Attorney General Jason Miyares calls on Virginia prosecutor to resign",
-          "users": "5394",
-          "views": "1633"
+          "users": "5383",
+          "views": "1631"
         },
         {
           "title": "Government shutdown and mass layoff fears threaten to upend Virginia governor race",
-          "users": "4654",
-          "views": "4702"
+          "users": "4647",
+          "views": "4696"
         },
         {
           "title": "Thune dismisses Democrats demand to reach Obamacare subsidies deal before shutdown",
-          "users": "4245",
-          "views": "4317"
+          "users": "4236",
+          "views": "4307"
         },
         {
           "title": "‘Terrorism cannot be tolerated’: Judge makes example out of antifa arsonist in federal firebombing case",
-          "users": "4119",
-          "views": "4207"
+          "users": "4106",
+          "views": "4194"
         },
         {
           "title": "A brief example of James Comey's dishonesty",
-          "users": "3985",
-          "views": "2477"
+          "users": "3973",
+          "views": "2469"
         },
         {
           "title": "First round of October Social Security payments issue in 10 days",
-          "users": "3719",
-          "views": "3636"
+          "users": "3722",
+          "views": "3639"
         },
         {
           "title": "Florida attorney general pledges legal action against public schools blocking TPUSA chapters",
-          "users": "3355",
-          "views": "3441"
+          "users": "3359",
+          "views": "3445"
         },
         {
           "title": "Comey’s number two Andrew McCabe says DOJ has not reached out about indictment",
           "users": "3069",
-          "views": "3096"
+          "views": "3097"
         },
         {
           "title": "Kentucky Republicans break with party leadership on town hall hiatus",
-          "users": "2913",
-          "views": "2972"
+          "users": "2904",
+          "views": "2963"
         }
       ],
       "sections": [
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20250929",
-      "totalUsers": 150471,
-      "newUsers": 71852,
-      "pageviews": 162761,
-      "sessions": 169462,
-      "bounceRate": 0.6439378739776469,
-      "averageSessionDuration": 232.70490974323448,
+      "totalUsers": 157983,
+      "newUsers": 82049,
+      "pageviews": 176305,
+      "sessions": 180508,
+      "bounceRate": 0.5553216477940036,
+      "averageSessionDuration": 154.0518007302668,
       "referrers": [
         {
           "source": "newsbreak.com",
-          "users": 47002
+          "users": 51713
         },
         {
           "source": "(direct)",
-          "users": 27937
+          "users": 29419
         },
         {
           "source": "smartnews.com",
-          "users": 20526
-        },
-        {
-          "source": "(not set)",
-          "users": 19736
+          "users": 21753
         },
         {
           "source": "realclearpolitics.com",
-          "users": 14229
+          "users": 14664
         },
         {
           "source": "google",
-          "users": 9448
+          "users": 12762
         },
         {
           "source": "t.co",
-          "users": 5711
-        },
-        {
-          "source": "(data not available)",
-          "users": 2364
+          "users": 6363
         },
         {
           "source": "newsbreakapp.com",
-          "users": 2174
+          "users": 2385
         },
         {
           "source": "newsbreak",
-          "users": 1822
+          "users": 1993
         },
         {
           "source": "powerlineblog.com",
-          "users": 1677
+          "users": 1723
         },
         {
           "source": "THF_Email",
-          "users": 1555
+          "users": 1719
         },
         {
           "source": "m.facebook.com",
-          "users": 1550
+          "users": 1670
         },
         {
           "source": "deployer",
-          "users": 1394
+          "users": 1490
         },
         {
           "source": "bing",
-          "users": 1323
+          "users": 1408
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1085
+        },
+        {
+          "source": "news.google.com",
+          "users": 836
         }
       ],
       "authors": [
         {
           "author": "Asher Notheis",
-          "users": "29915",
-          "views": "28910"
+          "users": "32298",
+          "views": "32938"
         },
         {
           "author": "Robert Schmad",
-          "users": "6199",
-          "views": "6116"
+          "users": "6372",
+          "views": "6580"
         },
         {
           "author": "Emily Hallas",
-          "users": "5465",
-          "views": "5493"
+          "users": "5783",
+          "views": "6050"
         },
         {
           "author": "Washington Examiner",
-          "users": "3693",
-          "views": "3568"
+          "users": "3868",
+          "views": "3978"
         },
         {
           "author": "Washington Examiner Staff",
-          "users": "2909",
-          "views": "2841"
+          "users": "3077",
+          "views": "3160"
         },
         {
           "author": "Molly Parks",
-          "users": "2303",
-          "views": "2264"
+          "users": "2478",
+          "views": "2558"
         },
         {
           "author": "Conn Carroll",
-          "users": "2198",
-          "views": "2148"
+          "users": "2220",
+          "views": "2279"
         },
         {
           "author": "Mia Cathell",
-          "users": "1899",
-          "views": "1860"
+          "users": "1947",
+          "views": "2027"
         },
         {
           "author": "Samantha-Jo Roth",
-          "users": "1543",
-          "views": "1576"
+          "users": "1596",
+          "views": "1706"
         },
         {
-          "author": "Sydney Topf",
-          "users": "1382",
-          "views": "1350"
+          "author": "Ross O'Keefe",
+          "users": "1515",
+          "views": "1539"
         }
       ],
       "articles": [
         {
           "title": "A brief example of James Comey's dishonesty",
-          "users": "26946",
-          "views": "18833"
+          "users": "27847",
+          "views": "20012"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in two days",
-          "users": "16816",
-          "views": "16147"
+          "users": "18878",
+          "views": "19096"
         },
         {
           "title": "October Social Security direct payment worth $967 goes out in three days",
-          "users": "7867",
-          "views": "7532"
+          "users": "8784",
+          "views": "8937"
         },
         {
           "title": "The Democrats’ ridiculous shutdown ransom",
-          "users": "5534",
-          "views": "5039"
+          "users": "5781",
+          "views": "5559"
         },
         {
           "title": "New Jersey gubernatorial candidate took large donations from CCP-linked auto executives",
-          "users": "4294",
-          "views": "4176"
+          "users": "4532",
+          "views": "4627"
         },
         {
           "title": "Michigan church shooter identified as one victim still in critical condition",
-          "users": "3307",
-          "views": "3072"
+          "users": "3554",
+          "views": "3508"
         },
         {
           "title": "Why Schumer has to shut it down",
-          "users": "2988",
-          "views": "2873"
+          "users": "3193",
+          "views": "3304"
         },
         {
           "title": "Fetterman blasts use of ‘extreme rhetoric,’ warns of calling people ‘Hitler’ or ‘fascist’",
-          "users": "2821",
-          "views": "2741"
-        },
-        {
-          "title": "Four dead, one in critical condition after Michigan Mormon church shooting",
-          "users": "1890",
-          "views": "1390"
+          "users": "3004",
+          "views": "3081"
         },
         {
           "title": "Top aide to Oregon governor was arrested at 2020 antifa riot",
-          "users": "1784",
-          "views": "1074"
+          "users": "2079",
+          "views": "1429"
+        },
+        {
+          "title": "Four dead, one in critical condition after Michigan Mormon church shooting",
+          "users": "1949",
+          "views": "1465"
         },
         {
           "title": "Pentagon confirms ‘extraordinary’ weapons push as Hegseth seeks expanded missile capacity",
-          "users": "1676",
-          "views": "1654"
+          "users": "1826",
+          "views": "1862"
         },
         {
           "title": "Teachers smuggle in pro-Palestinian lessons despite official curriculum saying nothing about Palestine",
-          "users": "1603",
-          "views": "1511"
-        },
-        {
-          "title": "Humphrey’s Executor case shouldn't survive the Trump presidency",
-          "users": "1364",
-          "views": "457"
+          "users": "1700",
+          "views": "1722"
         },
         {
           "title": "Don Bacon accuses Pentagon of ‘routinely’ blocking Trump-approved Ukrainian strikes on Russia",
-          "users": "1351",
-          "views": "1252"
+          "users": "1538",
+          "views": "1578"
+        },
+        {
+          "title": "Trump signs executive order seeking death penalty for murder in DC",
+          "users": "1481",
+          "views": "1504"
         },
         {
           "title": "Economy enters 'low-fire, low-hire' stage",
-          "users": "1338",
-          "views": "388"
+          "users": "1443",
+          "views": "438"
         }
       ],
       "sections": [
         {
           "section": "Finance and Economy",
-          "users": "25887",
-          "views": "25037"
+          "users": "28094",
+          "views": "28568"
         },
         {
           "section": "News",
-          "users": "9066",
-          "views": "8951"
+          "users": "9609",
+          "views": "9971"
         },
         {
           "section": "Investigations",
-          "users": "8168",
-          "views": "8221"
-        },
-        {
-          "section": "Defense",
-          "users": "3916",
-          "views": "3944"
+          "users": "8418",
+          "views": "8915"
         },
         {
           "section": "White House",
-          "users": "3896",
-          "views": "3913"
+          "users": "4148",
+          "views": "4378"
+        },
+        {
+          "section": "Defense",
+          "users": "4074",
+          "views": "4273"
         },
         {
           "section": "Editorials",
-          "users": "3693",
-          "views": "3568"
+          "users": "3868",
+          "views": "3978"
         },
         {
           "section": "In Focus",
-          "users": "2647",
-          "views": "2594"
+          "users": "2687",
+          "views": "2778"
         },
         {
           "section": "Justice",
-          "users": "2332",
-          "views": "2293"
+          "users": "2525",
+          "views": "2599"
         },
         {
           "section": "Crime",
-          "users": "1979",
-          "views": "1945"
+          "users": "2138",
+          "views": "2195"
         },
         {
           "section": "House",
-          "users": "1356",
-          "views": "1355"
+          "users": "1423",
+          "views": "1486"
+        }
+      ]
+    },
+    {
+      "date": "20250930",
+      "totalUsers": 159292,
+      "newUsers": 69830,
+      "pageviews": 174017,
+      "sessions": 185382,
+      "bounceRate": 0.6708903777065734,
+      "averageSessionDuration": 218.45884102229448,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 43206
+        },
+        {
+          "source": "(direct)",
+          "users": 27502
+        },
+        {
+          "source": "smartnews.com",
+          "users": 26617
+        },
+        {
+          "source": "(not set)",
+          "users": 25370
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 17334
+        },
+        {
+          "source": "google",
+          "users": 10765
+        },
+        {
+          "source": "t.co",
+          "users": 2622
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 2404
+        },
+        {
+          "source": "(data not available)",
+          "users": 2281
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 2151
+        },
+        {
+          "source": "deployer",
+          "users": 2050
+        },
+        {
+          "source": "bing",
+          "users": 1854
+        },
+        {
+          "source": "msn",
+          "users": 1425
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1409
+        },
+        {
+          "source": "newsbreak",
+          "users": 1284
+        }
+      ],
+      "authors": [
+        {
+          "author": "Washington Examiner Staff",
+          "users": "14365",
+          "views": "13489"
+        },
+        {
+          "author": "Brad Polumbo",
+          "users": "11992",
+          "views": "11348"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "9333",
+          "views": "8764"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "9196",
+          "views": "8729"
+        },
+        {
+          "author": "Robert Schmad",
+          "users": "3826",
+          "views": "3567"
+        },
+        {
+          "author": "Heather Hunter",
+          "users": "3683",
+          "views": "3369"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "2914",
+          "views": "2806"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "2386",
+          "views": "2277"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "2351",
+          "views": "2247"
+        },
+        {
+          "author": "David Harsanyi",
+          "users": "1703",
+          "views": "1606"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Senate votes against proposed legislation to prevent government shutdown",
+          "users": "14668",
+          "views": "13252"
+        },
+        {
+          "title": "'Win elections' before making government demands: Fetterman",
+          "users": "11636",
+          "views": "8690"
+        },
+        {
+          "title": "Chuck Schumer’s bad shutdown bet",
+          "users": "11428",
+          "views": "8700"
+        },
+        {
+          "title": "Manhattan’s district attorney declares open season on conservative women",
+          "users": "11299",
+          "views": "10790"
+        },
+        {
+          "title": "How an illegal immigrant landed an Iowa school superintendent job",
+          "users": "11216",
+          "views": "9899"
+        },
+        {
+          "title": "October Social Security direct payment worth $967 goes out in two days",
+          "users": "7472",
+          "views": "6865"
+        },
+        {
+          "title": "Iowa's stunning, embarrassing immigration mess",
+          "users": "3071",
+          "views": "1439"
+        },
+        {
+          "title": "The Democrats’ ridiculous shutdown ransom",
+          "users": "2906",
+          "views": "2304"
+        },
+        {
+          "title": "A brief example of James Comey's dishonesty",
+          "users": "2487",
+          "views": "1666"
+        },
+        {
+          "title": "Why Schumer has to shut it down",
+          "users": "2185",
+          "views": "2120"
+        },
+        {
+          "title": "Hegseth pledges to reshape War Department after ‘decades of decay’",
+          "users": "1885",
+          "views": "1378"
+        },
+        {
+          "title": "Top aide to Oregon governor was arrested at 2020 antifa riot",
+          "users": "1849",
+          "views": "1199"
+        },
+        {
+          "title": "US to deport hundreds of Iranians after reaching agreement with Tehran",
+          "users": "1691",
+          "views": "1555"
+        },
+        {
+          "title": "CCP member cut check to support Arizona governor shortly after she vetoed anti-China legislation",
+          "users": "1615",
+          "views": "1487"
+        },
+        {
+          "title": "Don Bacon accuses Pentagon of ‘routinely’ blocking Trump-approved Ukrainian strikes on Russia",
+          "users": "1511",
+          "views": "1427"
+        }
+      ],
+      "sections": [
+        {
+          "section": "News",
+          "users": "17912",
+          "views": "16998"
+        },
+        {
+          "section": "Fairness &amp; Justice",
+          "users": "11521",
+          "views": "11075"
+        },
+        {
+          "section": "Immigration",
+          "users": "10744",
+          "views": "10172"
+        },
+        {
+          "section": "Finance and Economy",
+          "users": "8686",
+          "views": "8069"
+        },
+        {
+          "section": "Investigations",
+          "users": "4967",
+          "views": "4655"
+        },
+        {
+          "section": "Defense",
+          "users": "4380",
+          "views": "4262"
+        },
+        {
+          "section": "In Focus",
+          "users": "3261",
+          "views": "3145"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "2612",
+          "views": "2583"
+        },
+        {
+          "section": "House",
+          "users": "2594",
+          "views": "2676"
+        },
+        {
+          "section": "Business",
+          "users": "2168",
+          "views": "1930"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 30,
+    "uniqueAuthors": 28,
     "uniqueSections": 25,
     "sampleAuthors": [
-      "Molly Parks",
       "Asher Notheis",
-      "Benjamin Osborne",
-      "Washington Examiner Staff",
-      "Jack Birle"
+      "Christopher Tremoglie",
+      "Ross O'Keefe",
+      "Heather Hunter",
+      "Jenny Goldsberry"
     ],
     "sampleSections": [
-      "Defense",
-      "Finance",
       "News",
-      "In Focus",
-      "Fairness & Justice"
+      "Finance",
+      "House",
+      "Business",
+      "Crime"
     ]
   }
 }

@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2025-10-15T07:22:28.490Z",
+  "updatedAt": "2025-10-16T07:22:17.434Z",
   "range": {
-    "start": "2025-10-08",
-    "end": "2025-10-14"
+    "start": "2025-10-09",
+    "end": "2025-10-15"
   },
   "rows": [
-    {
-      "date": "20251008",
-      "totalUsers": 118774,
-      "newUsers": 58270,
-      "pageviews": 151789,
-      "sessions": 135826,
-      "bounceRate": 0.5657017065952027,
-      "averageSessionDuration": 131.60198260336017,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 30764
-        },
-        {
-          "source": "(direct)",
-          "users": 24506
-        },
-        {
-          "source": "smartnews.com",
-          "users": 23819
-        },
-        {
-          "source": "google",
-          "users": 13228
-        },
-        {
-          "source": "t.co",
-          "users": 4009
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 3798
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1746
-        },
-        {
-          "source": "deployer",
-          "users": 1496
-        },
-        {
-          "source": "bing",
-          "users": 1457
-        },
-        {
-          "source": "powerlineblog.com",
-          "users": 1355
-        },
-        {
-          "source": "duckduckgo",
-          "users": 1245
-        },
-        {
-          "source": "newsbreak",
-          "users": 1056
-        },
-        {
-          "source": "news.google.com",
-          "users": 950
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 909
-        },
-        {
-          "source": "newsshowcase",
-          "users": 905
-        }
-      ],
-      "authors": [
-        {
-          "author": "Asher Notheis",
-          "users": "10130",
-          "views": "10723"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "7190",
-          "views": "7435"
-        },
-        {
-          "author": "Ross O'Keefe",
-          "users": "5516",
-          "views": "6134"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "5007",
-          "views": "5201"
-        },
-        {
-          "author": "Gabrielle M. Etzel",
-          "users": "3254",
-          "views": "3397"
-        },
-        {
-          "author": "Heather Hunter",
-          "users": "2790",
-          "views": "2953"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "2756",
-          "views": "2826"
-        },
-        {
-          "author": "Lauren Green",
-          "users": "2523",
-          "views": "2616"
-        },
-        {
-          "author": "Paul Bedard",
-          "users": "2312",
-          "views": "2386"
-        },
-        {
-          "author": "Mike Brest",
-          "users": "1942",
-          "views": "1982"
-        }
-      ],
-      "articles": [
-        {
-          "title": "November Social Security direct payment worth $967 goes out in 23 days",
-          "users": "4741",
-          "views": "4872"
-        },
-        {
-          "title": "Trump says Blumenthal should ‘no longer’ be allowed to speak after heated Bondi hearing",
-          "users": "4343",
-          "views": "4451"
-        },
-        {
-          "title": "Conservative allies call on Trump to follow through on promises of ‘aggressive’ antitrust enforcement",
-          "users": "4152",
-          "views": "4242"
-        },
-        {
-          "title": "Trump immigration officials still struggling with Biden's legacy",
-          "users": "3603",
-          "views": "3261"
-        },
-        {
-          "title": "What to know about the conservative case for letting added Obamacare subsidies lapse",
-          "users": "3195",
-          "views": "3322"
-        },
-        {
-          "title": "Shutdown: Voters say Democrats did it for illegal immigrants",
-          "users": "3017",
-          "views": "2664"
-        },
-        {
-          "title": "First round of October Social Security payments issue today",
-          "users": "2940",
-          "views": "2877"
-        },
-        {
-          "title": "Taylor Swift breaks silence on Super Bowl halftime rumors as Bad Bunny pick draws backlash",
-          "users": "2696",
-          "views": "2854"
-        },
-        {
-          "title": "Will Zach Bryan write a song about murdered women Laken Riley and Rachel Morin?",
-          "users": "2573",
-          "views": "750"
-        },
-        {
-          "title": "Hillary and Bill Clinton delay House Oversight Committee depositions: What to know on their Epstein ties",
-          "users": "2043",
-          "views": "2082"
-        },
-        {
-          "title": "Hamas demands release of high-profile Palestinian prisoners and body of Sinwar as negotiators meet in Cairo",
-          "users": "1892",
-          "views": "1929"
-        },
-        {
-          "title": "Stefanik polls closer than expected to Hochul ahead of anticipated gubernatorial run",
-          "users": "1882",
-          "views": "1912"
-        },
-        {
-          "title": "Hundreds of ‘sponsors’ who exploited migrant children in Biden era arrested: Bondi",
-          "users": "1878",
-          "views": "1913"
-        },
-        {
-          "title": "Trump says Blumenthal should 'no longer' be allowed to speak",
-          "users": "1463",
-          "views": "1223"
-        },
-        {
-          "title": "Senate confirms Herschel Walker and 106 other nominees in largest bloc vote to date",
-          "users": "1426",
-          "views": "1442"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Finance",
-          "users": "7605",
-          "views": "7977"
-        },
-        {
-          "section": "White House",
-          "users": "6244",
-          "views": "6678"
-        },
-        {
-          "section": "Policy",
-          "users": "4209",
-          "views": "4299"
-        },
-        {
-          "section": "House",
-          "users": "4144",
-          "views": "4410"
-        },
-        {
-          "section": "Healthcare",
-          "users": "3547",
-          "views": "3698"
-        },
-        {
-          "section": "Entertainment",
-          "users": "3535",
-          "views": "3708"
-        },
-        {
-          "section": "Justice",
-          "users": "3519",
-          "views": "3710"
-        },
-        {
-          "section": "Crime",
-          "users": "3278",
-          "views": "3355"
-        },
-        {
-          "section": "Campaigns",
-          "users": "3244",
-          "views": "3355"
-        },
-        {
-          "section": "Senate",
-          "users": "2805",
-          "views": "2895"
-        }
-      ]
-    },
     {
       "date": "20251009",
       "totalUsers": 157488,
@@ -382,78 +130,78 @@
       "articles": [
         {
           "title": "Antifa leaders flee Trump crackdown on domestic terrorist networks",
-          "users": "10916",
-          "views": "4833"
+          "users": "10826",
+          "views": "4801"
         },
         {
           "title": "Antifa leaders flee America as Trump cracks down on domestic terrorist networks",
-          "users": "9067",
-          "views": "9296"
+          "users": "9057",
+          "views": "9302"
         },
         {
           "title": "Spanberger deflects questions about Jay Jones texts as Republicans experience momentum",
-          "users": "8265",
-          "views": "6554"
+          "users": "8252",
+          "views": "6536"
         },
         {
           "title": "RFK Jr.: Tylenol after circumcision maybe linked to autism",
-          "users": "6617",
-          "views": "2615"
+          "users": "6611",
+          "views": "2620"
         },
         {
           "title": "Trump immigration officials still struggling with Biden's legacy",
-          "users": "5874",
-          "views": "5023"
+          "users": "5894",
+          "views": "5044"
         },
         {
           "title": "Second round of October Social Security payments goes out in six days",
-          "users": "5750",
-          "views": "5871"
+          "users": "5766",
+          "views": "5878"
         },
         {
           "title": "Thune on board for shutdown solution that would pass appropriations bills one by one",
-          "users": "5164",
-          "views": "5178"
+          "users": "5148",
+          "views": "5166"
         },
         {
           "title": "Walmart is reinventing retail, one struggling mall at a time",
-          "users": "4187",
-          "views": "1589"
+          "users": "4189",
+          "views": "1584"
         },
         {
           "title": "Court rules Oregon National Guard can remain federalized — with one vital stipulation",
-          "users": "4165",
-          "views": "4129"
+          "users": "4164",
+          "views": "4124"
         },
         {
           "title": "Joe Rogan says Harris was ‘probably hammered,’ claiming she had closest 21st-century election",
-          "users": "3662",
-          "views": "3712"
+          "users": "3641",
+          "views": "3691"
         },
         {
           "title": "The case for Trump winning a Nobel Peace Prize",
-          "users": "3305",
-          "views": "3365"
+          "users": "3321",
+          "views": "3384"
         },
         {
           "title": "Chicago has no sovereign right to its own immigration policy",
-          "users": "2877",
-          "views": "2867"
-        },
-        {
-          "title": "Hillary and Bill Clinton delay House Oversight Committee depositions: What to know on their Epstein ties",
-          "users": "2446",
-          "views": "2492"
+          "users": "2868",
+          "views": "2857"
         },
         {
           "title": "November Social Security direct payment worth $967 goes out in 22 days",
-          "users": "2439",
-          "views": "2501"
+          "users": "2465",
+          "views": "2528"
+        },
+        {
+          "title": "Hillary and Bill Clinton delay House Oversight Committee depositions: What to know on their Epstein ties",
+          "users": "2429",
+          "views": "2475"
         },
         {
           "title": "The Democratic Party’s unprecedented weaponization of DOJ",
-          "users": "2333",
-          "views": "2136"
+          "users": "2342",
+          "views": "2147"
         }
       ],
       "sections": [
@@ -634,78 +382,78 @@
       "articles": [
         {
           "title": "Senate defies shutdown gridlock to pass annual defense bill",
-          "users": "23608",
-          "views": "23745"
+          "users": "23712",
+          "views": "23777"
         },
         {
           "title": "Walmart is reinventing retail, one struggling mall at a time",
-          "users": "16806",
-          "views": "5812"
+          "users": "16826",
+          "views": "5824"
         },
         {
           "title": "November Social Security direct payments worth $967 go out in 21 days",
-          "users": "9588",
-          "views": "9674"
+          "users": "9535",
+          "views": "9648"
         },
         {
           "title": "Comedian Trevor Noah jokes Charlie Kirk was killed ‘while defending guns’",
-          "users": "8119",
-          "views": "8306"
+          "users": "8107",
+          "views": "8268"
         },
         {
           "title": "Nobel Peace Prize winner Machado dedicates award to Trump",
-          "users": "7082",
-          "views": "6169"
+          "users": "7032",
+          "views": "6136"
         },
         {
           "title": "Bondi announces arrest of left-wing activist who threatened commentator Benny Johnson",
-          "users": "5916",
-          "views": "6013"
+          "users": "5865",
+          "views": "5962"
         },
         {
           "title": "Obamacare bankrupts itself",
-          "users": "5292",
-          "views": "5296"
+          "users": "5281",
+          "views": "5287"
         },
         {
           "title": "WATCH LIVE: Melania Trump makes announcement from White House",
-          "users": "4065",
-          "views": "3746"
+          "users": "4051",
+          "views": "3734"
         },
         {
           "title": "White House announces federal government layoffs have begun",
-          "users": "3805",
-          "views": "1930"
+          "users": "3808",
+          "views": "1937"
         },
         {
           "title": "Trump to speak at $1 million-per-plate Mar-a-Lago candlelight dinner",
-          "users": "3793",
-          "views": "3745"
+          "users": "3802",
+          "views": "3749"
         },
         {
           "title": "Oversight committee contacted Ghislaine Maxwell to testify after Supreme Court defeat",
-          "users": "3646",
-          "views": "3626"
+          "users": "3660",
+          "views": "3647"
         },
         {
           "title": "In the fight against Islamism and antisemitism, the British government has picked the wrong side",
-          "users": "3177",
-          "views": "3260"
+          "users": "3163",
+          "views": "3246"
         },
         {
           "title": "Page not found",
-          "users": "2946",
-          "views": "19486"
+          "users": "2943",
+          "views": "19431"
         },
         {
           "title": "Second round of October Social Security payments goes out in five days",
-          "users": "2808",
-          "views": "2846"
+          "users": "2833",
+          "views": "2870"
         },
         {
           "title": "Antifa leaders flee Trump crackdown on domestic terrorist networks",
-          "users": "2564",
-          "views": "1375"
+          "users": "2572",
+          "views": "1370"
         }
       ],
       "sections": [
@@ -886,78 +634,78 @@
       "articles": [
         {
           "title": "Bondi announces arrest of left-wing activist who threatened commentator Benny Johnson",
-          "users": "36472",
-          "views": "37346"
+          "users": "36540",
+          "views": "37369"
         },
         {
           "title": "Newsom approves agency to administer slavery reparations",
-          "users": "16765",
-          "views": "6279"
+          "users": "16831",
+          "views": "6301"
         },
         {
           "title": "Comedian Trevor Noah jokes Charlie Kirk was killed ‘while defending guns’",
-          "users": "8243",
-          "views": "8314"
+          "users": "8285",
+          "views": "8336"
         },
         {
           "title": "Shutdown will cause many ‘Democrat-oriented’ federal workers to be fired, Trump warns",
-          "users": "7816",
-          "views": "8002"
+          "users": "7864",
+          "views": "8040"
         },
         {
           "title": "November Social Security direct payments worth $967 go out in 20 days",
-          "users": "6061",
-          "views": "6143"
+          "users": "6037",
+          "views": "6113"
         },
         {
           "title": "Second round of October Social Security payments goes out in four days",
-          "users": "5175",
-          "views": "5203"
+          "users": "5218",
+          "views": "5254"
         },
         {
           "title": "November Social Security direct payments worth $967 go out in 21 days",
-          "users": "4826",
-          "views": "4853"
+          "users": "4812",
+          "views": "4841"
         },
         {
           "title": "Nobel Peace Prize winner Machado dedicates award to Trump",
-          "users": "3679",
-          "views": "3570"
+          "users": "3684",
+          "views": "3566"
         },
         {
           "title": "Trump administration awards billions in border ‘Smart Wall’ contracts in push to target illegal immigration",
-          "users": "3518",
-          "views": "3580"
+          "users": "3523",
+          "views": "3585"
         },
         {
           "title": "Winsome Earle-Sears’s confrontational debate shows shifting tactics in Virginia bid",
-          "users": "3103",
-          "views": "3165"
+          "users": "3109",
+          "views": "3174"
         },
         {
           "title": "Trump to speak at $1 million-per-plate Mar-a-Lago candlelight dinner",
-          "users": "3072",
-          "views": "2933"
+          "users": "3060",
+          "views": "2926"
         },
         {
           "title": "Trump directs Hegseth to pay troops during government shutdown",
-          "users": "2761",
-          "views": "1516"
+          "users": "2778",
+          "views": "1515"
         },
         {
           "title": "Trump administration dials up heat on Democrats as government shutdown set to enter third week",
-          "users": "2665",
-          "views": "2738"
+          "users": "2654",
+          "views": "2728"
         },
         {
           "title": "Walmart is reinventing retail, one struggling mall at a time",
-          "users": "2188",
-          "views": "892"
+          "users": "2185",
+          "views": "895"
         },
         {
           "title": "In the fight against Islamism and antisemitism, the British government has picked the wrong side",
-          "users": "2056",
-          "views": "2104"
+          "users": "2050",
+          "views": "2097"
         }
       ],
       "sections": [
@@ -1138,78 +886,78 @@
       "articles": [
         {
           "title": "Schiff tells Trump ‘put down your phone’ after president calls impeachment ‘illegal hoax’",
-          "users": "16306",
-          "views": "16733"
+          "users": "16314",
+          "views": "16710"
         },
         {
           "title": "Letitia James and an eye for an eye",
-          "users": "15247",
-          "views": "12906"
+          "users": "15204",
+          "views": "12919"
         },
         {
           "title": "Virginia shake-up: Earle-Sears surging, Miyares overtakes Jones",
-          "users": "13659",
-          "views": "13443"
+          "users": "13591",
+          "views": "13440"
         },
         {
           "title": "Newsom approves agency to administer slavery reparations",
-          "users": "8497",
-          "views": "3892"
+          "users": "8530",
+          "views": "3905"
         },
         {
           "title": "November Social Security direct payments worth $967 go out in 20 days",
-          "users": "7906",
-          "views": "8047"
+          "users": "7963",
+          "views": "8097"
         },
         {
           "title": "Comedian Trevor Noah jokes Charlie Kirk was killed ‘while defending guns’",
-          "users": "7195",
-          "views": "7278"
+          "users": "7177",
+          "views": "7295"
         },
         {
           "title": "Bondi announces arrest of left-wing activist who threatened commentator Benny Johnson",
-          "users": "6311",
-          "views": "6430"
+          "users": "6338",
+          "views": "6455"
         },
         {
           "title": "Capitol Hill staff express concern as Mike Johnson keeps House in recess",
-          "users": "6050",
-          "views": "6070"
+          "users": "6045",
+          "views": "6060"
         },
         {
           "title": "Democrats clearly in need of anger management",
-          "users": "5987",
-          "views": "5462"
+          "users": "5982",
+          "views": "5472"
         },
         {
           "title": "Education Department guts special ed office as part of shutdown layoffs",
-          "users": "5393",
-          "views": "2323"
+          "users": "5400",
+          "views": "2316"
         },
         {
           "title": "Second round of October Social Security payments issues in three days",
-          "users": "5162",
-          "views": "5309"
+          "users": "5156",
+          "views": "5300"
         },
         {
           "title": "Espionage-linked Chinese company embedded in top US research labs",
-          "users": "3911",
-          "views": "3943"
+          "users": "3889",
+          "views": "3930"
         },
         {
           "title": "November Social Security direct payments worth $967 go out in 19 days",
-          "users": "3323",
-          "views": "3384"
+          "users": "3356",
+          "views": "3417"
         },
         {
           "title": "Democrats declare war on federal law",
-          "users": "3180",
-          "views": "3159"
+          "users": "3171",
+          "views": "3150"
         },
         {
           "title": "Fiscal hawks wince at looming Obamacare subsidies price tag",
-          "users": "2548",
-          "views": "2533"
+          "users": "2529",
+          "views": "2514"
         }
       ],
       "sections": [
@@ -1390,78 +1138,78 @@
       "articles": [
         {
           "title": "Letitia James handled mortgage and bank fraud cases similar to the one she now faces",
-          "users": "55498",
-          "views": "55710"
+          "users": "55349",
+          "views": "55606"
         },
         {
           "title": "Virginia shake-up: Earle-Sears surging, Miyares overtakes Jones",
-          "users": "35696",
-          "views": "32443"
+          "users": "35693",
+          "views": "32481"
         },
         {
           "title": "Trump triumph is bad news for his adversaries",
-          "users": "11978",
-          "views": "5940"
+          "users": "11934",
+          "views": "5932"
         },
         {
           "title": "Trump is sending in ICE, Border Patrol, and troops to these blue cities",
-          "users": "9502",
-          "views": "9776"
+          "users": "9551",
+          "views": "9803"
         },
         {
           "title": "Schiff tells Trump ‘put down your phone’ after president calls impeachment ‘illegal hoax’",
-          "users": "8352",
-          "views": "8541"
+          "users": "8405",
+          "views": "8561"
         },
         {
           "title": "CNN’s dour Dana Bash rains on Trump triumph parade: Liberal Media Scream",
-          "users": "5609",
-          "views": "5482"
+          "users": "5601",
+          "views": "5478"
         },
         {
           "title": "November Social Security direct payment worth $967 goes out in 18 days",
-          "users": "4511",
-          "views": "4548"
+          "users": "4491",
+          "views": "4525"
         },
         {
           "title": "Hamas will only release bodies of four hostages",
-          "users": "4267",
-          "views": "4368"
+          "users": "4274",
+          "views": "4372"
         },
         {
           "title": "Judge sets Comey evidence deadline as DOJ seeks to limit access",
-          "users": "4230",
-          "views": "4277"
+          "users": "4233",
+          "views": "4282"
         },
         {
           "title": "Obama swipes at Democrats for ‘holier than thou’ anti-Trump messaging",
-          "users": "3278",
-          "views": "3346"
+          "users": "3264",
+          "views": "3331"
         },
         {
           "title": "Newsom approves agency to administer slavery reparations",
-          "users": "2709",
-          "views": "1694"
+          "users": "2691",
+          "views": "1690"
         },
         {
           "title": "Letitia James handled mortgage fraud cases like the one she now faces",
-          "users": "2581",
-          "views": "1527"
+          "users": "2564",
+          "views": "1514"
         },
         {
           "title": "November Social Security direct payments worth $967 go out in 19 days",
-          "users": "2470",
-          "views": "2510"
+          "users": "2493",
+          "views": "2531"
         },
         {
           "title": "Johnson invites MTG to sit in on committees addressing Obamacare tax credits",
-          "users": "2193",
-          "views": "2148"
+          "users": "2208",
+          "views": "2174"
         },
         {
           "title": "Trump says Blumenthal should 'no longer' be allowed to speak",
-          "users": "2189",
-          "views": "734"
+          "users": "2183",
+          "views": "740"
         }
       ],
       "sections": [
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20251014",
-      "totalUsers": 173479,
-      "newUsers": 82911,
-      "pageviews": 187019,
-      "sessions": 191223,
-      "bounceRate": 0.7271719406138383,
-      "averageSessionDuration": 163.35377585531552,
+      "totalUsers": 182431,
+      "newUsers": 96583,
+      "pageviews": 207301,
+      "sessions": 205062,
+      "bounceRate": 0.6318479289190586,
+      "averageSessionDuration": 103.71946890508725,
       "referrers": [
         {
           "source": "newsbreak.com",
-          "users": 78254
+          "users": 86213
         },
         {
           "source": "(direct)",
-          "users": 25561
-        },
-        {
-          "source": "(not set)",
-          "users": 22957
+          "users": 27021
         },
         {
           "source": "smartnews.com",
-          "users": 17502
+          "users": 18482
         },
         {
           "source": "google",
-          "users": 10806
+          "users": 14598
         },
         {
           "source": "realclearpolitics.com",
-          "users": 7199
+          "users": 7435
         },
         {
           "source": "m.facebook.com",
-          "users": 4501
+          "users": 5035
         },
         {
           "source": "newsbreak",
-          "users": 3268
-        },
-        {
-          "source": "(data not available)",
-          "users": 2702
+          "users": 3621
         },
         {
           "source": "deployer",
-          "users": 1673
+          "users": 1815
         },
         {
           "source": "bing",
-          "users": 1412
+          "users": 1515
         },
         {
           "source": "t.co",
-          "users": 1328
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1291
+          "users": 1470
         },
         {
           "source": "lm.facebook.com",
-          "users": 1290
+          "users": 1431
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1333
         },
         {
           "source": "duckduckgo",
-          "users": 1021
+          "users": 1110
+        },
+        {
+          "source": "newsshowcase",
+          "users": 843
+        },
+        {
+          "source": "news.google.com",
+          "users": 711
         }
       ],
       "authors": [
         {
           "author": "Anna Giaritelli",
-          "users": "20943",
-          "views": "20152"
+          "users": "22912",
+          "views": "23266"
         },
         {
           "author": "Kaelan Deese",
-          "users": "19906",
-          "views": "19151"
+          "users": "20866",
+          "views": "21502"
         },
         {
           "author": "Asher Notheis",
-          "users": "11030",
-          "views": "10669"
+          "users": "11733",
+          "views": "12164"
         },
         {
           "author": "Washington Examiner Staff",
-          "users": "9792",
-          "views": "9500"
+          "users": "10545",
+          "views": "10746"
         },
         {
           "author": "Paul Bedard",
-          "users": "9697",
-          "views": "9344"
+          "users": "10284",
+          "views": "10536"
         },
         {
           "author": "Samantha-Jo Roth",
-          "users": "7704",
-          "views": "7407"
+          "users": "8214",
+          "views": "8404"
         },
         {
           "author": "Lauren Green",
-          "users": "5682",
-          "views": "5426"
+          "users": "5852",
+          "views": "5985"
         },
         {
           "author": "Emily Hallas",
-          "users": "4223",
-          "views": "4224"
+          "users": "4386",
+          "views": "4658"
         },
         {
           "author": "Ramsey Touchberry",
-          "users": "1907",
-          "views": "1837"
+          "users": "1988",
+          "views": "2041"
         },
         {
           "author": "Brady Knox",
-          "users": "1746",
-          "views": "1972"
+          "users": "1855",
+          "views": "2203"
         }
       ],
       "articles": [
         {
           "title": "Trump is sending in ICE, Border Patrol, and troops to these blue cities",
-          "users": "20187",
-          "views": "19393"
+          "users": "22181",
+          "views": "22673"
         },
         {
           "title": "Letitia James handled mortgage and bank fraud cases similar to the one she now faces",
-          "users": "14487",
-          "views": "13904"
+          "users": "15539",
+          "views": "15724"
         },
         {
           "title": "Virginia shake-up: Earle-Sears surging, Miyares overtakes Jones",
-          "users": "11873",
-          "views": "7986"
+          "users": "12690",
+          "views": "9062"
         },
         {
           "title": "Trump blasts Time cover photo of him as ‘worst of all time’",
-          "users": "8647",
-          "views": "8150"
+          "users": "9239",
+          "views": "9191"
         },
         {
           "title": "Democrats who condemned Israel’s Gaza campaign silent after Trump-brokered ceasefire takes effect",
-          "users": "7622",
-          "views": "7283"
+          "users": "8126",
+          "views": "8271"
         },
         {
           "title": "November Social Security direct payment worth $967 goes out in 18 days",
-          "users": "6373",
-          "views": "6074"
+          "users": "6907",
+          "views": "7053"
         },
         {
           "title": "Johnson turns up volume on Democrats in shutdown standoff, telling them to ‘bring it’",
-          "users": "4846",
-          "views": "4598"
+          "users": "5264",
+          "views": "5354"
         },
         {
           "title": "Judge sides with Comey after DOJ sought to limit his discovery access",
-          "users": "4185",
-          "views": "3781"
+          "users": "4716",
+          "views": "4685"
         },
         {
           "title": "Democrats who condemned Israel’s Gaza war silent after ceasefire",
-          "users": "3179",
-          "views": "2602"
+          "users": "3230",
+          "views": "2752"
         },
         {
           "title": "CNN’s dour Dana Bash rains on Trump triumph parade: Liberal Media Scream",
-          "users": "2629",
-          "views": "2420"
-        },
-        {
-          "title": "Chicago has no sovereign right to its own immigration policy",
-          "users": "2336",
-          "views": "1946"
+          "users": "2803",
+          "views": "2736"
         },
         {
           "title": "Kellyanne Conway clobbers media gossips and hints of legal action",
-          "users": "2274",
-          "views": "2076"
+          "users": "2460",
+          "views": "2473"
+        },
+        {
+          "title": "Chicago has no sovereign right to its own immigration policy",
+          "users": "2384",
+          "views": "2097"
         },
         {
           "title": "Left-wing Chicago group teaches tactics for attacking ICE officers",
-          "users": "2153",
-          "views": "1994"
+          "users": "2246",
+          "views": "2172"
         },
         {
           "title": "Johnson watching ‘closely’ on whether congressional intervention needed for anti-ICE protests",
-          "users": "2034",
-          "views": "2008"
+          "users": "2238",
+          "views": "2309"
         },
         {
           "title": "Trump slaps down ABC reporter after Stephanopoulos cuts off Vance",
-          "users": "2025",
-          "views": "1722"
+          "users": "2223",
+          "views": "2152"
         }
       ],
       "sections": [
         {
           "section": "Crime",
-          "users": "22904",
-          "views": "21991"
+          "users": "24909",
+          "views": "25226"
         },
         {
           "section": "Justice",
-          "users": "19750",
-          "views": "19006"
+          "users": "20735",
+          "views": "21343"
         },
         {
           "section": "Washington Secrets",
-          "users": "9696",
-          "views": "9343"
+          "users": "10283",
+          "views": "10535"
         },
         {
           "section": "House",
-          "users": "9335",
-          "views": "9109"
+          "users": "9899",
+          "views": "10237"
         },
         {
           "section": "News",
-          "users": "8556",
-          "views": "8294"
+          "users": "9231",
+          "views": "9411"
         },
         {
           "section": "Finance",
-          "users": "7308",
-          "views": "7077"
+          "users": "7808",
+          "views": "8056"
         },
         {
           "section": "Congressional",
-          "users": "5255",
-          "views": "4978"
+          "users": "5413",
+          "views": "5509"
         },
         {
           "section": "Entertainment",
-          "users": "4579",
-          "views": "4522"
+          "users": "4782",
+          "views": "5027"
         },
         {
           "section": "White House",
-          "users": "3892",
-          "views": "3674"
+          "users": "4121",
+          "views": "4262"
         },
         {
           "section": "Defense",
-          "users": "3042",
-          "views": "2998"
+          "users": "3206",
+          "views": "3385"
+        }
+      ]
+    },
+    {
+      "date": "20251015",
+      "totalUsers": 196810,
+      "newUsers": 85574,
+      "pageviews": 221496,
+      "sessions": 228576,
+      "bounceRate": 0.716930036399272,
+      "averageSessionDuration": 171.67182002553636,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 70855
+        },
+        {
+          "source": "smartnews.com",
+          "users": 36707
+        },
+        {
+          "source": "(direct)",
+          "users": 28751
+        },
+        {
+          "source": "(not set)",
+          "users": 26911
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 13545
+        },
+        {
+          "source": "google",
+          "users": 12135
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 3820
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 3610
+        },
+        {
+          "source": "newsbreak",
+          "users": 2771
+        },
+        {
+          "source": "(data not available)",
+          "users": 2463
+        },
+        {
+          "source": "powerlineblog.com",
+          "users": 2243
+        },
+        {
+          "source": "deployer",
+          "users": 1882
+        },
+        {
+          "source": "bing",
+          "users": 1596
+        },
+        {
+          "source": "t.co",
+          "users": 1414
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1097
+        }
+      ],
+      "authors": [
+        {
+          "author": "Kaelan Deese",
+          "users": "17918",
+          "views": "17295"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "15546",
+          "views": "15415"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "14641",
+          "views": "14596"
+        },
+        {
+          "author": "David Sivak",
+          "users": "11150",
+          "views": "10881"
+        },
+        {
+          "author": "Anna Giaritelli",
+          "users": "10731",
+          "views": "10785"
+        },
+        {
+          "author": "Christopher Tremoglie",
+          "users": "10407",
+          "views": "10232"
+        },
+        {
+          "author": "Mia Cathell",
+          "users": "9616",
+          "views": "9414"
+        },
+        {
+          "author": "Zachary Faria",
+          "users": "3693",
+          "views": "3593"
+        },
+        {
+          "author": "Lauren Green",
+          "users": "3340",
+          "views": "3179"
+        },
+        {
+          "author": "Paul Bedard",
+          "users": "3089",
+          "views": "2932"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Judge sides with Comey after DOJ sought to limit his discovery access",
+          "users": "15557",
+          "views": "14654"
+        },
+        {
+          "title": "The unconscionable loss of conscience for Virginia Democrats",
+          "users": "13957",
+          "views": "11592"
+        },
+        {
+          "title": "Graham says Israel discussing reinvading Gaza to support anti-Hamas factions",
+          "users": "11728",
+          "views": "11433"
+        },
+        {
+          "title": "Illinois spent more on healthcare for illegal immigrants than roads, foster kids, elderly, and the arts — combined",
+          "users": "10696",
+          "views": "9501"
+        },
+        {
+          "title": "Democrats flip ‘America First’ script on Republicans over Argentina bailout",
+          "users": "10065",
+          "views": "9633"
+        },
+        {
+          "title": "The absurdity of California Democrats voting to pay rent for illegal immigrants afraid of ICE ‘raids’",
+          "users": "9893",
+          "views": "9646"
+        },
+        {
+          "title": "November Social Security direct payment worth $967 goes out in 16 days",
+          "users": "9608",
+          "views": "9223"
+        },
+        {
+          "title": "Salesforce CEO who backed National Guard deployment previously funded protest-industrial complex",
+          "users": "8795",
+          "views": "8408"
+        },
+        {
+          "title": "Zohran, Big Tish, and the New Resistance",
+          "users": "6955",
+          "views": "6154"
+        },
+        {
+          "title": "Letitia James handled mortgage fraud cases like the one she now faces",
+          "users": "5739",
+          "views": "2133"
+        },
+        {
+          "title": "Ruben Gallego is quickly becoming one of the worst senators",
+          "users": "4217",
+          "views": "3878"
+        },
+        {
+          "title": "Second round of October Social Security payments out today",
+          "users": "3431",
+          "views": "3347"
+        },
+        {
+          "title": "Virginia shake-up: Earle-Sears surging, Miyares overtakes Jones",
+          "users": "2927",
+          "views": "1312"
+        },
+        {
+          "title": "Good news: Woke lawfare reaches the Supreme Court",
+          "users": "2773",
+          "views": "2408"
+        },
+        {
+          "title": "Kellyanne Conway clobbers media gossips and hints of legal action",
+          "users": "2551",
+          "views": "2426"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Justice",
+          "users": "17646",
+          "views": "17046"
+        },
+        {
+          "section": "Finance and Economy",
+          "users": "13542",
+          "views": "13495"
+        },
+        {
+          "section": "Senate",
+          "users": "12226",
+          "views": "11811"
+        },
+        {
+          "section": "World",
+          "users": "11979",
+          "views": "11695"
+        },
+        {
+          "section": "Columnists",
+          "users": "11245",
+          "views": "11148"
+        },
+        {
+          "section": "Investigations",
+          "users": "9804",
+          "views": "9568"
+        },
+        {
+          "section": "Healthcare",
+          "users": "9196",
+          "views": "9159"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "6316",
+          "views": "6339"
+        },
+        {
+          "section": "House",
+          "users": "3639",
+          "views": "3631"
+        },
+        {
+          "section": "Crime",
+          "users": "3590",
+          "views": "3459"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 28,
-    "uniqueSections": 21,
+    "uniqueAuthors": 29,
+    "uniqueSections": 22,
     "sampleAuthors": [
       "Asher Notheis",
-      "David Zimmermann",
-      "Ross O'Keefe",
+      "Mia Cathell",
       "Emily Hallas",
-      "Gabrielle M. Etzel"
+      "Kaelan Deese",
+      "David Zimmermann"
     ],
     "sampleSections": [
-      "Finance",
-      "White House",
-      "Policy",
       "House",
-      "Healthcare"
+      "Investigations",
+      "Justice",
+      "Finance and Economy",
+      "Entertainment"
     ]
   }
 }

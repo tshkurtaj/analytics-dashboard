@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2025-11-03T07:21:58.047Z",
+  "updatedAt": "2025-11-04T07:22:11.533Z",
   "range": {
-    "start": "2025-10-27",
-    "end": "2025-11-02"
+    "start": "2025-10-28",
+    "end": "2025-11-03"
   },
   "rows": [
-    {
-      "date": "20251027",
-      "totalUsers": 188656,
-      "newUsers": 110742,
-      "pageviews": 201526,
-      "sessions": 205730,
-      "bounceRate": 0.6289700092354056,
-      "averageSessionDuration": 120.26571598524767,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 83487
-        },
-        {
-          "source": "(direct)",
-          "users": 30696
-        },
-        {
-          "source": "smartnews.com",
-          "users": 17349
-        },
-        {
-          "source": "google",
-          "users": 13098
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 10763
-        },
-        {
-          "source": "t.co",
-          "users": 8570
-        },
-        {
-          "source": "newsbreak",
-          "users": 3675
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1711
-        },
-        {
-          "source": "bing",
-          "users": 1700
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1668
-        },
-        {
-          "source": "powerlineblog.com",
-          "users": 1265
-        },
-        {
-          "source": "deployer",
-          "users": 1194
-        },
-        {
-          "source": "go.bsky.app",
-          "users": 1181
-        },
-        {
-          "source": "duckduckgo",
-          "users": 1073
-        },
-        {
-          "source": "out.reddit.com",
-          "users": 1034
-        }
-      ],
-      "authors": [
-        {
-          "author": "Asher Notheis",
-          "users": "55031",
-          "views": "56171"
-        },
-        {
-          "author": "Washington Examiner Staff",
-          "users": "7111",
-          "views": "7190"
-        },
-        {
-          "author": "Jack Birle",
-          "users": "6976",
-          "views": "7168"
-        },
-        {
-          "author": "Jenny Goldsberry",
-          "users": "4912",
-          "views": "5037"
-        },
-        {
-          "author": "Callie Patteson",
-          "users": "4649",
-          "views": "4847"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "3286",
-          "views": "3350"
-        },
-        {
-          "author": "Mia Cathell",
-          "users": "2489",
-          "views": "2569"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "2388",
-          "views": "2465"
-        },
-        {
-          "author": "John Roberts",
-          "users": "2087",
-          "views": "2145"
-        },
-        {
-          "author": "Anna Giaritelli",
-          "users": "2021",
-          "views": "2070"
-        }
-      ],
-      "articles": [
-        {
-          "title": "November Social Security direct payment worth $967 goes out in five days",
-          "users": "50726",
-          "views": "51664"
-        },
-        {
-          "title": "How John Brennan lied to Congress",
-          "users": "17548",
-          "views": "13485"
-        },
-        {
-          "title": "Trump administration quietly purges ICE leaders in five cities: Sources",
-          "users": "10808",
-          "views": "6224"
-        },
-        {
-          "title": "FBI ‘permantly removes’ major drug trafficking operation in Philadelphia",
-          "users": "4682",
-          "views": "4575"
-        },
-        {
-          "title": "Trump administration signing $1 billion supercomputer deal to advance nuclear power and cancer research",
-          "users": "3725",
-          "views": "3803"
-        },
-        {
-          "title": "DOJ draws red line over interference with ICE as state Democrats escalate threats",
-          "users": "3677",
-          "views": "3624"
-        },
-        {
-          "title": "Yes, Letitia James should be prosecuted",
-          "users": "3483",
-          "views": "2760"
-        },
-        {
-          "title": "Antifa’s international war chest bails out associates around the world",
-          "users": "3347",
-          "views": "3442"
-        },
-        {
-          "title": "Lindsey Graham suggests House Democrats ‘see what they are doing’ to US during shutdown",
-          "users": "3154",
-          "views": "3197"
-        },
-        {
-          "title": "First round of November Social Security payments out in 17 days",
-          "users": "3137",
-          "views": "2835"
-        },
-        {
-          "title": "Bessent plans to present short list of Fed chair finalists soon",
-          "users": "2732",
-          "views": "1535"
-        },
-        {
-          "title": "Trump administration asks Supreme Court to allow it to fire register of copyrights",
-          "users": "2414",
-          "views": "2450"
-        },
-        {
-          "title": "USDA confirms no SNAP benefits will go out Nov. 1",
-          "users": "2402",
-          "views": "2014"
-        },
-        {
-          "title": "DOJ draws red line over interfering with ICE as state Democrats escalate threats",
-          "users": "1911",
-          "views": "1901"
-        },
-        {
-          "title": "ICE says it can't allow Democrats access to facilities over shutdown",
-          "users": "1863",
-          "views": "688"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Finance",
-          "users": "54706",
-          "views": "55775"
-        },
-        {
-          "section": "News",
-          "users": "11523",
-          "views": "11748"
-        },
-        {
-          "section": "Energy and Environment",
-          "users": "6087",
-          "views": "6469"
-        },
-        {
-          "section": "Justice",
-          "users": "5742",
-          "views": "5917"
-        },
-        {
-          "section": "Immigration",
-          "users": "2941",
-          "views": "3084"
-        },
-        {
-          "section": "Supreme Court",
-          "users": "2870",
-          "views": "2918"
-        },
-        {
-          "section": "Investigations",
-          "users": "2857",
-          "views": "2960"
-        },
-        {
-          "section": "Crime",
-          "users": "2751",
-          "views": "2807"
-        },
-        {
-          "section": "Fairness and Justice",
-          "users": "2091",
-          "views": "2149"
-        },
-        {
-          "section": "Defense",
-          "users": "1742",
-          "views": "1767"
-        }
-      ]
-    },
     {
       "date": "20251028",
       "totalUsers": 157870,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20251102",
-      "totalUsers": 141056,
-      "newUsers": 59550,
-      "pageviews": 151655,
-      "sessions": 149545,
-      "bounceRate": 0.7971580460730884,
-      "averageSessionDuration": 153.15812887272057,
+      "totalUsers": 145838,
+      "newUsers": 66831,
+      "pageviews": 166774,
+      "sessions": 158646,
+      "bounceRate": 0.6925544923918662,
+      "averageSessionDuration": 90.85654180455857,
       "referrers": [
         {
           "source": "newsbreak.com",
-          "users": 64997
+          "users": 69485
         },
         {
           "source": "smartnews.com",
-          "users": 26292
-        },
-        {
-          "source": "(not set)",
-          "users": 23931
+          "users": 27861
         },
         {
           "source": "(direct)",
-          "users": 18871
+          "users": 19306
         },
         {
           "source": "google",
-          "users": 7134
+          "users": 10117
         },
         {
           "source": "realclearpolitics.com",
-          "users": 3403
-        },
-        {
-          "source": "(data not available)",
-          "users": 2307
+          "users": 3481
         },
         {
           "source": "newsbreak",
-          "users": 1431
+          "users": 1559
         },
         {
           "source": "m.facebook.com",
-          "users": 1387
+          "users": 1539
         },
         {
           "source": "newsbreakapp.com",
-          "users": 1292
+          "users": 1380
         },
         {
           "source": "bing",
-          "users": 889
+          "users": 932
         },
         {
           "source": "duckduckgo",
-          "users": 835
+          "users": 889
         },
         {
           "source": "t.co",
-          "users": 767
+          "users": 830
         },
         {
           "source": "newsshowcase",
-          "users": 590
+          "users": 628
         },
         {
           "source": "deployer",
-          "users": 546
+          "users": 577
+        },
+        {
+          "source": "yahoo",
+          "users": 485
+        },
+        {
+          "source": "paid.outbrain.com",
+          "users": 383
         }
       ],
       "authors": [
         {
           "author": "Asher Notheis",
-          "users": "26821",
-          "views": "25756"
+          "users": "27668",
+          "views": "28294"
         },
         {
           "author": "Zach Halaschak",
-          "users": "16491",
-          "views": "15780"
+          "users": "17213",
+          "views": "17575"
         },
         {
           "author": "Elizabeth Stauffer",
-          "users": "13987",
-          "views": "13420"
+          "users": "14558",
+          "views": "14938"
         },
         {
           "author": "Jack Birle",
-          "users": "6602",
-          "views": "6177"
+          "users": "6919",
+          "views": "7031"
         },
         {
           "author": "Gabrielle M. Etzel",
-          "users": "6447",
-          "views": "6277"
+          "users": "6828",
+          "views": "7034"
         },
         {
           "author": "Robert Schmad",
-          "users": "4648",
-          "views": "4330"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "3088",
-          "views": "3120"
+          "users": "4806",
+          "views": "4852"
         },
         {
           "author": "Lauren Green",
-          "users": "3084",
-          "views": "2954"
+          "users": "3178",
+          "views": "3265"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "3157",
+          "views": "3402"
         },
         {
           "author": "Barnini Chakraborty",
-          "users": "2509",
-          "views": "2400"
+          "users": "2567",
+          "views": "2658"
         },
         {
           "author": "Zach LaChance",
-          "users": "1589",
-          "views": "1574"
+          "users": "1660",
+          "views": "1768"
         }
       ],
       "articles": [
         {
           "title": "December Social Security direct payment worth $967 goes out in 30 days",
-          "users": "16448",
-          "views": "15644"
+          "users": "17395",
+          "views": "17785"
         },
         {
           "title": "SNAP funds pause could be painful hit to grocers",
-          "users": "15353",
-          "views": "14504"
+          "users": "16297",
+          "views": "16535"
         },
         {
           "title": "Democrats pulled the plug and forgot they were standing in water",
-          "users": "14634",
-          "views": "13656"
+          "users": "15733",
+          "views": "15841"
         },
         {
           "title": "December Social Security direct payment worth $967 goes out in 29 days",
-          "users": "8549",
-          "views": "7934"
+          "users": "9774",
+          "views": "9915"
         },
         {
           "title": "Trump may finally get some losses as Supreme Court turns to merits docket",
-          "users": "7249",
-          "views": "6671"
+          "users": "7651",
+          "views": "7634"
         },
         {
           "title": "Dr. Oz says states spent $1 billion in federal funding on illegal immigrant Medicaid",
-          "users": "6065",
-          "views": "5912"
+          "users": "6774",
+          "views": "7017"
         },
         {
           "title": "‘An exorbitant amount’: Top GOP Senate aide charged taxpayers $44,000 for his commute",
-          "users": "4618",
-          "views": "4298"
+          "users": "4801",
+          "views": "4848"
         },
         {
           "title": "Shape-shifter Newsom takes pandering to laughable level",
-          "users": "3718",
-          "views": "2937"
+          "users": "3823",
+          "views": "3184"
         },
         {
           "title": "Record-breaking Congress barrels toward another unwanted milestone",
-          "users": "2663",
-          "views": "2505"
-        },
-        {
-          "title": "Cuomo closes gap with Mamdani, almost margin-of-error race: Poll",
-          "users": "1982",
-          "views": "1762"
+          "users": "2958",
+          "views": "3008"
         },
         {
           "title": "How Democrats fuel the prostitution industry",
-          "users": "1973",
-          "views": "1446"
+          "users": "2175",
+          "views": "1750"
+        },
+        {
+          "title": "Cuomo closes gap with Mamdani, almost margin-of-error race: Poll",
+          "users": "2158",
+          "views": "2076"
         },
         {
           "title": "Rep. Valadao tells Newsom to act like \"an adult” and govern, not push Proposition 50",
-          "users": "1831",
-          "views": "1569"
+          "users": "2026",
+          "views": "1857"
         },
         {
           "title": "Antifa posts ‘hit list’ in Portland targeting journalists",
-          "users": "1425",
-          "views": "1340"
-        },
-        {
-          "title": "Thousands feared killed after paramilitaries take final government stronghold in western Sudan, splitting country in two",
-          "users": "1347",
-          "views": "1218"
+          "users": "1532",
+          "views": "1577"
         },
         {
           "title": "Newsom carves Issa’s home out of his district in Prop 50 map",
-          "users": "1107",
-          "views": "938"
+          "users": "1522",
+          "views": "1488"
+        },
+        {
+          "title": "Thousands feared killed after paramilitaries take final government stronghold in western Sudan, splitting country in two",
+          "users": "1369",
+          "views": "1379"
         }
       ],
       "sections": [
         {
           "section": "Finance",
-          "users": "26674",
-          "views": "25622"
+          "users": "27506",
+          "views": "28149"
         },
         {
           "section": "Finance and Economy",
-          "users": "15834",
-          "views": "14986"
+          "users": "16494",
+          "views": "16724"
         },
         {
           "section": "Beltway Confidential",
-          "users": "14976",
-          "views": "14408"
+          "users": "15550",
+          "views": "16042"
         },
         {
           "section": "In Focus",
-          "users": "7881",
-          "views": "7436"
+          "users": "8212",
+          "views": "8417"
         },
         {
           "section": "Healthcare",
-          "users": "6449",
-          "views": "6278"
+          "users": "6830",
+          "views": "7035"
         },
         {
           "section": "Investigations",
-          "users": "6146",
-          "views": "5733"
+          "users": "6359",
+          "views": "6427"
         },
         {
           "section": "Congressional",
-          "users": "5252",
-          "views": "5049"
+          "users": "5391",
+          "views": "5585"
         },
         {
           "section": "State",
-          "users": "3772",
-          "views": "3886"
+          "users": "3896",
+          "views": "4311"
         },
         {
           "section": "World",
-          "users": "2272",
-          "views": "2094"
+          "users": "2333",
+          "views": "2358"
         },
         {
           "section": "Senate",
-          "users": "1733",
-          "views": "1772"
+          "users": "1757",
+          "views": "1909"
+        }
+      ]
+    },
+    {
+      "date": "20251103",
+      "totalUsers": 174174,
+      "newUsers": 89204,
+      "pageviews": 164957,
+      "sessions": 191608,
+      "bounceRate": 0.7497129556177196,
+      "averageSessionDuration": 171.04395645392157,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 52599
+        },
+        {
+          "source": "(not set)",
+          "users": 39162
+        },
+        {
+          "source": "(direct)",
+          "users": 29520
+        },
+        {
+          "source": "smartnews.com",
+          "users": 25769
+        },
+        {
+          "source": "drudgereport.com",
+          "users": 18818
+        },
+        {
+          "source": "google",
+          "users": 9597
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 6403
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 4746
+        },
+        {
+          "source": "t.co",
+          "users": 3632
+        },
+        {
+          "source": "(data not available)",
+          "users": 2676
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1656
+        },
+        {
+          "source": "newsbreak",
+          "users": 1580
+        },
+        {
+          "source": "bing",
+          "users": 1540
+        },
+        {
+          "source": "deployer",
+          "users": 1370
+        },
+        {
+          "source": "duckduckgo",
+          "users": 1030
+        }
+      ],
+      "authors": [
+        {
+          "author": "Asher Notheis",
+          "users": "20381",
+          "views": "19460"
+        },
+        {
+          "author": "David Sivak and Ramsey Touchberry",
+          "users": "20233",
+          "views": "19402"
+        },
+        {
+          "author": "Paul Bedard",
+          "users": "15840",
+          "views": "15266"
+        },
+        {
+          "author": "Jenny Goldsberry",
+          "users": "8712",
+          "views": "8346"
+        },
+        {
+          "author": "Sally Pipes",
+          "users": "2407",
+          "views": "2346"
+        },
+        {
+          "author": "Gabrielle M. Etzel",
+          "users": "2197",
+          "views": "2115"
+        },
+        {
+          "author": "Barnini Chakraborty",
+          "users": "2128",
+          "views": "2016"
+        },
+        {
+          "author": "Naomi Lim",
+          "users": "1650",
+          "views": "1578"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "1637",
+          "views": "1554"
+        },
+        {
+          "author": "Zach LaChance",
+          "users": "1153",
+          "views": "1163"
+        }
+      ],
+      "articles": [
+        {
+          "title": "How to understand Mamdani, the Muslim at the gay bar",
+          "users": "24951",
+          "views": "6140"
+        },
+        {
+          "title": "Illegal migrants soak up SNAP and WIC benefits",
+          "users": "23971",
+          "views": "19696"
+        },
+        {
+          "title": "Republicans eye shutdown breakthrough after Virginia elections",
+          "users": "20698",
+          "views": "19467"
+        },
+        {
+          "title": "December Social Security direct payment worth $967 goes out in 29 days",
+          "users": "14673",
+          "views": "13910"
+        },
+        {
+          "title": "Joe Concha says indictments of Comey, James, and Bolton are ‘not retribution’",
+          "users": "7338",
+          "views": "6962"
+        },
+        {
+          "title": "Walz’s bad SNAP math",
+          "users": "5948",
+          "views": "2459"
+        },
+        {
+          "title": "December Social Security direct payment worth $967 goes out in 28 days",
+          "users": "2712",
+          "views": "2463"
+        },
+        {
+          "title": "No, the expiring subsidies aren’t to blame for next year’s premium hikes",
+          "users": "2300",
+          "views": "2231"
+        },
+        {
+          "title": "Trump makes election eve push for GOP in New Jersey and Virginia",
+          "users": "1795",
+          "views": "1611"
+        },
+        {
+          "title": "Dr. Oz says states spent $1 billion in federal funding on illegal immigrant Medicaid",
+          "users": "1602",
+          "views": "1545"
+        },
+        {
+          "title": "Newsom carves Issa’s home out of his district in Prop 50 map",
+          "users": "1582",
+          "views": "1437"
+        },
+        {
+          "title": "Where Trump stands now",
+          "users": "1380",
+          "views": "834"
+        },
+        {
+          "title": "Arizona school under fire for teachers’ bloody shirt costume many claimed mocked Charlie Kirk’s murder",
+          "users": "1281",
+          "views": "946"
+        },
+        {
+          "title": "With 'friends' like Carlson and Fuentes, who needs the Heritage Foundation under Kevin Roberts's leadership?",
+          "users": "1104",
+          "views": "689"
+        },
+        {
+          "title": "Billions of US dollars are being lost to foreign scams",
+          "users": "1022",
+          "views": "86"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Senate",
+          "users": "21148",
+          "views": "20267"
+        },
+        {
+          "section": "Finance",
+          "users": "18820",
+          "views": "18064"
+        },
+        {
+          "section": "Washington Secrets",
+          "users": "15535",
+          "views": "14956"
+        },
+        {
+          "section": "News",
+          "users": "9786",
+          "views": "9402"
+        },
+        {
+          "section": "State",
+          "users": "3884",
+          "views": "3822"
+        },
+        {
+          "section": "Congressional",
+          "users": "2496",
+          "views": "2379"
+        },
+        {
+          "section": "Faith, Freedom, and Self-Reliance",
+          "users": "2485",
+          "views": "2423"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "2250",
+          "views": "2178"
+        },
+        {
+          "section": "Healthcare",
+          "users": "2197",
+          "views": "2115"
+        },
+        {
+          "section": "House",
+          "users": "1254",
+          "views": "1170"
         }
       ]
     }
@@ -1775,20 +1775,20 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 32,
+    "uniqueAuthors": 34,
     "uniqueSections": 25,
     "sampleAuthors": [
-      "Asher Notheis",
-      "Washington Examiner Staff",
       "Jack Birle",
-      "Jenny Goldsberry",
-      "Callie Patteson"
+      "Callie Patteson",
+      "Ramsey Touchberry",
+      "Brady Knox",
+      "Washington Examiner Staff"
     ],
     "sampleSections": [
-      "Finance",
-      "News",
       "Energy and Environment",
-      "Justice",
+      "Supreme Court",
+      "News",
+      "Senate",
       "Immigration"
     ]
   }

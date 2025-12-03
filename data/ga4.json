@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2025-12-02T07:22:36.484Z",
+  "updatedAt": "2025-12-03T07:22:31.045Z",
   "range": {
-    "start": "2025-11-25",
-    "end": "2025-12-01"
+    "start": "2025-11-26",
+    "end": "2025-12-02"
   },
   "rows": [
-    {
-      "date": "20251125",
-      "totalUsers": 117247,
-      "newUsers": 46368,
-      "pageviews": 140255,
-      "sessions": 128839,
-      "bounceRate": 0.7087605461079332,
-      "averageSessionDuration": 88.9665466829221,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 61234
-        },
-        {
-          "source": "smartnews.com",
-          "users": 22454
-        },
-        {
-          "source": "(direct)",
-          "users": 13659
-        },
-        {
-          "source": "google",
-          "users": 9430
-        },
-        {
-          "source": "t.co",
-          "users": 1136
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 1123
-        },
-        {
-          "source": "deployer",
-          "users": 707
-        },
-        {
-          "source": "newsbreak",
-          "users": 662
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 573
-        },
-        {
-          "source": "bing",
-          "users": 533
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 304
-        },
-        {
-          "source": "duckduckgo",
-          "users": 275
-        },
-        {
-          "source": "news.google.com",
-          "users": 219
-        },
-        {
-          "source": "lm.facebook.com",
-          "users": 200
-        },
-        {
-          "source": "newsshowcase",
-          "users": 195
-        }
-      ],
-      "authors": [
-        {
-          "author": "Emily Hallas",
-          "users": "20014",
-          "views": "20658"
-        },
-        {
-          "author": "Asher Notheis",
-          "users": "17490",
-          "views": "18762"
-        },
-        {
-          "author": "Anna Giaritelli",
-          "users": "10812",
-          "views": "11407"
-        },
-        {
-          "author": "Washington Examiner Staff",
-          "users": "9391",
-          "views": "9633"
-        },
-        {
-          "author": "Pedro Rodriguez",
-          "users": "6658",
-          "views": "7004"
-        },
-        {
-          "author": "Christopher Tremoglie",
-          "users": "3693",
-          "views": "3831"
-        },
-        {
-          "author": "Rachel Schilke",
-          "users": "3421",
-          "views": "3529"
-        },
-        {
-          "author": "Jenny Goldsberry",
-          "users": "3272",
-          "views": "3345"
-        },
-        {
-          "author": "Lauren Green",
-          "users": "1900",
-          "views": "1954"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "1482",
-          "views": "1544"
-        }
-      ],
-      "articles": [
-        {
-          "title": "December Social Security direct payment worth $967 goes out in six days",
-          "users": "13088",
-          "views": "13451"
-        },
-        {
-          "title": "Senate Republican warns Trump is in no position to deliver $2,000 tariff rebate checks",
-          "users": "7584",
-          "views": "7746"
-        },
-        {
-          "title": "How millions of illegal immigrants got jobs in the US",
-          "users": "7412",
-          "views": "7574"
-        },
-        {
-          "title": "Oregon governor declares emergency after Olympic Pipeline forced to shut down",
-          "users": "7329",
-          "views": "7356"
-        },
-        {
-          "title": "California triggers transparency concerns after sinking $450 million into scrapped 911 project",
-          "users": "5538",
-          "views": "5641"
-        },
-        {
-          "title": "Erika Kirk reveals TPUSA push for Vance 2028 presidential bid ‘in the works’",
-          "users": "4866",
-          "views": "5079"
-        },
-        {
-          "title": "Slotkin caught lying as Democrats exposed again for sabotaging Trump administration",
-          "users": "3921",
-          "views": "4015"
-        },
-        {
-          "title": "Where illegal immigrants find work in the US",
-          "users": "3525",
-          "views": "3690"
-        },
-        {
-          "title": "Washington Examiner Store",
-          "users": "3304",
-          "views": "5257"
-        },
-        {
-          "title": "Republican Sen. Bill Cassidy urges public not to be ‘misled’ by CDC on vaccine safety",
-          "users": "3080",
-          "views": "3143"
-        },
-        {
-          "title": "Third round of November Social Security payments goes out in one day",
-          "users": "2860",
-          "views": "2966"
-        },
-        {
-          "title": "Russia launches over 460 drones into Ukraine, killing six, as peace talks continue",
-          "users": "1976",
-          "views": "2037"
-        },
-        {
-          "title": "MTG departure ramps pressure up on GOP to hold Tennessee, as the knives come out for Democratic candidate",
-          "users": "1891",
-          "views": "1942"
-        },
-        {
-          "title": "Trump’s HSA plan puts Democrats on the spot",
-          "users": "1646",
-          "views": "1557"
-        },
-        {
-          "title": "Greta Thunberg temporarily banned from Venice after leading protest turning canal green",
-          "users": "1645",
-          "views": "1719"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Finance and Economy",
-          "users": "25126",
-          "views": "26390"
-        },
-        {
-          "section": "News",
-          "users": "9075",
-          "views": "9509"
-        },
-        {
-          "section": "Crime",
-          "users": "7902",
-          "views": "8237"
-        },
-        {
-          "section": "Campaigns",
-          "users": "6190",
-          "views": "6363"
-        },
-        {
-          "section": "Energy",
-          "users": "5904",
-          "views": "6014"
-        },
-        {
-          "section": "Business",
-          "users": "5553",
-          "views": "5656"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "5377",
-          "views": "5625"
-        },
-        {
-          "section": "World",
-          "users": "3715",
-          "views": "3899"
-        },
-        {
-          "section": "Economy",
-          "users": "3530",
-          "views": "3694"
-        },
-        {
-          "section": "House",
-          "users": "3529",
-          "views": "3679"
-        }
-      ]
-    },
     {
       "date": "20251126",
       "totalUsers": 114936,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20251201",
-      "totalUsers": 135704,
-      "newUsers": 71612,
-      "pageviews": 141226,
-      "sessions": 150655,
-      "bounceRate": 0.8061730443729049,
-      "averageSessionDuration": 175.36355385759518,
+      "totalUsers": 136482,
+      "newUsers": 75032,
+      "pageviews": 147538,
+      "sessions": 150112,
+      "bounceRate": 0.633866712854402,
+      "averageSessionDuration": 95.87186272445241,
       "referrers": [
         {
           "source": "newsbreak.com",
-          "users": 60275
-        },
-        {
-          "source": "(not set)",
-          "users": 41044
+          "users": 61964
         },
         {
           "source": "(direct)",
-          "users": 21171
+          "users": 20670
         },
         {
           "source": "smartnews.com",
-          "users": 16366
-        },
-        {
-          "source": "drudgereport.com",
-          "users": 8163
+          "users": 16585
         },
         {
           "source": "google",
-          "users": 6623
+          "users": 10412
         },
         {
-          "source": "(data not available)",
-          "users": 5238
+          "source": "drudgereport.com",
+          "users": 9528
         },
         {
           "source": "newsbreak",
-          "users": 2050
+          "users": 2601
         },
         {
           "source": "realclearpolitics.com",
-          "users": 1769
+          "users": 1836
         },
         {
           "source": "powerlineblog.com",
-          "users": 1410
+          "users": 1604
         },
         {
           "source": "t.co",
-          "users": 1292
+          "users": 1441
         },
         {
           "source": "deployer",
-          "users": 1130
-        },
-        {
-          "source": "bing",
-          "users": 940
+          "users": 1247
         },
         {
           "source": "m.facebook.com",
-          "users": 836
+          "users": 1094
+        },
+        {
+          "source": "bing",
+          "users": 986
         },
         {
           "source": "duckduckgo",
-          "users": 645
+          "users": 734
+        },
+        {
+          "source": "newsshowcase",
+          "users": 427
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 352
         }
       ],
       "authors": [
         {
           "author": "Asher Notheis",
-          "users": "44167",
-          "views": "44116"
+          "users": "44383",
+          "views": "46189"
         },
         {
           "author": "Zach LaChance",
-          "users": "6849",
-          "views": "6947"
+          "users": "6865",
+          "views": "7239"
         },
         {
           "author": "Monique Yohanan",
-          "users": "4213",
-          "views": "4157"
+          "users": "4229",
+          "views": "4344"
         },
         {
           "author": "Christopher Tremoglie",
-          "users": "3775",
-          "views": "3736"
+          "users": "3792",
+          "views": "3896"
         },
         {
           "author": "Brady Knox",
-          "users": "3635",
-          "views": "3606"
+          "users": "3675",
+          "views": "3776"
         },
         {
           "author": "Washington Examiner",
-          "users": "2521",
-          "views": "2503"
+          "users": "2535",
+          "views": "2629"
         },
         {
           "author": "Molly Parks",
-          "users": "2349",
-          "views": "2393"
+          "users": "2364",
+          "views": "2488"
         },
         {
           "author": "Barnini Chakraborty",
-          "users": "1452",
-          "views": "1425"
+          "users": "1461",
+          "views": "1507"
         },
         {
           "author": "Jack Birle",
-          "users": "1336",
-          "views": "1338"
+          "users": "1342",
+          "views": "1390"
         },
         {
           "author": "Lauren Green",
-          "users": "1196",
-          "views": "1202"
+          "users": "1202",
+          "views": "1242"
         }
       ],
       "articles": [
         {
           "title": "December Social Security direct payment worth $967 goes out in one day",
-          "users": "29199",
-          "views": "28867"
-        },
-        {
-          "title": "December Social Security direct payment worth $967 goes out today",
-          "users": "9234",
-          "views": "8491"
-        },
-        {
-          "title": "Blackburn tempers expectations in Tennessee special election",
-          "users": "6535",
-          "views": "5999"
+          "users": "29746",
+          "views": "30670"
         },
         {
           "title": "Mark Kelly likens Hegseth to '12-year-old playing army'",
-          "users": "6202",
-          "views": "1594"
+          "users": "12384",
+          "views": "3506"
+        },
+        {
+          "title": "December Social Security direct payment worth $967 goes out today",
+          "users": "9462",
+          "views": "9046"
+        },
+        {
+          "title": "Blackburn tempers expectations in Tennessee special election",
+          "users": "6626",
+          "views": "6334"
         },
         {
           "title": "The science wasn’t settled. The CDC finally admitted it",
-          "users": "5376",
-          "views": "5069"
+          "users": "5594",
+          "views": "5487"
         },
         {
           "title": "First round of December Social Security payments goes out in nine days",
-          "users": "5173",
-          "views": "5109"
+          "users": "5343",
+          "views": "5500"
         },
         {
           "title": "Does Mark Kelly ever stop lying about Trump?",
-          "users": "4036",
-          "views": "3908"
+          "users": "4518",
+          "views": "4535"
         },
         {
           "title": "Requiem for a scandal",
-          "users": "3275",
-          "views": "2330"
+          "users": "3564",
+          "views": "2663"
         },
         {
           "title": "Former Ukrainian ‘co-president’ Yermak says he’s ‘going to the front’ after shock resignation",
-          "users": "2464",
-          "views": "2429"
+          "users": "2515",
+          "views": "2558"
         },
         {
           "title": "This holiday season, don’t be like the Obamas. Be grateful for our nation",
-          "users": "1647",
-          "views": "1637"
+          "users": "1750",
+          "views": "1817"
         },
         {
           "title": "Washington Examiner Store",
-          "users": "1323",
-          "views": "1538"
+          "users": "1675",
+          "views": "1998"
         },
         {
           "title": "Trump opposed to follow-up strikes on alleged drug boats amid Hegseth scrutiny",
-          "users": "1291",
-          "views": "1311"
+          "users": "1296",
+          "views": "1365"
         },
         {
           "title": "Powerhouse Texas delegation scrambles 2026 map with wave of House retirements",
-          "users": "1162",
-          "views": "1167"
+          "users": "1196",
+          "views": "1234"
         },
         {
           "title": "Minnesota human services employees hit Walz for 'massive fraud'",
-          "users": "1127",
-          "views": "678"
+          "users": "1153",
+          "views": "722"
         },
         {
           "title": "An insane anti-Trump conspiracy theory goes viral",
-          "users": "1087",
-          "views": "1041"
+          "users": "1107",
+          "views": "1107"
         }
       ],
       "sections": [
         {
           "section": "News",
-          "users": "31820",
-          "views": "31507"
+          "users": "31977",
+          "views": "32975"
         },
         {
           "section": "Finance and Economy",
-          "users": "13743",
-          "views": "13650"
+          "users": "13840",
+          "views": "14296"
         },
         {
           "section": "Beltway Confidential",
-          "users": "8477",
-          "views": "8556"
+          "users": "8519",
+          "views": "8927"
         },
         {
           "section": "Congressional",
-          "users": "6332",
-          "views": "6377"
+          "users": "6350",
+          "views": "6650"
         },
         {
           "section": "World",
-          "users": "2586",
-          "views": "2553"
+          "users": "2624",
+          "views": "2672"
         },
         {
           "section": "Editorials",
-          "users": "2521",
-          "views": "2503"
+          "users": "2535",
+          "views": "2629"
         },
         {
           "section": "Crime",
-          "users": "1957",
-          "views": "1956"
+          "users": "1964",
+          "views": "2040"
         },
         {
           "section": "Defense",
-          "users": "1921",
-          "views": "1986"
+          "users": "1929",
+          "views": "2055"
         },
         {
           "section": "White House",
-          "users": "1305",
-          "views": "1308"
+          "users": "1311",
+          "views": "1371"
         },
         {
           "section": "House",
-          "users": "1202",
-          "views": "1228"
+          "users": "1210",
+          "views": "1261"
+        }
+      ]
+    },
+    {
+      "date": "20251202",
+      "totalUsers": 192916,
+      "newUsers": 109832,
+      "pageviews": 184727,
+      "sessions": 215237,
+      "bounceRate": 0.8147391015485256,
+      "averageSessionDuration": 157.51084229652895,
+      "referrers": [
+        {
+          "source": "(not set)",
+          "users": 62787
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 60908
+        },
+        {
+          "source": "(direct)",
+          "users": 30891
+        },
+        {
+          "source": "drudgereport.com",
+          "users": 25753
+        },
+        {
+          "source": "smartnews.com",
+          "users": 21202
+        },
+        {
+          "source": "(data not available)",
+          "users": 14907
+        },
+        {
+          "source": "google",
+          "users": 11469
+        },
+        {
+          "source": "newsbreak",
+          "users": 4617
+        },
+        {
+          "source": "snews",
+          "users": 3552
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 3228
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1645
+        },
+        {
+          "source": "t.co",
+          "users": 1432
+        },
+        {
+          "source": "deployer",
+          "users": 1228
+        },
+        {
+          "source": "bing",
+          "users": 831
+        },
+        {
+          "source": "duckduckgo",
+          "users": 781
+        }
+      ],
+      "authors": [
+        {
+          "author": "Asher Notheis",
+          "users": "40157",
+          "views": "40924"
+        },
+        {
+          "author": "Christian Datoc",
+          "users": "6042",
+          "views": "6068"
+        },
+        {
+          "author": "Mia Cathell",
+          "users": "4457",
+          "views": "4589"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "4149",
+          "views": "4188"
+        },
+        {
+          "author": "Robert Schmad",
+          "users": "3241",
+          "views": "3276"
+        },
+        {
+          "author": "Timothy Nerozzi",
+          "users": "3114",
+          "views": "3102"
+        },
+        {
+          "author": "Mabinty Quarshie",
+          "users": "2795",
+          "views": "2857"
+        },
+        {
+          "author": "Washington Examiner Staff",
+          "users": "2637",
+          "views": "2658"
+        },
+        {
+          "author": "Barnini Chakraborty",
+          "users": "2345",
+          "views": "2390"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "2026",
+          "views": "2115"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Mark Kelly likens Hegseth to '12-year-old playing army'",
+          "users": "37786",
+          "views": "11600"
+        },
+        {
+          "title": "January Social Security direct payment worth $994 goes out in 29 days",
+          "users": "32578",
+          "views": "33080"
+        },
+        {
+          "title": "Washington Examiner Store",
+          "users": "13979",
+          "views": "16677"
+        },
+        {
+          "title": "Trump quietly ‘reviewing options’ as Congress stares down Obamacare deadline",
+          "users": "5151",
+          "views": "5152"
+        },
+        {
+          "title": "Trump's escalation against Venezuela splits Republicans",
+          "users": "4356",
+          "views": "1516"
+        },
+        {
+          "title": "December Social Security direct payment worth $967 goes out today",
+          "users": "4101",
+          "views": "3902"
+        },
+        {
+          "title": "Amy Coney Barrett questions why nonliable internet providers would help prevent copyright infringement",
+          "users": "3468",
+          "views": "3497"
+        },
+        {
+          "title": "Blame Democrats, not data centers, for rising electricity prices",
+          "users": "3081",
+          "views": "2863"
+        },
+        {
+          "title": "Chicago teachers union funneled millions to liberals while keeping members in the dark about finances",
+          "users": "3016",
+          "views": "3047"
+        },
+        {
+          "title": "DeSantis announces Florida is 'going to redistrict'",
+          "users": "2794",
+          "views": "2074"
+        },
+        {
+          "title": "Trump unloads on Tim Walz and Ilhan Omar over Minnesota fraud scandal and says country is at a tipping point",
+          "users": "2709",
+          "views": "2762"
+        },
+        {
+          "title": "Requiem for a scandal",
+          "users": "2126",
+          "views": "1488"
+        },
+        {
+          "title": "ASPCA sends scraps to local shelters despite millions collected in donations, says consumer watchdog",
+          "users": "2110",
+          "views": "2120"
+        },
+        {
+          "title": "Does Mark Kelly ever stop lying about Trump?",
+          "users": "1935",
+          "views": "1772"
+        },
+        {
+          "title": "Nation’s largest teachers union rolls out ‘Race Class Narrative’ playbook on transgender issues",
+          "users": "1928",
+          "views": "1916"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Finance and Economy",
+          "users": "38213",
+          "views": "38807"
+        },
+        {
+          "section": "White House",
+          "users": "10686",
+          "views": "11002"
+        },
+        {
+          "section": "Investigations",
+          "users": "7537",
+          "views": "7864"
+        },
+        {
+          "section": "Supreme Court",
+          "users": "4034",
+          "views": "4071"
+        },
+        {
+          "section": "World",
+          "users": "3287",
+          "views": "3273"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "3226",
+          "views": "3259"
+        },
+        {
+          "section": "News",
+          "users": "2868",
+          "views": "2946"
+        },
+        {
+          "section": "House",
+          "users": "2239",
+          "views": "2252"
+        },
+        {
+          "section": "Fairness and Justice",
+          "users": "2106",
+          "views": "2123"
+        },
+        {
+          "section": "Editorials",
+          "users": "1872",
+          "views": "1929"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 30,
-    "uniqueSections": 27,
+    "uniqueAuthors": 32,
+    "uniqueSections": 25,
     "sampleAuthors": [
-      "Emily Hallas",
       "Asher Notheis",
+      "Brady Knox",
       "Anna Giaritelli",
       "Washington Examiner Staff",
-      "Pedro Rodriguez"
+      "Colin Wright"
     ],
     "sampleSections": [
-      "Finance and Economy",
       "News",
+      "World",
+      "Beltway Confidential",
       "Crime",
-      "Campaigns",
-      "Energy"
+      "Justice"
     ]
   }
 }

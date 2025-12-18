@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2025-12-17T07:22:42.906Z",
+  "updatedAt": "2025-12-18T07:22:36.367Z",
   "range": {
-    "start": "2025-12-10",
-    "end": "2025-12-16"
+    "start": "2025-12-11",
+    "end": "2025-12-17"
   },
   "rows": [
-    {
-      "date": "20251210",
-      "totalUsers": 131452,
-      "newUsers": 57009,
-      "pageviews": 157677,
-      "sessions": 146020,
-      "bounceRate": 0.6648404328174222,
-      "averageSessionDuration": 99.67496313810437,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 58854
-        },
-        {
-          "source": "smartnews.com",
-          "users": 25232
-        },
-        {
-          "source": "(direct)",
-          "users": 20497
-        },
-        {
-          "source": "google",
-          "users": 8936
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 2741
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 1935
-        },
-        {
-          "source": "deployer",
-          "users": 1548
-        },
-        {
-          "source": "newsbreak",
-          "users": 1536
-        },
-        {
-          "source": "duckduckgo",
-          "users": 1407
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1286
-        },
-        {
-          "source": "bing",
-          "users": 898
-        },
-        {
-          "source": "t.co",
-          "users": 890
-        },
-        {
-          "source": "facebook.com",
-          "users": 451
-        },
-        {
-          "source": "newsshowcase",
-          "users": 422
-        },
-        {
-          "source": "paid.outbrain.com",
-          "users": 398
-        }
-      ],
-      "authors": [
-        {
-          "author": "Asher Notheis",
-          "users": "21677",
-          "views": "22690"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "13306",
-          "views": "13838"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "10367",
-          "views": "10868"
-        },
-        {
-          "author": "Washington Examiner Staff",
-          "users": "9290",
-          "views": "9744"
-        },
-        {
-          "author": "Paul Bedard",
-          "users": "6353",
-          "views": "6786"
-        },
-        {
-          "author": "Kaelan Deese",
-          "users": "5069",
-          "views": "5273"
-        },
-        {
-          "author": "Gabrielle M. Etzel",
-          "users": "3637",
-          "views": "3757"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "3296",
-          "views": "3435"
-        },
-        {
-          "author": "Rachel Schilke",
-          "users": "3115",
-          "views": "3180"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "2285",
-          "views": "2350"
-        }
-      ],
-      "articles": [
-        {
-          "title": "January Social Security direct payment worth $994 goes out in 21 days",
-          "users": "17260",
-          "views": "17833"
-        },
-        {
-          "title": "Six more states sign pledge to ban use of SNAP payments on junk food",
-          "users": "9322",
-          "views": "9628"
-        },
-        {
-          "title": "DOJ to revoke citizenship of former Marine originally from Ghana",
-          "users": "8971",
-          "views": "9274"
-        },
-        {
-          "title": "Trump administration pulls 9,500 non-English-speaking truck drivers off road",
-          "users": "8487",
-          "views": "8593"
-        },
-        {
-          "title": "Appeals court hands Trump win in lawsuit over transgender military ban",
-          "users": "5327",
-          "views": "5287"
-        },
-        {
-          "title": "Connie Chung bares fangs at husband over Bari Weiss CBS changes",
-          "users": "3569",
-          "views": "3585"
-        },
-        {
-          "title": "Bombshell Obamacare fraud report gives fiscal conservatives boost in fight over subsidies",
-          "users": "3329",
-          "views": "3434"
-        },
-        {
-          "title": "Missouri Democrats secure enough petition signatures to put new map in front of voters",
-          "users": "3077",
-          "views": "3160"
-        },
-        {
-          "title": "Historic shift as ‘barbarians’ take Kennedy Center center stage",
-          "users": "2967",
-          "views": "3032"
-        },
-        {
-          "title": "Johnson gives 10 options to address healthcare costs, none of which involve Obamacare subsidies",
-          "users": "2923",
-          "views": "2967"
-        },
-        {
-          "title": "Time's 2025 Person of the Year should be Charlie Kirk",
-          "users": "2321",
-          "views": "1485"
-        },
-        {
-          "title": "California’s new tax: A monthly subscription to use state roads",
-          "users": "1843",
-          "views": "1890"
-        },
-        {
-          "title": "California's new tax: A monthly subscription to use state roads",
-          "users": "1501",
-          "views": "598"
-        },
-        {
-          "title": "First round of December Social Security payments goes out today",
-          "users": "1460",
-          "views": "1295"
-        },
-        {
-          "title": "Against Justice Ketanji Brown Jackson’s technocratic despotism",
-          "users": "1397",
-          "views": "1421"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Finance and Economy",
-          "users": "20144",
-          "views": "21153"
-        },
-        {
-          "section": "News",
-          "users": "18360",
-          "views": "19218"
-        },
-        {
-          "section": "Immigration",
-          "users": "8501",
-          "views": "8739"
-        },
-        {
-          "section": "House",
-          "users": "5501",
-          "views": "5795"
-        },
-        {
-          "section": "Justice",
-          "users": "5488",
-          "views": "5756"
-        },
-        {
-          "section": "Campaigns",
-          "users": "4434",
-          "views": "4635"
-        },
-        {
-          "section": "Healthcare",
-          "users": "3637",
-          "views": "3757"
-        },
-        {
-          "section": "Opinion",
-          "users": "3473",
-          "views": "3542"
-        },
-        {
-          "section": "Washington Secrets",
-          "users": "3165",
-          "views": "3244"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "2576",
-          "views": "2645"
-        }
-      ]
-    },
     {
       "date": "20251211",
       "totalUsers": 140193,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20251216",
-      "totalUsers": 133484,
-      "newUsers": 54480,
-      "pageviews": 144690,
-      "sessions": 147924,
-      "bounceRate": 0.8236662069711473,
-      "averageSessionDuration": 149.7713232727617,
+      "totalUsers": 133819,
+      "newUsers": 56064,
+      "pageviews": 148969,
+      "sessions": 147925,
+      "bounceRate": 0.6820550954875781,
+      "averageSessionDuration": 92.52755611146189,
       "referrers": [
         {
           "source": "newsbreak.com",
-          "users": 60693
-        },
-        {
-          "source": "(not set)",
-          "users": 30193
+          "users": 61489
         },
         {
           "source": "smartnews.com",
-          "users": 24249
+          "users": 24494
         },
         {
           "source": "(direct)",
-          "users": 21828
+          "users": 21560
         },
         {
           "source": "google",
-          "users": 5497
-        },
-        {
-          "source": "(data not available)",
-          "users": 2584
+          "users": 6519
         },
         {
           "source": "newsbreak",
-          "users": 1999
+          "users": 2518
         },
         {
           "source": "t.co",
-          "users": 1748
-        },
-        {
-          "source": "deployer",
-          "users": 1308
+          "users": 1982
         },
         {
           "source": "m.facebook.com",
-          "users": 1244
+          "users": 1820
+        },
+        {
+          "source": "deployer",
+          "users": 1441
         },
         {
           "source": "realclearpolitics.com",
-          "users": 1149
+          "users": 1204
         },
         {
           "source": "bing",
-          "users": 935
+          "users": 1002
         },
         {
           "source": "duckduckgo",
-          "users": 613
+          "users": 687
+        },
+        {
+          "source": "facebook.com",
+          "users": 525
         },
         {
           "source": "newsbreakapp.com",
-          "users": 399
+          "users": 427
+        },
+        {
+          "source": "flipboard",
+          "users": 418
         },
         {
           "source": "paid.outbrain.com",
-          "users": 380
+          "users": 397
         }
       ],
       "authors": [
         {
           "author": "Asher Notheis",
-          "users": "32349",
-          "views": "33327"
+          "users": "32450",
+          "views": "34331"
         },
         {
           "author": "Mabinty Quarshie",
-          "users": "10587",
-          "views": "10728"
+          "users": "10617",
+          "views": "10978"
         },
         {
           "author": "Paul Bedard",
-          "users": "9817",
-          "views": "9903"
+          "users": "9834",
+          "views": "10204"
         },
         {
           "author": "Molly Parks",
-          "users": "8598",
-          "views": "8697"
+          "users": "8608",
+          "views": "8960"
         },
         {
           "author": "Ramsey Touchberry",
-          "users": "4125",
-          "views": "4195"
+          "users": "4130",
+          "views": "4279"
         },
         {
           "author": "Ian Haworth",
-          "users": "3711",
-          "views": "3731"
+          "users": "3720",
+          "views": "3829"
         },
         {
           "author": "Jenny Goldsberry",
-          "users": "3565",
-          "views": "3686"
+          "users": "3583",
+          "views": "3816"
         },
         {
           "author": "Brady Knox",
-          "users": "2197",
-          "views": "2242"
+          "users": "2203",
+          "views": "2304"
         },
         {
           "author": "David Zimmermann",
-          "users": "1449",
-          "views": "1450"
+          "users": "1454",
+          "views": "1494"
         },
         {
           "author": "Washington Examiner Staff",
-          "users": "1364",
-          "views": "1371"
+          "users": "1373",
+          "views": "1410"
         }
       ],
       "articles": [
         {
           "title": "January Social Security direct payment worth $994 goes out in 15 days",
-          "users": "28804",
-          "views": "29576"
+          "users": "29537",
+          "views": "31238"
         },
         {
           "title": "White House blames rising unemployment on federal workers and touts November jobs report gains",
-          "users": "9623",
-          "views": "9680"
+          "users": "10595",
+          "views": "10887"
         },
         {
           "title": "‘Doom loop’ loosens around Trump and GOP in start of ‘turnaround’",
-          "users": "8544",
-          "views": "8491"
+          "users": "8678",
+          "views": "8892"
         },
         {
           "title": "What to expect if Trump reclassifies marijuana",
-          "users": "6563",
-          "views": "6434"
-        },
-        {
-          "title": "Never, ever give up your guns",
-          "users": "4103",
-          "views": "4027"
+          "users": "6649",
+          "views": "6720"
         },
         {
           "title": "Mark Kelly spars with Pete Hegseth in classified briefing",
-          "users": "3501",
-          "views": "3447"
+          "users": "4440",
+          "views": "4522"
+        },
+        {
+          "title": "Never, ever give up your guns",
+          "users": "4330",
+          "views": "4371"
         },
         {
           "title": "Second round of December Social Security payments goes out in one day",
-          "users": "2179",
-          "views": "2238"
+          "users": "2273",
+          "views": "2401"
         },
         {
           "title": "Joe Concha calls for censure of Chris Murphy for blaming Brown University shooting on Trump",
-          "users": "2112",
-          "views": "2079"
+          "users": "2201",
+          "views": "2231"
         },
         {
           "title": "Trump is keeping his promise on Social Security",
-          "users": "1775",
-          "views": "519"
-        },
-        {
-          "title": "Erika Kirk and Candace Owens provide update about ‘productive’ meeting",
-          "users": "1768",
-          "views": "1638"
+          "users": "1817",
+          "views": "545"
         },
         {
           "title": "Trump designates Venezuelan government FTO, orders blockade",
-          "users": "1624",
-          "views": "325"
+          "users": "1790",
+          "views": "394"
+        },
+        {
+          "title": "Erika Kirk and Candace Owens provide update about ‘productive’ meeting",
+          "users": "1784",
+          "views": "1697"
         },
         {
           "title": "Stephen A. Smith says interview invitations for Democratic leaders went unanswered",
-          "users": "1402",
-          "views": "1386"
+          "users": "1476",
+          "views": "1508"
         },
         {
           "title": "Obama-appointed judge under fire for light sentence and praise of illegal immigrant who raped woman with cerebral palsy",
-          "users": "1372",
-          "views": "1370"
+          "users": "1385",
+          "views": "1422"
         },
         {
-          "title": "Pentagon escalates Mark Kelly ‘misconduct’ review as senator’s attorney threatens legal action",
-          "users": "1241",
-          "views": "1243"
+          "title": "Hegseth escalates his war against Sen. Mark Kelly’s words",
+          "users": "1351",
+          "views": "1368"
         },
         {
-          "title": "Maduro's narco-terrorism plot against America unraveled by defectors",
-          "users": "1211",
-          "views": "931"
+          "title": "Biden OK’d illegal immigrants ‘Elvis Presley’ and ‘Connie Chung’ into US",
+          "users": "1319",
+          "views": "1355"
         }
       ],
       "sections": [
         {
           "section": "Finance and Economy",
-          "users": "32381",
-          "views": "33345"
+          "users": "32488",
+          "views": "34352"
         },
         {
           "section": "White House",
-          "users": "12045",
-          "views": "12242"
+          "users": "12091",
+          "views": "12531"
         },
         {
           "section": "Washington Secrets",
-          "users": "9817",
-          "views": "9903"
+          "users": "9834",
+          "views": "10204"
         },
         {
           "section": "News",
-          "users": "8292",
-          "views": "8420"
+          "users": "8313",
+          "views": "8683"
         },
         {
           "section": "Faith, Freedom, and Self-Reliance",
-          "users": "4211",
-          "views": "4255"
+          "users": "4222",
+          "views": "4362"
         },
         {
           "section": "Senate",
-          "users": "4156",
-          "views": "4229"
+          "users": "4161",
+          "views": "4313"
         },
         {
           "section": "Crime",
-          "users": "2974",
-          "views": "2980"
+          "users": "2987",
+          "views": "3073"
         },
         {
           "section": "Justice",
-          "users": "2589",
-          "views": "2650"
+          "users": "2599",
+          "views": "2724"
         },
         {
           "section": "In Focus",
-          "users": "2046",
-          "views": "2066"
+          "users": "2057",
+          "views": "2147"
         },
         {
           "section": "Defense",
-          "users": "1961",
-          "views": "2024"
+          "users": "1970",
+          "views": "2080"
+        }
+      ]
+    },
+    {
+      "date": "20251217",
+      "totalUsers": 153954,
+      "newUsers": 64273,
+      "pageviews": 168946,
+      "sessions": 168775,
+      "bounceRate": 0.8190312546289439,
+      "averageSessionDuration": 159.5822119550111,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 60314
+        },
+        {
+          "source": "(direct)",
+          "users": 39672
+        },
+        {
+          "source": "(not set)",
+          "users": 35447
+        },
+        {
+          "source": "smartnews.com",
+          "users": 20444
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 8873
+        },
+        {
+          "source": "google",
+          "users": 5729
+        },
+        {
+          "source": "(data not available)",
+          "users": 3218
+        },
+        {
+          "source": "newsbreak",
+          "users": 1509
+        },
+        {
+          "source": "deployer",
+          "users": 1202
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1142
+        },
+        {
+          "source": "t.co",
+          "users": 890
+        },
+        {
+          "source": "bing",
+          "users": 699
+        },
+        {
+          "source": "duckduckgo",
+          "users": 569
+        },
+        {
+          "source": "iterable",
+          "users": 528
+        },
+        {
+          "source": "msn.com",
+          "users": 413
+        }
+      ],
+      "authors": [
+        {
+          "author": "Asher Notheis",
+          "users": "17723",
+          "views": "18066"
+        },
+        {
+          "author": "Mabinty Quarshie",
+          "users": "11205",
+          "views": "11199"
+        },
+        {
+          "author": "Timothy Nerozzi",
+          "users": "4267",
+          "views": "4253"
+        },
+        {
+          "author": "Brady Knox",
+          "users": "3207",
+          "views": "3346"
+        },
+        {
+          "author": "Paul Bedard",
+          "users": "2731",
+          "views": "2696"
+        },
+        {
+          "author": "Ramsey Touchberry",
+          "users": "2138",
+          "views": "2144"
+        },
+        {
+          "author": "Ian Haworth",
+          "users": "1449",
+          "views": "1427"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "1293",
+          "views": "1298"
+        },
+        {
+          "author": "Byron York",
+          "users": "1276",
+          "views": "1265"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "1015",
+          "views": "1029"
+        }
+      ],
+      "articles": [
+        {
+          "title": "January Social Security direct payment worth $994 goes out in 15 days",
+          "users": "16272",
+          "views": "16344"
+        },
+        {
+          "title": "Mexican president pleads for UN help to combat US operations against Venezuela",
+          "users": "15684",
+          "views": "15760"
+        },
+        {
+          "title": "White House blames rising unemployment on federal workers and touts November jobs report gains",
+          "users": "10866",
+          "views": "10919"
+        },
+        {
+          "title": "Are Democrats getting desperate about Epstein?",
+          "users": "10509",
+          "views": "7925"
+        },
+        {
+          "title": "Second round of December Social Security payments goes out today",
+          "users": "10480",
+          "views": "10631"
+        },
+        {
+          "title": "Republican rebels hand Jeffries big win by forcing vote on Obamacare extensions",
+          "users": "8874",
+          "views": "9039"
+        },
+        {
+          "title": "Appeals court halts order that blocked DC National Guard deployment",
+          "users": "3650",
+          "views": "3634"
+        },
+        {
+          "title": "West now facing threats 'once considered unimaginable' from Russia",
+          "users": "3490",
+          "views": "3467"
+        },
+        {
+          "title": "Biden OK’d ‘Elvis Presley’ and ‘Connie Chung' into US",
+          "users": "3201",
+          "views": "2360"
+        },
+        {
+          "title": "Mark Kelly spars with Pete Hegseth in classified briefing",
+          "users": "2730",
+          "views": "2535"
+        },
+        {
+          "title": "Biden OK’d illegal immigrants ‘Elvis Presley’ and ‘Connie Chung’ into US",
+          "users": "2293",
+          "views": "2260"
+        },
+        {
+          "title": "Republican frustration on healthcare hits boiling point",
+          "users": "1706",
+          "views": "1713"
+        },
+        {
+          "title": "Never, ever give up your guns",
+          "users": "1604",
+          "views": "1541"
+        },
+        {
+          "title": "Trump expected to sign order reclassifying marijuana to Schedule III drug",
+          "users": "1411",
+          "views": "1443"
+        },
+        {
+          "title": "FBI had doubts about probable cause for Mar-a-Lago raid, emails show",
+          "users": "1101",
+          "views": "569"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Finance and Economy",
+          "users": "17691",
+          "views": "18024"
+        },
+        {
+          "section": "White House",
+          "users": "13717",
+          "views": "13852"
+        },
+        {
+          "section": "World",
+          "users": "4527",
+          "views": "4539"
+        },
+        {
+          "section": "Washington Secrets",
+          "users": "2729",
+          "views": "2693"
+        },
+        {
+          "section": "News",
+          "users": "2548",
+          "views": "2595"
+        },
+        {
+          "section": "Senate",
+          "users": "2535",
+          "views": "2548"
+        },
+        {
+          "section": "House",
+          "users": "1907",
+          "views": "2009"
+        },
+        {
+          "section": "Faith, Freedom, and Self-Reliance",
+          "users": "1585",
+          "views": "1556"
+        },
+        {
+          "section": "Columnists",
+          "users": "1361",
+          "views": "1355"
+        },
+        {
+          "section": "In Focus",
+          "users": "833",
+          "views": "859"
         }
       ]
     }
@@ -1778,18 +1778,18 @@
     "uniqueAuthors": 25,
     "uniqueSections": 22,
     "sampleAuthors": [
-      "Asher Notheis",
       "Brady Knox",
+      "Asher Notheis",
       "David Zimmermann",
-      "Washington Examiner Staff",
-      "Paul Bedard"
+      "Paul Bedard",
+      "David Sivak"
     ],
     "sampleSections": [
-      "Finance and Economy",
       "News",
+      "Finance and Economy",
       "Immigration",
-      "House",
-      "Justice"
+      "Entertainment",
+      "House"
     ]
   }
 }

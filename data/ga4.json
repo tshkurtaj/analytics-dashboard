@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-01-05T07:23:26.101Z",
+  "updatedAt": "2026-01-06T07:23:05.488Z",
   "range": {
-    "start": "2025-12-29",
-    "end": "2026-01-04"
+    "start": "2025-12-30",
+    "end": "2026-01-05"
   },
   "rows": [
-    {
-      "date": "20251229",
-      "totalUsers": 117143,
-      "newUsers": 55394,
-      "pageviews": 127696,
-      "sessions": 129418,
-      "bounceRate": 0.6503963899921186,
-      "averageSessionDuration": 97.51938463471078,
-      "referrers": [
-        {
-          "source": "(direct)",
-          "users": 49598
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 25140
-        },
-        {
-          "source": "smartnews.com",
-          "users": 18167
-        },
-        {
-          "source": "google",
-          "users": 7442
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 3373
-        },
-        {
-          "source": "t.co",
-          "users": 2809
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1916
-        },
-        {
-          "source": "newsbreak",
-          "users": 1766
-        },
-        {
-          "source": "deployer",
-          "users": 1705
-        },
-        {
-          "source": "bing",
-          "users": 909
-        },
-        {
-          "source": "newsshowcase",
-          "users": 618
-        },
-        {
-          "source": "duckduckgo",
-          "users": 561
-        },
-        {
-          "source": "lm.facebook.com",
-          "users": 460
-        },
-        {
-          "source": "paid.outbrain.com",
-          "users": 448
-        },
-        {
-          "source": "facebook.com",
-          "users": 318
-        }
-      ],
-      "authors": [
-        {
-          "author": "Jenny Goldsberry",
-          "users": "3756",
-          "views": "3851"
-        },
-        {
-          "author": "Ross O'Keefe",
-          "users": "3433",
-          "views": "3521"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "2892",
-          "views": "2948"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "1557",
-          "views": "1680"
-        },
-        {
-          "author": "Mabinty Quarshie",
-          "users": "1200",
-          "views": "1245"
-        },
-        {
-          "author": "David Sivak and Ramsey Touchberry",
-          "users": "1048",
-          "views": "1098"
-        },
-        {
-          "author": "Anna Giaritelli",
-          "users": "939",
-          "views": "993"
-        },
-        {
-          "author": "Maydeen Merino",
-          "users": "731",
-          "views": "777"
-        },
-        {
-          "author": "Kaelan Deese",
-          "users": "713",
-          "views": "731"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "526",
-          "views": "548"
-        }
-      ],
-      "articles": [
-        {
-          "title": "January Social Security direct payment worth $994 goes out in two days",
-          "users": "21950",
-          "views": "21792"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9991",
-          "views": "16844"
-        },
-        {
-          "title": "Musicians who spoke out against the Trump administration for using their music",
-          "users": "5862",
-          "views": "6004"
-        },
-        {
-          "title": "January Social Security direct payment worth $994 goes out in three days",
-          "users": "5669",
-          "views": "5820"
-        },
-        {
-          "title": "First round of January Social Security payments goes out in 16 days",
-          "users": "4327",
-          "views": "4484"
-        },
-        {
-          "title": "ICE joins FBI agents in investigating suspected Minnesota fraud sites",
-          "users": "3837",
-          "views": "4003"
-        },
-        {
-          "title": "Wesley Hunt says Texas GOP has a Joe Biden problem",
-          "users": "3359",
-          "views": "3199"
-        },
-        {
-          "title": "Patel surging FBI resources to 'dismantle' Minnesota fraud",
-          "users": "3094",
-          "views": "1199"
-        },
-        {
-          "title": "Musk speaks with Netanyahu about transforming Israel into global AI leader",
-          "users": "3046",
-          "views": "3103"
-        },
-        {
-          "title": "Self-deportations soar as Trump's first year winds down",
-          "users": "2422",
-          "views": "2491"
-        },
-        {
-          "title": "The biggest political losers of 2025",
-          "users": "2330",
-          "views": "1867"
-        },
-        {
-          "title": "Democrats move to stop ICE from working with local police nationwide",
-          "users": "1692",
-          "views": "1735"
-        },
-        {
-          "title": "Zelensky suggests Russia is planning to interfere with referendum on Trump peace plan",
-          "users": "1572",
-          "views": "1593"
-        },
-        {
-          "title": "DHS trashes Abrego Garcia for 'making TikToks' during his release",
-          "users": "1557",
-          "views": "528"
-        },
-        {
-          "title": "Trump and former Fulton County codefendants plan to hold Fani Willis to 'maximum legal accountability'",
-          "users": "1450",
-          "views": "1484"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Entertainment",
-          "users": "3759",
-          "views": "3854"
-        },
-        {
-          "section": "Technology",
-          "users": "3024",
-          "views": "3079"
-        },
-        {
-          "section": "World",
-          "users": "2528",
-          "views": "2570"
-        },
-        {
-          "section": "White House",
-          "users": "2152",
-          "views": "2246"
-        },
-        {
-          "section": "House",
-          "users": "1156",
-          "views": "1200"
-        },
-        {
-          "section": "Senate",
-          "users": "1051",
-          "views": "1101"
-        },
-        {
-          "section": "Justice",
-          "users": "798",
-          "views": "814"
-        },
-        {
-          "section": "Energy and Environment",
-          "users": "731",
-          "views": "777"
-        },
-        {
-          "section": "Foreign Policy",
-          "users": "728",
-          "views": "751"
-        },
-        {
-          "section": "Immigration",
-          "users": "533",
-          "views": "550"
-        }
-      ]
-    },
     {
       "date": "20251230",
       "totalUsers": 170510,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260104",
-      "totalUsers": 137119,
-      "newUsers": 58345,
-      "pageviews": 157976,
-      "sessions": 153673,
-      "bounceRate": 0.8512881247844449,
-      "averageSessionDuration": 138.16941100351394,
+      "totalUsers": 137526,
+      "newUsers": 60084,
+      "pageviews": 162615,
+      "sessions": 151576,
+      "bounceRate": 0.6866786298622474,
+      "averageSessionDuration": 94.5894345587692,
       "referrers": [
         {
           "source": "(direct)",
-          "users": 54666
+          "users": 55169
         },
         {
           "source": "smartnews.com",
-          "users": 37475
-        },
-        {
-          "source": "(not set)",
-          "users": 31615
+          "users": 38009
         },
         {
           "source": "newsbreak.com",
-          "users": 20991
+          "users": 21033
         },
         {
           "source": "google",
-          "users": 5701
-        },
-        {
-          "source": "(data not available)",
-          "users": 3078
+          "users": 6938
         },
         {
           "source": "newsbreak",
-          "users": 2535
+          "users": 3289
         },
         {
           "source": "realclearpolitics.com",
-          "users": 2338
+          "users": 2612
         },
         {
           "source": "m.facebook.com",
-          "users": 1313
+          "users": 1736
         },
         {
           "source": "newsshowcase",
-          "users": 954
-        },
-        {
-          "source": "bing",
-          "users": 656
+          "users": 1127
         },
         {
           "source": "duckduckgo",
-          "users": 635
+          "users": 737
+        },
+        {
+          "source": "bing",
+          "users": 729
         },
         {
           "source": "newsbreakapp.com",
-          "users": 492
+          "users": 549
         },
         {
-          "source": "deployer",
-          "users": 376
+          "source": "t.co",
+          "users": 441
         },
         {
           "source": "flipboard",
-          "users": 368
+          "users": 422
+        },
+        {
+          "source": "deployer",
+          "users": 400
+        },
+        {
+          "source": "facebook.com",
+          "users": 320
         }
       ],
       "authors": [
         {
           "author": "Jenny Goldsberry",
-          "users": "13905",
-          "views": "14001"
+          "users": "13976",
+          "views": "14381"
         },
         {
           "author": "Brady Knox",
-          "users": "7897",
-          "views": "8022"
+          "users": "7929",
+          "views": "8308"
         },
         {
           "author": "Zach LaChance",
-          "users": "3760",
-          "views": "3792"
+          "users": "3788",
+          "views": "3896"
         },
         {
           "author": "Asher Notheis",
-          "users": "3558",
-          "views": "3836"
-        },
-        {
-          "author": "Peter Laffin",
-          "users": "2860",
-          "views": "2851"
+          "users": "3582",
+          "views": "3957"
         },
         {
           "author": "Mia Cathell",
-          "users": "2844",
-          "views": "2817"
+          "users": "2879",
+          "views": "2908"
+        },
+        {
+          "author": "Peter Laffin",
+          "users": "2868",
+          "views": "2930"
         },
         {
           "author": "Jack Birle",
-          "users": "1962",
-          "views": "2052"
+          "users": "1977",
+          "views": "2133"
         },
         {
           "author": "Christian Datoc",
-          "users": "1498",
-          "views": "1527"
+          "users": "1510",
+          "views": "1570"
         },
         {
           "author": "Emily Hallas",
-          "users": "1479",
-          "views": "1493"
+          "users": "1492",
+          "views": "1535"
         },
         {
-          "author": "Sydney Topf",
-          "users": "1388",
-          "views": "1387"
+          "author": "Washington Examiner Staff",
+          "users": "1400",
+          "views": "1418"
         }
       ],
       "articles": [
         {
           "title": "Venezuelan government reasserts control over Caracas after Maduro arrest",
-          "users": "22197",
-          "views": "21947"
+          "users": "22757",
+          "views": "23197"
         },
         {
           "title": "George Santos announces Venezuela trip to be ‘part of the solution’",
-          "users": "12647",
-          "views": "11683"
+          "users": "16282",
+          "views": "15691"
         },
         {
           "title": "US forces killed 'large part' of Maduro's security team during capture, defense minister says",
-          "users": "10633",
-          "views": "10603"
+          "users": "13112",
+          "views": "13605"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9541",
-          "views": "15932"
+          "users": "9943",
+          "views": "17413"
         },
         {
           "title": "February Social Security direct payment worth $994 goes out in 27 days",
-          "users": "5287",
-          "views": "5302"
-        },
-        {
-          "title": "Venezuela declares state of emergency after US operation in Caracas",
-          "users": "3360",
-          "views": "3383"
+          "users": "5474",
+          "views": "5680"
         },
         {
           "title": "Court orders Venezuela’s vice president to serve as interim president after Maduro capture",
-          "users": "3135",
-          "views": "3105"
+          "users": "3597",
+          "views": "3660"
         },
         {
-          "title": "Some black New Yorkers worried that Mamdani’s socialist policies would harm them the most",
-          "users": "2696",
-          "views": "2665"
-        },
-        {
-          "title": "Somali-run accounting firm with spotty record connects scrutinized Somali nonprofit groups",
-          "users": "2672",
-          "views": "2680"
+          "title": "Venezuela declares state of emergency after US operation in Caracas",
+          "users": "3385",
+          "views": "3508"
         },
         {
           "title": "Firm with spotty record connects scrutinized Somali nonprofits",
-          "users": "2657",
-          "views": "637"
+          "users": "3235",
+          "views": "792"
+        },
+        {
+          "title": "Some black New Yorkers worried that Mamdani’s socialist policies would harm them the most",
+          "users": "2876",
+          "views": "2904"
         },
         {
           "title": "The military’s staggering competence under Trump",
-          "users": "2648",
-          "views": "2634"
+          "users": "2867",
+          "views": "2929"
         },
         {
-          "title": "Trump, the president of peace, bombed as many countries in 2025 as he did during his entire first term",
-          "users": "2434",
-          "views": "2484"
+          "title": "Somali-run accounting firm with spotty record connects scrutinized Somali nonprofit groups",
+          "users": "2844",
+          "views": "2917"
         },
         {
           "title": "US forces killed 'large part' of Maduro's security team during capture",
-          "users": "2338",
-          "views": "1397"
+          "users": "2649",
+          "views": "1663"
         },
         {
-          "title": "Some cultures are simply not compatible with American values",
-          "users": "2335",
-          "views": "2318"
+          "title": "Trump, the president of peace, bombed as many countries in 2025 as he did during his entire first term",
+          "users": "2460",
+          "views": "2581"
         },
         {
           "title": "The military's staggering competence under Trump",
-          "users": "2330",
-          "views": "2267"
+          "users": "2446",
+          "views": "2455"
+        },
+        {
+          "title": "Some cultures are simply not compatible with American values",
+          "users": "2442",
+          "views": "2490"
         }
       ],
       "sections": [
         {
           "section": "World",
-          "users": "22296",
-          "views": "25291"
+          "users": "22457",
+          "views": "26029"
         },
         {
           "section": "News",
-          "users": "4681",
-          "views": "4835"
+          "users": "4735",
+          "views": "4977"
         },
         {
           "section": "Foreign Policy",
-          "users": "2939",
-          "views": "3041"
+          "users": "2962",
+          "views": "3138"
         },
         {
           "section": "Courage, Strength, and Optimism",
-          "users": "2862",
-          "views": "2853"
+          "users": "2870",
+          "views": "2932"
         },
         {
           "section": "Senate",
-          "users": "2052",
-          "views": "2089"
+          "users": "2067",
+          "views": "2151"
         },
         {
           "section": "Supreme Court",
-          "users": "1952",
-          "views": "2039"
+          "users": "1967",
+          "views": "2121"
         },
         {
           "section": "White House",
-          "users": "1839",
-          "views": "1910"
+          "users": "1852",
+          "views": "1961"
         },
         {
           "section": "Editorials",
-          "users": "1328",
-          "views": "1359"
+          "users": "1331",
+          "views": "1388"
         },
         {
           "section": "Investigations",
-          "users": "970",
-          "views": "974"
+          "users": "976",
+          "views": "999"
         },
         {
           "section": "Beltway Confidential",
-          "users": "707",
-          "views": "718"
+          "users": "713",
+          "views": "739"
+        }
+      ]
+    },
+    {
+      "date": "20260105",
+      "totalUsers": 196995,
+      "newUsers": 89018,
+      "pageviews": 210243,
+      "sessions": 213790,
+      "bounceRate": 0.8667758080359231,
+      "averageSessionDuration": 122.1711652857898,
+      "referrers": [
+        {
+          "source": "(direct)",
+          "users": 72124
+        },
+        {
+          "source": "smartnews.com",
+          "users": 67048
+        },
+        {
+          "source": "(not set)",
+          "users": 43655
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 27681
+        },
+        {
+          "source": "google",
+          "users": 7349
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 4681
+        },
+        {
+          "source": "(data not available)",
+          "users": 3673
+        },
+        {
+          "source": "newsbreak",
+          "users": 1649
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1309
+        },
+        {
+          "source": "deployer",
+          "users": 1062
+        },
+        {
+          "source": "bing",
+          "users": 851
+        },
+        {
+          "source": "newsshowcase",
+          "users": 848
+        },
+        {
+          "source": "duckduckgo",
+          "users": 694
+        },
+        {
+          "source": "t.co",
+          "users": 560
+        },
+        {
+          "source": "lm.facebook.com",
+          "users": 490
+        }
+      ],
+      "authors": [
+        {
+          "author": "Washington Examiner Staff",
+          "users": "51444",
+          "views": "51282"
+        },
+        {
+          "author": "Zach LaChance",
+          "users": "5601",
+          "views": "5580"
+        },
+        {
+          "author": "Jenny Goldsberry",
+          "users": "5139",
+          "views": "5167"
+        },
+        {
+          "author": "Mia Cathell",
+          "users": "1977",
+          "views": "1996"
+        },
+        {
+          "author": "Brady Knox",
+          "users": "1729",
+          "views": "1744"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "1614",
+          "views": "1634"
+        },
+        {
+          "author": "Peter Laffin",
+          "users": "1027",
+          "views": "1023"
+        },
+        {
+          "author": "Lauren Green",
+          "users": "993",
+          "views": "1008"
+        },
+        {
+          "author": "Washington Examiner",
+          "users": "782",
+          "views": "788"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "709",
+          "views": "710"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Trump reverses course, now says Ukraine strike on Putin’s residence didn’t happen",
+          "users": "52099",
+          "views": "50898"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "8239",
+          "views": "12695"
+        },
+        {
+          "title": "Firm with spotty record connects scrutinized Somali nonprofits",
+          "users": "8143",
+          "views": "1748"
+        },
+        {
+          "title": "US forces killed 'large part' of Maduro's security team during capture, defense minister says",
+          "users": "8053",
+          "views": "8080"
+        },
+        {
+          "title": "Venezuela: It all depends on the meaning of the word 'run'",
+          "users": "5389",
+          "views": "3956"
+        },
+        {
+          "title": "February Social Security direct payment worth $994 goes out in 25 days",
+          "users": "4756",
+          "views": "4308"
+        },
+        {
+          "title": "George Santos announces Venezuela trip to be ‘part of the solution’",
+          "users": "4640",
+          "views": "4381"
+        },
+        {
+          "title": "Tim Walz to hold press conference on Monday amid rumors he will not run for reelection",
+          "users": "4132",
+          "views": "3946"
+        },
+        {
+          "title": "Court orders Venezuela’s vice president to serve as interim president after Maduro capture",
+          "users": "3798",
+          "views": "3744"
+        },
+        {
+          "title": "Tim Walz drops reelection bid for Minnesota governor",
+          "users": "2170",
+          "views": "783"
+        },
+        {
+          "title": "Places where war could escalate or break out in 2026",
+          "users": "1687",
+          "views": "1586"
+        },
+        {
+          "title": "Tim Walz to hold press conference amid rumors he will drop reelection bid",
+          "users": "1521",
+          "views": "1363"
+        },
+        {
+          "title": "US forces killed 'large part' of Maduro's security team during capture",
+          "users": "1412",
+          "views": "832"
+        },
+        {
+          "title": "Venezuelan government reasserts control over Caracas after Maduro arrest",
+          "users": "1389",
+          "views": "1335"
+        },
+        {
+          "title": "California’s Palisades fire cover-up continues",
+          "users": "1310",
+          "views": "1286"
+        }
+      ],
+      "sections": [
+        {
+          "section": "News",
+          "users": "52583",
+          "views": "52796"
+        },
+        {
+          "section": "World",
+          "users": "10299",
+          "views": "10768"
+        },
+        {
+          "section": "Investigations",
+          "users": "1486",
+          "views": "1492"
+        },
+        {
+          "section": "Finance",
+          "users": "1428",
+          "views": "1451"
+        },
+        {
+          "section": "House",
+          "users": "1352",
+          "views": "1477"
+        },
+        {
+          "section": "Foreign Policy",
+          "users": "1168",
+          "views": "1181"
+        },
+        {
+          "section": "Courage, Strength, and Optimism",
+          "users": "1027",
+          "views": "1023"
+        },
+        {
+          "section": "Editorials",
+          "users": "782",
+          "views": "788"
+        },
+        {
+          "section": "Immigration",
+          "users": "594",
+          "views": "606"
+        },
+        {
+          "section": "In Focus",
+          "users": "527",
+          "views": "533"
         }
       ]
     }
@@ -1776,20 +1776,20 @@
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
     "uniqueAuthors": 31,
-    "uniqueSections": 25,
+    "uniqueSections": 26,
     "sampleAuthors": [
-      "Jenny Goldsberry",
+      "Daniel Nuccio",
+      "Sean Durns",
+      "Asher Notheis",
       "Ross O'Keefe",
-      "David Zimmermann",
-      "Emily Hallas",
-      "Mabinty Quarshie"
+      "Brady Knox"
     ],
     "sampleSections": [
+      "Faith, Freedom, and Self-Reliance",
+      "Courage, Strength, and Optimism",
+      "Investigations",
       "Entertainment",
-      "Technology",
-      "World",
-      "White House",
-      "House"
+      "World"
     ]
   }
 }

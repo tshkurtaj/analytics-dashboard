@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-01-09T07:23:02.760Z",
+  "updatedAt": "2026-01-10T07:21:54.332Z",
   "range": {
-    "start": "2026-01-02",
-    "end": "2026-01-08"
+    "start": "2026-01-03",
+    "end": "2026-01-09"
   },
   "rows": [
-    {
-      "date": "20260102",
-      "totalUsers": 85448,
-      "newUsers": 33939,
-      "pageviews": 102108,
-      "sessions": 97800,
-      "bounceRate": 0.6451738241308793,
-      "averageSessionDuration": 104.82453318436605,
-      "referrers": [
-        {
-          "source": "(direct)",
-          "users": 34479
-        },
-        {
-          "source": "smartnews.com",
-          "users": 18332
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 15571
-        },
-        {
-          "source": "google",
-          "users": 5879
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 2027
-        },
-        {
-          "source": "deployer",
-          "users": 1195
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1115
-        },
-        {
-          "source": "newsbreak",
-          "users": 921
-        },
-        {
-          "source": "bing",
-          "users": 692
-        },
-        {
-          "source": "duckduckgo",
-          "users": 668
-        },
-        {
-          "source": "t.co",
-          "users": 640
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 472
-        },
-        {
-          "source": "facebook.com",
-          "users": 311
-        },
-        {
-          "source": "news.google.com",
-          "users": 261
-        },
-        {
-          "source": "newsshowcase",
-          "users": 244
-        }
-      ],
-      "authors": [
-        {
-          "author": "Becket Adams",
-          "users": "3234",
-          "views": "3318"
-        },
-        {
-          "author": "Timothy Nerozzi",
-          "users": "2053",
-          "views": "2212"
-        },
-        {
-          "author": "Callie Patteson",
-          "users": "1808",
-          "views": "1856"
-        },
-        {
-          "author": "Gabrielle M. Etzel",
-          "users": "1635",
-          "views": "1676"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "1154",
-          "views": "1166"
-        },
-        {
-          "author": "Jenny Goldsberry",
-          "users": "877",
-          "views": "913"
-        },
-        {
-          "author": "Kaelan Deese",
-          "users": "825",
-          "views": "868"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "804",
-          "views": "830"
-        },
-        {
-          "author": "Naomi Lim",
-          "users": "723",
-          "views": "753"
-        },
-        {
-          "author": "Christian Datoc",
-          "users": "707",
-          "views": "715"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9609",
-          "views": "16245"
-        },
-        {
-          "title": "February Social Security direct payment worth $994 goes out in 28 days",
-          "users": "4886",
-          "views": "5044"
-        },
-        {
-          "title": "California postpones canceling licenses of illegal immigrant truck drivers",
-          "users": "4472",
-          "views": "4551"
-        },
-        {
-          "title": "Where does Sarah Palin go for her apology on death panels?",
-          "users": "3318",
-          "views": "3376"
-        },
-        {
-          "title": "China teaches Trump two lessons on Taiwan",
-          "users": "2403",
-          "views": "2430"
-        },
-        {
-          "title": "Lower court clashes with the Supreme Court are exploding",
-          "users": "1993",
-          "views": "2030"
-        },
-        {
-          "title": "Europe struggles to keep pace as US cracks the whip on defensive self-reliance",
-          "users": "1873",
-          "views": "1929"
-        },
-        {
-          "title": "2026 is a pivotal year for Trump's second term",
-          "users": "1782",
-          "views": "1380"
-        },
-        {
-          "title": "Fraud explains high Obamacare enrollment despite subsidy lapse",
-          "users": "1773",
-          "views": "1792"
-        },
-        {
-          "title": "The reality of Trump’s ‘drill, baby, drill’ agenda",
-          "users": "1719",
-          "views": "1764"
-        },
-        {
-          "title": "January Social Security direct payment worth $994 goes out today",
-          "users": "1638",
-          "views": "1609"
-        },
-        {
-          "title": "Trump vetoes law expanding Miccosukee tribe's territory in Everglades after its opposition to 'Alligator Alcatraz'",
-          "users": "1582",
-          "views": "1602"
-        },
-        {
-          "title": "Democrat mocks Comer Minnesota fraud hearings",
-          "users": "1404",
-          "views": "1451"
-        },
-        {
-          "title": "The Biden administration's failed attempts to spin autopen use",
-          "users": "1384",
-          "views": "1429"
-        },
-        {
-          "title": "Walz received $10K from donors tied to Somali-run day care centers",
-          "users": "1294",
-          "views": "1239"
-        }
-      ],
-      "sections": [
-        {
-          "section": "In Focus",
-          "users": "3421",
-          "views": "3519"
-        },
-        {
-          "section": "World",
-          "users": "2258",
-          "views": "2430"
-        },
-        {
-          "section": "News",
-          "users": "1990",
-          "views": "2043"
-        },
-        {
-          "section": "Energy and Environment",
-          "users": "1853",
-          "views": "1909"
-        },
-        {
-          "section": "White House",
-          "users": "1751",
-          "views": "1870"
-        },
-        {
-          "section": "Healthcare",
-          "users": "1661",
-          "views": "1702"
-        },
-        {
-          "section": "Entertainment",
-          "users": "880",
-          "views": "900"
-        },
-        {
-          "section": "Magazine",
-          "users": "851",
-          "views": "912"
-        },
-        {
-          "section": "Justice",
-          "users": "811",
-          "views": "837"
-        },
-        {
-          "section": "Congressional",
-          "users": "763",
-          "views": "806"
-        }
-      ]
-    },
     {
       "date": "20260103",
       "totalUsers": 171670,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260108",
-      "totalUsers": 224341,
-      "newUsers": 129070,
-      "pageviews": 181395,
-      "sessions": 241555,
-      "bounceRate": 0.8571836641758606,
-      "averageSessionDuration": 127.69189504951667,
+      "totalUsers": 225984,
+      "newUsers": 136887,
+      "pageviews": 192634,
+      "sessions": 249025,
+      "bounceRate": 0.6374500552153398,
+      "averageSessionDuration": 83.34546601768898,
       "referrers": [
         {
           "source": "(direct)",
-          "users": 85197
-        },
-        {
-          "source": "(not set)",
-          "users": 77171
-        },
-        {
-          "source": "smartnews.com",
-          "users": 34604
+          "users": 87402
         },
         {
           "source": "google",
-          "users": 34428
+          "users": 46385
+        },
+        {
+          "source": "smartnews.com",
+          "users": 35370
         },
         {
           "source": "newsbreak.com",
-          "users": 27413
-        },
-        {
-          "source": "(data not available)",
-          "users": 13280
+          "users": 27571
         },
         {
           "source": "t.co",
-          "users": 9414
+          "users": 12663
         },
         {
           "source": "realclearpolitics.com",
-          "users": 2533
-        },
-        {
-          "source": "deployer",
-          "users": 1317
-        },
-        {
-          "source": "newsbreak",
-          "users": 1275
+          "users": 2710
         },
         {
           "source": "m.facebook.com",
-          "users": 1201
+          "users": 1771
+        },
+        {
+          "source": "newsbreak",
+          "users": 1622
+        },
+        {
+          "source": "deployer",
+          "users": 1449
         },
         {
           "source": "bing",
-          "users": 1087
+          "users": 1197
         },
         {
           "source": "duckduckgo",
-          "users": 917
+          "users": 1084
         },
         {
           "source": "newsbreakapp.com",
-          "users": 814
+          "users": 958
         },
         {
           "source": "newsshowcase",
-          "users": 596
+          "users": 693
+        },
+        {
+          "source": "substack",
+          "users": 467
+        },
+        {
+          "source": "facebook.com",
+          "users": 459
         }
       ],
       "authors": [
         {
           "author": "Brady Knox",
-          "users": "9299",
-          "views": "9167"
+          "users": "9402",
+          "views": "9702"
         },
         {
           "author": "Robert Schmad",
-          "users": "8625",
-          "views": "8456"
+          "users": "8715",
+          "views": "9004"
         },
         {
           "author": "Timothy Nerozzi",
-          "users": "5400",
-          "views": "5382"
+          "users": "5480",
+          "views": "5599"
         },
         {
           "author": "Emily Hallas",
-          "users": "2726",
-          "views": "2711"
+          "users": "2762",
+          "views": "2837"
         },
         {
           "author": "Samantha-Jo Roth",
-          "users": "2500",
-          "views": "2482"
+          "users": "2527",
+          "views": "2566"
         },
         {
           "author": "Asher Notheis",
-          "users": "1297",
-          "views": "1295"
+          "users": "1314",
+          "views": "1376"
         },
         {
           "author": "Lauren Green",
-          "users": "1108",
-          "views": "1202"
+          "users": "1113",
+          "views": "1245"
         },
         {
           "author": "Brad Polumbo",
-          "users": "1105",
-          "views": "1070"
+          "users": "1110",
+          "views": "1129"
         },
         {
           "author": "W. James Antle III",
-          "users": "1006",
-          "views": "999"
+          "users": "1021",
+          "views": "1040"
         },
         {
           "author": "Byron York",
-          "users": "933",
-          "views": "915"
+          "users": "937",
+          "views": "959"
         }
       ],
       "articles": [
         {
           "title": "Senate Republicans urge discipline for pair of 'rogue' judges",
-          "users": "70762",
-          "views": "9534"
+          "users": "72724",
+          "views": "10458"
         },
         {
           "title": "Noem says ICE officer who killed woman had been 'dragged' in vehicle ramming months before",
-          "users": "14285",
-          "views": "13817"
+          "users": "14476",
+          "views": "15048"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10922",
-          "views": "18511"
+          "users": "11275",
+          "views": "20648"
         },
         {
           "title": "Noem says ICE officer who killed woman had been ‘dragged’ in vehicle ramming months before",
-          "users": "9192",
-          "views": "8961"
+          "users": "9308",
+          "views": "9490"
         },
         {
           "title": "Head of taxpayer-funded Somali charity cutting checks to family members",
-          "users": "8260",
-          "views": "8066"
+          "users": "8583",
+          "views": "8861"
         },
         {
           "title": "First round of January Social Security payments goes out in six days",
-          "users": "7102",
-          "views": "6979"
+          "users": "7198",
+          "views": "7532"
         },
         {
           "title": "February Social Security direct payment worth $994 goes out in 23 days",
-          "users": "6094",
-          "views": "5838"
+          "users": "6177",
+          "views": "6327"
         },
         {
           "title": "Stephen Miller goads panicked European allies and says no military would defend Greenland",
-          "users": "4848",
-          "views": "4677"
-        },
-        {
-          "title": "Russia deems foreign troops in Ukraine 'legitimate targets' in stark warning to West",
-          "users": "3792",
-          "views": "3602"
-        },
-        {
-          "title": "This 'trans rights' horror story is going to haunt the Democrats",
-          "users": "3752",
-          "views": "3267"
+          "users": "5788",
+          "views": "5799"
         },
         {
           "title": "Ken Jennings endorses 2028 candidate who would ‘prosecute the former regime at every level’",
-          "users": "3512",
-          "views": "3462"
+          "users": "5543",
+          "views": "5737"
+        },
+        {
+          "title": "Russia deems foreign troops in Ukraine 'legitimate targets' in stark warning to West",
+          "users": "3936",
+          "views": "4085"
+        },
+        {
+          "title": "This 'trans rights' horror story is going to haunt the Democrats",
+          "users": "3869",
+          "views": "3548"
         },
         {
           "title": "Head of taxpayer-funded Somali charity cutting checks to family",
-          "users": "3218",
-          "views": "1588"
+          "users": "3412",
+          "views": "1780"
         },
         {
           "title": "Are America and the West better off one year into President Trump’s second term? Unquestionably they are.",
-          "users": "2955",
-          "views": "2869"
+          "users": "2969",
+          "views": "3032"
         },
         {
-          "title": "Trump pauses all Somali aid programs over reports US-funded warehouse destroyed",
-          "users": "2440",
-          "views": "2331"
+          "title": "Iowa becomes first state approved for sweeping federal education waiver by Trump administration",
+          "users": "2590",
+          "views": "2630"
         },
         {
           "title": "AOC, Khanna lead progressives breaking with Democrats on calls to arrest ICE officer in Minnesota killing",
-          "users": "2270",
-          "views": "2159"
+          "users": "2510",
+          "views": "2573"
         }
       ],
       "sections": [
         {
           "section": "Investigations",
-          "users": "10102",
-          "views": "10120"
+          "users": "10208",
+          "views": "10745"
         },
         {
           "section": "Immigration",
-          "users": "9361",
-          "views": "9215"
+          "users": "9466",
+          "views": "9757"
         },
         {
           "section": "World",
-          "users": "5490",
-          "views": "5478"
+          "users": "5573",
+          "views": "5703"
         },
         {
           "section": "Education",
-          "users": "2495",
-          "views": "2476"
+          "users": "2522",
+          "views": "2560"
         },
         {
           "section": "House",
-          "users": "1426",
-          "views": "1522"
+          "users": "1436",
+          "views": "1585"
         },
         {
           "section": "Congressional",
-          "users": "1404",
-          "views": "1417"
+          "users": "1420",
+          "views": "1477"
         },
         {
           "section": "Foreign Policy",
-          "users": "1398",
-          "views": "1392"
+          "users": "1416",
+          "views": "1459"
         },
         {
           "section": "Fairness and Justice",
-          "users": "1149",
-          "views": "1124"
+          "users": "1154",
+          "views": "1187"
         },
         {
           "section": "Entertainment",
-          "users": "1034",
-          "views": "1010"
+          "users": "1047",
+          "views": "1072"
         },
         {
           "section": "Columnists",
-          "users": "940",
-          "views": "922"
+          "users": "944",
+          "views": "966"
+        }
+      ]
+    },
+    {
+      "date": "20260109",
+      "totalUsers": 178050,
+      "newUsers": 89127,
+      "pageviews": 213303,
+      "sessions": 199430,
+      "bounceRate": 0.8486235771950058,
+      "averageSessionDuration": 148.51314039817478,
+      "referrers": [
+        {
+          "source": "(direct)",
+          "users": 76222
+        },
+        {
+          "source": "(not set)",
+          "users": 53645
+        },
+        {
+          "source": "smartnews.com",
+          "users": 34421
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 24121
+        },
+        {
+          "source": "google",
+          "users": 14410
+        },
+        {
+          "source": "(data not available)",
+          "users": 7491
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 3692
+        },
+        {
+          "source": "t.co",
+          "users": 2427
+        },
+        {
+          "source": "newsbreak",
+          "users": 1779
+        },
+        {
+          "source": "deployer",
+          "users": 1461
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1105
+        },
+        {
+          "source": "bing",
+          "users": 947
+        },
+        {
+          "source": "duckduckgo",
+          "users": 839
+        },
+        {
+          "source": "bonginoreport.com",
+          "users": 826
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 703
+        }
+      ],
+      "authors": [
+        {
+          "author": "Mia Cathell",
+          "users": "8917",
+          "views": "8880"
+        },
+        {
+          "author": "Timothy Nerozzi",
+          "users": "7218",
+          "views": "7174"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "6288",
+          "views": "6243"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "2464",
+          "views": "2461"
+        },
+        {
+          "author": "Ross O'Keefe",
+          "users": "2291",
+          "views": "2301"
+        },
+        {
+          "author": "Scott W. Johnson",
+          "users": "1930",
+          "views": "1903"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "1613",
+          "views": "1598"
+        },
+        {
+          "author": "Robert Schmad",
+          "users": "1505",
+          "views": "1512"
+        },
+        {
+          "author": "Brad Polumbo",
+          "users": "975",
+          "views": "957"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "869",
+          "views": "889"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Ken Jennings endorses 2028 candidate who would ‘prosecute the former regime at every level’",
+          "users": "26573",
+          "views": "26606"
+        },
+        {
+          "title": "Senate Republicans urge discipline for pair of 'rogue' judges",
+          "users": "13707",
+          "views": "10039"
+        },
+        {
+          "title": "Head of taxpayer-funded Somali charity cutting checks to family",
+          "users": "12766",
+          "views": "11524"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "10486",
+          "views": "18928"
+        },
+        {
+          "title": "Thousands already applied for Minnesota’s new paid leave program open to illegal immigrants",
+          "users": "9615",
+          "views": "9613"
+        },
+        {
+          "title": "Iowa becomes first state approved for sweeping federal education waiver by Trump administration",
+          "users": "5829",
+          "views": "5775"
+        },
+        {
+          "title": "Zelensky calls for 'clear response' from US after Russia's use of nuclear-capable missile in strikes",
+          "users": "5597",
+          "views": "5588"
+        },
+        {
+          "title": "Iranian officials have few options if they flee an overthrown regime",
+          "users": "4841",
+          "views": "4820"
+        },
+        {
+          "title": "Harvard president admits faculty activism chills speech on campus",
+          "users": "3993",
+          "views": "4079"
+        },
+        {
+          "title": "Stephen Miller goads panicked European allies and says no military would defend Greenland",
+          "users": "3786",
+          "views": "3751"
+        },
+        {
+          "title": "Walz authorizes National Guard to assist law enforcement amid ICE shooting protests",
+          "users": "2560",
+          "views": "2536"
+        },
+        {
+          "title": "New top Democrat on House CCP committee took cash from China-linked donors",
+          "users": "1986",
+          "views": "1972"
+        },
+        {
+          "title": "Minneapolis mayor calls Vance's declaration of absolute immunity for ICE officer 'bizarre'",
+          "users": "1959",
+          "views": "1967"
+        },
+        {
+          "title": "Exit Tim Walz, stage Biden: Another Democrat has clung to power past his expiration date",
+          "users": "1948",
+          "views": "1919"
+        },
+        {
+          "title": "Trump announces cancellation of ‘second wave of attacks’ on Venezuela",
+          "users": "1905",
+          "views": "1895"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Investigations",
+          "users": "11339",
+          "views": "11819"
+        },
+        {
+          "section": "World",
+          "users": "8425",
+          "views": "8533"
+        },
+        {
+          "section": "Education",
+          "users": "6229",
+          "views": "6188"
+        },
+        {
+          "section": "Foreign Policy",
+          "users": "2719",
+          "views": "2766"
+        },
+        {
+          "section": "Magazine",
+          "users": "2252",
+          "views": "2263"
+        },
+        {
+          "section": "Entertainment",
+          "users": "1384",
+          "views": "1381"
+        },
+        {
+          "section": "News",
+          "users": "1032",
+          "views": "1082"
+        },
+        {
+          "section": "Fairness and Justice",
+          "users": "978",
+          "views": "960"
+        },
+        {
+          "section": "Crime",
+          "users": "930",
+          "views": "967"
+        },
+        {
+          "section": "White House",
+          "users": "884",
+          "views": "935"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 32,
-    "uniqueSections": 27,
+    "uniqueAuthors": 30,
+    "uniqueSections": 28,
     "sampleAuthors": [
-      "Becket Adams",
-      "Timothy Nerozzi",
-      "Callie Patteson",
-      "Gabrielle M. Etzel",
-      "David Zimmermann"
+      "Robert Schmad",
+      "Emily Hallas",
+      "Christian Datoc",
+      "Sydney Topf",
+      "Timothy P. Carney"
     ],
     "sampleSections": [
-      "In Focus",
+      "Investigations",
+      "White House",
       "World",
-      "News",
-      "Energy and Environment",
-      "White House"
+      "Senate",
+      "Beltway Confidential"
     ]
   }
 }

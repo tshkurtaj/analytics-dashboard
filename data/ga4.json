@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-01-20T07:23:20.306Z",
+  "updatedAt": "2026-01-21T07:23:32.761Z",
   "range": {
-    "start": "2026-01-13",
-    "end": "2026-01-19"
+    "start": "2026-01-14",
+    "end": "2026-01-20"
   },
   "rows": [
-    {
-      "date": "20260113",
-      "totalUsers": 117441,
-      "newUsers": 53847,
-      "pageviews": 159410,
-      "sessions": 135581,
-      "bounceRate": 0.5599530907723058,
-      "averageSessionDuration": 121.44327439225997,
-      "referrers": [
-        {
-          "source": "(direct)",
-          "users": 51042
-        },
-        {
-          "source": "smartnews.com",
-          "users": 16487
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 15321
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 7560
-        },
-        {
-          "source": "google",
-          "users": 6909
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 2215
-        },
-        {
-          "source": "t.co",
-          "users": 2120
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1743
-        },
-        {
-          "source": "deployer",
-          "users": 1666
-        },
-        {
-          "source": "bing",
-          "users": 1152
-        },
-        {
-          "source": "powerlineblog.com",
-          "users": 1126
-        },
-        {
-          "source": "newsbreak",
-          "users": 1001
-        },
-        {
-          "source": "duckduckgo",
-          "users": 965
-        },
-        {
-          "source": "newsshowcase",
-          "users": 555
-        },
-        {
-          "source": "news.google.com",
-          "users": 534
-        }
-      ],
-      "authors": [
-        {
-          "author": "Rachel Schilke",
-          "users": "2728",
-          "views": "2857"
-        },
-        {
-          "author": "Jenny Goldsberry",
-          "users": "2099",
-          "views": "2145"
-        },
-        {
-          "author": "Jack Birle",
-          "users": "2060",
-          "views": "2163"
-        },
-        {
-          "author": "Gabrielle M. Etzel",
-          "users": "1241",
-          "views": "1262"
-        },
-        {
-          "author": "Mike Gonzalez",
-          "users": "1176",
-          "views": "1231"
-        },
-        {
-          "author": "Mike Brest",
-          "users": "844",
-          "views": "860"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "748",
-          "views": "773"
-        },
-        {
-          "author": "Lauren Green",
-          "users": "740",
-          "views": "765"
-        },
-        {
-          "author": "Shaun McCutcheon",
-          "users": "732",
-          "views": "744"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "700",
-          "views": "729"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "11176",
-          "views": "21969"
-        },
-        {
-          "title": "February Social Security direct payment worth $994 goes out in 18 days",
-          "users": "8673",
-          "views": "9104"
-        },
-        {
-          "title": "The prime of tough-guy progressivism",
-          "users": "6622",
-          "views": "7111"
-        },
-        {
-          "title": "Former US Navy sailor sentenced to 200 months in prison for spying for China",
-          "users": "6466",
-          "views": "6835"
-        },
-        {
-          "title": "Neal Dunn becomes 48th member to announce retirement from House after this term",
-          "users": "6397",
-          "views": "6537"
-        },
-        {
-          "title": "Former secretary of state under Biden admits Maduro capture ‘was brilliant’",
-          "users": "4306",
-          "views": "4365"
-        },
-        {
-          "title": "Homeland Security funding frozen thanks to ICE as Democrats demand guardrails",
-          "users": "4002",
-          "views": "4100"
-        },
-        {
-          "title": "Trump dealt GOP blows over Powell inquiry amid rising tensions with Congress",
-          "users": "3695",
-          "views": "3851"
-        },
-        {
-          "title": "Fraud is just the beginning of the Tim Walz failure",
-          "users": "3690",
-          "views": "3952"
-        },
-        {
-          "title": "Sotomayor swipes at Supreme Court rejecting precedent: 'We've been doing an awful lot of that lately'",
-          "users": "3217",
-          "views": "3238"
-        },
-        {
-          "title": "Speaker Johnson suffers blow after GOP revolt over workforce bill",
-          "users": "2996",
-          "views": "3101"
-        },
-        {
-          "title": "Who radicalized the Mississippi synagogue arsonist?",
-          "users": "2802",
-          "views": "3084"
-        },
-        {
-          "title": "Trump flips off Ford factory worker who yelled 'pedophile protector'",
-          "users": "2257",
-          "views": "2391"
-        },
-        {
-          "title": "Sotomayor swipes at Supreme Court rejecting precedent: ‘We’ve been doing an awful lot of that lately’",
-          "users": "1921",
-          "views": "1948"
-        },
-        {
-          "title": "Big Labor's child care racket",
-          "users": "1899",
-          "views": "2003"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Congressional",
-          "users": "2510",
-          "views": "2594"
-        },
-        {
-          "section": "World",
-          "users": "2181",
-          "views": "2246"
-        },
-        {
-          "section": "Supreme Court",
-          "users": "2020",
-          "views": "2051"
-        },
-        {
-          "section": "House",
-          "users": "1533",
-          "views": "1709"
-        },
-        {
-          "section": "In Focus",
-          "users": "1476",
-          "views": "1555"
-        },
-        {
-          "section": "Healthcare",
-          "users": "1246",
-          "views": "1268"
-        },
-        {
-          "section": "Foreign Policy",
-          "users": "1179",
-          "views": "1215"
-        },
-        {
-          "section": "Senate",
-          "users": "871",
-          "views": "904"
-        },
-        {
-          "section": "News",
-          "users": "813",
-          "views": "852"
-        },
-        {
-          "section": "Equality, Not Elitism",
-          "users": "734",
-          "views": "746"
-        }
-      ]
-    },
     {
       "date": "20260114",
       "totalUsers": 148077,
@@ -382,78 +130,78 @@
       "articles": [
         {
           "title": "Iran promised Trump not to execute any protesters on day of expected hanging",
-          "users": "20378",
-          "views": "21203"
+          "users": "20353",
+          "views": "21182"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "11261",
-          "views": "22879"
+          "users": "11252",
+          "views": "22855"
         },
         {
           "title": "Somali fraudster convicted in Feeding Our Future scheme tied to recent recipient of Minnesota funding",
-          "users": "8895",
-          "views": "9047"
+          "users": "8910",
+          "views": "9071"
         },
         {
           "title": "Blackburn challenges Jackson to define 'woman' in Supreme Court transgender sports cases",
-          "users": "5574",
-          "views": "5708"
+          "users": "5583",
+          "views": "5719"
         },
         {
           "title": "Speaker Johnson suffers blow after GOP revolt over workforce bill",
-          "users": "5269",
-          "views": "5416"
+          "users": "5283",
+          "views": "5425"
         },
         {
           "title": "Neal Dunn becomes 48th member to announce retirement from House after this term",
-          "users": "4995",
-          "views": "5175"
+          "users": "4980",
+          "views": "5161"
         },
         {
           "title": "ICE officer who killed Renee Good sustained internal bleeding after being hit by her vehicle: DHS",
-          "users": "4870",
-          "views": "5098"
+          "users": "4869",
+          "views": "5096"
         },
         {
           "title": "Sotomayor swipes at Supreme Court rejecting precedent: ‘We’ve been doing an awful lot of that lately’",
-          "users": "3473",
-          "views": "3511"
+          "users": "3497",
+          "views": "3536"
         },
         {
           "title": "Family of Renee Good hires George Floyd attorney one week after ICE shooting",
-          "users": "3422",
-          "views": "3602"
+          "users": "3445",
+          "views": "3625"
         },
         {
           "title": "401(k)s are making record millionaires while Social Security sinks",
-          "users": "3408",
-          "views": "3576"
+          "users": "3406",
+          "views": "3575"
         },
         {
           "title": "Bonta says Trump administration ‘accepted defeat’ in mission to yank California transportation funding",
-          "users": "3207",
-          "views": "3276"
+          "users": "3199",
+          "views": "3268"
         },
         {
           "title": "Philadelphia sheriff calls Wesley Hunt a racial slur during anti-ICE rant",
-          "users": "2877",
-          "views": "2986"
+          "users": "2885",
+          "views": "2996"
         },
         {
           "title": "'Seditious six' Democrats who urged troops to disobey illegal orders contacted by DOJ, Jason Crow says",
-          "users": "2748",
-          "views": "2776"
+          "users": "2764",
+          "views": "2791"
         },
         {
           "title": "The Democratic Party’s immigration endgame is still amnesty",
-          "users": "2534",
-          "views": "2714"
+          "users": "2528",
+          "views": "2706"
         },
         {
           "title": "Homeland Security funding frozen thanks to ICE as Democrats demand guardrails",
-          "users": "2531",
-          "views": "2602"
+          "users": "2527",
+          "views": "2597"
         }
       ],
       "sections": [
@@ -634,78 +382,78 @@
       "articles": [
         {
           "title": "February Social Security direct payment worth $994 goes out in 15 days",
-          "users": "21398",
-          "views": "22569"
+          "users": "21358",
+          "views": "22541"
         },
         {
           "title": "Iran promised Trump not to execute any protesters on day of expected hanging",
-          "users": "13329",
-          "views": "14120"
+          "users": "13320",
+          "views": "14134"
         },
         {
           "title": "Minnesota legislator files impeachment articles against Tim Walz",
-          "users": "12499",
-          "views": "12919"
+          "users": "12478",
+          "views": "12941"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "11086",
-          "views": "21588"
+          "users": "11079",
+          "views": "21586"
         },
         {
           "title": "McConnell says Trump seizing Greenland would be 'more disastrous' than Biden's Afghan exit",
-          "users": "6382",
-          "views": "6679"
+          "users": "6369",
+          "views": "6667"
         },
         {
           "title": "McConnell says Trump seizing Greenland would be ‘more disastrous’ than Biden’s Afghan exit",
-          "users": "5575",
-          "views": "5622"
+          "users": "5588",
+          "views": "5636"
         },
         {
           "title": "Democrats request over $30 million for pro-LGBT United Nations agency in appropriations bill",
-          "users": "4604",
-          "views": "4695"
+          "users": "4606",
+          "views": "4698"
         },
         {
           "title": "House sends incorrect version of Obamacare subsidies extension to Senate",
-          "users": "4432",
-          "views": "4539"
+          "users": "4440",
+          "views": "4548"
         },
         {
           "title": "Trump outlines new 'Great Healthcare Plan' for Congress",
-          "users": "4331",
-          "views": "4517"
+          "users": "4341",
+          "views": "4529"
         },
         {
           "title": "'Seditious six' Democrats who urged troops to disobey illegal orders contacted by DOJ, Jason Crow says",
-          "users": "4166",
-          "views": "4260"
+          "users": "4180",
+          "views": "4274"
         },
         {
           "title": "Somali fraudster convicted in Feeding Our Future scheme tied to recent recipient of Minnesota funding",
-          "users": "3837",
-          "views": "3939"
+          "users": "3842",
+          "views": "3945"
         },
         {
           "title": "Bonta says Trump administration ‘accepted defeat’ in mission to yank California transportation funding",
-          "users": "3495",
-          "views": "3575"
+          "users": "3491",
+          "views": "3568"
         },
         {
           "title": "Philadelphia sheriff calls Wesley Hunt a racial slur during anti-ICE rant",
-          "users": "3136",
-          "views": "3251"
-        },
-        {
-          "title": "Minnesota: Federal law shouldn't apply to us",
-          "users": "3106",
+          "users": "3133",
           "views": "3246"
         },
         {
+          "title": "Minnesota: Federal law shouldn't apply to us",
+          "users": "3103",
+          "views": "3244"
+        },
+        {
           "title": "Trump outlines new ‘Great Healthcare Plan’ for Congress",
-          "users": "2163",
-          "views": "2212"
+          "users": "2170",
+          "views": "2219"
         }
       ],
       "sections": [
@@ -886,78 +634,78 @@
       "articles": [
         {
           "title": "Tom Homan offers to pull ICE from Minneapolis 'real quick' upon access to jails",
-          "users": "55440",
-          "views": "57136"
+          "users": "55552",
+          "views": "57139"
         },
         {
           "title": "Tom Homan offers to pull ICE from Minneapolis ‘real quick’ upon access to jails",
-          "users": "13128",
-          "views": "13326"
+          "users": "13174",
+          "views": "13336"
         },
         {
           "title": "Minnesota: Federal law shouldn't apply to us",
-          "users": "12695",
-          "views": "13179"
+          "users": "12774",
+          "views": "13194"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10562",
-          "views": "19961"
+          "users": "10545",
+          "views": "19944"
         },
         {
           "title": "Trump’s tariffs aren’t raising prices, but they are shrinking America’s manufacturing workforce",
-          "users": "9624",
-          "views": "9774"
+          "users": "9596",
+          "views": "9769"
         },
         {
           "title": "February Social Security direct payment worth $994 goes out in 14 days",
-          "users": "8898",
-          "views": "9264"
+          "users": "8914",
+          "views": "9275"
         },
         {
           "title": "Second round of January Social Security payments goes out in five days",
-          "users": "6778",
-          "views": "7165"
+          "users": "6788",
+          "views": "7177"
         },
         {
           "title": "The awkward question that Josh Shapiro won't answer",
-          "users": "4769",
-          "views": "4916"
+          "users": "4765",
+          "views": "4912"
         },
         {
           "title": "McConnell says Trump seizing Greenland would be ‘more disastrous’ than Biden’s Afghan exit",
-          "users": "3975",
-          "views": "4027"
+          "users": "3983",
+          "views": "4035"
         },
         {
           "title": "February Social Security direct payment worth $994 goes out in 15 days",
-          "users": "3129",
-          "views": "3296"
+          "users": "3124",
+          "views": "3286"
         },
         {
           "title": "Iran promised Trump not to execute any protesters on day of expected hanging",
-          "users": "2719",
-          "views": "2821"
+          "users": "2742",
+          "views": "2844"
         },
         {
           "title": "Trump DOJ argues ‘eyesore’ of White House ballroom construction not a valid reason to sue",
-          "users": "2540",
-          "views": "2568"
+          "users": "2548",
+          "views": "2576"
         },
         {
           "title": "Pennsylvania dairy farmers celebrate the Whole Milk Act",
-          "users": "2408",
-          "views": "2562"
+          "users": "2419",
+          "views": "2573"
         },
         {
           "title": "Tom Homan makes Tim Walz and Jacob Frey offer to pull back ICE",
-          "users": "2072",
-          "views": "2215"
+          "users": "2076",
+          "views": "2221"
         },
         {
           "title": "House sends incorrect version of Obamacare subsidies extension to Senate",
-          "users": "2042",
-          "views": "2086"
+          "users": "2052",
+          "views": "2097"
         }
       ],
       "sections": [
@@ -1138,77 +886,77 @@
       "articles": [
         {
           "title": "Minnesota: Federal law shouldn't apply to us",
-          "users": "16005",
-          "views": "17537"
+          "users": "16014",
+          "views": "17590"
         },
         {
           "title": "Trump’s tariffs aren’t raising prices, but they are shrinking America’s manufacturing workforce",
-          "users": "10780",
-          "views": "10987"
+          "users": "10812",
+          "views": "11012"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9120",
-          "views": "16811"
+          "users": "9086",
+          "views": "16800"
         },
         {
           "title": "February Social Security direct payment worth $994 goes out in 13 days",
-          "users": "7967",
-          "views": "8208"
+          "users": "7987",
+          "views": "8213"
         },
         {
           "title": "Iran promised Trump not to execute any protesters on day of expected hanging",
-          "users": "7331",
-          "views": "7657"
+          "users": "7288",
+          "views": "7616"
         },
         {
           "title": "Tom Homan offers to pull ICE from Minneapolis ‘real quick’ upon access to jails",
           "users": "5579",
-          "views": "5659"
+          "views": "5660"
         },
         {
           "title": "Tom Homan offers to pull ICE from Minneapolis 'real quick' upon access to jails",
-          "users": "4363",
-          "views": "4497"
+          "users": "4357",
+          "views": "4488"
         },
         {
           "title": "Iran state TV issues Trump assassination threat featuring Butler shooting footage: 'This time it won't miss'",
-          "users": "4269",
-          "views": "4357"
+          "users": "4276",
+          "views": "4363"
         },
         {
           "title": "Horses leap through flames and pets go to church in Spanish animal rituals honoring St Anthony",
-          "users": "3657",
-          "views": "3762"
+          "users": "3665",
+          "views": "3771"
         },
         {
           "title": "Florida fuel supplier convicted for defrauding military of $4.5 million",
-          "users": "2630",
-          "views": "2671"
+          "users": "2631",
+          "views": "2673"
         },
         {
           "title": "McConnell says Trump seizing Greenland would be ‘more disastrous’ than Biden’s Afghan exit",
-          "users": "2533",
-          "views": "2561"
+          "users": "2538",
+          "views": "2567"
         },
         {
           "title": "Glenn Youngkin positions himself for future with Vance endorsement",
           "users": "2474",
-          "views": "2550"
+          "views": "2549"
         },
         {
           "title": "Trump pushes regime change in Iran after Ayatollah declares president ‘guilty’ of ‘slander’ and ‘sedition’",
-          "users": "2107",
-          "views": "2171"
+          "users": "2111",
+          "views": "2176"
         },
         {
           "title": "Pennsylvania dairy farmers celebrate the Whole Milk Act",
-          "users": "1978",
-          "views": "2081"
+          "users": "1968",
+          "views": "2069"
         },
         {
           "title": "The Svalbard proof Trump wants Greenland for dollars, not defense",
-          "users": "1774",
+          "users": "1776",
           "views": "1862"
         }
       ],
@@ -1390,78 +1138,78 @@
       "articles": [
         {
           "title": "Florida fuel supplier convicted for defrauding military of $4.5 million",
-          "users": "162169",
-          "views": "169980"
+          "users": "162330",
+          "views": "170102"
         },
         {
           "title": "Democrats fret Jasmine Crockett may be a tough sell statewide in Texas",
-          "users": "11662",
-          "views": "12243"
+          "users": "11651",
+          "views": "12238"
         },
         {
           "title": "February Social Security direct payment worth $994 goes out in 13 days",
-          "users": "11383",
-          "views": "11832"
+          "users": "11420",
+          "views": "11852"
         },
         {
           "title": "Michael Cohen flips — again",
-          "users": "10014",
-          "views": "10447"
+          "users": "10006",
+          "views": "10439"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9481",
-          "views": "17995"
+          "users": "9463",
+          "views": "17940"
         },
         {
           "title": "Walz mobilizes National Guard for Minnesota protests",
-          "users": "5715",
+          "users": "5711",
           "views": "6057"
         },
         {
           "title": "Democrats — the party of lawbreaking",
-          "users": "4828",
-          "views": "5339"
+          "users": "4834",
+          "views": "5354"
         },
         {
           "title": "February Social Security direct payment worth $994 goes out in 12 days",
-          "users": "4267",
-          "views": "4490"
+          "users": "4275",
+          "views": "4497"
         },
         {
           "title": "Minnesota: Federal law shouldn't apply to us",
-          "users": "3672",
-          "views": "3844"
+          "users": "3680",
+          "views": "3854"
         },
         {
           "title": "Glenn Youngkin positions himself for future with Vance endorsement",
-          "users": "3483",
-          "views": "3583"
+          "users": "3482",
+          "views": "3582"
         },
         {
           "title": "Trump puts Russia on the global back foot",
-          "users": "2962",
-          "views": "3056"
+          "users": "2956",
+          "views": "3051"
         },
         {
           "title": "Tom Homan offers to pull ICE from Minneapolis ‘real quick’ upon access to jails",
-          "users": "2932",
-          "views": "2961"
+          "users": "2913",
+          "views": "2942"
         },
         {
           "title": "Iran state TV issues Trump assassination threat featuring Butler shooting footage: 'This time it won't miss'",
-          "users": "2732",
-          "views": "2785"
+          "users": "2731",
+          "views": "2784"
         },
         {
           "title": "Spanberger scraps Youngkin's ICE cooperation order on first day in office",
-          "users": "2682",
-          "views": "2730"
+          "users": "2681",
+          "views": "2729"
         },
         {
           "title": "Walz won't tell the truth, so he turns up the heat",
-          "users": "2311",
-          "views": "2609"
+          "users": "2312",
+          "views": "2615"
         }
       ],
       "sections": [
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260119",
-      "totalUsers": 178260,
-      "newUsers": 107823,
-      "pageviews": 219691,
-      "sessions": 193295,
-      "bounceRate": 0.815856592255361,
-      "averageSessionDuration": 156.7328769125223,
+      "totalUsers": 178510,
+      "newUsers": 111319,
+      "pageviews": 226676,
+      "sessions": 196359,
+      "bounceRate": 0.5360334896796174,
+      "averageSessionDuration": 96.9687224908917,
       "referrers": [
         {
           "source": "(direct)",
-          "users": 86109
-        },
-        {
-          "source": "(not set)",
-          "users": 71524
-        },
-        {
-          "source": "smartnews.com",
-          "users": 23381
+          "users": 86918
         },
         {
           "source": "google",
-          "users": 19834
+          "users": 24896
+        },
+        {
+          "source": "smartnews.com",
+          "users": 23701
         },
         {
           "source": "newsbreak.com",
-          "users": 15940
-        },
-        {
-          "source": "(data not available)",
-          "users": 8222
+          "users": 15976
         },
         {
           "source": "realclearpolitics.com",
-          "users": 5776
+          "users": 6462
         },
         {
           "source": "t.co",
-          "users": 3477
+          "users": 4246
         },
         {
           "source": "m.facebook.com",
-          "users": 2053
+          "users": 3303
         },
         {
           "source": "l.threads.com",
-          "users": 1138
-        },
-        {
-          "source": "deployer",
-          "users": 918
+          "users": 1486
         },
         {
           "source": "newsbreak",
-          "users": 896
+          "users": 1206
+        },
+        {
+          "source": "deployer",
+          "users": 1135
         },
         {
           "source": "newsshowcase",
-          "users": 772
+          "users": 925
+        },
+        {
+          "source": "lm.facebook.com",
+          "users": 749
         },
         {
           "source": "bing",
-          "users": 577
+          "users": 680
         },
         {
           "source": "duckduckgo",
-          "users": 575
+          "users": 678
+        },
+        {
+          "source": "paid.outbrain.com",
+          "users": 521
         }
       ],
       "authors": [
         {
           "author": "Byron York",
-          "users": "6768",
-          "views": "6736"
+          "users": "6778",
+          "views": "6977"
         },
         {
           "author": "Asher Notheis",
-          "users": "3579",
-          "views": "3643"
+          "users": "3592",
+          "views": "3732"
         },
         {
           "author": "Jenny Goldsberry",
-          "users": "2247",
-          "views": "2350"
+          "users": "2258",
+          "views": "2420"
         },
         {
           "author": "Washington Examiner Staff",
-          "users": "1612",
-          "views": "1615"
+          "users": "1631",
+          "views": "1665"
         },
         {
           "author": "Steve Milloy",
-          "users": "1588",
-          "views": "1577"
+          "users": "1591",
+          "views": "1622"
         },
         {
           "author": "Robert Schmad",
-          "users": "1053",
-          "views": "1050"
+          "users": "1056",
+          "views": "1073"
         },
         {
           "author": "Rob Crilly",
-          "users": "895",
-          "views": "885"
+          "users": "906",
+          "views": "912"
         },
         {
           "author": "Washington Examiner",
-          "users": "845",
-          "views": "857"
+          "users": "850",
+          "views": "879"
         },
         {
           "author": "Jack Birle",
-          "users": "751",
-          "views": "746"
+          "users": "759",
+          "views": "769"
         },
         {
           "author": "Gabrielle M. Etzel",
-          "users": "730",
-          "views": "712"
+          "users": "732",
+          "views": "749"
         }
       ],
       "articles": [
         {
           "title": "Florida fuel supplier convicted for defrauding military of $4.5 million",
-          "users": "52829",
-          "views": "54482"
+          "users": "53023",
+          "views": "56515"
         },
         {
           "title": "Michael Cohen flips — again",
-          "users": "16070",
-          "views": "16272"
+          "users": "16343",
+          "views": "17154"
         },
         {
           "title": "February Social Security direct payment worth $994 goes out in 12 days",
-          "users": "14824",
-          "views": "14859"
+          "users": "15342",
+          "views": "15809"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10524",
-          "views": "19249"
+          "users": "10855",
+          "views": "20764"
         },
         {
           "title": "Trump says now ‘is time’ to get Russian threat ‘away from Greenland’",
-          "users": "7828",
-          "views": "7941"
+          "users": "8388",
+          "views": "8735"
         },
         {
           "title": "Pennsylvania’s blue wave",
-          "users": "3907",
-          "views": "4068"
+          "users": "4115",
+          "views": "4430"
         },
         {
           "title": "Iran state TV hacked and airs message from exiled crown prince urging protests to continue",
-          "users": "2824",
-          "views": "2804"
+          "users": "2933",
+          "views": "2996"
         },
         {
           "title": "Second round of January Social Security payments goes out in two days",
-          "users": "2528",
-          "views": "2584"
+          "users": "2628",
+          "views": "2753"
         },
         {
           "title": "If populism is so great, why are blue states so unaffordable?",
-          "users": "2077",
-          "views": "2093"
-        },
-        {
-          "title": "Beshear posits himself as Democrats' best chance to beat Vance in 2028",
-          "users": "1928",
-          "views": "1925"
+          "users": "2149",
+          "views": "2241"
         },
         {
           "title": "Polling against impeachment may be ‘only’ thing to stop third attempt on Trump: Byron York",
-          "users": "1843",
-          "views": "1829"
+          "users": "1985",
+          "views": "2017"
+        },
+        {
+          "title": "Beshear posits himself as Democrats' best chance to beat Vance in 2028",
+          "users": "1943",
+          "views": "2008"
         },
         {
           "title": "Ed Markey calls to 'invoke the 25th Amendment'",
-          "users": "1667",
-          "views": "1692"
+          "users": "1816",
+          "views": "1901"
         },
         {
           "title": "Surfing hypocrisy at Kamala Harris’s new Malibu playhouse",
-          "users": "1637",
-          "views": "1619"
+          "users": "1670",
+          "views": "1705"
         },
         {
           "title": "Democrats fret Jasmine Crockett may be a tough sell statewide in Texas",
-          "users": "1629",
-          "views": "1665"
+          "users": "1651",
+          "views": "1741"
         },
         {
           "title": "California gubernatorial hopefuls have a Gavin Newsom problem",
-          "users": "1416",
-          "views": "1446"
+          "users": "1510",
+          "views": "1576"
         }
       ],
       "sections": [
         {
           "section": "Columnists",
-          "users": "6787",
-          "views": "6755"
+          "users": "6798",
+          "views": "6997"
         },
         {
           "section": "News",
-          "users": "3676",
-          "views": "3759"
+          "users": "3700",
+          "views": "3869"
         },
         {
           "section": "White House",
-          "users": "2025",
-          "views": "2197"
+          "users": "2030",
+          "views": "2264"
         },
         {
           "section": "Equality, Not Elitism",
-          "users": "1752",
-          "views": "1777"
+          "users": "1756",
+          "views": "1836"
         },
         {
           "section": "Entertainment",
-          "users": "1449",
-          "views": "1438"
+          "users": "1453",
+          "views": "1469"
         },
         {
           "section": "Campaigns",
-          "users": "1329",
-          "views": "1354"
+          "users": "1333",
+          "views": "1382"
         },
         {
           "section": "In Focus",
-          "users": "1286",
-          "views": "1310"
+          "users": "1295",
+          "views": "1339"
         },
         {
           "section": "Foreign Policy",
-          "users": "1069",
-          "views": "1124"
+          "users": "1077",
+          "views": "1155"
         },
         {
           "section": "Washington Secrets",
-          "users": "895",
-          "views": "885"
+          "users": "906",
+          "views": "912"
         },
         {
           "section": "Editorials",
-          "users": "845",
-          "views": "857"
+          "users": "850",
+          "views": "879"
+        }
+      ]
+    },
+    {
+      "date": "20260120",
+      "totalUsers": 153287,
+      "newUsers": 62696,
+      "pageviews": 198347,
+      "sessions": 168023,
+      "bounceRate": 0.796135052939181,
+      "averageSessionDuration": 183.24532286201296,
+      "referrers": [
+        {
+          "source": "(direct)",
+          "users": 57330
+        },
+        {
+          "source": "(not set)",
+          "users": 37181
+        },
+        {
+          "source": "smartnews.com",
+          "users": 35859
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 20021
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 9748
+        },
+        {
+          "source": "google",
+          "users": 6906
+        },
+        {
+          "source": "(data not available)",
+          "users": 5220
+        },
+        {
+          "source": "t.co",
+          "users": 2018
+        },
+        {
+          "source": "newsbreak",
+          "users": 1147
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1063
+        },
+        {
+          "source": "deployer",
+          "users": 992
+        },
+        {
+          "source": "bing",
+          "users": 890
+        },
+        {
+          "source": "duckduckgo",
+          "users": 666
+        },
+        {
+          "source": "powerlineblog.com",
+          "users": 603
+        },
+        {
+          "source": "news.google.com",
+          "users": 564
+        }
+      ],
+      "authors": [
+        {
+          "author": "Molly Parks",
+          "users": "15022",
+          "views": "15325"
+        },
+        {
+          "author": "Jenny Goldsberry",
+          "users": "7056",
+          "views": "7317"
+        },
+        {
+          "author": "Byron York",
+          "users": "2321",
+          "views": "2345"
+        },
+        {
+          "author": "Jamie McIntyre",
+          "users": "2200",
+          "views": "2284"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "1590",
+          "views": "1647"
+        },
+        {
+          "author": "Conn Carroll",
+          "users": "1446",
+          "views": "1454"
+        },
+        {
+          "author": "Ramsey Touchberry",
+          "users": "1321",
+          "views": "1403"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "1269",
+          "views": "1306"
+        },
+        {
+          "author": "Washington Examiner Staff",
+          "users": "1030",
+          "views": "1050"
+        },
+        {
+          "author": "Claire Carter",
+          "users": "992",
+          "views": "1067"
+        }
+      ],
+      "articles": [
+        {
+          "title": "WATCH LIVE: Macron delivers speech in Davos after telling Trump he does ‘not understand’ Greenland plan",
+          "users": "13310",
+          "views": "13671"
+        },
+        {
+          "title": "February Social Security direct payment worth $994 goes out in 10 days",
+          "users": "11490",
+          "views": "11743"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "10942",
+          "views": "19953"
+        },
+        {
+          "title": "Minnesota and the battle to cripple ICE",
+          "users": "7306",
+          "views": "7802"
+        },
+        {
+          "title": "Why are so many K-12 educators prone to violent rhetoric?",
+          "users": "7144",
+          "views": "7515"
+        },
+        {
+          "title": "BLM coalition behind anti-ICE shutdown of Minneapolis church service",
+          "users": "6742",
+          "views": "7002"
+        },
+        {
+          "title": "WATCH LIVE: Macron delivers speech in Davos after telling Trump he does 'not understand' Greenland plan",
+          "users": "5792",
+          "views": "5802"
+        },
+        {
+          "title": "Bessent under fire for suggesting Americans purchased multiple homes ‘for retirement’",
+          "users": "4477",
+          "views": "4647"
+        },
+        {
+          "title": "Trump’s Cassidy snub sends 'warning shot' through GOP primaries",
+          "users": "4383",
+          "views": "4675"
+        },
+        {
+          "title": "Sotomayor asks why gun owners should have right to enter private property while armed",
+          "users": "4303",
+          "views": "4410"
+        },
+        {
+          "title": "Michael Cohen flips — again",
+          "users": "3691",
+          "views": "3772"
+        },
+        {
+          "title": "Michael Whatley's North Carolina senate campaign sees support tank: Poll",
+          "users": "2639",
+          "views": "2864"
+        },
+        {
+          "title": "Second round of January Social Security payments goes out in one day",
+          "users": "2492",
+          "views": "2609"
+        },
+        {
+          "title": "Trump escalates Greenland land grab into a full-blown, five-alarm transatlantic crisis",
+          "users": "2270",
+          "views": "2435"
+        },
+        {
+          "title": "The human cost of the Minnesota fraud scandal",
+          "users": "2204",
+          "views": "2295"
+        }
+      ],
+      "sections": [
+        {
+          "section": "World",
+          "users": "15073",
+          "views": "15276"
+        },
+        {
+          "section": "Finance and Economy",
+          "users": "6276",
+          "views": "6401"
+        },
+        {
+          "section": "Columnists",
+          "users": "2326",
+          "views": "2350"
+        },
+        {
+          "section": "State",
+          "users": "2273",
+          "views": "2356"
+        },
+        {
+          "section": "Daily on Defense",
+          "users": "2200",
+          "views": "2284"
+        },
+        {
+          "section": "Campaigns",
+          "users": "2156",
+          "views": "2336"
+        },
+        {
+          "section": "In Focus",
+          "users": "1721",
+          "views": "1743"
+        },
+        {
+          "section": "News",
+          "users": "1599",
+          "views": "1654"
+        },
+        {
+          "section": "White House",
+          "users": "1082",
+          "views": "1113"
+        },
+        {
+          "section": "Foreign Policy",
+          "users": "1039",
+          "views": "1129"
         }
       ]
     }
@@ -1778,18 +1778,18 @@
     "uniqueAuthors": 36,
     "uniqueSections": 28,
     "sampleAuthors": [
-      "Rachel Schilke",
-      "Jenny Goldsberry",
+      "Brady Knox",
+      "Mia Cathell",
       "Jack Birle",
-      "Gabrielle M. Etzel",
-      "Mike Gonzalez"
+      "Ross O'Keefe",
+      "Molly Parks"
     ],
     "sampleSections": [
-      "Congressional",
       "World",
+      "Investigations",
       "Supreme Court",
-      "House",
-      "In Focus"
+      "Infrastructure",
+      "News"
     ]
   }
 }

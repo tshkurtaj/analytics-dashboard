@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-03-03T07:30:11.175Z",
+  "updatedAt": "2026-03-04T07:27:55.569Z",
   "range": {
-    "start": "2026-02-24",
-    "end": "2026-03-02"
+    "start": "2026-02-25",
+    "end": "2026-03-03"
   },
   "rows": [
-    {
-      "date": "20260224",
-      "totalUsers": 170198,
-      "newUsers": 79507,
-      "pageviews": 231369,
-      "sessions": 198597,
-      "bounceRate": 0.6140676848089347,
-      "averageSessionDuration": 100.94840562230044,
-      "referrers": [
-        {
-          "source": "smartnews.com",
-          "users": 55883
-        },
-        {
-          "source": "(direct)",
-          "users": 36828
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 36042
-        },
-        {
-          "source": "google",
-          "users": 16465
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 5723
-        },
-        {
-          "source": "t.co",
-          "users": 2390
-        },
-        {
-          "source": "deployer",
-          "users": 2140
-        },
-        {
-          "source": "newsbreak",
-          "users": 1736
-        },
-        {
-          "source": "bing",
-          "users": 1684
-        },
-        {
-          "source": "lm.facebook.com",
-          "users": 1601
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 1277
-        },
-        {
-          "source": "duckduckgo",
-          "users": 1021
-        },
-        {
-          "source": "msn.com",
-          "users": 687
-        },
-        {
-          "source": "paid.outbrain.com",
-          "users": 662
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 658
-        }
-      ],
-      "authors": [
-        {
-          "author": "Mia Cathell",
-          "users": "20783",
-          "views": "21095"
-        },
-        {
-          "author": "Asher Notheis",
-          "users": "17421",
-          "views": "18464"
-        },
-        {
-          "author": "Rachel Schilke",
-          "users": "15764",
-          "views": "16468"
-        },
-        {
-          "author": "Robert Schmad",
-          "users": "10228",
-          "views": "10564"
-        },
-        {
-          "author": "Christopher Tremoglie",
-          "users": "7645",
-          "views": "7694"
-        },
-        {
-          "author": "Kaelan Deese",
-          "users": "6769",
-          "views": "7067"
-        },
-        {
-          "author": "Timothy Nerozzi",
-          "users": "6455",
-          "views": "6652"
-        },
-        {
-          "author": "Zachary Faria",
-          "users": "4970",
-          "views": "5100"
-        },
-        {
-          "author": "Samuel J. Abrams",
-          "users": "4317",
-          "views": "4537"
-        },
-        {
-          "author": "Claire Carter",
-          "users": "3499",
-          "views": "3639"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Walz permanently appoints state commissioner who oversaw fraud as audit uncovers scope of autism billing schemes",
-          "users": "20650",
-          "views": "21099"
-        },
-        {
-          "title": "March Social Security direct payment worth $994 goes out in three days",
-          "users": "16672",
-          "views": "17412"
-        },
-        {
-          "title": "Mike Johnson throws cold water on House stepping in to codify Trump’s tariffs",
-          "users": "14169",
-          "views": "14543"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "11892",
-          "views": "23256"
-        },
-        {
-          "title": "Iowa congressman took cash from Chinese companies buying American farmland",
-          "users": "8558",
-          "views": "8759"
-        },
-        {
-          "title": "Where was the left-wing outrage when Trump said women were ‘much smarter’ than men?",
-          "users": "7421",
-          "views": "7650"
-        },
-        {
-          "title": "Kim Jong Un reelected as North Korean leader, teen daughter to serve as ‘missile chief’",
-          "users": "6406",
-          "views": "6555"
-        },
-        {
-          "title": "The US hockey team knelt — and that is what matters",
-          "users": "5956",
-          "views": "6520"
-        },
-        {
-          "title": "FBI records contradict claims Biden was ‘not aware’ of Mar-a-Lago raid",
-          "users": "5807",
-          "views": "5930"
-        },
-        {
-          "title": "Los Angeles is now fining people whose homes burned down",
-          "users": "5258",
-          "views": "5418"
-        },
-        {
-          "title": "READ: Tony Gonzales's explicit sexual texts to late staffer who set herself on fire",
-          "users": "4749",
-          "views": "5007"
-        },
-        {
-          "title": "State of the Union 2026 bingo: Play along as you watch",
-          "users": "3873",
-          "views": "5111"
-        },
-        {
-          "title": "State of the Union 2026 bingo: Fill out as you watch",
-          "users": "3532",
-          "views": "4021"
-        },
-        {
-          "title": "Mexico shows the futility and danger of gun control",
-          "users": "2336",
-          "views": "2523"
-        },
-        {
-          "title": "Elizabeth Warren accuses Trump of ‘stealing’ from Americans with tariffs",
-          "users": "2325",
-          "views": "2361"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Investigations",
-          "users": "29451",
-          "views": "31658"
-        },
-        {
-          "section": "News",
-          "users": "18335",
-          "views": "19383"
-        },
-        {
-          "section": "Finance and Economy",
-          "users": "15106",
-          "views": "15560"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "13944",
-          "views": "14924"
-        },
-        {
-          "section": "World",
-          "users": "8183",
-          "views": "8511"
-        },
-        {
-          "section": "Justice",
-          "users": "7908",
-          "views": "8264"
-        },
-        {
-          "section": "In Focus",
-          "users": "6297",
-          "views": "6560"
-        },
-        {
-          "section": "House",
-          "users": "3077",
-          "views": "3338"
-        },
-        {
-          "section": "Senate",
-          "users": "2867",
-          "views": "2925"
-        },
-        {
-          "section": "White House",
-          "users": "2818",
-          "views": "2930"
-        }
-      ]
-    },
     {
       "date": "20260225",
       "totalUsers": 250146,
@@ -382,78 +130,78 @@
       "articles": [
         {
           "title": "Nearly two-thirds of State of the Union viewers approve of Trump speech: CNN poll",
-          "users": "35869",
-          "views": "36774"
+          "users": "35894",
+          "views": "36821"
         },
         {
           "title": "Walz permanently appoints state commissioner who oversaw fraud as audit uncovers scope of autism billing schemes",
-          "users": "27284",
-          "views": "28133"
+          "users": "27299",
+          "views": "28149"
         },
         {
           "title": "Mark Kelly stands for illegal immigrants but sits for legal American citizens",
-          "users": "18256",
-          "views": "18674"
+          "users": "18267",
+          "views": "18707"
         },
         {
           "title": "Newsom’s worst nightmare, as Zuckerberg leaves California",
-          "users": "14934",
-          "views": "15416"
+          "users": "14943",
+          "views": "15418"
         },
         {
           "title": "House Democrats ignore Hakeem Jeffries’ plea to sit silent at State of the Union",
-          "users": "13430",
-          "views": "13751"
+          "users": "13459",
+          "views": "13776"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "12794",
-          "views": "23577"
+          "users": "12775",
+          "views": "23579"
         },
         {
           "title": "'These people are crazy' is the campaign Democrats should fear",
-          "users": "12158",
-          "views": "13665"
+          "users": "12180",
+          "views": "13681"
         },
         {
           "title": "Minnesota woman pleads guilty to stealing millions through Feeding our Future fraud",
-          "users": "11050",
-          "views": "11371"
+          "users": "11062",
+          "views": "11386"
         },
         {
           "title": "Los Angeles is now fining people whose homes burned down",
-          "users": "10252",
-          "views": "10514"
+          "users": "10259",
+          "views": "10511"
         },
         {
           "title": "Third round of February Social Security payments goes out today",
-          "users": "9637",
-          "views": "10006"
+          "users": "9630",
+          "views": "9999"
         },
         {
           "title": "Congressman who sounded alarm on Chinese companies buying American farmland took cash from them",
-          "users": "8010",
-          "views": "8099"
+          "users": "8003",
+          "views": "8089"
         },
         {
           "title": "Live updates: Trump delivers 2026 State of the Union address",
-          "users": "7041",
-          "views": "7373"
+          "users": "7057",
+          "views": "7387"
         },
         {
           "title": "Where was the left-wing outrage when Trump said women were ‘much smarter’ than men?",
-          "users": "6497",
-          "views": "6600"
+          "users": "6516",
+          "views": "6621"
         },
         {
           "title": "March Social Security direct payment worth $994 goes out in three days",
           "users": "6385",
-          "views": "6639"
+          "views": "6640"
         },
         {
           "title": "Democrats not sweating Trump putting them on record for choosing illegal immigrants over Americans",
-          "users": "6361",
-          "views": "6599"
+          "users": "6362",
+          "views": "6597"
         }
       ],
       "sections": [
@@ -634,78 +382,78 @@
       "articles": [
         {
           "title": "James Carville video telling Ilhan Omar to leave Democratic Party goes viral",
-          "users": "33262",
-          "views": "34155"
+          "users": "33366",
+          "views": "34215"
         },
         {
           "title": "Nearly two-thirds of State of the Union viewers approve of Trump speech: CNN poll",
-          "users": "27221",
-          "views": "28155"
+          "users": "27245",
+          "views": "28171"
         },
         {
           "title": "Newsom’s worst nightmare, as Zuckerberg leaves California",
-          "users": "16169",
-          "views": "16968"
+          "users": "16147",
+          "views": "16957"
         },
         {
           "title": "Minnesota woman pleads guilty to stealing millions through Feeding our Future fraud",
-          "users": "12583",
-          "views": "12895"
+          "users": "12599",
+          "views": "12918"
         },
         {
           "title": "Fetterman admits he dresses ‘like a slob’ but wore suit to ‘respect’ State of the Union",
-          "users": "11089",
-          "views": "11267"
+          "users": "11103",
+          "views": "11278"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10812",
-          "views": "20702"
+          "users": "10806",
+          "views": "20696"
         },
         {
           "title": "Democrats not sweating Trump putting them on record for choosing illegal immigrants over Americans",
-          "users": "9460",
-          "views": "9800"
+          "users": "9466",
+          "views": "9821"
         },
         {
           "title": "From day care fraud to suitcases full of cash: Somali fraud is worse than you think",
-          "users": "7223",
-          "views": "7586"
+          "users": "7232",
+          "views": "7589"
         },
         {
           "title": "Partially undisclosed cash linked to foreign billionaire tied to California lawsuit against energy giant",
-          "users": "6618",
-          "views": "6750"
+          "users": "6629",
+          "views": "6763"
         },
         {
           "title": "'These people are crazy' is the campaign Democrats should fear",
-          "users": "6224",
-          "views": "6894"
+          "users": "6226",
+          "views": "6897"
         },
         {
           "title": "Mark Kelly stands for illegal immigrants but sits for legal American citizens",
-          "users": "5646",
-          "views": "5798"
+          "users": "5647",
+          "views": "5800"
         },
         {
           "title": "Walz permanently appoints state commissioner who oversaw fraud as audit uncovers scope of autism billing schemes",
-          "users": "5590",
-          "views": "5749"
-        },
-        {
-          "title": "Stephen A. Smith says Trump played Democrats ‘like a fiddle’ at State of the Union",
-          "users": "4691",
-          "views": "4813"
+          "users": "5595",
+          "views": "5754"
         },
         {
           "title": "Mamdani says ‘kids’ in a ‘snowball fight’ with NYPD officers shouldn’t face criminal charges",
-          "users": "4687",
-          "views": "4756"
+          "users": "4691",
+          "views": "4759"
+        },
+        {
+          "title": "Stephen A. Smith says Trump played Democrats ‘like a fiddle’ at State of the Union",
+          "users": "4686",
+          "views": "4808"
         },
         {
           "title": "House Democrats ignore Hakeem Jeffries’ plea to sit silent at State of the Union",
-          "users": "4016",
-          "views": "4078"
+          "users": "4012",
+          "views": "4072"
         }
       ],
       "sections": [
@@ -886,78 +634,78 @@
       "articles": [
         {
           "title": "James Carville video telling Ilhan Omar to leave Democratic Party goes viral",
-          "users": "32975",
-          "views": "34249"
+          "users": "33028",
+          "views": "34286"
         },
         {
           "title": "James Comer claims Clinton poured cold water on any Trump involvement with Epstein",
-          "users": "20947",
-          "views": "21481"
+          "users": "20969",
+          "views": "21484"
         },
         {
           "title": "March Social Security direct payment worth $994 goes out today",
-          "users": "15748",
-          "views": "16226"
+          "users": "15742",
+          "views": "16218"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10407",
-          "views": "19236"
+          "users": "10401",
+          "views": "19203"
         },
         {
           "title": "America's sweetheart vs. American psycho",
-          "users": "5506",
-          "views": "5882"
+          "users": "5515",
+          "views": "5890"
         },
         {
           "title": "DHS agent says Abrego Garcia human smuggling case grew ‘stronger’ after investigation",
-          "users": "4480",
-          "views": "4555"
+          "users": "4488",
+          "views": "4563"
         },
         {
           "title": "Nearly two-thirds of State of the Union viewers approve of Trump speech: CNN poll",
-          "users": "4366",
-          "views": "4454"
+          "users": "4377",
+          "views": "4467"
         },
         {
           "title": "Newsom’s worst nightmare, as Zuckerberg leaves California",
-          "users": "4194",
-          "views": "4360"
+          "users": "4205",
+          "views": "4369"
         },
         {
           "title": "States gave at least $380 million in Medicaid dollars to scheming service providers",
-          "users": "4074",
-          "views": "4156"
+          "users": "4076",
+          "views": "4159"
+        },
+        {
+          "title": "Senate GOP sends warning to House SAVE Act agitators: Don’t tell us what to do",
+          "users": "3999",
+          "views": "4095"
         },
         {
           "title": "First round of March Social Security payments goes out in 12 days",
           "users": "3996",
-          "views": "4190"
-        },
-        {
-          "title": "Senate GOP sends warning to House SAVE Act agitators: Don’t tell us what to do",
-          "users": "3995",
-          "views": "4088"
+          "views": "4191"
         },
         {
           "title": "Minnesota woman pleads guilty to stealing millions through Feeding our Future fraud",
-          "users": "3942",
-          "views": "4040"
+          "users": "3937",
+          "views": "4038"
         },
         {
           "title": "Democrats not sweating Trump putting them on record for choosing illegal immigrants over Americans",
-          "users": "3720",
-          "views": "3804"
+          "users": "3725",
+          "views": "3810"
         },
         {
           "title": "Fetterman admits he dresses ‘like a slob’ but wore suit to ‘respect’ State of the Union",
-          "users": "3611",
-          "views": "3676"
+          "users": "3622",
+          "views": "3687"
         },
         {
           "title": "State Department offers $10 million reward for brothers leading Sinaloa cartel",
-          "users": "3577",
-          "views": "3757"
+          "users": "3584",
+          "views": "3767"
         }
       ],
       "sections": [
@@ -1138,78 +886,78 @@
       "articles": [
         {
           "title": "Khamenei is dead. We’re about to learn how many terrorists crossed the US border",
-          "users": "27583",
-          "views": "28399"
+          "users": "27567",
+          "views": "28415"
         },
         {
           "title": "James Comer claims Clinton poured cold water on any Trump involvement with Epstein",
-          "users": "22874",
-          "views": "23605"
+          "users": "22883",
+          "views": "23635"
         },
         {
           "title": "Trump orders every federal agency to stop using Anthropic an hour before Pentagon deadline",
-          "users": "14400",
-          "views": "14975"
+          "users": "14408",
+          "views": "14989"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "11819",
-          "views": "23933"
+          "users": "11820",
+          "views": "23918"
         },
         {
           "title": "Comer says ‘charming’ Bill Clinton deposition better than Hillary’s because of ‘Southern people skills’",
-          "users": "8345",
-          "views": "8685"
+          "users": "8358",
+          "views": "8696"
         },
         {
           "title": "James Carville video telling Ilhan Omar to leave Democratic Party goes viral",
-          "users": "8218",
-          "views": "8475"
+          "users": "8227",
+          "views": "8490"
         },
         {
           "title": "Trump picks up Whataburger for Air Force One and jokes about being poisoned after Texas speech",
-          "users": "7616",
-          "views": "7828"
+          "users": "7632",
+          "views": "7838"
         },
         {
           "title": "Undisclosed cash linked to foreign billionaire tied to California lawsuit",
-          "users": "6927",
-          "views": "7060"
+          "users": "6931",
+          "views": "7065"
         },
         {
           "title": "How the tariffs ruling could complicate Trump's next Supreme Court nomination",
-          "users": "6844",
-          "views": "7257"
+          "users": "6846",
+          "views": "7264"
         },
         {
           "title": "April Social Security direct payment worth $994 goes out in 32 days",
-          "users": "6516",
-          "views": "6749"
+          "users": "6507",
+          "views": "6739"
         },
         {
           "title": "March Social Security direct payment worth $994 goes out today",
-          "users": "5961",
-          "views": "6127"
+          "users": "5960",
+          "views": "6125"
         },
         {
           "title": "Illegal immigrant who stabbed woman to death at Fairfax bus stop previously arrested over 30 times",
-          "users": "4311",
-          "views": "4426"
+          "users": "4300",
+          "views": "4417"
         },
         {
           "title": "Trump’s attack on Iran’s regime is an attack on China’s economic supremacy",
-          "users": "3850",
-          "views": "3985"
+          "users": "3843",
+          "views": "3976"
         },
         {
           "title": "Democrats not sweating Trump putting them on record for choosing illegal immigrants over Americans",
-          "users": "3722",
-          "views": "3807"
+          "users": "3733",
+          "views": "3817"
         },
         {
           "title": "States gave at least $380 million in Medicaid dollars to scheming service providers",
-          "users": "2610",
-          "views": "2667"
+          "users": "2620",
+          "views": "2678"
         }
       ],
       "sections": [
@@ -1390,78 +1138,78 @@
       "articles": [
         {
           "title": "Khamenei is dead. We’re about to learn how many terrorists crossed the US border",
-          "users": "13057",
-          "views": "13507"
+          "users": "13063",
+          "views": "13518"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "12091",
-          "views": "23123"
+          "users": "12108",
+          "views": "23071"
         },
         {
           "title": "Supreme Court to weigh scope of gun rights for drug users",
-          "users": "10674",
-          "views": "11215"
+          "users": "10682",
+          "views": "11211"
         },
         {
           "title": "B-2 stealth bombers hit Iranian ballistic missile sites with 2,000-pound bombs: CENTCOM",
-          "users": "7761",
-          "views": "8031"
+          "users": "7786",
+          "views": "8044"
         },
         {
           "title": "UK, France, and Germany jump into the fray in Iran, vowing to defend Gulf allies",
-          "users": "4377",
-          "views": "4439"
+          "users": "4378",
+          "views": "4440"
         },
         {
           "title": "James Comer claims Clinton poured cold water on any Trump involvement with Epstein",
-          "users": "3977",
-          "views": "4033"
+          "users": "3981",
+          "views": "4038"
         },
         {
           "title": "Trump’s attack on Iran’s regime is an attack on China’s economic supremacy",
-          "users": "3737",
-          "views": "3856"
+          "users": "3729",
+          "views": "3850"
         },
         {
           "title": "James Carville video telling Ilhan Omar to leave Democratic Party goes viral",
-          "users": "3629",
-          "views": "3725"
+          "users": "3631",
+          "views": "3726"
         },
         {
           "title": "April Social Security direct payment worth $994 goes out in 32 days",
-          "users": "3610",
-          "views": "3767"
+          "users": "3604",
+          "views": "3762"
         },
         {
           "title": "Three US service members killed in operations against Iran, CENTCOM says",
-          "users": "3467",
-          "views": "3564"
+          "users": "3462",
+          "views": "3559"
         },
         {
           "title": "Trump picks up Whataburger for Air Force One and jokes about being poisoned after Texas speech",
           "users": "2918",
-          "views": "2986"
+          "views": "2985"
         },
         {
           "title": "Trump says US has sunk nine Iranian navy ships and ‘largely destroyed’ headquarters",
-          "users": "2531",
-          "views": "2593"
+          "users": "2532",
+          "views": "2594"
         },
         {
           "title": "Trump is threatening to destroy the same Iran nuclear facilities he said were ‘obliterated’ months ago",
-          "users": "2455",
-          "views": "2502"
+          "users": "2443",
+          "views": "2487"
         },
         {
           "title": "Supreme Court’s Trump tariffs slap-down could limit, if not end, economic damage",
-          "users": "2450",
-          "views": "2495"
+          "users": "2441",
+          "views": "2487"
         },
         {
           "title": "Candace Owens’s first hit piece on Erika Kirk falls totally flat",
-          "users": "2435",
-          "views": "2839"
+          "users": "2433",
+          "views": "2832"
         }
       ],
       "sections": [
@@ -1642,78 +1390,78 @@
       "articles": [
         {
           "title": "UK, France, and Germany jump into the fray in Iran, vowing to defend Gulf allies",
-          "users": "137386",
-          "views": "135131"
+          "users": "137776",
+          "views": "141505"
         },
         {
           "title": "B-2 stealth bombers hit Iranian ballistic missile sites with 2,000-pound bombs: CENTCOM",
-          "users": "25214",
-          "views": "25445"
+          "users": "25249",
+          "views": "26472"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "13477",
-          "views": "24474"
+          "users": "13473",
+          "views": "25494"
         },
         {
           "title": "Gorsuch questions how one regular marijuana gummy could allow for taking away gun rights",
-          "users": "10649",
-          "views": "10514"
+          "users": "10824",
+          "views": "11140"
         },
         {
           "title": "Republicans didn’t cut Medicaid — but Democrats did make a mess of it",
-          "users": "8704",
-          "views": "8491"
+          "users": "8853",
+          "views": "8932"
         },
         {
           "title": "James Comer claims Clinton poured cold water on any Trump involvement with Epstein",
-          "users": "4318",
-          "views": "4291"
+          "users": "4399",
+          "views": "4513"
         },
         {
           "title": "For Democratic contenders, Iran war presents opportunity and risk",
-          "users": "4142",
-          "views": "4327"
+          "users": "4172",
+          "views": "4562"
         },
         {
           "title": "Oil and gas prices soar after Iran strikes",
-          "users": "3743",
-          "views": "3784"
+          "users": "3764",
+          "views": "3972"
         },
         {
           "title": "Hegseth announces end to Department of War attendance at Ivy Leagues",
-          "users": "3317",
-          "views": "3275"
+          "users": "3390",
+          "views": "3430"
         },
         {
           "title": "Hezbollah leader killed in IDF strikes in Lebanon",
-          "users": "3214",
-          "views": "3217"
+          "users": "3222",
+          "views": "3355"
         },
         {
           "title": "How the CIA planned the perfect moment to assassinate Khamenei",
-          "users": "2784",
-          "views": "2965"
+          "users": "2795",
+          "views": "3088"
         },
         {
           "title": "Trump's attack on Iran's regime is an attack on China's economic supremacy",
-          "users": "2775",
-          "views": "2845"
+          "users": "2776",
+          "views": "2959"
         },
         {
           "title": "Gas prices: Costs creep up close to $3 per gallon to begin March",
-          "users": "2625",
-          "views": "2624"
+          "users": "2639",
+          "views": "2732"
         },
         {
           "title": "Khamenei is dead. We’re about to learn how many terrorists crossed the US border",
-          "users": "2353",
-          "views": "2397"
+          "users": "2372",
+          "views": "2491"
         },
         {
           "title": "Nancy Mace under House Ethics investigation for alleged ‘improper reimbursement practices’",
-          "users": "2248",
-          "views": "2193"
+          "users": "2283",
+          "views": "2310"
         }
       ],
       "sections": [
@@ -1768,6 +1516,258 @@
           "views": "3462"
         }
       ]
+    },
+    {
+      "date": "20260303",
+      "totalUsers": 181363,
+      "newUsers": 66680,
+      "pageviews": 229313,
+      "sessions": 204512,
+      "bounceRate": 0.8448795180722891,
+      "averageSessionDuration": 173.4735706929031,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 53886
+        },
+        {
+          "source": "smartnews.com",
+          "users": 50286
+        },
+        {
+          "source": "(not set)",
+          "users": 43056
+        },
+        {
+          "source": "(direct)",
+          "users": 40658
+        },
+        {
+          "source": "google",
+          "users": 7924
+        },
+        {
+          "source": "(data not available)",
+          "users": 7004
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 4637
+        },
+        {
+          "source": "newsbreak",
+          "users": 2440
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 2128
+        },
+        {
+          "source": "deployer",
+          "users": 1408
+        },
+        {
+          "source": "bing",
+          "users": 1011
+        },
+        {
+          "source": "lm.facebook.com",
+          "users": 789
+        },
+        {
+          "source": "t.co",
+          "users": 739
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 608
+        },
+        {
+          "source": "duckduckgo",
+          "users": 592
+        }
+      ],
+      "authors": [
+        {
+          "author": "Brady Knox",
+          "users": "40295",
+          "views": "39652"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "19208",
+          "views": "18785"
+        },
+        {
+          "author": "Asher Notheis",
+          "users": "18553",
+          "views": "18387"
+        },
+        {
+          "author": "James Rogan",
+          "users": "8097",
+          "views": "7833"
+        },
+        {
+          "author": "Zach LaChance",
+          "users": "6139",
+          "views": "6120"
+        },
+        {
+          "author": "Barnini Chakraborty",
+          "users": "4183",
+          "views": "4089"
+        },
+        {
+          "author": "Timothy P. Carney",
+          "users": "3791",
+          "views": "3689"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "3712",
+          "views": "3673"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "3485",
+          "views": "3474"
+        },
+        {
+          "author": "Lauren Green",
+          "users": "2936",
+          "views": "2956"
+        }
+      ],
+      "articles": [
+        {
+          "title": "US decimates Iranian base in Strait of Hormuz as IRGC says shipping lane closed",
+          "users": "36663",
+          "views": "36541"
+        },
+        {
+          "title": "Gorsuch questions how one regular marijuana gummy could allow for taking away gun rights",
+          "users": "18801",
+          "views": "18463"
+        },
+        {
+          "title": "April Social Security direct payment worth $994 goes out in 29 days",
+          "users": "16492",
+          "views": "16178"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "12777",
+          "views": "23523"
+        },
+        {
+          "title": "Oil prices will likely fall quickly",
+          "users": "8925",
+          "views": "8608"
+        },
+        {
+          "title": "UK, France, and Germany jump into the fray in Iran, vowing to defend Gulf allies",
+          "users": "6114",
+          "views": "6148"
+        },
+        {
+          "title": "Trump, forever wars, and Iraq Syndrome",
+          "users": "5609",
+          "views": "5662"
+        },
+        {
+          "title": "No, the War Powers Resolution doesn’t give the president 60 days of free war",
+          "users": "3720",
+          "views": "3626"
+        },
+        {
+          "title": "California Democratic Party chair tells struggling gubernatorial candidates to drop out",
+          "users": "2703",
+          "views": "2632"
+        },
+        {
+          "title": "Virginia mosque with alleged ties to Iran regime holds remembrance service for ‘martyr’ Ali Khamenei",
+          "users": "2531",
+          "views": "2503"
+        },
+        {
+          "title": "Republicans didn’t cut Medicaid — but Democrats did make a mess of it",
+          "users": "2530",
+          "views": "2477"
+        },
+        {
+          "title": "Centrist Democrats buck Jeffries and offer Trump 30-day clock to wage Iran conflict",
+          "users": "2489",
+          "views": "2472"
+        },
+        {
+          "title": "An online meltdown over a return to biological reality in Kansas",
+          "users": "2192",
+          "views": "2179"
+        },
+        {
+          "title": "Justice Department abandons defense of Trump executive orders targeting law firms",
+          "users": "2167",
+          "views": "2158"
+        },
+        {
+          "title": "Qatar shot down two Iranian bomber jets",
+          "users": "2066",
+          "views": "2074"
+        }
+      ],
+      "sections": [
+        {
+          "section": "World",
+          "users": "43564",
+          "views": "43614"
+        },
+        {
+          "section": "Supreme Court",
+          "users": "19003",
+          "views": "18593"
+        },
+        {
+          "section": "Finance and Economy",
+          "users": "18624",
+          "views": "18464"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "13578",
+          "views": "13542"
+        },
+        {
+          "section": "Defense",
+          "users": "6148",
+          "views": "6187"
+        },
+        {
+          "section": "Campaigns",
+          "users": "5100",
+          "views": "5051"
+        },
+        {
+          "section": "House",
+          "users": "4949",
+          "views": "4964"
+        },
+        {
+          "section": "News",
+          "users": "3468",
+          "views": "3425"
+        },
+        {
+          "section": "Investigations",
+          "users": "2744",
+          "views": "2734"
+        },
+        {
+          "section": "Faith, Freedom, and Self-Reliance",
+          "users": "2643",
+          "views": "2598"
+        }
+      ]
     }
   ],
   "meta": {
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 28,
-    "uniqueSections": 20,
+    "uniqueAuthors": 30,
+    "uniqueSections": 19,
     "sampleAuthors": [
+      "Mabinty Quarshie",
       "Mia Cathell",
-      "Asher Notheis",
-      "Rachel Schilke",
-      "Robert Schmad",
-      "Christopher Tremoglie"
+      "Christopher Tremoglie",
+      "Steven Taff",
+      "Asher Notheis"
     ],
     "sampleSections": [
+      "Beltway Confidential",
+      "White House",
       "Investigations",
       "News",
-      "Finance and Economy",
-      "Beltway Confidential",
-      "World"
+      "Justice"
     ]
   }
 }

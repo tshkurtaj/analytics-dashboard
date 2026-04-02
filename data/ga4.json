@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-04-01T07:48:58.125Z",
+  "updatedAt": "2026-04-02T07:43:00.460Z",
   "range": {
-    "start": "2026-03-25",
-    "end": "2026-03-31"
+    "start": "2026-03-26",
+    "end": "2026-04-01"
   },
   "rows": [
-    {
-      "date": "20260325",
-      "totalUsers": 178059,
-      "newUsers": 81962,
-      "pageviews": 207301,
-      "sessions": 199409,
-      "bounceRate": 0.6901794803644771,
-      "averageSessionDuration": 89.89033813743112,
-      "referrers": [
-        {
-          "source": "smartnews.com",
-          "users": 48530
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 41495
-        },
-        {
-          "source": "(direct)",
-          "users": 41485
-        },
-        {
-          "source": "s0.2mdn.net",
-          "users": 11134
-        },
-        {
-          "source": "google",
-          "users": 10874
-        },
-        {
-          "source": "drudgereport.com",
-          "users": 2694
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 2441
-        },
-        {
-          "source": "deployer",
-          "users": 2001
-        },
-        {
-          "source": "t.co",
-          "users": 1895
-        },
-        {
-          "source": "newsbreak",
-          "users": 1720
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1542
-        },
-        {
-          "source": "bing",
-          "users": 1140
-        },
-        {
-          "source": "facebook.com",
-          "users": 945
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 693
-        },
-        {
-          "source": "msn.com",
-          "users": 672
-        }
-      ],
-      "authors": [
-        {
-          "author": "Asher Notheis",
-          "users": "32390",
-          "views": "34209"
-        },
-        {
-          "author": "Heyrsh Abdulrahman",
-          "users": "12393",
-          "views": "12782"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "10456",
-          "views": "11142"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "8681",
-          "views": "8754"
-        },
-        {
-          "author": "Jack Birle",
-          "users": "7005",
-          "views": "7331"
-        },
-        {
-          "author": "Washington Examiner Staff",
-          "users": "6028",
-          "views": "6272"
-        },
-        {
-          "author": "Zachary Faria",
-          "users": "3483",
-          "views": "3610"
-        },
-        {
-          "author": "Samantha-Jo Roth",
-          "users": "3150",
-          "views": "3250"
-        },
-        {
-          "author": "David Sivak",
-          "users": "3076",
-          "views": "3372"
-        },
-        {
-          "author": "Lauren Green",
-          "users": "2724",
-          "views": "2823"
-        }
-      ],
-      "articles": [
-        {
-          "title": "April Social Security direct payment worth $994 goes out in seven days",
-          "users": "17428",
-          "views": "18231"
-        },
-        {
-          "title": "The endgame in Iran may already be taking shape",
-          "users": "12733",
-          "views": "13100"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "12554",
-          "views": "22250"
-        },
-        {
-          "title": "Trump is expanding opportunities to invest in America’s future",
-          "users": "11183",
-          "views": "4988"
-        },
-        {
-          "title": "Abigail Spanberger makes direct appeal for voters to support map that would give Democrats 10-1 control",
-          "users": "8115",
-          "views": "8339"
-        },
-        {
-          "title": "Trump names Mark Zuckerberg, Larry Ellison, and other leaders to tech council",
-          "users": "6948",
-          "views": "7051"
-        },
-        {
-          "title": "‘Online movement’ against John Fetterman is only present in the ‘far-left’: Salena Zito",
-          "users": "4730",
-          "views": "4782"
-        },
-        {
-          "title": "Third round of March Social Security payments goes out today",
-          "users": "4579",
-          "views": "4724"
-        },
-        {
-          "title": "DOJ John Brennan inquiry ramps up after GOP votes to send classified transcripts",
-          "users": "4006",
-          "views": "944"
-        },
-        {
-          "title": "Philadelphia district attorney threatens to arrest ICE officers patrolling airport",
-          "users": "3535",
-          "views": "3552"
-        },
-        {
-          "title": "Ketanji Brown Jackson accuses RNC of wanting Supreme Court to do Congress’s job on mail ballot laws",
-          "users": "3477",
-          "views": "3521"
-        },
-        {
-          "title": "The number of abortions slightly increased in 2025",
-          "users": "3296",
-          "views": "3132"
-        },
-        {
-          "title": "GOP concern grows as FCC commissioner Brendan Carr may have reshaped Texas Senate race",
-          "users": "3138",
-          "views": "3236"
-        },
-        {
-          "title": "Democrats blame victim in Chicago murder case with illegal immigrant suspect",
-          "users": "2928",
-          "views": "2988"
-        },
-        {
-          "title": "The Strait of Hormuz will reopen. Washington will pay the cost",
-          "users": "2648",
-          "views": "2696"
-        }
-      ],
-      "sections": [
-        {
-          "section": "News",
-          "users": "29949",
-          "views": "31592"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "15588",
-          "views": "16522"
-        },
-        {
-          "section": "House",
-          "users": "15140",
-          "views": "16655"
-        },
-        {
-          "section": "Technology",
-          "users": "7168",
-          "views": "7190"
-        },
-        {
-          "section": "Senate",
-          "users": "6563",
-          "views": "6784"
-        },
-        {
-          "section": "Supreme Court",
-          "users": "6002",
-          "views": "6297"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "5155",
-          "views": "5499"
-        },
-        {
-          "section": "Courage, Strength, and Optimism",
-          "users": "4807",
-          "views": "4980"
-        },
-        {
-          "section": "Campaigns",
-          "users": "3461",
-          "views": "3575"
-        },
-        {
-          "section": "Justice",
-          "users": "2599",
-          "views": "2697"
-        }
-      ]
-    },
     {
       "date": "20260326",
       "totalUsers": 175452,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260331",
-      "totalUsers": 209012,
-      "newUsers": 78551,
-      "pageviews": 224281,
-      "sessions": 228726,
-      "bounceRate": 0.8690354397838461,
-      "averageSessionDuration": 146.98251018837388,
+      "totalUsers": 210277,
+      "newUsers": 81974,
+      "pageviews": 234173,
+      "sessions": 242709,
+      "bounceRate": 0.7040900831860376,
+      "averageSessionDuration": 85.9605734044267,
       "referrers": [
         {
           "source": "smartnews.com",
-          "users": 64866
+          "users": 65849
         },
         {
           "source": "newsbreak.com",
-          "users": 60766
+          "users": 61947
         },
         {
           "source": "(direct)",
-          "users": 39900
-        },
-        {
-          "source": "(not set)",
-          "users": 39133
+          "users": 40290
         },
         {
           "source": "google",
-          "users": 8186
+          "users": 9464
         },
         {
           "source": "reddit.com",
-          "users": 5638
+          "users": 5816
         },
         {
           "source": "newsbreak",
-          "users": 3224
+          "users": 3303
         },
         {
           "source": "realclearpolitics.com",
-          "users": 3081
+          "users": 3110
         },
         {
           "source": "s0.2mdn.net",
-          "users": 2856
+          "users": 2970
         },
         {
           "source": "deployer",
-          "users": 2483
+          "users": 2550
         },
         {
           "source": "newsbreakapp.com",
-          "users": 2332
+          "users": 2400
         },
         {
           "source": "m.facebook.com",
-          "users": 1672
+          "users": 1904
         },
         {
           "source": "t.co",
-          "users": 1277
-        },
-        {
-          "source": "(data not available)",
-          "users": 1204
+          "users": 1312
         },
         {
           "source": "bing",
-          "users": 1053
+          "users": 1071
+        },
+        {
+          "source": "facebook.com",
+          "users": 747
+        },
+        {
+          "source": "duckduckgo",
+          "users": 626
         }
       ],
       "authors": [
         {
           "author": "David Zimmermann",
-          "users": "43843",
-          "views": "43420"
+          "users": "44070",
+          "views": "45560"
         },
         {
           "author": "Asher Notheis",
-          "users": "18955",
-          "views": "19600"
+          "users": "19138",
+          "views": "20488"
         },
         {
           "author": "Gabrielle M. Etzel",
-          "users": "16535",
-          "views": "16475"
+          "users": "16867",
+          "views": "17191"
         },
         {
           "author": "Jeremy Tedesco",
-          "users": "13988",
-          "views": "13910"
+          "users": "14027",
+          "views": "14496"
         },
         {
           "author": "Brady Knox",
-          "users": "11457",
-          "views": "11410"
+          "users": "11669",
+          "views": "11926"
         },
         {
           "author": "Mia Cathell",
-          "users": "6697",
-          "views": "6640"
+          "users": "6719",
+          "views": "6852"
         },
         {
           "author": "Molly Parks",
-          "users": "5280",
-          "views": "5449"
+          "users": "5353",
+          "views": "5655"
         },
         {
           "author": "Zachary Faria",
-          "users": "3413",
-          "views": "3457"
+          "users": "3432",
+          "views": "3583"
         },
         {
           "author": "Washington Examiner Staff",
-          "users": "3174",
-          "views": "3139"
+          "users": "3232",
+          "views": "3293"
         },
         {
           "author": "Claire Carter",
-          "users": "3119",
-          "views": "3163"
+          "users": "3160",
+          "views": "3300"
         }
       ],
       "articles": [
         {
           "title": "Iran says US-Israel strike knocked desalination plant offline in Strait of Hormuz",
-          "users": "42500",
-          "views": "42458"
+          "users": "42685",
+          "views": "44555"
         },
         {
           "title": "RFK Jr. and Dr. Oz say hospitals will lose funding if they serve unhealthy food",
-          "users": "16620",
-          "views": "16405"
+          "users": "16933",
+          "views": "17119"
         },
         {
           "title": "What Finland just did to a Christian grandmother is coming to America",
-          "users": "14745",
-          "views": "14411"
+          "users": "14770",
+          "views": "15019"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "11751",
-          "views": "18559"
+          "users": "11789",
+          "views": "19373"
         },
         {
           "title": "Netanyahu says Iran war ‘beyond the halfway point,’ tells Trump to ignore anti-war polls",
-          "users": "8464",
-          "views": "8336"
+          "users": "8637",
+          "views": "8717"
         },
         {
           "title": "Hegseth lifts suspensions of Apache crews who flew by Kid Rock's house",
-          "users": "8378",
-          "views": "1655"
+          "users": "8398",
+          "views": "1710"
         },
         {
           "title": "April Social Security direct payment worth $994 goes out in two days",
-          "users": "8150",
-          "views": "8134"
+          "users": "8188",
+          "views": "8507"
         },
         {
           "title": "Feeding Our Future fraudster sentenced to just one year in prison by judge committed to ‘combating racism’",
-          "users": "6317",
-          "views": "6289"
+          "users": "6341",
+          "views": "6492"
         },
         {
           "title": "Trump says he’s working to fix ‘absolutely filthy’ Lincoln Memorial reflecting pool",
-          "users": "3937",
-          "views": "3932"
+          "users": "4001",
+          "views": "4071"
         },
         {
           "title": "The Strait of Hormuz’s bitter lesson for the European Union",
-          "users": "3337",
-          "views": "3086"
+          "users": "3355",
+          "views": "3217"
         },
         {
           "title": "‘No Kings’ protests are ‘regurgitating’ the same voters from 2024: Salena Zito",
-          "users": "3275",
-          "views": "3204"
+          "users": "3321",
+          "views": "3368"
         },
         {
           "title": "Johnson wants airlines to pause perk letting lawmakers skip TSA lines until DHS is funded",
-          "users": "2948",
-          "views": "2879"
+          "users": "2970",
+          "views": "3008"
         },
         {
           "title": "Trump is expanding opportunities to invest in America’s future",
-          "users": "2879",
+          "users": "2945",
           "views": "2"
         },
         {
           "title": "Tom Homan defends ICE wearing masks: ‘Stop calling ICE Nazis and racists’",
-          "users": "2871",
-          "views": "2837"
+          "users": "2927",
+          "views": "2975"
         },
         {
           "title": "Trump is cracking down on the welfare fraud no one’s talking about",
-          "users": "2571",
-          "views": "2561"
+          "users": "2594",
+          "views": "2675"
         }
       ],
       "sections": [
         {
           "section": "Defense",
-          "users": "47243",
-          "views": "47356"
+          "users": "47524",
+          "views": "49668"
         },
         {
           "section": "Healthcare",
-          "users": "16651",
-          "views": "16575"
+          "users": "16973",
+          "views": "17296"
         },
         {
           "section": "Fairness and Justice",
-          "users": "15808",
-          "views": "15947"
+          "users": "15875",
+          "views": "16628"
         },
         {
           "section": "News",
-          "users": "13586",
-          "views": "13664"
+          "users": "13713",
+          "views": "14284"
         },
         {
           "section": "World",
-          "users": "11099",
-          "views": "11081"
+          "users": "11301",
+          "views": "11571"
         },
         {
           "section": "Justice",
-          "users": "10608",
-          "views": "10859"
+          "users": "10652",
+          "views": "11248"
         },
         {
           "section": "Entertainment",
-          "users": "8084",
-          "views": "8352"
+          "users": "8175",
+          "views": "8740"
         },
         {
           "section": "Op-Eds",
-          "users": "6059",
-          "views": "6168"
+          "users": "6095",
+          "views": "6417"
         },
         {
           "section": "Energy and Environment",
-          "users": "4388",
-          "views": "4414"
+          "users": "4455",
+          "views": "4577"
         },
         {
           "section": "House",
-          "users": "3928",
-          "views": "3922"
+          "users": "3957",
+          "views": "4102"
+        }
+      ]
+    },
+    {
+      "date": "20260401",
+      "totalUsers": 204230,
+      "newUsers": 83320,
+      "pageviews": 208914,
+      "sessions": 233356,
+      "bounceRate": 0.8598279024323351,
+      "averageSessionDuration": 174.23975056877902,
+      "referrers": [
+        {
+          "source": "smartnews.com",
+          "users": 52940
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 52661
+        },
+        {
+          "source": "(direct)",
+          "users": 42731
+        },
+        {
+          "source": "(not set)",
+          "users": 42064
+        },
+        {
+          "source": "google",
+          "users": 8274
+        },
+        {
+          "source": "(data not available)",
+          "users": 7182
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 3990
+        },
+        {
+          "source": "t.co",
+          "users": 3990
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 3323
+        },
+        {
+          "source": "s0.2mdn.net",
+          "users": 3275
+        },
+        {
+          "source": "reddit.com",
+          "users": 3079
+        },
+        {
+          "source": "deployer",
+          "users": 2415
+        },
+        {
+          "source": "go.bsky.app",
+          "users": 2336
+        },
+        {
+          "source": "newsbreak",
+          "users": 1613
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 984
+        }
+      ],
+      "authors": [
+        {
+          "author": "Asher Notheis",
+          "users": "26582",
+          "views": "26335"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "13680",
+          "views": "13676"
+        },
+        {
+          "author": "Mia Cathell",
+          "users": "12310",
+          "views": "11939"
+        },
+        {
+          "author": "Brady Knox",
+          "users": "11128",
+          "views": "11154"
+        },
+        {
+          "author": "Britta Miller",
+          "users": "10118",
+          "views": "10460"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "8217",
+          "views": "8502"
+        },
+        {
+          "author": "Claire Carter",
+          "users": "7305",
+          "views": "7473"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "5442",
+          "views": "5504"
+        },
+        {
+          "author": "Gabrielle M. Etzel",
+          "users": "4294",
+          "views": "4231"
+        },
+        {
+          "author": "Zachary Faria",
+          "users": "4016",
+          "views": "3944"
+        }
+      ],
+      "articles": [
+        {
+          "title": "April Social Security direct payment worth $994 goes out Wednesday",
+          "users": "21387",
+          "views": "20798"
+        },
+        {
+          "title": "Border Patrol chief Michael Banks hit with prostitution allegations by agents",
+          "users": "18561",
+          "views": "8462"
+        },
+        {
+          "title": "Feeding Our Future fraudster sentenced to just one year in prison by judge committed to ‘combating racism’",
+          "users": "12226",
+          "views": "11856"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "11626",
+          "views": "19122"
+        },
+        {
+          "title": "Iran says US-Israel strike knocked desalination plant offline in Strait of Hormuz",
+          "users": "10829",
+          "views": "10765"
+        },
+        {
+          "title": "Iran launches mass text-based recruitment drive, including minors, to join targeted security forces",
+          "users": "6907",
+          "views": "6843"
+        },
+        {
+          "title": "Democrats are the kings of hypocrisy",
+          "users": "6244",
+          "views": "5121"
+        },
+        {
+          "title": "Nancy Grace criticizes Democrats at State of the Union: ‘How could you not care?’",
+          "users": "5391",
+          "views": "5249"
+        },
+        {
+          "title": "Democrats not seeing political reversal from shutdown ‘because of something Republicans did’: Byron York",
+          "users": "5390",
+          "views": "5198"
+        },
+        {
+          "title": "Hegseth lifts suspensions of Apache crews who flew by Kid Rock's house",
+          "users": "5137",
+          "views": "1124"
+        },
+        {
+          "title": "Trump says he’s working to fix ‘absolutely filthy’ Lincoln Memorial reflecting pool",
+          "users": "4343",
+          "views": "4320"
+        },
+        {
+          "title": "RFK Jr. and Dr. Oz say hospitals will lose funding if they serve unhealthy food",
+          "users": "4175",
+          "views": "4119"
+        },
+        {
+          "title": "Judge orders California to pay hefty attorney fees after loss in school secret gender transition case",
+          "users": "4030",
+          "views": "3995"
+        },
+        {
+          "title": "What Finland just did to a Christian grandmother is coming to America",
+          "users": "3828",
+          "views": "3738"
+        },
+        {
+          "title": "Alex Vindman raises $8.2 million in Senate bid as Florida Democrats feel momentum",
+          "users": "3536",
+          "views": "3474"
+        }
+      ],
+      "sections": [
+        {
+          "section": "News",
+          "users": "24711",
+          "views": "24235"
+        },
+        {
+          "section": "Justice",
+          "users": "21839",
+          "views": "22106"
+        },
+        {
+          "section": "Defense",
+          "users": "12251",
+          "views": "12312"
+        },
+        {
+          "section": "World",
+          "users": "11235",
+          "views": "11313"
+        },
+        {
+          "section": "Entertainment",
+          "users": "10292",
+          "views": "10468"
+        },
+        {
+          "section": "Senate",
+          "users": "5701",
+          "views": "5516"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "5434",
+          "views": "5353"
+        },
+        {
+          "section": "Energy and Environment",
+          "users": "4879",
+          "views": "4862"
+        },
+        {
+          "section": "Supreme Court",
+          "users": "4746",
+          "views": "5099"
+        },
+        {
+          "section": "In Focus",
+          "users": "4603",
+          "views": "4579"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 31,
+    "uniqueAuthors": 29,
     "uniqueSections": 23,
     "sampleAuthors": [
       "Asher Notheis",
-      "Heyrsh Abdulrahman",
-      "Molly Parks",
-      "David Zimmermann",
-      "Jack Birle"
+      "Washington Examiner Staff",
+      "Ramsey Touchberry",
+      "Jack Birle",
+      "David Zimmermann"
     ],
     "sampleSections": [
       "News",
-      "Op-Eds",
+      "Senate",
       "House",
-      "Technology",
-      "Senate"
+      "White House",
+      "Technology"
     ]
   }
 }

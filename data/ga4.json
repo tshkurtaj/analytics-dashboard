@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-04-22T07:52:01.493Z",
+  "updatedAt": "2026-04-23T07:52:35.002Z",
   "range": {
-    "start": "2026-04-15",
-    "end": "2026-04-21"
+    "start": "2026-04-16",
+    "end": "2026-04-22"
   },
   "rows": [
-    {
-      "date": "20260415",
-      "totalUsers": 158759,
-      "newUsers": 55411,
-      "pageviews": 191479,
-      "sessions": 184941,
-      "bounceRate": 0.7000556934373665,
-      "averageSessionDuration": 92.09872707151472,
-      "referrers": [
-        {
-          "source": "smartnews.com",
-          "users": 57981
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 48067
-        },
-        {
-          "source": "(direct)",
-          "users": 27127
-        },
-        {
-          "source": "google",
-          "users": 8305
-        },
-        {
-          "source": "t.co",
-          "users": 2147
-        },
-        {
-          "source": "newsbreak",
-          "users": 1996
-        },
-        {
-          "source": "facebook.com",
-          "users": 1661
-        },
-        {
-          "source": "deployer",
-          "users": 1584
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1143
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1140
-        },
-        {
-          "source": "bing",
-          "users": 861
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 730
-        },
-        {
-          "source": "duckduckgo",
-          "users": 607
-        },
-        {
-          "source": "referral",
-          "users": 426
-        },
-        {
-          "source": "newsshowcase",
-          "users": 392
-        }
-      ],
-      "authors": [
-        {
-          "author": "David Zimmermann",
-          "users": "23126",
-          "views": "23967"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "15757",
-          "views": "16444"
-        },
-        {
-          "author": "Robert Schmad",
-          "users": "15648",
-          "views": "16028"
-        },
-        {
-          "author": "Haris Alic",
-          "users": "14169",
-          "views": "14488"
-        },
-        {
-          "author": "Claire Carter",
-          "users": "6988",
-          "views": "7432"
-        },
-        {
-          "author": "Washington Examiner Staff",
-          "users": "6634",
-          "views": "6965"
-        },
-        {
-          "author": "Jack Birle",
-          "users": "6418",
-          "views": "6626"
-        },
-        {
-          "author": "Timothy Nerozzi",
-          "users": "6087",
-          "views": "6242"
-        },
-        {
-          "author": "Asher Notheis",
-          "users": "5874",
-          "views": "6370"
-        },
-        {
-          "author": "Rena Rowe",
-          "users": "5103",
-          "views": "5241"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Russia planning to put nuclear weapons in space, US general warns",
-          "users": "21818",
-          "views": "22382"
-        },
-        {
-          "title": "Lone Democrat, Republicans who voted against housing bill have financial ties to its opponents",
-          "users": "15324",
-          "views": "15558"
-        },
-        {
-          "title": "Scandals won’t stop Eric Swalwell from getting $22,000 a-year taxpayer-funded pension",
-          "users": "14072",
-          "views": "14461"
-        },
-        {
-          "title": "Iran threatens to halt Red Sea trade if US Hormuz blockade continues",
-          "users": "11574",
-          "views": "11983"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9986",
-          "views": "17061"
-        },
-        {
-          "title": "Secret Service warns court of ‘numerous security risks’ if White House ballroom project halted now",
-          "users": "4385",
-          "views": "4461"
-        },
-        {
-          "title": "Magyar demands Hungarian president step down or else be removed by force",
-          "users": "4082",
-          "views": "4165"
-        },
-        {
-          "title": "Spanberger signs bill to award Virginia electoral votes to popular vote winner",
-          "users": "3996",
-          "views": "4147"
-        },
-        {
-          "title": "Trump wants Pope Leo to know that ‘Iran has killed 42,000 innocent’ protesters",
-          "users": "3637",
-          "views": "3607"
-        },
-        {
-          "title": "White House orders NASA and Pentagon to develop nuclear space reactors",
-          "users": "3123",
-          "views": "3177"
-        },
-        {
-          "title": "Gas prices: Five days of decreases at the pumps",
-          "users": "3073",
-          "views": "3135"
-        },
-        {
-          "title": "Whistleblower contacted Democrats before filing Trump complaint that led to first impeachment, records show",
-          "users": "2960",
-          "views": "3016"
-        },
-        {
-          "title": "Spain legalizes residency of over 500,000 illegal immigrants in the country",
-          "users": "2790",
-          "views": "2853"
-        },
-        {
-          "title": "Second round of April Social Security payments goes out today",
-          "users": "2674",
-          "views": "2811"
-        },
-        {
-          "title": "Senate GOP ‘prepared’ to confirm Alito high court replacement before midterm elections",
-          "users": "2568",
-          "views": "2633"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Space",
-          "users": "24615",
-          "views": "25446"
-        },
-        {
-          "section": "House",
-          "users": "20326",
-          "views": "21654"
-        },
-        {
-          "section": "World",
-          "users": "17059",
-          "views": "17683"
-        },
-        {
-          "section": "Investigations",
-          "users": "15829",
-          "views": "16211"
-        },
-        {
-          "section": "News",
-          "users": "9615",
-          "views": "10462"
-        },
-        {
-          "section": "Justice",
-          "users": "7942",
-          "views": "8403"
-        },
-        {
-          "section": "Immigration",
-          "users": "5395",
-          "views": "5617"
-        },
-        {
-          "section": "Entertainment",
-          "users": "3953",
-          "views": "4271"
-        },
-        {
-          "section": "Senate",
-          "users": "3924",
-          "views": "4042"
-        },
-        {
-          "section": "Presidential",
-          "users": "3896",
-          "views": "4035"
-        }
-      ]
-    },
     {
       "date": "20260416",
       "totalUsers": 201662,
@@ -382,78 +130,78 @@
       "articles": [
         {
           "title": "Somali fugitive fleeing Minnesota fraud charges is an Ilhan Omar donor",
-          "users": "47307",
-          "views": "49412"
+          "users": "47479",
+          "views": "49462"
         },
         {
           "title": "America is on the verge of bankruptcy. Nothing will matter when the crisis hits",
-          "users": "27313",
-          "views": "28252"
+          "users": "27436",
+          "views": "28345"
         },
         {
           "title": "Newsom admits calling speedy Swalwell special election to undercut Mike Johnson",
-          "users": "14099",
-          "views": "14537"
+          "users": "14143",
+          "views": "14549"
         },
         {
           "title": "Democrats vow to block next Trump Supreme Court pick amid Alito speculation",
-          "users": "10906",
-          "views": "11323"
+          "users": "10901",
+          "views": "11334"
         },
         {
           "title": "Russia planning to put nuclear weapons in space, US general warns",
-          "users": "10031",
-          "views": "10333"
+          "users": "10015",
+          "views": "10335"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9856",
-          "views": "17171"
+          "users": "9854",
+          "views": "17258"
         },
         {
           "title": "May Social Security direct payment worth $994 goes out in 15 days",
-          "users": "5716",
-          "views": "5533"
+          "users": "5728",
+          "views": "5539"
         },
         {
           "title": "Magyar demands Hungarian president step down or else be removed by force",
-          "users": "4988",
-          "views": "5094"
+          "users": "4968",
+          "views": "5079"
         },
         {
           "title": "Scandals won’t stop Eric Swalwell from getting $22,000 a-year taxpayer-funded pension",
-          "users": "4884",
-          "views": "5033"
+          "users": "4886",
+          "views": "5038"
         },
         {
           "title": "Virginia redistricting vote tightens as early turnout surges",
-          "users": "4412",
-          "views": "2691"
+          "users": "4432",
+          "views": "2699"
         },
         {
           "title": "Lone Democrat, Republicans who voted against housing bill have financial ties to its opponents",
-          "users": "3598",
-          "views": "3655"
+          "users": "3604",
+          "views": "3661"
         },
         {
           "title": "Democrats governed California into the ground. Now they can’t field a candidate",
           "users": "2701",
-          "views": "2772"
+          "views": "2773"
         },
         {
           "title": "Democrats turn on Spanberger over plummeting popularity amid redistricting battle",
-          "users": "2687",
-          "views": "2712"
+          "users": "2674",
+          "views": "2699"
         },
         {
           "title": "Third round of April Social Security payments goes out in six days",
-          "users": "2228",
-          "views": "2359"
+          "users": "2235",
+          "views": "2364"
         },
         {
           "title": "Secret Service warns court of ‘numerous security risks’ if White House ballroom project halted now",
-          "users": "2220",
-          "views": "2256"
+          "users": "2206",
+          "views": "2241"
         }
       ],
       "sections": [
@@ -634,78 +382,78 @@
       "articles": [
         {
           "title": "Kamala Harris announces she’s thinking about losing again",
-          "users": "13802",
-          "views": "14137"
+          "users": "13931",
+          "views": "14100"
         },
         {
           "title": "Newsom admits calling speedy Swalwell special election to undercut Mike Johnson",
-          "users": "11284",
-          "views": "11561"
+          "users": "11253",
+          "views": "11562"
         },
         {
           "title": "Democrats turn on Spanberger over plummeting popularity amid redistricting battle",
-          "users": "10913",
-          "views": "10745"
+          "users": "10901",
+          "views": "10728"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9807",
-          "views": "17271"
+          "users": "9842",
+          "views": "17400"
         },
         {
           "title": "Somali fugitive fleeing Minnesota fraud charges is an Ilhan Omar donor",
-          "users": "8482",
+          "users": "8488",
           "views": "8040"
         },
         {
           "title": "Chuck Grassley, the longest-serving senator, hints at a ninth term",
-          "users": "7981",
-          "views": "8260"
+          "users": "8026",
+          "views": "8292"
         },
         {
           "title": "Trump is putting money back in the pockets of Americans: Joe Concha",
-          "users": "6466",
-          "views": "6643"
+          "users": "6507",
+          "views": "6684"
         },
         {
           "title": "Iran’s Hormuz blockade restarted over frustration with Trump’s public comments",
-          "users": "5761",
-          "views": "5753"
+          "users": "5770",
+          "views": "5768"
         },
         {
           "title": "America is on the verge of bankruptcy. Nothing will matter when the crisis hits",
-          "users": "5708",
-          "views": "5897"
+          "users": "5693",
+          "views": "5885"
         },
         {
           "title": "Democrats governed California into the ground. Now they can’t field a candidate",
-          "users": "3872",
-          "views": "3983"
+          "users": "3832",
+          "views": "3944"
         },
         {
           "title": "Conservative Virginia's last stand against DC 'burbs on redistricting",
-          "users": "3820",
-          "views": "2810"
+          "users": "3819",
+          "views": "2829"
         },
         {
           "title": "Donald Trump is losing his mind",
-          "users": "3190",
-          "views": "2526"
+          "users": "3217",
+          "views": "2551"
         },
         {
           "title": "China keeps trying to poison America",
-          "users": "3151",
-          "views": "3229"
+          "users": "3153",
+          "views": "3238"
         },
         {
           "title": "May Social Security direct payment worth $994 goes out in 14 days",
-          "users": "3140",
-          "views": "3003"
+          "users": "3138",
+          "views": "3005"
         },
         {
           "title": "Pete Hegseth",
-          "users": "2324",
-          "views": "829"
+          "users": "2342",
+          "views": "836"
         }
       ],
       "sections": [
@@ -886,78 +634,78 @@
       "articles": [
         {
           "title": "Iran fires on multiple vessels after re-closing Strait of Hormuz",
-          "users": "13566",
-          "views": "14012"
+          "users": "13594",
+          "views": "14036"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "8552",
-          "views": "14590"
+          "users": "8602",
+          "views": "14713"
         },
         {
           "title": "Trump is putting money back in the pockets of Americans: Joe Concha",
-          "users": "7025",
-          "views": "7323"
+          "users": "7020",
+          "views": "7314"
         },
         {
           "title": "Kamala Harris announces she’s thinking about losing again",
-          "users": "6152",
-          "views": "6224"
+          "users": "6155",
+          "views": "6228"
         },
         {
           "title": "Iran’s Hormuz blockade restarted over frustration with Trump’s public comments",
-          "users": "5587",
-          "views": "5646"
+          "users": "5605",
+          "views": "5671"
         },
         {
           "title": "Trump is solving the healthcare crisis and cleaning up Obama’s mess",
-          "users": "4020",
+          "users": "4021",
           "views": "4128"
         },
         {
           "title": "America is on the verge of bankruptcy. Nothing will matter when the crisis hits",
-          "users": "3971",
-          "views": "4011"
+          "users": "3973",
+          "views": "4015"
         },
         {
           "title": "Manchin ‘rooting’ for GOP to keep Senate over fear Democrats will blow up filibuster",
-          "users": "3808",
-          "views": "3879"
+          "users": "3801",
+          "views": "3872"
         },
         {
           "title": "Senate Democrats lost in space on attempt to kill education freedom tax credit",
-          "users": "3614",
+          "users": "3612",
           "views": "3694"
         },
         {
           "title": "Newsom admits calling speedy Swalwell special election to undercut Mike Johnson",
-          "users": "3153",
-          "views": "3227"
+          "users": "3167",
+          "views": "3242"
         },
         {
           "title": "Somali fugitive fleeing Minnesota fraud charges is an Ilhan Omar donor",
-          "users": "2960",
-          "views": "2743"
+          "users": "2955",
+          "views": "2741"
         },
         {
           "title": "Donald Trump is losing his mind",
-          "users": "2740",
-          "views": "2471"
+          "users": "2739",
+          "views": "2461"
         },
         {
           "title": "Democrats turn on Spanberger over plummeting popularity amid redistricting battle",
-          "users": "2675",
-          "views": "2294"
+          "users": "2671",
+          "views": "2292"
         },
         {
           "title": "Trump isn’t looking for an exit in Iran",
-          "users": "2526",
-          "views": "2608"
+          "users": "2524",
+          "views": "2603"
         },
         {
           "title": "Chuck Grassley, the longest-serving senator, hints at a ninth term",
-          "users": "2385",
-          "views": "2470"
+          "users": "2399",
+          "views": "2482"
         }
       ],
       "sections": [
@@ -1138,78 +886,78 @@
       "articles": [
         {
           "title": "Manchin ‘rooting’ for GOP to keep Senate over fear Democrats will blow up filibuster",
-          "users": "31737",
-          "views": "32800"
+          "users": "31677",
+          "views": "32782"
         },
         {
           "title": "Trump is putting money back in the pockets of Americans: Joe Concha",
-          "users": "12975",
-          "views": "13834"
+          "users": "12990",
+          "views": "13881"
         },
         {
           "title": "Trump and Iran announce Strait of Hormuz ‘completely open’ for rest of Israel-Lebanon ceasefire",
-          "users": "9812",
-          "views": "9972"
+          "users": "9854",
+          "views": "10010"
         },
         {
           "title": "Prosecutor who charged ICE officer took $286K from far-left PACs",
-          "users": "9550",
-          "views": "9952"
+          "users": "9547",
+          "views": "9964"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9062",
-          "views": "14884"
+          "users": "9088",
+          "views": "14964"
         },
         {
           "title": "Virginia could lose influence in Congress if Spanberger’s gerrymander passes",
-          "users": "8844",
-          "views": "9066"
+          "users": "8827",
+          "views": "9045"
         },
         {
           "title": "Anti-ICE billionaire Tom Steyer wants to make California even more unaffordable",
-          "users": "8251",
-          "views": "8363"
+          "users": "8191",
+          "views": "8337"
         },
         {
           "title": "The weekslong FISA battle that ended in an overnight defeat for Mike Johnson",
-          "users": "7833",
-          "views": "8015"
+          "users": "7849",
+          "views": "8046"
         },
         {
           "title": "Kamala Harris announces she’s thinking about losing again",
-          "users": "6356",
-          "views": "6434"
+          "users": "6363",
+          "views": "6442"
         },
         {
           "title": "May Social Security direct payment worth $994 goes out in 12 days",
-          "users": "5685",
-          "views": "5475"
+          "users": "5663",
+          "views": "5432"
         },
         {
           "title": "Trump and the Christian Right crack-up",
-          "users": "5486",
-          "views": "4796"
+          "users": "5465",
+          "views": "4780"
         },
         {
           "title": "Democratics' socialist turn is a GOP Electoral College dream",
-          "users": "4872",
-          "views": "3720"
+          "users": "4880",
+          "views": "3707"
         },
         {
           "title": "Transportation industry showers son-in-law of transportation secretary with cash to fuel congressional bid",
-          "users": "3840",
-          "views": "3894"
+          "users": "3802",
+          "views": "3856"
         },
         {
           "title": "Democrats turn on Spanberger over plummeting popularity amid redistricting",
-          "users": "3741",
-          "views": "2179"
+          "users": "3730",
+          "views": "2160"
         },
         {
           "title": "Democrats turn on Spanberger over plummeting popularity amid redistricting battle",
-          "users": "3683",
-          "views": "2189"
+          "users": "3659",
+          "views": "2158"
         }
       ],
       "sections": [
@@ -1390,78 +1138,78 @@
       "articles": [
         {
           "title": "Mark Warner announces death of his 36-year-old daughter",
-          "users": "15430",
-          "views": "15603"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10781",
-          "views": "18141"
+          "users": "15327",
+          "views": "15613"
         },
         {
           "title": "Manchin ‘rooting’ for GOP to keep Senate over fear Democrats will blow up filibuster",
-          "users": "10770",
-          "views": "10936"
+          "users": "10790",
+          "views": "10945"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "10785",
+          "views": "18195"
         },
         {
           "title": "How Swalwell and Gonzales turned scandal into a golden parachute",
-          "users": "9713",
-          "views": "9698"
+          "users": "9659",
+          "views": "9691"
         },
         {
           "title": "When in Congress, I will confront radical Islamism without hesitation",
-          "users": "7097",
-          "views": "7326"
+          "users": "7115",
+          "views": "7344"
         },
         {
           "title": "Chip Roy introduces MAMDANI Act to denaturalize and deport socialists",
-          "users": "6857",
-          "views": "7175"
+          "users": "6860",
+          "views": "7179"
         },
         {
           "title": "Gas prices: Seven straight days of falling prices at the pumps",
-          "users": "5827",
-          "views": "6096"
+          "users": "5833",
+          "views": "6105"
         },
         {
           "title": "Trump is solving the healthcare crisis and cleaning up Obama’s mess",
-          "users": "5015",
-          "views": "5151"
+          "users": "5045",
+          "views": "5184"
         },
         {
           "title": "Anti-ICE billionaire Tom Steyer wants to make California even more unaffordable",
-          "users": "4301",
-          "views": "4280"
+          "users": "4303",
+          "views": "4283"
         },
         {
           "title": "Virginia Republicans turning out to vote on redistricting at higher rate than in 2025",
-          "users": "4223",
-          "views": "4354"
+          "users": "4236",
+          "views": "4366"
         },
         {
           "title": "Virginia could lose influence in Congress if Spanberger’s gerrymander passes",
-          "users": "3998",
-          "views": "4133"
+          "users": "3994",
+          "views": "4132"
         },
         {
           "title": "May Social Security direct payment worth $994 goes out in 11 days",
-          "users": "3512",
-          "views": "3515"
+          "users": "3511",
+          "views": "3505"
         },
         {
           "title": "The weekslong FISA battle that ended in an overnight defeat for Mike Johnson",
-          "users": "2867",
-          "views": "2922"
+          "users": "2869",
+          "views": "2929"
         },
         {
           "title": "Prosecutor who charged ICE officer took $286K from far-left PACs",
-          "users": "2739",
-          "views": "2788"
+          "users": "2738",
+          "views": "2785"
         },
         {
           "title": "Paxton’s persecution: Texas faithful can’t ignore what’s happening in Senate race",
-          "users": "2638",
-          "views": "2717"
+          "users": "2620",
+          "views": "2699"
         }
       ],
       "sections": [
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260421",
-      "totalUsers": 276146,
-      "newUsers": 132189,
-      "pageviews": 254885,
-      "sessions": 305134,
-      "bounceRate": 0.8486140515314583,
-      "averageSessionDuration": 131.77505272728047,
+      "totalUsers": 280325,
+      "newUsers": 142948,
+      "pageviews": 275400,
+      "sessions": 316586,
+      "bounceRate": 0.6465794444479541,
+      "averageSessionDuration": 89.67195966454928,
       "referrers": [
         {
           "source": "smartnews.com",
-          "users": 86949
-        },
-        {
-          "source": "(not set)",
-          "users": 72229
+          "users": 90112
         },
         {
           "source": "newsbreak.com",
-          "users": 62490
+          "users": 65261
         },
         {
           "source": "(direct)",
-          "users": 42399
+          "users": 43332
         },
         {
           "source": "reddit.com",
-          "users": 28280
+          "users": 30203
         },
         {
           "source": "google",
-          "users": 7689
+          "users": 9084
         },
         {
           "source": "newsbreakapp.com",
-          "users": 7404
+          "users": 7776
         },
         {
           "source": "old.reddit.com",
-          "users": 4665
+          "users": 5127
         },
         {
           "source": "t.co",
-          "users": 4549
+          "users": 4729
         },
         {
           "source": "facebook.com",
-          "users": 3497
+          "users": 3806
         },
         {
           "source": "out.reddit.com",
-          "users": 2137
+          "users": 2274
         },
         {
           "source": "realclearpolitics.com",
-          "users": 2015
+          "users": 2064
         },
         {
           "source": "newsbreak",
-          "users": 1601
-        },
-        {
-          "source": "(data not available)",
-          "users": 1506
+          "users": 1656
         },
         {
           "source": "lm.facebook.com",
-          "users": 1139
+          "users": 1186
+        },
+        {
+          "source": "bing",
+          "users": 1144
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1134
         }
       ],
       "authors": [
         {
           "author": "Mike Gonzalez",
-          "users": "64953",
-          "views": "60560"
+          "users": "66293",
+          "views": "67980"
         },
         {
           "author": "Molly Parks",
-          "users": "22467",
-          "views": "23235"
+          "users": "22666",
+          "views": "24752"
         },
         {
           "author": "Washington Examiner Staff",
-          "users": "21406",
-          "views": "21411"
+          "users": "22452",
+          "views": "23298"
         },
         {
           "author": "Rob Crilly",
-          "users": "20007",
-          "views": "20153"
+          "users": "20334",
+          "views": "21106"
         },
         {
           "author": "Mike Brest",
-          "users": "9072",
-          "views": "9208"
+          "users": "9120",
+          "views": "9458"
         },
         {
           "author": "Claire Carter",
-          "users": "7858",
-          "views": "7963"
+          "users": "7929",
+          "views": "8361"
         },
         {
           "author": "Emily Hallas",
-          "users": "6174",
-          "views": "6135"
+          "users": "6247",
+          "views": "6529"
         },
         {
           "author": "David Sivak",
-          "users": "4295",
-          "views": "4259"
+          "users": "4396",
+          "views": "4505"
         },
         {
           "author": "Guy Benson",
-          "users": "3521",
-          "views": "3452"
+          "users": "3556",
+          "views": "3759"
         },
         {
           "author": "Lauren Green",
-          "users": "3164",
-          "views": "3125"
+          "users": "3214",
+          "views": "3360"
         }
       ],
       "articles": [
         {
           "title": "Clarence Thomas breaks his silence and issues a warning",
-          "users": "64839",
-          "views": "60366"
+          "users": "66278",
+          "views": "67759"
         },
         {
           "title": "Donald Trump is losing his mind",
-          "users": "55831",
-          "views": "9575"
+          "users": "56810",
+          "views": "10448"
         },
         {
           "title": "White House holds secret meeting on how to turn out Trump voters in midterms",
-          "users": "20844",
-          "views": "20624"
+          "users": "21220",
+          "views": "21635"
         },
         {
           "title": "Trump says ‘it’s possible’ Jerome Powell is making money off Fed renovation",
-          "users": "18406",
-          "views": "18023"
+          "users": "19519",
+          "views": "19766"
         },
         {
           "title": "Virginia Republicans turning out to vote on redistricting at higher rate than in 2025",
-          "users": "12312",
-          "views": "12482"
+          "users": "12488",
+          "views": "13254"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "11445",
-          "views": "17933"
+          "users": "11534",
+          "views": "19382"
         },
         {
           "title": "Chip Roy introduces MAMDANI Act to denaturalize and deport socialists",
-          "users": "9115",
-          "views": "9010"
+          "users": "9191",
+          "views": "9673"
         },
         {
           "title": "Hard-line Iranian Revolutionary Guard commander emerges as key player",
-          "users": "8966",
-          "views": "9023"
+          "users": "9008",
+          "views": "9251"
         },
         {
           "title": "Social security offices are closed in 12 states: What to know",
-          "users": "4599",
-          "views": "4271"
+          "users": "4588",
+          "views": "4368"
         },
         {
           "title": "Clarence Thomas breaks his silence — and issues a warning",
-          "users": "4471",
-          "views": "2000"
+          "users": "4521",
+          "views": "2176"
         },
         {
           "title": "What we know about nearly a dozen scientists who went missing, died, or were murdered",
-          "users": "3751",
-          "views": "3689"
-        },
-        {
-          "title": "Tim Walz’s defeatist disgrace",
-          "users": "3504",
-          "views": "3436"
+          "users": "3787",
+          "views": "3937"
         },
         {
           "title": "Manchin ‘rooting’ for GOP to keep Senate over fear Democrats will blow up filibuster",
-          "users": "3447",
-          "views": "3352"
+          "users": "3571",
+          "views": "3632"
+        },
+        {
+          "title": "Tim Walz’s defeatist disgrace",
+          "users": "3556",
+          "views": "3760"
         },
         {
           "title": "Anti-ICE billionaire Tom Steyer wants to make California even more unaffordable",
-          "users": "2870",
-          "views": "2757"
+          "users": "2914",
+          "views": "2926"
         },
         {
           "title": "Oregon professor fired for bizarre tirade, allegedly threatening student protesters",
-          "users": "2733",
-          "views": "1494"
+          "users": "2787",
+          "views": "1642"
         }
       ],
       "sections": [
         {
           "section": "In Focus",
-          "users": "66961",
-          "views": "62763"
+          "users": "68330",
+          "views": "70261"
         },
         {
           "section": "White House",
-          "users": "21264",
-          "views": "21680"
+          "users": "22259",
+          "views": "23642"
         },
         {
           "section": "Washington Secrets",
-          "users": "20002",
-          "views": "20151"
+          "users": "20328",
+          "views": "21104"
         },
         {
           "section": "Campaigns",
-          "users": "14673",
-          "views": "14807"
+          "users": "14777",
+          "views": "15732"
         },
         {
           "section": "House",
-          "users": "10669",
-          "views": "10524"
+          "users": "10796",
+          "views": "11337"
         },
         {
           "section": "Defense",
-          "users": "9124",
-          "views": "9255"
+          "users": "9174",
+          "views": "9513"
         },
         {
           "section": "Economy",
-          "users": "6725",
-          "views": "6846"
+          "users": "6762",
+          "views": "7108"
         },
         {
           "section": "Crime",
-          "users": "4083",
-          "views": "4024"
+          "users": "4117",
+          "views": "4285"
         },
         {
           "section": "State",
-          "users": "4012",
-          "views": "3938"
+          "users": "4065",
+          "views": "4240"
         },
         {
           "section": "Columnists",
-          "users": "3809",
-          "views": "3801"
+          "users": "3845",
+          "views": "4134"
+        }
+      ]
+    },
+    {
+      "date": "20260422",
+      "totalUsers": 229659,
+      "newUsers": 90149,
+      "pageviews": 258220,
+      "sessions": 256525,
+      "bounceRate": 0.8651164603839782,
+      "averageSessionDuration": 148.12464960233504,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 86013
+        },
+        {
+          "source": "smartnews.com",
+          "users": 68586
+        },
+        {
+          "source": "(not set)",
+          "users": 48309
+        },
+        {
+          "source": "(direct)",
+          "users": 32979
+        },
+        {
+          "source": "google",
+          "users": 10172
+        },
+        {
+          "source": "t.co",
+          "users": 4320
+        },
+        {
+          "source": "facebook.com",
+          "users": 2642
+        },
+        {
+          "source": "bing",
+          "users": 2573
+        },
+        {
+          "source": "newsbreak",
+          "users": 2030
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1526
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1457
+        },
+        {
+          "source": "(data not available)",
+          "users": 1322
+        },
+        {
+          "source": "reddit.com",
+          "users": 1308
+        },
+        {
+          "source": "deployer",
+          "users": 1156
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1027
+        }
+      ],
+      "authors": [
+        {
+          "author": "Mia Cathell",
+          "users": "81961",
+          "views": "81793"
+        },
+        {
+          "author": "Claire Carter",
+          "users": "24585",
+          "views": "24888"
+        },
+        {
+          "author": "Mike Brest",
+          "users": "15624",
+          "views": "15680"
+        },
+        {
+          "author": "Rob Crilly",
+          "users": "9372",
+          "views": "9335"
+        },
+        {
+          "author": "Mike Gonzalez",
+          "users": "8003",
+          "views": "8101"
+        },
+        {
+          "author": "Washington Examiner Staff",
+          "users": "7398",
+          "views": "7426"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "4909",
+          "views": "4911"
+        },
+        {
+          "author": "Washington Examiner",
+          "users": "4807",
+          "views": "4805"
+        },
+        {
+          "author": "Peter Cordi",
+          "users": "4359",
+          "views": "4367"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "4237",
+          "views": "4394"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Minnesota fraud committee suspects Ilhan Omar of involvement in Feeding Our Future scheme",
+          "users": "81017",
+          "views": "81439"
+        },
+        {
+          "title": "Hard-line Iranian Revolutionary Guard commander emerges as key player",
+          "users": "15567",
+          "views": "15454"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "11569",
+          "views": "18168"
+        },
+        {
+          "title": "Social security offices are closed in 12 states: What to know",
+          "users": "10976",
+          "views": "11137"
+        },
+        {
+          "title": "UK passes bill banning people born after 2008 from ever buying tobacco",
+          "users": "10848",
+          "views": "11031"
+        },
+        {
+          "title": "Donald Trump is losing his mind",
+          "users": "10725",
+          "views": "3641"
+        },
+        {
+          "title": "White House holds secret meeting on how to turn out Trump voters in midterms",
+          "users": "9069",
+          "views": "9050"
+        },
+        {
+          "title": "Clarence Thomas breaks his silence and issues a warning",
+          "users": "8051",
+          "views": "8103"
+        },
+        {
+          "title": "No more second chances for Iran",
+          "users": "5032",
+          "views": "4998"
+        },
+        {
+          "title": "Trump is right. The Virginia redistricting referendum was rigged",
+          "users": "4997",
+          "views": "4855"
+        },
+        {
+          "title": "Trump says ‘it’s possible’ Jerome Powell is making money off Fed renovation",
+          "users": "4880",
+          "views": "4874"
+        },
+        {
+          "title": "By the numbers: How many seats has each party gained in redistricting?",
+          "users": "4329",
+          "views": "4218"
+        },
+        {
+          "title": "Florida attorney general announces criminal investigation into OpenAI over FSU shooter",
+          "users": "2894",
+          "views": "2883"
+        },
+        {
+          "title": "The press declare war on Trump at the WHCA dinner",
+          "users": "2634",
+          "views": "2550"
+        },
+        {
+          "title": "Minnesota fraud committee suspects Omar of involvement in Feeding Our Future scheme",
+          "users": "2439",
+          "views": "1353"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Investigations",
+          "users": "82234",
+          "views": "82253"
+        },
+        {
+          "section": "Defense",
+          "users": "15743",
+          "views": "15801"
+        },
+        {
+          "section": "In Focus",
+          "users": "11867",
+          "views": "11966"
+        },
+        {
+          "section": "Economy",
+          "users": "11863",
+          "views": "12190"
+        },
+        {
+          "section": "World",
+          "users": "11678",
+          "views": "11880"
+        },
+        {
+          "section": "Washington Secrets",
+          "users": "9372",
+          "views": "9335"
+        },
+        {
+          "section": "Campaigns",
+          "users": "7084",
+          "views": "7279"
+        },
+        {
+          "section": "White House",
+          "users": "6930",
+          "views": "7055"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "4903",
+          "views": "4923"
+        },
+        {
+          "section": "Editorials",
+          "users": "4807",
+          "views": "4805"
         }
       ]
     }
@@ -1776,19 +1776,19 @@
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
     "uniqueAuthors": 33,
-    "uniqueSections": 27,
+    "uniqueSections": 25,
     "sampleAuthors": [
+      "Mia Cathell",
+      "Les Rubin",
+      "Lauren Green",
       "David Zimmermann",
-      "Brady Knox",
-      "Robert Schmad",
-      "Haris Alic",
-      "Claire Carter"
+      "Ramsey Touchberry"
     ],
     "sampleSections": [
-      "Space",
-      "House",
-      "World",
       "Investigations",
+      "Finance and Economy",
+      "Campaigns",
+      "Senate",
       "News"
     ]
   }

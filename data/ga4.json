@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-04-29T07:54:38.568Z",
+  "updatedAt": "2026-04-30T07:55:09.399Z",
   "range": {
-    "start": "2026-04-22",
-    "end": "2026-04-28"
+    "start": "2026-04-23",
+    "end": "2026-04-29"
   },
   "rows": [
-    {
-      "date": "20260422",
-      "totalUsers": 230465,
-      "newUsers": 93790,
-      "pageviews": 268658,
-      "sessions": 265437,
-      "bounceRate": 0.7218209970727517,
-      "averageSessionDuration": 90.06095144769192,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 87476
-        },
-        {
-          "source": "smartnews.com",
-          "users": 69611
-        },
-        {
-          "source": "(direct)",
-          "users": 32960
-        },
-        {
-          "source": "google",
-          "users": 11445
-        },
-        {
-          "source": "t.co",
-          "users": 4455
-        },
-        {
-          "source": "facebook.com",
-          "users": 2927
-        },
-        {
-          "source": "bing",
-          "users": 2651
-        },
-        {
-          "source": "newsbreak",
-          "users": 2086
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1561
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 1478
-        },
-        {
-          "source": "reddit.com",
-          "users": 1349
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1299
-        },
-        {
-          "source": "deployer",
-          "users": 1177
-        },
-        {
-          "source": "go.bsky.app",
-          "users": 872
-        },
-        {
-          "source": "iterable",
-          "users": 742
-        }
-      ],
-      "authors": [
-        {
-          "author": "Mia Cathell",
-          "users": "82341",
-          "views": "85299"
-        },
-        {
-          "author": "Claire Carter",
-          "users": "24695",
-          "views": "25961"
-        },
-        {
-          "author": "Mike Brest",
-          "users": "15733",
-          "views": "16291"
-        },
-        {
-          "author": "Rob Crilly",
-          "users": "9436",
-          "views": "9684"
-        },
-        {
-          "author": "Mike Gonzalez",
-          "users": "8033",
-          "views": "8406"
-        },
-        {
-          "author": "Washington Examiner Staff",
-          "users": "7516",
-          "views": "7686"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "4993",
-          "views": "5131"
-        },
-        {
-          "author": "Washington Examiner",
-          "users": "4824",
-          "views": "5001"
-        },
-        {
-          "author": "Peter Cordi",
-          "users": "4392",
-          "views": "4532"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "4256",
-          "views": "4532"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Minnesota fraud committee suspects Ilhan Omar of involvement in Feeding Our Future scheme",
-          "users": "82292",
-          "views": "85294"
-        },
-        {
-          "title": "Hard-line Iranian Revolutionary Guard commander emerges as key player",
-          "users": "15664",
-          "views": "16118"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "11574",
-          "views": "18939"
-        },
-        {
-          "title": "Social security offices are closed in 12 states: What to know",
-          "users": "11030",
-          "views": "11627"
-        },
-        {
-          "title": "UK passes bill banning people born after 2008 from ever buying tobacco",
-          "users": "10899",
-          "views": "11520"
-        },
-        {
-          "title": "Donald Trump is losing his mind",
-          "users": "10850",
-          "views": "3805"
-        },
-        {
-          "title": "White House holds secret meeting on how to turn out Trump voters in midterms",
-          "users": "9112",
-          "views": "9410"
-        },
-        {
-          "title": "Clarence Thomas breaks his silence and issues a warning",
-          "users": "8079",
-          "views": "8406"
-        },
-        {
-          "title": "No more second chances for Iran",
-          "users": "5099",
-          "views": "5274"
-        },
-        {
-          "title": "Trump says ‘it’s possible’ Jerome Powell is making money off Fed renovation",
-          "users": "4975",
-          "views": "5066"
-        },
-        {
-          "title": "Trump is right. The Virginia redistricting referendum was rigged",
-          "users": "4962",
-          "views": "4973"
-        },
-        {
-          "title": "By the numbers: How many seats has each party gained in redistricting?",
-          "users": "4352",
-          "views": "4444"
-        },
-        {
-          "title": "Florida attorney general announces criminal investigation into OpenAI over FSU shooter",
-          "users": "2970",
-          "views": "3019"
-        },
-        {
-          "title": "The press declare war on Trump at the WHCA dinner",
-          "users": "2656",
-          "views": "2684"
-        },
-        {
-          "title": "Minnesota fraud committee suspects Omar of involvement in Feeding Our Future scheme",
-          "users": "2470",
-          "views": "1418"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Investigations",
-          "users": "82617",
-          "views": "85775"
-        },
-        {
-          "section": "Defense",
-          "users": "15871",
-          "views": "16419"
-        },
-        {
-          "section": "In Focus",
-          "users": "11887",
-          "views": "12417"
-        },
-        {
-          "section": "Economy",
-          "users": "11886",
-          "views": "12706"
-        },
-        {
-          "section": "World",
-          "users": "11768",
-          "views": "12368"
-        },
-        {
-          "section": "Washington Secrets",
-          "users": "9436",
-          "views": "9684"
-        },
-        {
-          "section": "Campaigns",
-          "users": "7108",
-          "views": "7561"
-        },
-        {
-          "section": "White House",
-          "users": "7016",
-          "views": "7317"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "4938",
-          "views": "5105"
-        },
-        {
-          "section": "Editorials",
-          "users": "4824",
-          "views": "5001"
-        }
-      ]
-    },
     {
       "date": "20260423",
       "totalUsers": 132945,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260428",
-      "totalUsers": 136037,
-      "newUsers": 52556,
-      "pageviews": 155331,
-      "sessions": 160378,
-      "bounceRate": 0.7409120951751487,
-      "averageSessionDuration": 220.07775367882755,
+      "totalUsers": 137548,
+      "newUsers": 56360,
+      "pageviews": 166614,
+      "sessions": 159162,
+      "bounceRate": 0.5426672195624583,
+      "averageSessionDuration": 132.37708318250588,
       "referrers": [
         {
           "source": "smartnews.com",
-          "users": 48792
-        },
-        {
-          "source": "(not set)",
-          "users": 31038
+          "users": 49869
         },
         {
           "source": "(direct)",
-          "users": 22552
+          "users": 22729
         },
         {
           "source": "newsbreak.com",
-          "users": 18270
+          "users": 18924
         },
         {
           "source": "realclearpolitics.com",
-          "users": 17501
+          "users": 18061
         },
         {
           "source": "google",
-          "users": 7686
+          "users": 8940
         },
         {
           "source": "facebook.com",
-          "users": 2174
+          "users": 2419
         },
         {
           "source": "t.co",
-          "users": 1663
-        },
-        {
-          "source": "deployer",
-          "users": 1481
+          "users": 1737
         },
         {
           "source": "reddit.com",
-          "users": 1462
+          "users": 1537
         },
         {
-          "source": "(data not available)",
-          "users": 1222
+          "source": "deployer",
+          "users": 1518
         },
         {
           "source": "bing",
-          "users": 1113
+          "users": 1155
         },
         {
           "source": "m.facebook.com",
-          "users": 881
+          "users": 1123
         },
         {
           "source": "powerlineblog.com",
-          "users": 852
+          "users": 894
         },
         {
           "source": "duckduckgo",
-          "users": 732
+          "users": 774
+        },
+        {
+          "source": "newsbreak",
+          "users": 666
+        },
+        {
+          "source": "l.facebook.com",
+          "users": 478
         }
       ],
       "authors": [
         {
           "author": "Emily Hallas",
-          "users": "19153",
-          "views": "19549"
+          "users": "19319",
+          "views": "20650"
         },
         {
           "author": "Washington Examiner Staff",
-          "users": "13298",
-          "views": "13062"
+          "users": "13629",
+          "views": "14085"
         },
         {
           "author": "Heyrsh Abdulrahman",
-          "users": "11861",
-          "views": "11101"
+          "users": "12111",
+          "views": "12384"
         },
         {
           "author": "Rob Crilly",
-          "users": "8117",
-          "views": "8082"
+          "users": "8315",
+          "views": "8407"
         },
         {
           "author": "Kaelan Deese",
-          "users": "3397",
-          "views": "3291"
+          "users": "3431",
+          "views": "3538"
         },
         {
           "author": "Hailey Bullis",
-          "users": "2572",
-          "views": "2658"
+          "users": "2600",
+          "views": "2746"
         },
         {
           "author": "Lauren Green",
-          "users": "2423",
-          "views": "2485"
+          "users": "2453",
+          "views": "2588"
         },
         {
           "author": "David Zimmermann",
-          "users": "1772",
-          "views": "1793"
+          "users": "1799",
+          "views": "1886"
         },
         {
           "author": "Molly Parks",
-          "users": "1475",
-          "views": "1480"
+          "users": "1491",
+          "views": "1559"
         },
         {
           "author": "Rena Rowe",
-          "users": "1423",
-          "views": "1419"
+          "users": "1474",
+          "views": "1549"
         }
       ],
       "articles": [
         {
           "title": "Gunman's manifesto is anti-Trump social media come to life",
-          "users": "19695",
-          "views": "12529"
+          "users": "19731",
+          "views": "13502"
         },
         {
           "title": "Iraq is being captured, and Washington is letting it happen",
-          "users": "12164",
-          "views": "11305"
+          "users": "12359",
+          "views": "12604"
         },
         {
           "title": "Rubio: Iran wants to do to world ‘with a nuclear weapon what they are doing now with oil’",
-          "users": "10985",
-          "views": "10624"
+          "users": "11257",
+          "views": "11442"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10577",
-          "views": "17178"
+          "users": "10591",
+          "views": "18468"
         },
         {
           "title": "Mike Johnson says King Charles’s speech to Congress will be a ‘unifying event’",
-          "users": "7913",
-          "views": "7965"
+          "users": "8119",
+          "views": "8278"
         },
         {
           "title": "Bongino says he’s ‘scared’ of winding up in federal prison: ‘They’re coming for me’",
-          "users": "6768",
-          "views": "6766"
+          "users": "6802",
+          "views": "6969"
         },
         {
           "title": "GOP bill will authorize $400M in taxpayer dollars to White House ballroom: Graham",
-          "users": "6505",
-          "views": "6462"
+          "users": "6587",
+          "views": "7092"
         },
         {
           "title": "The quiet man",
-          "users": "6300",
-          "views": "4249"
+          "users": "6313",
+          "views": "4511"
         },
         {
           "title": "DeSantis frustrated after state House speaker denies consideration of AI and vaccine bills",
-          "users": "3326",
-          "views": "3332"
+          "users": "3356",
+          "views": "3405"
         },
         {
           "title": "Injured Secret Service agent fired five shots at Cole during Trump assassination attempt",
-          "users": "2862",
-          "views": "2757"
+          "users": "2893",
+          "views": "2966"
         },
         {
           "title": "Secret Service agent fired five shots at Cole during Trump assassination attempt",
-          "users": "2820",
-          "views": "1335"
+          "users": "2831",
+          "views": "1403"
         },
         {
           "title": "Jimmy Kimmel addresses Melania Trump’s social media post about his ‘corrosive’ comedy skit",
-          "users": "2301",
-          "views": "2217"
+          "users": "2316",
+          "views": "2384"
         },
         {
           "title": "Trump says US negotiators will no longer physically travel for Iran peace talks",
-          "users": "1668",
-          "views": "1636"
+          "users": "1722",
+          "views": "1762"
         },
         {
           "title": "United Arab Emirates quits OPEC alliance",
-          "users": "1539",
-          "views": "1397"
+          "users": "1555",
+          "views": "1541"
         },
         {
           "title": "Lauren Boebert unveils bill to get Trump’s White House ballroom ‘over the finish line’",
-          "users": "1354",
-          "views": "1359"
+          "users": "1376",
+          "views": "1400"
         }
       ],
       "sections": [
         {
           "section": "Op-Eds",
-          "users": "13914",
-          "views": "13499"
+          "users": "14208",
+          "views": "15006"
         },
         {
           "section": "Justice",
-          "users": "12872",
-          "views": "13007"
+          "users": "12985",
+          "views": "13616"
         },
         {
           "section": "News",
-          "users": "11425",
-          "views": "11128"
+          "users": "11755",
+          "views": "12020"
         },
         {
           "section": "Washington Secrets",
-          "users": "8117",
-          "views": "8082"
+          "users": "8315",
+          "views": "8407"
         },
         {
           "section": "Senate",
-          "users": "7387",
-          "views": "7443"
+          "users": "7481",
+          "views": "8156"
         },
         {
           "section": "House",
-          "users": "5535",
-          "views": "5835"
+          "users": "5599",
+          "views": "6077"
         },
         {
           "section": "Beltway Confidential",
-          "users": "3403",
-          "views": "3472"
+          "users": "3466",
+          "views": "3754"
         },
         {
           "section": "Technology",
-          "users": "3326",
-          "views": "3332"
+          "users": "3356",
+          "views": "3405"
         },
         {
           "section": "Entertainment",
-          "users": "2714",
-          "views": "2644"
+          "users": "2732",
+          "views": "2838"
         },
         {
           "section": "White House",
-          "users": "2371",
-          "views": "2424"
+          "users": "2434",
+          "views": "2657"
+        }
+      ]
+    },
+    {
+      "date": "20260429",
+      "totalUsers": 164065,
+      "newUsers": 63556,
+      "pageviews": 188460,
+      "sessions": 185081,
+      "bounceRate": 0.8067062529379029,
+      "averageSessionDuration": 193.40954245536818,
+      "referrers": [
+        {
+          "source": "smartnews.com",
+          "users": 56226
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 41548
+        },
+        {
+          "source": "(not set)",
+          "users": 35481
+        },
+        {
+          "source": "(direct)",
+          "users": 24124
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 8833
+        },
+        {
+          "source": "google",
+          "users": 8605
+        },
+        {
+          "source": "news.google.com",
+          "users": 2494
+        },
+        {
+          "source": "facebook.com",
+          "users": 2068
+        },
+        {
+          "source": "reddit.com",
+          "users": 1359
+        },
+        {
+          "source": "deployer",
+          "users": 1319
+        },
+        {
+          "source": "(data not available)",
+          "users": 1313
+        },
+        {
+          "source": "t.co",
+          "users": 1310
+        },
+        {
+          "source": "newsbreak",
+          "users": 1199
+        },
+        {
+          "source": "bing",
+          "users": 1188
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 827
+        }
+      ],
+      "authors": [
+        {
+          "author": "Emily Hallas",
+          "users": "18954",
+          "views": "19183"
+        },
+        {
+          "author": "Adisa Hargett-Robinson",
+          "users": "17695",
+          "views": "18216"
+        },
+        {
+          "author": "Hailey Bullis",
+          "users": "10083",
+          "views": "10578"
+        },
+        {
+          "author": "Lauren Green and Mabinty Quarshie",
+          "users": "9602",
+          "views": "9422"
+        },
+        {
+          "author": "Claire Carter",
+          "users": "8819",
+          "views": "8547"
+        },
+        {
+          "author": "Rob Crilly",
+          "users": "6650",
+          "views": "6580"
+        },
+        {
+          "author": "Hugh Hewitt",
+          "users": "5399",
+          "views": "5313"
+        },
+        {
+          "author": "Heyrsh Abdulrahman",
+          "users": "5235",
+          "views": "5138"
+        },
+        {
+          "author": "Mia Cathell",
+          "users": "5169",
+          "views": "4954"
+        },
+        {
+          "author": "Washington Examiner Staff",
+          "users": "3778",
+          "views": "3696"
+        }
+      ],
+      "articles": [
+        {
+          "title": "May Social Security direct payment worth $994 goes out in two days",
+          "users": "17343",
+          "views": "17973"
+        },
+        {
+          "title": "Supreme Court strikes down race-based redistricting map in Louisiana",
+          "users": "11789",
+          "views": "7086"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "10361",
+          "views": "16778"
+        },
+        {
+          "title": "Bongino says he’s ‘scared’ of winding up in federal prison: ‘They’re coming for me’",
+          "users": "9940",
+          "views": "9636"
+        },
+        {
+          "title": "Democrats ready to fight after Supreme Court strikes down voting rights case",
+          "users": "9830",
+          "views": "9693"
+        },
+        {
+          "title": "Blue Cross Blue Shield to start $2.6 billion antitrust settlement payouts. What to know",
+          "users": "7876",
+          "views": "7573"
+        },
+        {
+          "title": "DeSantis frustrated after state House speaker denies consideration of AI and vaccine bills",
+          "users": "7167",
+          "views": "6975"
+        },
+        {
+          "title": "Mike Johnson says King Charles’s speech to Congress will be a ‘unifying event’",
+          "users": "6598",
+          "views": "6561"
+        },
+        {
+          "title": "Over 40 House Democrats bail Johnson out on three-year extension of government spy powers",
+          "users": "5693",
+          "views": "5617"
+        },
+        {
+          "title": "Walls are closing in on Iran’s weakened regime",
+          "users": "5399",
+          "views": "5313"
+        },
+        {
+          "title": "Iraq is being captured, and Washington is letting it happen",
+          "users": "5336",
+          "views": "5227"
+        },
+        {
+          "title": "Walz skips state oversight hearing on fraud prevention: ‘He’s probably in the basement’",
+          "users": "4766",
+          "views": "4544"
+        },
+        {
+          "title": "Former Obama staffer implies Trump is to blame for anti-Trump assassins trying to murder him",
+          "users": "3851",
+          "views": "3735"
+        },
+        {
+          "title": "Supreme Court appears poised to allow Trump to end TPS for Haiti and Syria",
+          "users": "3145",
+          "views": "3051"
+        },
+        {
+          "title": "Rubio: Iran wants to do to world ‘with a nuclear weapon what they are doing now with oil’",
+          "users": "3018",
+          "views": "2927"
+        }
+      ],
+      "sections": [
+        {
+          "section": "House",
+          "users": "22532",
+          "views": "24113"
+        },
+        {
+          "section": "Finance and Economy",
+          "users": "18022",
+          "views": "18451"
+        },
+        {
+          "section": "Justice",
+          "users": "13479",
+          "views": "13201"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "8073",
+          "views": "8114"
+        },
+        {
+          "section": "Healthcare",
+          "users": "7879",
+          "views": "7647"
+        },
+        {
+          "section": "Technology",
+          "users": "7304",
+          "views": "7080"
+        },
+        {
+          "section": "Washington Secrets",
+          "users": "6650",
+          "views": "6580"
+        },
+        {
+          "section": "Courage, Strength, and Optimism",
+          "users": "5800",
+          "views": "5723"
+        },
+        {
+          "section": "Crime",
+          "users": "5060",
+          "views": "4848"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "4832",
+          "views": "4816"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 30,
+    "uniqueAuthors": 32,
     "uniqueSections": 24,
     "sampleAuthors": [
-      "Mia Cathell",
       "Claire Carter",
-      "Mike Brest",
-      "Rob Crilly",
-      "Mike Gonzalez"
+      "Peter Cordi",
+      "Mia Cathell",
+      "Emily Hallas",
+      "Washington Examiner Staff"
     ],
     "sampleSections": [
+      "Beltway Confidential",
+      "World",
       "Investigations",
-      "Defense",
-      "In Focus",
-      "Economy",
-      "World"
+      "Crime",
+      "In Focus"
     ]
   }
 }

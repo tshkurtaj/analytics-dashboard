@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-05-06T07:57:37.096Z",
+  "updatedAt": "2026-05-07T08:04:20.036Z",
   "range": {
-    "start": "2026-04-29",
-    "end": "2026-05-05"
+    "start": "2026-04-30",
+    "end": "2026-05-06"
   },
   "rows": [
-    {
-      "date": "20260429",
-      "totalUsers": 165829,
-      "newUsers": 68263,
-      "pageviews": 201804,
-      "sessions": 188750,
-      "bounceRate": 0.6418754966887418,
-      "averageSessionDuration": 119.88678005549139,
-      "referrers": [
-        {
-          "source": "smartnews.com",
-          "users": 57672
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 43075
-        },
-        {
-          "source": "(direct)",
-          "users": 24566
-        },
-        {
-          "source": "google",
-          "users": 9872
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 9133
-        },
-        {
-          "source": "news.google.com",
-          "users": 2691
-        },
-        {
-          "source": "facebook.com",
-          "users": 2337
-        },
-        {
-          "source": "reddit.com",
-          "users": 1442
-        },
-        {
-          "source": "deployer",
-          "users": 1360
-        },
-        {
-          "source": "t.co",
-          "users": 1358
-        },
-        {
-          "source": "bing",
-          "users": 1236
-        },
-        {
-          "source": "newsbreak",
-          "users": 1231
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1049
-        },
-        {
-          "source": "duckduckgo",
-          "users": 764
-        },
-        {
-          "source": "instapundit.com",
-          "users": 492
-        }
-      ],
-      "authors": [
-        {
-          "author": "Emily Hallas",
-          "users": "19257",
-          "views": "20501"
-        },
-        {
-          "author": "Adisa Hargett-Robinson",
-          "users": "17799",
-          "views": "18987"
-        },
-        {
-          "author": "Hailey Bullis",
-          "users": "10204",
-          "views": "11092"
-        },
-        {
-          "author": "Lauren Green and Mabinty Quarshie",
-          "users": "9708",
-          "views": "9990"
-        },
-        {
-          "author": "Claire Carter",
-          "users": "9004",
-          "views": "9727"
-        },
-        {
-          "author": "Rob Crilly",
-          "users": "6948",
-          "views": "7043"
-        },
-        {
-          "author": "Hugh Hewitt",
-          "users": "5453",
-          "views": "5740"
-        },
-        {
-          "author": "Mia Cathell",
-          "users": "5291",
-          "views": "5433"
-        },
-        {
-          "author": "Heyrsh Abdulrahman",
-          "users": "5275",
-          "views": "5423"
-        },
-        {
-          "author": "Washington Examiner Staff",
-          "users": "3857",
-          "views": "3955"
-        }
-      ],
-      "articles": [
-        {
-          "title": "May Social Security direct payment worth $994 goes out in two days",
-          "users": "17436",
-          "views": "18727"
-        },
-        {
-          "title": "Supreme Court strikes down race-based redistricting map in Louisiana",
-          "users": "11869",
-          "views": "7806"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10382",
-          "views": "18016"
-        },
-        {
-          "title": "Bongino says he’s ‘scared’ of winding up in federal prison: ‘They’re coming for me’",
-          "users": "10048",
-          "views": "10295"
-        },
-        {
-          "title": "Democrats ready to fight after Supreme Court strikes down voting rights case",
-          "users": "9940",
-          "views": "10316"
-        },
-        {
-          "title": "Blue Cross Blue Shield to start $2.6 billion antitrust settlement payouts. What to know",
-          "users": "8048",
-          "views": "8676"
-        },
-        {
-          "title": "DeSantis frustrated after state House speaker denies consideration of AI and vaccine bills",
-          "users": "7327",
-          "views": "7440"
-        },
-        {
-          "title": "Mike Johnson says King Charles’s speech to Congress will be a ‘unifying event’",
-          "users": "6926",
-          "views": "7022"
-        },
-        {
-          "title": "Over 40 House Democrats bail Johnson out on three-year extension of government spy powers",
-          "users": "5714",
-          "views": "5800"
-        },
-        {
-          "title": "Walls are closing in on Iran’s weakened regime",
-          "users": "5453",
-          "views": "5740"
-        },
-        {
-          "title": "Iraq is being captured, and Washington is letting it happen",
-          "users": "5376",
-          "views": "5521"
-        },
-        {
-          "title": "Walz skips state oversight hearing on fraud prevention: ‘He’s probably in the basement’",
-          "users": "4884",
-          "views": "4991"
-        },
-        {
-          "title": "Former Obama staffer implies Trump is to blame for anti-Trump assassins trying to murder him",
-          "users": "3927",
-          "views": "3960"
-        },
-        {
-          "title": "Supreme Court appears poised to allow Trump to end TPS for Haiti and Syria",
-          "users": "3198",
-          "views": "3226"
-        },
-        {
-          "title": "Rubio: Iran wants to do to world ‘with a nuclear weapon what they are doing now with oil’",
-          "users": "3093",
-          "views": "3136"
-        }
-      ],
-      "sections": [
-        {
-          "section": "House",
-          "users": "22866",
-          "views": "25470"
-        },
-        {
-          "section": "Finance and Economy",
-          "users": "18100",
-          "views": "19245"
-        },
-        {
-          "section": "Justice",
-          "users": "13612",
-          "views": "14081"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "8145",
-          "views": "8653"
-        },
-        {
-          "section": "Healthcare",
-          "users": "8047",
-          "views": "8755"
-        },
-        {
-          "section": "Technology",
-          "users": "7465",
-          "views": "7549"
-        },
-        {
-          "section": "Washington Secrets",
-          "users": "6948",
-          "views": "7043"
-        },
-        {
-          "section": "Courage, Strength, and Optimism",
-          "users": "5856",
-          "views": "6172"
-        },
-        {
-          "section": "Crime",
-          "users": "5181",
-          "views": "5313"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "4915",
-          "views": "5109"
-        }
-      ]
-    },
     {
       "date": "20260430",
       "totalUsers": 140436,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260505",
-      "totalUsers": 178974,
-      "newUsers": 56605,
-      "pageviews": 213187,
-      "sessions": 204985,
-      "bounceRate": 0.8499304827182477,
-      "averageSessionDuration": 176.38696470337342,
+      "totalUsers": 180829,
+      "newUsers": 61041,
+      "pageviews": 230205,
+      "sessions": 209001,
+      "bounceRate": 0.6845661025545332,
+      "averageSessionDuration": 110.74419921386979,
       "referrers": [
         {
           "source": "smartnews.com",
-          "users": 67266
+          "users": 68900
         },
         {
           "source": "newsbreak.com",
-          "users": 52981
-        },
-        {
-          "source": "(not set)",
-          "users": 32376
+          "users": 54844
         },
         {
           "source": "(direct)",
-          "users": 21951
+          "users": 22117
         },
         {
           "source": "google",
-          "users": 7131
+          "users": 8445
         },
         {
           "source": "realclearpolitics.com",
-          "users": 5577
+          "users": 5736
         },
         {
           "source": "drudgereport.com",
-          "users": 2211
+          "users": 2323
         },
         {
           "source": "newsbreak",
-          "users": 2084
+          "users": 2186
         },
         {
           "source": "facebook.com",
-          "users": 1907
-        },
-        {
-          "source": "(data not available)",
-          "users": 1393
+          "users": 2164
         },
         {
           "source": "t.co",
-          "users": 1281
+          "users": 1345
         },
         {
           "source": "newsbreakapp.com",
-          "users": 1190
+          "users": 1260
         },
         {
           "source": "deployer",
-          "users": 1082
-        },
-        {
-          "source": "bing",
-          "users": 981
+          "users": 1120
         },
         {
           "source": "m.facebook.com",
-          "users": 794
+          "users": 1040
+        },
+        {
+          "source": "bing",
+          "users": 1027
+        },
+        {
+          "source": "duckduckgo",
+          "users": 732
+        },
+        {
+          "source": "msn.com",
+          "users": 622
         }
       ],
       "authors": [
         {
           "author": "Mia Cathell",
-          "users": "34036",
-          "views": "32976"
+          "users": "34418",
+          "views": "35713"
         },
         {
           "author": "Brady Knox",
-          "users": "22103",
-          "views": "22565"
+          "users": "22547",
+          "views": "24125"
         },
         {
           "author": "Claire Carter",
-          "users": "13793",
-          "views": "14121"
+          "users": "14036",
+          "views": "15118"
         },
         {
           "author": "Jesse D. Franklin-Murdock",
-          "users": "13410",
-          "views": "13015"
+          "users": "13535",
+          "views": "14029"
         },
         {
           "author": "Emily Hallas",
-          "users": "9806",
-          "views": "9917"
+          "users": "9918",
+          "views": "10530"
         },
         {
           "author": "Timothy Nerozzi",
-          "users": "9262",
-          "views": "9003"
+          "users": "9336",
+          "views": "9623"
         },
         {
           "author": "Mabinty Quarshie",
-          "users": "8598",
-          "views": "8518"
+          "users": "8833",
+          "views": "9022"
         },
         {
           "author": "Washington Examiner",
-          "users": "5484",
-          "views": "5221"
+          "users": "5576",
+          "views": "5740"
         },
         {
           "author": "J. Marc Wheat",
-          "users": "4457",
-          "views": "4138"
+          "users": "4539",
+          "views": "4624"
         },
         {
           "author": "Adisa Hargett-Robinson",
-          "users": "3619",
-          "views": "3749"
+          "users": "3666",
+          "views": "4052"
         }
       ],
       "articles": [
         {
           "title": "Convicted Somali scammer to avoid jail time in Minnesota’s largest-ever Medicaid fraud case",
-          "users": "33623",
-          "views": "32950"
+          "users": "34003",
+          "views": "35686"
         },
         {
           "title": "Supreme Court First Choice ruling crushes lawfare in win for First Amendment",
-          "users": "13356",
-          "views": "13015"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "10033",
-          "views": "16962"
+          "users": "13495",
+          "views": "14029"
         },
         {
           "title": "Barrett says idea Supreme Court is partisan ‘not consistent with the data’",
-          "users": "10008",
-          "views": "9858"
+          "users": "10395",
+          "views": "10599"
         },
         {
           "title": "Obama says Netanyahu gave him same Iran war pitch as Trump",
-          "users": "9932",
-          "views": "8667"
+          "users": "10135",
+          "views": "9320"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "10046",
+          "views": "18357"
         },
         {
           "title": "Trump’s troop drawdown jolts Europe as NATO chief says leaders got the ‘message’",
-          "users": "8690",
-          "views": "8518"
+          "users": "8763",
+          "views": "9110"
         },
         {
           "title": "Trump claims Iran’s leaders told him their country has ‘no chance’ of winning the war",
-          "users": "8299",
-          "views": "8166"
+          "users": "8533",
+          "views": "8642"
         },
         {
           "title": "Zelensky tells Putin ‘take real steps’ to end war after Ukrainian drone hits Moscow",
-          "users": "7707",
-          "views": "7451"
+          "users": "7786",
+          "views": "7897"
         },
         {
           "title": "Trump’s food stamp reforms are working",
-          "users": "5784",
-          "views": "5439"
+          "users": "5878",
+          "views": "5991"
         },
         {
           "title": "Civil rights groups sue over Texas law allowing state police to arrest illegal immigrants: ‘Unconstitutional’",
-          "users": "5155",
-          "views": "5236"
+          "users": "5203",
+          "views": "5491"
         },
         {
           "title": "Three branches agree: The CTA needs to go",
-          "users": "4576",
-          "views": "4204"
+          "users": "4660",
+          "views": "4694"
         },
         {
           "title": "Marco Rubio's 2028 momentum is getting impossible to ignore",
-          "users": "4126",
-          "views": "3020"
+          "users": "4139",
+          "views": "3310"
         },
         {
           "title": "Two US destroyers transit Strait of Hormuz under Iranian missile barrage: Report",
-          "users": "3811",
-          "views": "3694"
+          "users": "3852",
+          "views": "3936"
         },
         {
           "title": "Spanberger and the Democrats’ constitutional wrecking crew",
-          "users": "3712",
-          "views": "3502"
+          "users": "3770",
+          "views": "3826"
         },
         {
           "title": "Kash Patel credits AI with stopping attacks: 'I'm using it everywhere'",
-          "users": "2993",
-          "views": "1126"
+          "users": "3005",
+          "views": "1183"
         }
       ],
       "sections": [
         {
           "section": "Investigations",
-          "users": "34013",
-          "views": "32952"
+          "users": "34394",
+          "views": "35688"
         },
         {
           "section": "Fairness and Justice",
-          "users": "17228",
-          "views": "17203"
+          "users": "17453",
+          "views": "18704"
         },
         {
           "section": "Defense",
-          "users": "13768",
-          "views": "13816"
+          "users": "13890",
+          "views": "14766"
         },
         {
           "section": "White House",
-          "users": "11575",
-          "views": "11981"
+          "users": "11867",
+          "views": "12681"
         },
         {
           "section": "Supreme Court",
-          "users": "11311",
-          "views": "11453"
+          "users": "11668",
+          "views": "12383"
         },
         {
           "section": "World",
-          "users": "10172",
-          "views": "10028"
+          "users": "10264",
+          "views": "10660"
         },
         {
           "section": "Foreign Policy",
-          "users": "8871",
-          "views": "8732"
+          "users": "9072",
+          "views": "9384"
         },
         {
           "section": "Crime",
-          "users": "8006",
-          "views": "8090"
+          "users": "8063",
+          "views": "8496"
         },
         {
           "section": "Editorials",
-          "users": "5484",
-          "views": "5221"
+          "users": "5576",
+          "views": "5740"
         },
         {
           "section": "News",
-          "users": "3770",
-          "views": "3932"
+          "users": "3815",
+          "views": "4257"
+        }
+      ]
+    },
+    {
+      "date": "20260506",
+      "totalUsers": 150957,
+      "newUsers": 45920,
+      "pageviews": 185555,
+      "sessions": 174547,
+      "bounceRate": 0.843709717153546,
+      "averageSessionDuration": 193.58589153947648,
+      "referrers": [
+        {
+          "source": "smartnews.com",
+          "users": 57278
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 44812
+        },
+        {
+          "source": "(not set)",
+          "users": 26561
+        },
+        {
+          "source": "(direct)",
+          "users": 21513
+        },
+        {
+          "source": "google",
+          "users": 6961
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 3038
+        },
+        {
+          "source": "newsbreak",
+          "users": 1322
+        },
+        {
+          "source": "t.co",
+          "users": 1156
+        },
+        {
+          "source": "bing",
+          "users": 1065
+        },
+        {
+          "source": "facebook.com",
+          "users": 1058
+        },
+        {
+          "source": "(data not available)",
+          "users": 1045
+        },
+        {
+          "source": "deployer",
+          "users": 945
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 787
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 777
+        },
+        {
+          "source": "duckduckgo",
+          "users": 732
+        }
+      ],
+      "authors": [
+        {
+          "author": "Mia Cathell",
+          "users": "19600",
+          "views": "19713"
+        },
+        {
+          "author": "Adisa Hargett-Robinson",
+          "users": "17755",
+          "views": "17741"
+        },
+        {
+          "author": "Haris Alic",
+          "users": "11176",
+          "views": "11190"
+        },
+        {
+          "author": "Rob Crilly",
+          "users": "8758",
+          "views": "8565"
+        },
+        {
+          "author": "Mabinty Quarshie",
+          "users": "7097",
+          "views": "6959"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "6635",
+          "views": "6630"
+        },
+        {
+          "author": "Guy Benson",
+          "users": "6162",
+          "views": "5918"
+        },
+        {
+          "author": "Anna Giaritelli",
+          "users": "6101",
+          "views": "5966"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "5978",
+          "views": "5957"
+        },
+        {
+          "author": "Sydney Topf",
+          "users": "4482",
+          "views": "4519"
+        }
+      ],
+      "articles": [
+        {
+          "title": "June Social Security direct payment worth $994 goes out in 26 days",
+          "users": "17176",
+          "views": "16846"
+        },
+        {
+          "title": "Ilhan Omar withholding records of her messages with Feeding Our Future mastermind, Minnesota fraud committee says",
+          "users": "13663",
+          "views": "13779"
+        },
+        {
+          "title": "Vance says fraud task force found 186,000 dead people collecting SNAP benefits",
+          "users": "11191",
+          "views": "11126"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "10221",
+          "views": "17529"
+        },
+        {
+          "title": "Marco Rubio schools misbehaving White House press corps with master class in wit",
+          "users": "9236",
+          "views": "8851"
+        },
+        {
+          "title": "Convicted Somali scammer to avoid jail time in Minnesota’s largest-ever Medicaid fraud case",
+          "users": "6143",
+          "views": "5923"
+        },
+        {
+          "title": "Trump claims Iran’s leaders told him their country has ‘no chance’ of winning the war",
+          "users": "6051",
+          "views": "5898"
+        },
+        {
+          "title": "‘Mass deportations are coming’: Homan previews ICE surge to sanctuary cities",
+          "users": "6005",
+          "views": "5830"
+        },
+        {
+          "title": "Virginia Democrats are panicking and infighting over looming referendum ruling",
+          "users": "5875",
+          "views": "5649"
+        },
+        {
+          "title": "Former Frontier CEO says Spirit might still be in business if the two airlines merged",
+          "users": "4621",
+          "views": "4603"
+        },
+        {
+          "title": "After 70 years of loyalty, Alan Dershowitz turns on Democratic Party",
+          "users": "4324",
+          "views": "4346"
+        },
+        {
+          "title": "Trump’s food stamp reforms are working",
+          "users": "4171",
+          "views": "3381"
+        },
+        {
+          "title": "Supreme Court First Choice ruling crushes lawfare in win for First Amendment",
+          "users": "3302",
+          "views": "3232"
+        },
+        {
+          "title": "Trump says Ted Turner was ‘devastated’ by CNN going woke",
+          "users": "2696",
+          "views": "2681"
+        },
+        {
+          "title": "Obama says Netanyahu gave him same Iran war pitch as Trump",
+          "users": "2005",
+          "views": "1834"
+        }
+      ],
+      "sections": [
+        {
+          "section": "White House",
+          "users": "22011",
+          "views": "22690"
+        },
+        {
+          "section": "Investigations",
+          "users": "19587",
+          "views": "19704"
+        },
+        {
+          "section": "Finance and Economy",
+          "users": "17735",
+          "views": "17663"
+        },
+        {
+          "section": "Washington Secrets",
+          "users": "8758",
+          "views": "8565"
+        },
+        {
+          "section": "Immigration",
+          "users": "6799",
+          "views": "6688"
+        },
+        {
+          "section": "Columnists",
+          "users": "6583",
+          "views": "6480"
+        },
+        {
+          "section": "News",
+          "users": "5411",
+          "views": "5469"
+        },
+        {
+          "section": "Business",
+          "users": "4815",
+          "views": "4808"
+        },
+        {
+          "section": "Fairness and Justice",
+          "users": "3816",
+          "views": "3769"
+        },
+        {
+          "section": "Supreme Court",
+          "users": "3298",
+          "views": "3327"
         }
       ]
     }
@@ -1778,18 +1778,18 @@
     "uniqueAuthors": 26,
     "uniqueSections": 24,
     "sampleAuthors": [
-      "Emily Hallas",
-      "Adisa Hargett-Robinson",
+      "Haris Alic",
       "Hailey Bullis",
-      "Lauren Green and Mabinty Quarshie",
-      "Claire Carter"
+      "Emily Hallas",
+      "Mabinty Quarshie",
+      "Tom Rogan"
     ],
     "sampleSections": [
+      "News",
       "House",
-      "Finance and Economy",
-      "Justice",
-      "Op-Eds",
-      "Healthcare"
+      "Beltway Confidential",
+      "White House",
+      "Defense"
     ]
   }
 }

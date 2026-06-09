@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-06-08T08:52:44.598Z",
+  "updatedAt": "2026-06-09T08:24:54.304Z",
   "range": {
-    "start": "2026-06-01",
-    "end": "2026-06-07"
+    "start": "2026-06-02",
+    "end": "2026-06-08"
   },
   "rows": [
-    {
-      "date": "20260601",
-      "totalUsers": 140903,
-      "newUsers": 56595,
-      "pageviews": 166187,
-      "sessions": 159928,
-      "bounceRate": 0.6162710719823921,
-      "averageSessionDuration": 121.64650698854483,
-      "referrers": [
-        {
-          "source": "smartnews.com",
-          "users": 57222
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 26210
-        },
-        {
-          "source": "(direct)",
-          "users": 20490
-        },
-        {
-          "source": "google",
-          "users": 9183
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 8772
-        },
-        {
-          "source": "reddit.com",
-          "users": 3160
-        },
-        {
-          "source": "t.co",
-          "users": 2057
-        },
-        {
-          "source": "newsbreak",
-          "users": 1713
-        },
-        {
-          "source": "deployer",
-          "users": 1138
-        },
-        {
-          "source": "facebook.com",
-          "users": 1049
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 926
-        },
-        {
-          "source": "bing",
-          "users": 855
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 752
-        },
-        {
-          "source": "youtube.com",
-          "users": 723
-        },
-        {
-          "source": "duckduckgo",
-          "users": 656
-        }
-      ],
-      "authors": [
-        {
-          "author": "David Sivak",
-          "users": "18604",
-          "views": "19584"
-        },
-        {
-          "author": "Jon Miltimore",
-          "users": "15811",
-          "views": "16265"
-        },
-        {
-          "author": "Zach Halaschak",
-          "users": "7863",
-          "views": "7948"
-        },
-        {
-          "author": "Joe Concha",
-          "users": "5958",
-          "views": "6100"
-        },
-        {
-          "author": "Kiara Moore",
-          "users": "4659",
-          "views": "4765"
-        },
-        {
-          "author": "Rob Crilly",
-          "users": "4470",
-          "views": "4597"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "2766",
-          "views": "2870"
-        },
-        {
-          "author": "Peter Tonguette",
-          "users": "2505",
-          "views": "2582"
-        },
-        {
-          "author": "Carter Schroppe",
-          "users": "2203",
-          "views": "2295"
-        },
-        {
-          "author": "Varad Mehta",
-          "users": "1809",
-          "views": "1870"
-        }
-      ],
-      "articles": [
-        {
-          "title": "McConnell lets loose on Trump on his way to Senate retirement",
-          "users": "18843",
-          "views": "19556"
-        },
-        {
-          "title": "Chicago is losing the Bears — thanks to Brandon Johnson",
-          "users": "15778",
-          "views": "16265"
-        },
-        {
-          "title": "The impending Republican collapse",
-          "users": "14383",
-          "views": "9884"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9494",
-          "views": "17529"
-        },
-        {
-          "title": "Bernie Sanders proposes having government take half of Anthropic and OpenAI",
-          "users": "7224",
-          "views": "7301"
-        },
-        {
-          "title": "E. Jean Carroll couldn’t remember the year. But she remembered to lie under oath",
-          "users": "5958",
-          "views": "6100"
-        },
-        {
-          "title": "White House report card: Poll shows that half of Americans now see Israel as a strategic liability",
-          "users": "4469",
-          "views": "4596"
-        },
-        {
-          "title": "‘This is not the Republican Party anymore, it’s the MAGA party’: Joe Concha",
-          "users": "3917",
-          "views": "3976"
-        },
-        {
-          "title": "Washington Examiner | Political News and Conservative Analysis About Congress, the President, and the Federal Government",
-          "users": "2639",
-          "views": "2147"
-        },
-        {
-          "title": "Sally Field, you deserve better than this",
-          "users": "2505",
-          "views": "2582"
-        },
-        {
-          "title": "Carroll couldn't remember the year. But she remembered to lie",
-          "users": "1863",
-          "views": "1501"
-        },
-        {
-          "title": "Liberal law professor Mark Tushnet should’ve been careful what he wished for",
-          "users": "1809",
-          "views": "1870"
-        },
-        {
-          "title": "Appeals court strikes down War Department's ban on transgender troops",
-          "users": "1724",
-          "views": "1525"
-        },
-        {
-          "title": "McConnell lets loose on Trump on his way to retirement",
-          "users": "1691",
-          "views": "932"
-        },
-        {
-          "title": "Supreme Court takes up another case over First Step Act brought by inmate",
-          "users": "1422",
-          "views": "1454"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Senate",
-          "users": "19957",
-          "views": "21006"
-        },
-        {
-          "section": "Equality, Not Elitism",
-          "users": "15842",
-          "views": "16289"
-        },
-        {
-          "section": "In Focus",
-          "users": "10017",
-          "views": "10453"
-        },
-        {
-          "section": "Finance and Economy",
-          "users": "8595",
-          "views": "8717"
-        },
-        {
-          "section": "Congressional",
-          "users": "7491",
-          "views": "7837"
-        },
-        {
-          "section": "News",
-          "users": "6616",
-          "views": "6845"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "3111",
-          "views": "3280"
-        },
-        {
-          "section": "Defense",
-          "users": "2579",
-          "views": "2713"
-        },
-        {
-          "section": "Entertainment",
-          "users": "2528",
-          "views": "2605"
-        },
-        {
-          "section": "Justice",
-          "users": "2499",
-          "views": "2637"
-        }
-      ]
-    },
     {
       "date": "20260602",
       "totalUsers": 198530,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260607",
-      "totalUsers": 149503,
-      "newUsers": 64710,
-      "pageviews": 170069,
-      "sessions": 166094,
-      "bounceRate": 0.8179825881729623,
-      "averageSessionDuration": 189.26787976089446,
+      "totalUsers": 150056,
+      "newUsers": 67534,
+      "pageviews": 177095,
+      "sessions": 169644,
+      "bounceRate": 0.6531795996321709,
+      "averageSessionDuration": 105.3167877496522,
       "referrers": [
         {
           "source": "newsbreak.com",
-          "users": 51566
+          "users": 52668
         },
         {
           "source": "smartnews.com",
-          "users": 41487
-        },
-        {
-          "source": "(not set)",
-          "users": 40173
+          "users": 42004
         },
         {
           "source": "(direct)",
-          "users": 22453
+          "users": 23250
         },
         {
           "source": "google",
-          "users": 10024
+          "users": 11523
         },
         {
           "source": "realclearpolitics.com",
-          "users": 4952
+          "users": 5047
         },
         {
           "source": "newsbreak",
-          "users": 3220
+          "users": 3426
         },
         {
           "source": "facebook.com",
-          "users": 2395
+          "users": 2532
         },
         {
           "source": "newsbreakapp.com",
-          "users": 2083
-        },
-        {
-          "source": "(data not available)",
-          "users": 1558
+          "users": 2180
         },
         {
           "source": "t.co",
-          "users": 996
+          "users": 1082
         },
         {
           "source": "m.facebook.com",
-          "users": 926
+          "users": 976
         },
         {
           "source": "newsshowcase",
-          "users": 849
+          "users": 926
         },
         {
           "source": "lm.facebook.com",
-          "users": 806
+          "users": 854
         },
         {
           "source": "duckduckgo",
-          "users": 610
+          "users": 640
+        },
+        {
+          "source": "deployer",
+          "users": 510
+        },
+        {
+          "source": "bing",
+          "users": 509
         }
       ],
       "authors": [
         {
           "author": "Carter Schroppe",
-          "users": "23731",
-          "views": "23971"
+          "users": "23815",
+          "views": "25009"
         },
         {
           "author": "Claire Carter",
-          "users": "20391",
-          "views": "20963"
+          "users": "20480",
+          "views": "21798"
         },
         {
           "author": "Britta Miller",
-          "users": "18905",
-          "views": "19433"
+          "users": "18980",
+          "views": "20218"
         },
         {
           "author": "Washington Examiner",
-          "users": "10614",
-          "views": "10566"
+          "users": "10704",
+          "views": "11044"
         },
         {
           "author": "Mark Bradford",
-          "users": "5158",
-          "views": "5067"
+          "users": "5175",
+          "views": "5298"
         },
         {
           "author": "Arnie Cole",
-          "users": "2052",
-          "views": "2033"
+          "users": "2061",
+          "views": "2114"
         },
         {
           "author": "Timothy Nerozzi",
-          "users": "1848",
-          "views": "1851"
+          "users": "1867",
+          "views": "1914"
         },
         {
           "author": "Emily Hallas",
-          "users": "1784",
-          "views": "1774"
+          "users": "1791",
+          "views": "1845"
         },
         {
           "author": "Lauren Green",
-          "users": "1750",
-          "views": "1744"
+          "users": "1769",
+          "views": "1814"
         },
         {
           "author": "Rena Rowe",
-          "users": "1748",
-          "views": "1813"
+          "users": "1760",
+          "views": "1877"
         }
       ],
       "articles": [
         {
           "title": "Scott Pelley says he was accused of physical abuse before 60 Minutes firing",
-          "users": "16043",
-          "views": "15978"
+          "users": "16118",
+          "views": "16613"
         },
         {
           "title": "Manhunt underway after at least 12 shot at street festival in Toledo, Ohio",
-          "users": "14500",
-          "views": "14523"
+          "users": "14555",
+          "views": "15161"
         },
         {
           "title": "July Social Security direct payment worth $994 goes out in 25 days",
-          "users": "14172",
-          "views": "14643"
+          "users": "14220",
+          "views": "15214"
         },
         {
           "title": "Trump’s fountain and reflecting pool beautification shows Democratic disarray is a choice",
-          "users": "11239",
-          "views": "11044"
+          "users": "11313",
+          "views": "11532"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "8033",
-          "views": "13911"
+          "users": "8037",
+          "views": "14502"
         },
         {
           "title": "OPT out: Reduce fraud and preserve American jobs by killing key program",
-          "users": "7008",
-          "views": "3408"
+          "users": "7016",
+          "views": "3552"
         },
         {
           "title": "Graham Platner fires back at Fetterman: ‘It’s not the hoodie, dude’",
-          "users": "6316",
-          "views": "6263"
+          "users": "6359",
+          "views": "6549"
         },
         {
           "title": "Washington Examiner | Political News and Conservative Analysis About Congress, the President, and the Federal Government",
-          "users": "5534",
-          "views": "2635"
+          "users": "5547",
+          "views": "2733"
         },
         {
           "title": "Jesse Ridgway aborted his child with Down syndrome. He was lied to",
-          "users": "5158",
-          "views": "5067"
+          "users": "5175",
+          "views": "5298"
         },
         {
           "title": "Tim Walz is the model for anti-Talarico campaign",
           "users": "3408",
-          "views": "3025"
+          "views": "3178"
         },
         {
           "title": "July Social Security direct payment worth $994 goes out in 24 days",
-          "users": "3140",
-          "views": "3239"
+          "users": "3150",
+          "views": "3382"
         },
         {
           "title": "Trump builds the wall",
-          "users": "2514",
-          "views": "1912"
+          "users": "2519",
+          "views": "1987"
         },
         {
           "title": "Trump hails Lincoln Memorial Reflecting Pool work as ‘complete’",
-          "users": "2448",
-          "views": "2489"
+          "users": "2457",
+          "views": "2579"
         },
         {
           "title": "Trump walks out on NBC interview ranting about 'rigged' elections",
-          "users": "2412",
-          "views": "1560"
+          "users": "2415",
+          "views": "1621"
         },
         {
           "title": "1776 America wasn’t a Christian supermajority — 1955 was. 2026 is neither",
-          "users": "2051",
-          "views": "2033"
+          "users": "2060",
+          "views": "2114"
         }
       ],
       "sections": [
         {
           "section": "News",
-          "users": "24957",
-          "views": "25090"
+          "users": "25047",
+          "views": "26128"
         },
         {
           "section": "Entertainment",
-          "users": "16365",
-          "views": "16280"
+          "users": "16422",
+          "views": "16919"
         },
         {
           "section": "Crime",
-          "users": "16226",
-          "views": "16431"
+          "users": "16288",
+          "views": "17147"
         },
         {
           "section": "Editorials",
-          "users": "10614",
-          "views": "10566"
+          "users": "10704",
+          "views": "11044"
         },
         {
           "section": "White House",
-          "users": "5232",
-          "views": "5358"
+          "users": "5259",
+          "views": "5558"
         },
         {
           "section": "Community and Family",
-          "users": "5166",
-          "views": "5075"
+          "users": "5183",
+          "views": "5306"
         },
         {
           "section": "Faith, Freedom, and Self-Reliance",
-          "users": "4351",
-          "views": "4372"
+          "users": "4368",
+          "views": "4568"
         },
         {
           "section": "Op-Eds",
-          "users": "2969",
-          "views": "3069"
+          "users": "2983",
+          "views": "3178"
         },
         {
           "section": "Congressional",
-          "users": "2730",
-          "views": "2955"
+          "users": "2754",
+          "views": "3081"
         },
         {
           "section": "House",
-          "users": "2548",
-          "views": "2542"
+          "users": "2572",
+          "views": "2648"
+        }
+      ]
+    },
+    {
+      "date": "20260608",
+      "totalUsers": 127552,
+      "newUsers": 56426,
+      "pageviews": 137881,
+      "sessions": 143606,
+      "bounceRate": 0.7883584251354401,
+      "averageSessionDuration": 205.4344264412629,
+      "referrers": [
+        {
+          "source": "smartnews.com",
+          "users": 43013
+        },
+        {
+          "source": "(not set)",
+          "users": 35288
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 24970
+        },
+        {
+          "source": "(direct)",
+          "users": 18723
+        },
+        {
+          "source": "google",
+          "users": 9087
+        },
+        {
+          "source": "t.co",
+          "users": 5713
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 5541
+        },
+        {
+          "source": "newsbreak",
+          "users": 2699
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 2112
+        },
+        {
+          "source": "(data not available)",
+          "users": 1371
+        },
+        {
+          "source": "facebook.com",
+          "users": 1250
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 814
+        },
+        {
+          "source": "deployer",
+          "users": 805
+        },
+        {
+          "source": "bing",
+          "users": 707
+        },
+        {
+          "source": "duckduckgo",
+          "users": 619
+        }
+      ],
+      "authors": [
+        {
+          "author": "Claire Carter",
+          "users": "10654",
+          "views": "10572"
+        },
+        {
+          "author": "Britta Miller",
+          "users": "10037",
+          "views": "10263"
+        },
+        {
+          "author": "Kiara Moore",
+          "users": "9770",
+          "views": "9839"
+        },
+        {
+          "author": "Carter Schroppe",
+          "users": "6903",
+          "views": "6817"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "6589",
+          "views": "6844"
+        },
+        {
+          "author": "Washington Examiner",
+          "users": "4521",
+          "views": "4382"
+        },
+        {
+          "author": "Jay Rogers",
+          "users": "3599",
+          "views": "3527"
+        },
+        {
+          "author": "Lauren Green",
+          "users": "3573",
+          "views": "3582"
+        },
+        {
+          "author": "Christian Datoc, Mabinty Quarshie and Naomi Lim",
+          "users": "2152",
+          "views": "2157"
+        },
+        {
+          "author": "Associated Press",
+          "users": "1746",
+          "views": "1787"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "9489",
+          "views": "16006"
+        },
+        {
+          "title": "Scott Pelley says he was accused of physical abuse before 60 Minutes firing",
+          "users": "7986",
+          "views": "7643"
+        },
+        {
+          "title": "July Social Security direct payment worth $994 goes out in 24 days",
+          "users": "7316",
+          "views": "7504"
+        },
+        {
+          "title": "Bernie Sanders calls out Trump: ‘You’re a president, not a dictator’",
+          "users": "6900",
+          "views": "6980"
+        },
+        {
+          "title": "Homan says most anti-ICE protesters at New Jersey’s Delaney Hall are not state residents",
+          "users": "5512",
+          "views": "5453"
+        },
+        {
+          "title": "Bernie Sanders on possible 2028 bid: 'I suspect that's not going to happen'",
+          "users": "5078",
+          "views": "1368"
+        },
+        {
+          "title": "Trump’s fountain and reflecting pool beautification shows Democratic disarray is a choice",
+          "users": "4669",
+          "views": "4483"
+        },
+        {
+          "title": "Minnesota retaliated against fraud whistleblowers, House report finds",
+          "users": "3575",
+          "views": "1998"
+        },
+        {
+          "title": "The constitutional slavery exception nobody talks about",
+          "users": "3526",
+          "views": "3440"
+        },
+        {
+          "title": "‘I just don’t see the out here’: Joe Concha on Karmelo Anthony trial",
+          "users": "3283",
+          "views": "2575"
+        },
+        {
+          "title": "Trump-linked US attorney says California ‘blocking’ federal audit of voter rolls",
+          "users": "2844",
+          "views": "2806"
+        },
+        {
+          "title": "Graham Platner fires back at Fetterman: ‘It’s not the hoodie, dude’",
+          "users": "2234",
+          "views": "2121"
+        },
+        {
+          "title": "Trump bringing an entourage and security disruptions to Game 3 of Knicks-Spurs",
+          "users": "2152",
+          "views": "2157"
+        },
+        {
+          "title": "July Social Security direct payment worth $994 goes out in 25 days",
+          "users": "1906",
+          "views": "1955"
+        },
+        {
+          "title": "House GOP faces growing legislative backlog ahead of midterms",
+          "users": "1880",
+          "views": "1798"
+        }
+      ],
+      "sections": [
+        {
+          "section": "News",
+          "users": "13952",
+          "views": "14101"
+        },
+        {
+          "section": "Crime",
+          "users": "9080",
+          "views": "9220"
+        },
+        {
+          "section": "Entertainment",
+          "users": "8269",
+          "views": "7930"
+        },
+        {
+          "section": "Senate",
+          "users": "8009",
+          "views": "8181"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "7882",
+          "views": "8185"
+        },
+        {
+          "section": "Editorials",
+          "users": "4521",
+          "views": "4382"
+        },
+        {
+          "section": "House",
+          "users": "3955",
+          "views": "3994"
+        },
+        {
+          "section": "Congressional",
+          "users": "3591",
+          "views": "3513"
+        },
+        {
+          "section": "Investigations",
+          "users": "2844",
+          "views": "2807"
+        },
+        {
+          "section": "White House",
+          "users": "2821",
+          "views": "2765"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 35,
-    "uniqueSections": 22,
+    "uniqueAuthors": 34,
+    "uniqueSections": 20,
     "sampleAuthors": [
-      "David Sivak",
-      "Jon Miltimore",
-      "Zach Halaschak",
-      "Joe Concha",
-      "Kiara Moore"
+      "Kaelan Deese",
+      "Rob Crilly",
+      "Brady Knox",
+      "Mia Cathell",
+      "Wes Martin"
     ],
     "sampleSections": [
-      "Senate",
-      "Equality, Not Elitism",
-      "In Focus",
-      "Finance and Economy",
-      "Congressional"
+      "Justice",
+      "News",
+      "Op-Eds",
+      "Investigations",
+      "White House"
     ]
   }
 }

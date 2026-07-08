@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-07-07T10:30:52.051Z",
+  "updatedAt": "2026-07-08T09:33:57.880Z",
   "range": {
-    "start": "2026-06-30",
-    "end": "2026-07-06"
+    "start": "2026-07-01",
+    "end": "2026-07-07"
   },
   "rows": [
-    {
-      "date": "20260630",
-      "totalUsers": 204010,
-      "newUsers": 95742,
-      "pageviews": 236482,
-      "sessions": 231202,
-      "bounceRate": 0.643995294158355,
-      "averageSessionDuration": 109.90433011237361,
-      "referrers": [
-        {
-          "source": "smartnews.com",
-          "users": 67286
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 57535
-        },
-        {
-          "source": "(direct)",
-          "users": 33254
-        },
-        {
-          "source": "google",
-          "users": 15488
-        },
-        {
-          "source": "reddit.com",
-          "users": 2920
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 2789
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 2625
-        },
-        {
-          "source": "t.co",
-          "users": 2347
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 2344
-        },
-        {
-          "source": "newsbreak",
-          "users": 2319
-        },
-        {
-          "source": "facebook.com",
-          "users": 2296
-        },
-        {
-          "source": "lm.facebook.com",
-          "users": 1139
-        },
-        {
-          "source": "deployer",
-          "users": 921
-        },
-        {
-          "source": "fark",
-          "users": 666
-        },
-        {
-          "source": "bing",
-          "users": 654
-        }
-      ],
-      "authors": [
-        {
-          "author": "Anna Giaritelli",
-          "users": "22268",
-          "views": "23783"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "15998",
-          "views": "17346"
-        },
-        {
-          "author": "Kaelan Deese",
-          "users": "14877",
-          "views": "15541"
-        },
-        {
-          "author": "Sydney Topf",
-          "users": "13450",
-          "views": "13594"
-        },
-        {
-          "author": "Kiara Moore",
-          "users": "9140",
-          "views": "9598"
-        },
-        {
-          "author": "Sophia Mandt",
-          "users": "7910",
-          "views": "8054"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "6843",
-          "views": "7218"
-        },
-        {
-          "author": "Christian Datoc",
-          "users": "5444",
-          "views": "5592"
-        },
-        {
-          "author": "Claire Carter",
-          "users": "3759",
-          "views": "3933"
-        },
-        {
-          "author": "Timothy Nerozzi",
-          "users": "3703",
-          "views": "3878"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Haitians and Syrians must self-deport in a matter of hours or face ICE, officials say",
-          "users": "20744",
-          "views": "21680"
-        },
-        {
-          "title": "Trump supporters rip Amy Coney Barrett after Supreme Court setbacks",
-          "users": "13818",
-          "views": "14382"
-        },
-        {
-          "title": "Joe Manchin says it’s ‘insane’ that a majority of Democrats prefer socialism over capitalism",
-          "users": "13103",
-          "views": "13301"
-        },
-        {
-          "title": "Judge bars Trump administration from blocking funding for Hudson River tunnel",
-          "users": "9705",
-          "views": "10024"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "8749",
-          "views": "14654"
-        },
-        {
-          "title": "The spirit of ’76 lives on as Pennsylvania rallies for America’s birthday",
-          "users": "7170",
-          "views": "3942"
-        },
-        {
-          "title": "Josh Shapiro’s decision not to have exhibit at Great American State Fair was ‘humiliating’: Salena Zito",
-          "users": "7167",
-          "views": "7204"
-        },
-        {
-          "title": "Walz swipes at Freedom 250 by calling Minnesota event ‘America’s real state fair’",
-          "users": "7087",
-          "views": "7214"
-        },
-        {
-          "title": "Trump signs memorandum aimed at breaking up aftermarket auto parts ‘monopoly’",
-          "users": "4784",
-          "views": "4887"
-        },
-        {
-          "title": "Texas Democrats rip Paxton after video shows him flying to Iceland ahead of July 4",
-          "users": "3734",
-          "views": "3815"
-        },
-        {
-          "title": "Mamdani-backed New York candidate was arrested multiple times at protests",
-          "users": "3182",
-          "views": "3243"
-        },
-        {
-          "title": "Whitmer warns Trump Michigan National Guard troops in DC solely for America 250",
-          "users": "2802",
-          "views": "2875"
-        },
-        {
-          "title": "California treated worshippers like criminals. The Supreme Court must draw the line",
-          "users": "2685",
-          "views": "2745"
-        },
-        {
-          "title": "Mount Rushmore is incomplete: Here's who is missing",
-          "users": "2430",
-          "views": "970"
-        },
-        {
-          "title": "Poetica justice: Why this Jew-hating coffee shop owner deserves a Zionist thank you",
-          "users": "2328",
-          "views": "2396"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Justice",
-          "users": "25121",
-          "views": "26711"
-        },
-        {
-          "section": "Congressional",
-          "users": "21972",
-          "views": "23634"
-        },
-        {
-          "section": "Immigration",
-          "users": "20493",
-          "views": "21839"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "17887",
-          "views": "20571"
-        },
-        {
-          "section": "News",
-          "users": "11817",
-          "views": "12146"
-        },
-        {
-          "section": "Entertainment",
-          "users": "8221",
-          "views": "8403"
-        },
-        {
-          "section": "White House",
-          "users": "7649",
-          "views": "8010"
-        },
-        {
-          "section": "Healthcare",
-          "users": "6766",
-          "views": "7127"
-        },
-        {
-          "section": "Investigations",
-          "users": "4435",
-          "views": "4652"
-        },
-        {
-          "section": "Supreme Court",
-          "users": "4411",
-          "views": "4813"
-        }
-      ]
-    },
     {
       "date": "20260701",
       "totalUsers": 231402,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260706",
-      "totalUsers": 192687,
-      "newUsers": 69584,
-      "pageviews": 214915,
-      "sessions": 216767,
-      "bounceRate": 0.8625482661106165,
-      "averageSessionDuration": 185.28220323628133,
+      "totalUsers": 196226,
+      "newUsers": 76881,
+      "pageviews": 240611,
+      "sessions": 225935,
+      "bounceRate": 0.6777391727709297,
+      "averageSessionDuration": 111.4241752600571,
       "referrers": [
         {
           "source": "smartnews.com",
-          "users": 69999
+          "users": 76053
         },
         {
           "source": "newsbreak.com",
-          "users": 50948
-        },
-        {
-          "source": "(not set)",
-          "users": 43358
+          "users": 55906
         },
         {
           "source": "(direct)",
-          "users": 23042
+          "users": 24926
         },
         {
           "source": "google",
-          "users": 13628
-        },
-        {
-          "source": "(data not available)",
-          "users": 9285
-        },
-        {
-          "source": "newsbreak",
-          "users": 2457
+          "users": 17204
         },
         {
           "source": "newsbreakapp.com",
-          "users": 2416
+          "users": 2976
         },
         {
-          "source": "realclearpolitics.com",
-          "users": 1718
+          "source": "newsbreak",
+          "users": 2934
         },
         {
           "source": "reddit.com",
-          "users": 1706
+          "users": 2176
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1904
         },
         {
           "source": "deployer",
-          "users": 1258
+          "users": 1480
         },
         {
           "source": "m.facebook.com",
-          "users": 1068
+          "users": 1313
+        },
+        {
+          "source": "t.co",
+          "users": 1061
+        },
+        {
+          "source": "facebook.com",
+          "users": 950
+        },
+        {
+          "source": "youtube.com",
+          "users": 861
+        },
+        {
+          "source": "bing",
+          "users": 568
+        },
+        {
+          "source": "duckduckgo",
+          "users": 567
+        }
+      ],
+      "authors": [
+        {
+          "author": "Jay Rogers",
+          "users": "30990",
+          "views": "31824"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "22600",
+          "views": "23386"
+        },
+        {
+          "author": "Steven Casstevens",
+          "users": "9812",
+          "views": "10077"
+        },
+        {
+          "author": "Connor Bolster and Hans von Spakovsky",
+          "users": "8821",
+          "views": "9033"
+        },
+        {
+          "author": "Emily Robertson",
+          "users": "7315",
+          "views": "7487"
+        },
+        {
+          "author": "Carter Schroppe",
+          "users": "6916",
+          "views": "7148"
+        },
+        {
+          "author": "Sydney Topf",
+          "users": "6586",
+          "views": "6888"
+        },
+        {
+          "author": "Kiara Moore",
+          "users": "6544",
+          "views": "6804"
+        },
+        {
+          "author": "Bob Armstrong",
+          "users": "5746",
+          "views": "5921"
+        },
+        {
+          "author": "Michael Breeden",
+          "users": "5233",
+          "views": "5383"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Rogue judge just vacated Trump policy — thanks to a loophole Congress never intended",
+          "users": "27863",
+          "views": "28551"
+        },
+        {
+          "title": "Hamas dismantles government to allow Board of Peace-approved panel to take over",
+          "users": "13371",
+          "views": "13501"
+        },
+        {
+          "title": "Congress is about to make America’s roads far more dangerous",
+          "users": "10111",
+          "views": "10367"
+        },
+        {
+          "title": "First Amendment wins at Supreme Court to the horror of liberal justices",
+          "users": "9416",
+          "views": "9476"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "9065",
+          "views": "15346"
+        },
+        {
+          "title": "Trump claims to outrank Taylor Swift on TikTok popularity",
+          "users": "7096",
+          "views": "6236"
+        },
+        {
+          "title": "Johnson: House will pass SAVE America Act ‘one more time’ by attaching it to reconciliation bill",
+          "users": "6431",
+          "views": "6565"
+        },
+        {
+          "title": "TDS and the madness of King Joe Biden",
+          "users": "5890",
+          "views": "5908"
+        },
+        {
+          "title": "Vietnam’s communists quietly surrender to capitalism — with Trump resort",
+          "users": "5746",
+          "views": "5921"
+        },
+        {
+          "title": "Calm down, America: Why socialist surge is sure to backfire on the Left",
+          "users": "4942",
+          "views": "5072"
+        },
+        {
+          "title": "Trump tells Usha Vance he needs to be ‘careful’ he doesn’t become heaviest US president",
+          "users": "3891",
+          "views": "3942"
+        },
+        {
+          "title": "Democrats lay out investigation priorities if they retake the House",
+          "users": "3722",
+          "views": "3895"
+        },
+        {
+          "title": "Trump signs pardons for 11 people, most convicted of vehicle emissions violations",
+          "users": "3676",
+          "views": "3726"
+        },
+        {
+          "title": "Biden’s fertilizer tariffs failed. Trump just lifted them in a big win for farmers",
+          "users": "3515",
+          "views": "3588"
+        },
+        {
+          "title": "Trump administration spending nearly $3 billion to kill offshore wind projects",
+          "users": "3494",
+          "views": "3594"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Op-Eds",
+          "users": "61445",
+          "views": "73164"
+        },
+        {
+          "section": "World",
+          "users": "14039",
+          "views": "14549"
+        },
+        {
+          "section": "In Focus",
+          "users": "10113",
+          "views": "10457"
+        },
+        {
+          "section": "White House",
+          "users": "9391",
+          "views": "9872"
+        },
+        {
+          "section": "Entertainment",
+          "users": "7968",
+          "views": "8260"
+        },
+        {
+          "section": "Congressional",
+          "users": "6990",
+          "views": "7415"
+        },
+        {
+          "section": "Energy and Environment",
+          "users": "6839",
+          "views": "6972"
+        },
+        {
+          "section": "Policy",
+          "users": "6370",
+          "views": "6565"
+        },
+        {
+          "section": "Campaigns",
+          "users": "5464",
+          "views": "5752"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "3631",
+          "views": "3817"
+        }
+      ]
+    },
+    {
+      "date": "20260707",
+      "totalUsers": 165253,
+      "newUsers": 62992,
+      "pageviews": 187171,
+      "sessions": 191997,
+      "bounceRate": 0.8322786293535837,
+      "averageSessionDuration": 218.0639260212191,
+      "referrers": [
+        {
+          "source": "smartnews.com",
+          "users": 55753
+        },
+        {
+          "source": "(not set)",
+          "users": 40702
+        },
+        {
+          "source": "(data not available)",
+          "users": 32631
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 26029
+        },
+        {
+          "source": "(direct)",
+          "users": 23562
+        },
+        {
+          "source": "google",
+          "users": 7349
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 3822
+        },
+        {
+          "source": "instapundit.com",
+          "users": 1185
+        },
+        {
+          "source": "deployer",
+          "users": 889
         },
         {
           "source": "t.co",
           "users": 887
         },
         {
-          "source": "facebook.com",
-          "users": 814
+          "source": "newsbreak",
+          "users": 763
         },
         {
-          "source": "youtube.com",
-          "users": 691
+          "source": "newsbreakapp.com",
+          "users": 576
+        },
+        {
+          "source": "reddit.com",
+          "users": 558
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 440
+        },
+        {
+          "source": "bing",
+          "users": 373
         }
       ],
       "authors": [
         {
-          "author": "Jay Rogers",
-          "users": "30050",
-          "views": "27586"
+          "author": "Jack Birle",
+          "users": "13033",
+          "views": "12964"
         },
         {
           "author": "Molly Parks",
-          "users": "21861",
-          "views": "21026"
-        },
-        {
-          "author": "Steven Casstevens",
-          "users": "9464",
-          "views": "8790"
-        },
-        {
-          "author": "Connor Bolster and Hans von Spakovsky",
-          "users": "8792",
-          "views": "8821"
-        },
-        {
-          "author": "Emily Robertson",
-          "users": "6900",
-          "views": "6410"
-        },
-        {
-          "author": "Carter Schroppe",
-          "users": "6685",
-          "views": "6341"
+          "users": "9461",
+          "views": "9152"
         },
         {
           "author": "Sydney Topf",
-          "users": "6541",
-          "views": "6559"
+          "users": "9356",
+          "views": "9196"
         },
         {
-          "author": "Kiara Moore",
-          "users": "6396",
-          "views": "6330"
+          "author": "Connor Bolster and Hans von Spakovsky",
+          "users": "9206",
+          "views": "8447"
         },
         {
-          "author": "Bob Armstrong",
-          "users": "5524",
-          "views": "5287"
+          "author": "Jay Rogers",
+          "users": "9032",
+          "views": "8469"
+        },
+        {
+          "author": "David W. Wang",
+          "users": "5302",
+          "views": "4962"
         },
         {
           "author": "Michael Breeden",
-          "users": "5088",
-          "views": "4773"
+          "users": "4424",
+          "views": "4151"
+        },
+        {
+          "author": "Rena Rowe",
+          "users": "3966",
+          "views": "3763"
+        },
+        {
+          "author": "Claire Carter",
+          "users": "3927",
+          "views": "3875"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "3764",
+          "views": "3722"
         }
       ],
       "articles": [
         {
-          "title": "Rogue judge just vacated Trump policy — thanks to a loophole Congress never intended",
-          "users": "26853",
-          "views": "24554"
-        },
-        {
-          "title": "Hamas dismantles government to allow Board of Peace-approved panel to take over",
-          "users": "13120",
-          "views": "12262"
-        },
-        {
-          "title": "Congress is about to make America’s roads far more dangerous",
-          "users": "9774",
-          "views": "9031"
+          "title": "Justice Ketanji Brown Jackson took up more than 20% of Supreme Court’s questioning last term",
+          "users": "10549",
+          "views": "10312"
         },
         {
           "title": "First Amendment wins at Supreme Court to the horror of liberal justices",
-          "users": "9386",
-          "views": "9261"
+          "users": "9883",
+          "views": "9048"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9037",
-          "views": "13701"
+          "users": "8997",
+          "views": "13391"
+        },
+        {
+          "title": "Rogue judge just vacated Trump policy — thanks to a loophole Congress never intended",
+          "users": "6801",
+          "views": "6339"
         },
         {
           "title": "Trump claims to outrank Taylor Swift on TikTok popularity",
-          "users": "7082",
-          "views": "6009"
+          "users": "6247",
+          "views": "5680"
         },
         {
-          "title": "Johnson: House will pass SAVE America Act ‘one more time’ by attaching it to reconciliation bill",
-          "users": "6234",
-          "views": "5798"
+          "title": "Trump's anti-communist manifesto",
+          "users": "5592",
+          "views": "3607"
+        },
+        {
+          "title": "How a NATO realignment can bring Putin and Tehran to their knees",
+          "users": "5468",
+          "views": "5121"
+        },
+        {
+          "title": "Trump says senators would approve Cruz as Supreme Court justice to ‘get him the hell out’",
+          "users": "4606",
+          "views": "4436"
         },
         {
           "title": "TDS and the madness of King Joe Biden",
-          "users": "5739",
-          "views": "5244"
+          "users": "3997",
+          "views": "3666"
+        },
+        {
+          "title": "Congress is about to make America’s roads far more dangerous",
+          "users": "3644",
+          "views": "3419"
+        },
+        {
+          "title": "Abe Hamadeh begins drafting impeachment articles against Biden judge who blocked voter database",
+          "users": "3358",
+          "views": "3306"
+        },
+        {
+          "title": "Platner proves Democratic establishment is alive and well",
+          "users": "3316",
+          "views": "3073"
+        },
+        {
+          "title": "Joe Manchin warned Joe Biden that his staff was taking him too far left in 2020",
+          "users": "3242",
+          "views": "3214"
+        },
+        {
+          "title": "NATO is stronger because Trump demanded more",
+          "users": "3149",
+          "views": "1436"
         },
         {
           "title": "Vietnam’s communists quietly surrender to capitalism — with Trump resort",
-          "users": "5524",
-          "views": "5287"
-        },
-        {
-          "title": "Calm down, America: Why socialist surge is sure to backfire on the Left",
-          "users": "4816",
-          "views": "4333"
-        },
-        {
-          "title": "Democrats lay out investigation priorities if they retake the House",
-          "users": "3628",
-          "views": "3391"
-        },
-        {
-          "title": "Trump tells Usha Vance he needs to be ‘careful’ he doesn’t become heaviest US president",
-          "users": "3604",
-          "views": "3337"
-        },
-        {
-          "title": "Trump signs pardons for 11 people, most convicted of vehicle emissions violations",
-          "users": "3400",
-          "views": "3156"
-        },
-        {
-          "title": "Fox News’s Steve Doocy says America looks different through a ‘windshield’ than it does a ‘headline’",
-          "users": "3344",
-          "views": "3071"
-        },
-        {
-          "title": "Biden’s fertilizer tariffs failed. Trump just lifted them in a big win for farmers",
-          "users": "3328",
-          "views": "3038"
+          "users": "3103",
+          "views": "2951"
         }
       ],
       "sections": [
         {
           "section": "Op-Eds",
-          "users": "59551",
-          "views": "63868"
+          "users": "36456",
+          "views": "40433"
         },
         {
-          "section": "World",
-          "users": "13747",
-          "views": "13131"
+          "section": "Supreme Court",
+          "users": "13869",
+          "views": "13819"
         },
         {
           "section": "In Focus",
-          "users": "10046",
-          "views": "10159"
-        },
-        {
-          "section": "White House",
-          "users": "8758",
-          "views": "8424"
-        },
-        {
-          "section": "Entertainment",
-          "users": "7826",
-          "views": "7747"
+          "users": "11437",
+          "views": "10941"
         },
         {
           "section": "Congressional",
-          "users": "6834",
-          "views": "6688"
-        },
-        {
-          "section": "Energy and Environment",
-          "users": "6554",
-          "views": "6182"
-        },
-        {
-          "section": "Policy",
-          "users": "6152",
-          "views": "5798"
+          "users": "8529",
+          "views": "9035"
         },
         {
           "section": "Campaigns",
-          "users": "5374",
-          "views": "5392"
+          "users": "7418",
+          "views": "7440"
+        },
+        {
+          "section": "Entertainment",
+          "users": "6270",
+          "views": "5999"
+        },
+        {
+          "section": "Defense",
+          "users": "5585",
+          "views": "5529"
+        },
+        {
+          "section": "Senate",
+          "users": "5070",
+          "views": "4906"
         },
         {
           "section": "Beltway Confidential",
-          "users": "3581",
-          "views": "3573"
+          "users": "4768",
+          "views": "4663"
+        },
+        {
+          "section": "House",
+          "users": "4161",
+          "views": "4117"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 34,
-    "uniqueSections": 24,
+    "uniqueAuthors": 33,
+    "uniqueSections": 25,
     "sampleAuthors": [
-      "Anna Giaritelli",
       "Emily Hallas",
-      "Kaelan Deese",
       "Sydney Topf",
+      "Anna Giaritelli",
+      "Hailey Bullis",
       "Kiara Moore"
     ],
     "sampleSections": [
+      "News",
       "Justice",
-      "Congressional",
+      "Senate",
       "Immigration",
-      "Op-Eds",
-      "News"
+      "Op-Eds"
     ]
   }
 }

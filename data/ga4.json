@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-07-16T09:25:35.058Z",
+  "updatedAt": "2026-07-17T09:19:47.696Z",
   "range": {
-    "start": "2026-07-09",
-    "end": "2026-07-15"
+    "start": "2026-07-10",
+    "end": "2026-07-16"
   },
   "rows": [
-    {
-      "date": "20260709",
-      "totalUsers": 227065,
-      "newUsers": 102597,
-      "pageviews": 256011,
-      "sessions": 251018,
-      "bounceRate": 0.6297875052785059,
-      "averageSessionDuration": 113.24177334930165,
-      "referrers": [
-        {
-          "source": "smartnews.com",
-          "users": 72192
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 67344
-        },
-        {
-          "source": "(direct)",
-          "users": 33799
-        },
-        {
-          "source": "google",
-          "users": 19117
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 11932
-        },
-        {
-          "source": "t.co",
-          "users": 3284
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 2827
-        },
-        {
-          "source": "newsbreak",
-          "users": 2149
-        },
-        {
-          "source": "reddit.com",
-          "users": 1542
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1289
-        },
-        {
-          "source": "youtube.com",
-          "users": 868
-        },
-        {
-          "source": "facebook.com",
-          "users": 825
-        },
-        {
-          "source": "msn.com",
-          "users": 780
-        },
-        {
-          "source": "deployer",
-          "users": 603
-        },
-        {
-          "source": "bing",
-          "users": 588
-        }
-      ],
-      "authors": [
-        {
-          "author": "Tom Rogan",
-          "users": "68897",
-          "views": "69963"
-        },
-        {
-          "author": "Britta Miller",
-          "users": "9502",
-          "views": "10331"
-        },
-        {
-          "author": "Michael DeSantis",
-          "users": "7050",
-          "views": "7248"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "6686",
-          "views": "7229"
-        },
-        {
-          "author": "John Schilling",
-          "users": "5782",
-          "views": "5936"
-        },
-        {
-          "author": "Anna Giaritelli",
-          "users": "4505",
-          "views": "4692"
-        },
-        {
-          "author": "Jay Rogers",
-          "users": "4200",
-          "views": "4357"
-        },
-        {
-          "author": "Claire Carter",
-          "users": "3419",
-          "views": "3635"
-        },
-        {
-          "author": "Timothy Nerozzi",
-          "users": "3368",
-          "views": "3442"
-        },
-        {
-          "author": "Kaelan Deese",
-          "users": "2991",
-          "views": "3079"
-        }
-      ],
-      "articles": [
-        {
-          "title": "China just fired a nuclear warning shot across the Pacific",
-          "users": "68498",
-          "views": "70621"
-        },
-        {
-          "title": "I co-founded Wikipedia, but anonymous mob runs the show. Now I'm banned",
-          "users": "11224",
-          "views": "6880"
-        },
-        {
-          "title": "Border wall projects at Big Bend National Park get underway",
-          "users": "11018",
-          "views": "4775"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "8972",
-          "views": "15176"
-        },
-        {
-          "title": "The 14th Amendment was never legitimately ratified",
-          "users": "7557",
-          "views": "7615"
-        },
-        {
-          "title": "August Social Security direct payment worth $994 goes out in 23 days",
-          "users": "6523",
-          "views": "7022"
-        },
-        {
-          "title": "Giving Platner the bum's rush",
-          "users": "6283",
-          "views": "4998"
-        },
-        {
-          "title": "Why teachers unions just said no to $6.5 billion for America’s failing students",
-          "users": "6102",
-          "views": "6196"
-        },
-        {
-          "title": "Trump contemplates assassinating more Iranian leaders, warns he ‘may be gone too’ after topping Tehran’s ‘kill list’",
-          "users": "3278",
-          "views": "3349"
-        },
-        {
-          "title": "US on track to intercept 16 times as many suspected terrorists at border under Trump thanks to cartel designations",
-          "users": "3222",
-          "views": "3330"
-        },
-        {
-          "title": "Democrats file ethics complaint against Ramaswamy as race tightens",
-          "users": "3136",
-          "views": "2246"
-        },
-        {
-          "title": "Prepare for the expulsion of Crimean Russians",
-          "users": "3037",
-          "views": "3029"
-        },
-        {
-          "title": "NYC immigrant neighborhoods map outrages Italian community",
-          "users": "2921",
-          "views": "1606"
-        },
-        {
-          "title": "Stealing from cops: Democrats loot pensions for green slush fund",
-          "users": "2658",
-          "views": "2728"
-        },
-        {
-          "title": "Iran state media says country should start ‘burning’ US ceasefire agreement after Trump comments",
-          "users": "2604",
-          "views": "2646"
-        }
-      ],
-      "sections": [
-        {
-          "section": "In Focus",
-          "users": "71942",
-          "views": "73381"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "26252",
-          "views": "31005"
-        },
-        {
-          "section": "World",
-          "users": "9921",
-          "views": "11121"
-        },
-        {
-          "section": "News",
-          "users": "7543",
-          "views": "8239"
-        },
-        {
-          "section": "Immigration",
-          "users": "7395",
-          "views": "7994"
-        },
-        {
-          "section": "Congressional",
-          "users": "5669",
-          "views": "6673"
-        },
-        {
-          "section": "White House",
-          "users": "4998",
-          "views": "5256"
-        },
-        {
-          "section": "Campaigns",
-          "users": "4303",
-          "views": "4468"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "4034",
-          "views": "4205"
-        },
-        {
-          "section": "Supreme Court",
-          "users": "3524",
-          "views": "3605"
-        }
-      ]
-    },
     {
       "date": "20260710",
       "totalUsers": 193234,
@@ -382,78 +130,78 @@
       "articles": [
         {
           "title": "China just fired a nuclear warning shot across the Pacific",
-          "users": "18800",
-          "views": "19439"
+          "users": "18823",
+          "views": "19455"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "8531",
-          "views": "14226"
+          "users": "8543",
+          "views": "14222"
         },
         {
           "title": "As mourners in Tehran call for death to the American president, Iran allegedly plots to assassinate Trump",
-          "users": "8250",
-          "views": "8450"
+          "users": "8267",
+          "views": "8467"
         },
         {
           "title": "Taylor Swift reimburses New York City for police overtime during wedding: Mamdani",
-          "users": "8017",
+          "users": "8015",
           "views": "8175"
         },
         {
           "title": "The socialist dominoes are falling, and young Americans are cheering it on",
-          "users": "5763",
-          "views": "5881"
+          "users": "5770",
+          "views": "5888"
         },
         {
           "title": "Congress can’t term-limit itself — the Supreme Court already said so, twice",
-          "users": "5412",
-          "views": "5515"
+          "users": "5420",
+          "views": "5522"
         },
         {
           "title": "Elliot Page and the impossible promise of transition",
-          "users": "4675",
-          "views": "4853"
+          "users": "4671",
+          "views": "4848"
         },
         {
           "title": "Border wall projects at Big Bend National Park get underway",
-          "users": "4540",
-          "views": "1906"
+          "users": "4545",
+          "views": "1907"
         },
         {
           "title": "Mamdani official told to cancel meeting with Iran’s UN representative by Trump administration",
-          "users": "4440",
-          "views": "4546"
+          "users": "4435",
+          "views": "4541"
         },
         {
           "title": "More than a machine: Big Boy No. 4014 sparks a nationwide reunion",
-          "users": "4383",
-          "views": "3203"
+          "users": "4395",
+          "views": "3218"
         },
         {
           "title": "Iran’s threats against Trump raise a question Washington cannot avoid",
-          "users": "4364",
-          "views": "4418"
+          "users": "4375",
+          "views": "4428"
         },
         {
           "title": "John James expected a coronation. He got a reckoning instead",
-          "users": "4270",
-          "views": "4304"
+          "users": "4271",
+          "views": "4305"
         },
         {
           "title": "Duckworth calls for Maine Senate candidate to drop Platner replacement bid over 2015 actions",
-          "users": "3894",
-          "views": "3999"
+          "users": "3899",
+          "views": "4004"
         },
         {
           "title": "These 120,000 people could shatter Democrats and two-party system",
-          "users": "3441",
-          "views": "3519"
+          "users": "3440",
+          "views": "3518"
         },
         {
           "title": "Damning Tyler Robinson letter accidentally flashed during Charlie Kirk murder hearing",
-          "users": "3104",
-          "views": "3233"
+          "users": "3101",
+          "views": "3230"
         }
       ],
       "sections": [
@@ -634,78 +382,78 @@
       "articles": [
         {
           "title": "Second round of July Social Security payments goes out in four days",
-          "users": "17369",
-          "views": "18378"
+          "users": "17396",
+          "views": "18419"
         },
         {
           "title": "August Social Security direct payment worth $994 goes out in 20 days",
-          "users": "10014",
-          "views": "10542"
+          "users": "10003",
+          "views": "10547"
         },
         {
           "title": "China just fired a nuclear warning shot across the Pacific",
-          "users": "9010",
-          "views": "9185"
+          "users": "9026",
+          "views": "9195"
         },
         {
           "title": "Mamdani says Eric Adams’s administration created neighborhood map and will add Little Italy",
-          "users": "8377",
-          "views": "8592"
+          "users": "8375",
+          "views": "8582"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "7453",
-          "views": "12017"
+          "users": "7452",
+          "views": "12016"
         },
         {
           "title": "Federal judges issue warring rulings over DHS citizenship database for voter roll checks",
-          "users": "7303",
-          "views": "7608"
+          "users": "7302",
+          "views": "7614"
         },
         {
           "title": "Wyoming governor plots legal strategy as California officials aim to halt Oakland coal terminal",
-          "users": "6162",
-          "views": "6363"
+          "users": "6171",
+          "views": "6371"
         },
         {
           "title": "As mourners in Tehran call for death to the American president, Iran allegedly plots to assassinate Trump",
-          "users": "6107",
-          "views": "6245"
+          "users": "6109",
+          "views": "6250"
         },
         {
           "title": "Anti-abortion group posts, then deletes message about death of Mitch McConnell",
-          "users": "4904",
-          "views": "2027"
+          "users": "4911",
+          "views": "2037"
         },
         {
           "title": "Democratic reality check: Left in denial as California's blue model crumbles",
-          "users": "4510",
+          "users": "4512",
           "views": "3754"
         },
         {
           "title": "Platner ran polling on possible replacements before dropping out. Here’s how they stacked up against Collins",
-          "users": "4267",
-          "views": "4385"
+          "users": "4273",
+          "views": "4392"
         },
         {
           "title": "Border wall projects at Big Bend National Park get underway",
-          "users": "4179",
-          "views": "1605"
+          "users": "4181",
+          "views": "1604"
         },
         {
           "title": "The socialist dominoes are falling, and young Americans are cheering it on",
-          "users": "3526",
-          "views": "3573"
+          "users": "3524",
+          "views": "3570"
         },
         {
           "title": "Iran’s threats against Trump raise a question Washington cannot avoid",
-          "users": "3244",
-          "views": "3335"
+          "users": "3245",
+          "views": "3336"
         },
         {
           "title": "More than a machine: Big Boy No. 4014 sparks a nationwide reunion",
-          "users": "2914",
-          "views": "1979"
+          "users": "2925",
+          "views": "1988"
         }
       ],
       "sections": [
@@ -886,78 +634,78 @@
       "articles": [
         {
           "title": "How will Lindsey Graham be replaced as South Carolina senator after sudden death?",
-          "users": "28682",
-          "views": "29734"
+          "users": "28656",
+          "views": "29745"
         },
         {
           "title": "August Social Security direct payment worth $994 goes out in 19 days",
-          "users": "22617",
-          "views": "24505"
+          "users": "22701",
+          "views": "24564"
         },
         {
           "title": "At least two killed in shooting at Toronto music festival",
-          "users": "18948",
-          "views": "19673"
+          "users": "18970",
+          "views": "19703"
         },
         {
           "title": "Second round of July Social Security payments goes out in three days",
-          "users": "10069",
-          "views": "6121"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "8662",
-          "views": "14100"
+          "users": "10071",
+          "views": "6127"
         },
         {
           "title": "Iran returns to no-limits Gulf State target list after declaring Strait of Hormuz closed",
-          "users": "8659",
+          "users": "8665",
           "views": "8852"
         },
         {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "8665",
+          "views": "14096"
+        },
+        {
           "title": "Mamdani says Eric Adams’s administration created neighborhood map and will add Little Italy",
-          "users": "6510",
-          "views": "6649"
+          "users": "6515",
+          "views": "6655"
         },
         {
           "title": "Democrats fume at Bernie Sanders for enabling Graham Platner’s rise in Maine",
-          "users": "5639",
-          "views": "5716"
+          "users": "5645",
+          "views": "5724"
         },
         {
           "title": "August Social Security direct payment worth $994 goes out in 20 days",
-          "users": "5512",
-          "views": "5803"
+          "users": "5523",
+          "views": "5815"
         },
         {
           "title": "Lindsey Graham's risk of heart attack heightened by family history",
-          "users": "5416",
-          "views": "2493"
+          "users": "5422",
+          "views": "2494"
         },
         {
           "title": "The RNC wants a massive Trump celebration. Some worry ordinary Republicans can’t afford to attend",
-          "users": "3917",
-          "views": "4018"
+          "users": "3932",
+          "views": "4032"
         },
         {
           "title": "Second round of July Social Security payments goes out in four days",
-          "users": "3722",
-          "views": "3748"
+          "users": "3727",
+          "views": "3753"
         },
         {
           "title": "As mourners in Tehran call for death to the American president, Iran allegedly plots to assassinate Trump",
-          "users": "3710",
-          "views": "3801"
+          "users": "3712",
+          "views": "3803"
         },
         {
           "title": "Democrats have no idea what a man is",
-          "users": "3550",
-          "views": "3680"
+          "users": "3561",
+          "views": "3691"
         },
         {
           "title": "Wyoming governor plots legal strategy as California officials aim to halt Oakland coal terminal",
-          "users": "3519",
-          "views": "3599"
+          "users": "3525",
+          "views": "3606"
         }
       ],
       "sections": [
@@ -1138,78 +886,78 @@
       "articles": [
         {
           "title": "Johnson confronts GOP rebellion over SAVE America Act as House returns to Washington",
-          "users": "58038",
-          "views": "59768"
+          "users": "58113",
+          "views": "59829"
         },
         {
           "title": "Seven dead, 228 structures hit: The Iran war just exposed a broken bet",
-          "users": "44283",
-          "views": "45054"
+          "users": "44306",
+          "views": "45118"
         },
         {
           "title": "Conservatives urge Congress to pass constitutional amendment keeping Supreme Court at nine justices",
-          "users": "12089",
-          "views": "12367"
+          "users": "12100",
+          "views": "12378"
         },
         {
           "title": "House prepares to ditch daylight saving time clock changes: What to know",
-          "users": "11132",
-          "views": "11615"
+          "users": "11131",
+          "views": "11622"
         },
         {
           "title": "Second round of July Social Security payments goes out in three days",
-          "users": "10864",
-          "views": "7245"
+          "users": "10872",
+          "views": "7244"
         },
         {
           "title": "Election officials melt down because DOJ wants them to follow the law",
-          "users": "9406",
-          "views": "9047"
+          "users": "9429",
+          "views": "9060"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9396",
-          "views": "15740"
+          "users": "9416",
+          "views": "15728"
         },
         {
           "title": "Judge bars Trump from using IRS immunity deal to evade investigation over past tax filings",
-          "users": "8889",
-          "views": "9162"
+          "users": "8898",
+          "views": "9165"
         },
         {
           "title": "The new fuel at the pump could hurt your car and wallet",
-          "users": "6612",
-          "views": "6577"
+          "users": "6605",
+          "views": "6570"
         },
         {
           "title": "Newsom says Democrats must stop trying to ‘win an argument’ and start winning elections",
-          "users": "5522",
-          "views": "5616"
+          "users": "5521",
+          "views": "5615"
         },
         {
           "title": "Why is Iran suddenly desperate to kill Trump?",
-          "users": "5471",
+          "users": "5470",
           "views": "5616"
         },
         {
           "title": "US, Iran climb the escalation ladder with strikes and counterstrikes over the Strait of Hormuz",
-          "users": "5330",
-          "views": "5515"
+          "users": "5323",
+          "views": "5508"
         },
         {
           "title": "DHS extends work permits for TPS recipients from Haiti and six countries",
           "users": "5026",
-          "views": "5306"
+          "views": "5308"
         },
         {
           "title": "Ossoff polling lead contrasts with Bottoms’s race against Rick Jackson",
-          "users": "4817",
-          "views": "4846"
+          "users": "4826",
+          "views": "4854"
         },
         {
           "title": "Iran is gaming Hormuz — and Washington is teaching it how",
-          "users": "4464",
-          "views": "4578"
+          "users": "4459",
+          "views": "4571"
         }
       ],
       "sections": [
@@ -1390,78 +1138,78 @@
       "articles": [
         {
           "title": "Iran just admitted the quiet part out loud. Is Trump listening?",
-          "users": "48646",
-          "views": "50647"
+          "users": "48741",
+          "views": "50668"
         },
         {
           "title": "Mamdani forgot he’s just a mayor. The State Department had to remind him",
-          "users": "26249",
-          "views": "26849"
+          "users": "26266",
+          "views": "26893"
         },
         {
           "title": "Mike Johnson works to flip GOP holdouts as blockade shows signs of thawing",
-          "users": "12320",
-          "views": "12628"
+          "users": "12338",
+          "views": "12632"
         },
         {
           "title": "Seven dead, 228 structures hit: The Iran war just exposed a broken bet",
-          "users": "11932",
-          "views": "11547"
+          "users": "11960",
+          "views": "11567"
         },
         {
           "title": "Vance cancels appearance in front of House Republicans as blockade threatens GOP agenda",
-          "users": "10968",
-          "views": "11350"
+          "users": "10976",
+          "views": "11371"
         },
         {
           "title": "China fired a nuclear-capable warning shot — while Trump was focused on Iran",
-          "users": "10598",
-          "views": "10845"
+          "users": "10607",
+          "views": "10857"
         },
         {
           "title": "Johnson confronts GOP rebellion over SAVE America Act as House returns to Washington",
-          "users": "10295",
-          "views": "10837"
+          "users": "10319",
+          "views": "10860"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9234",
-          "views": "15043"
+          "users": "9248",
+          "views": "15055"
         },
         {
           "title": "Ceasefire imminent? Putin’s endgame has arrived",
-          "users": "8914",
-          "views": "9276"
+          "users": "8933",
+          "views": "9282"
         },
         {
           "title": "Taco Bell being investigated for cyclosporiasis outbreak in Michigan",
-          "users": "7141",
-          "views": "7639"
+          "users": "7151",
+          "views": "7651"
         },
         {
           "title": "Appeals court hands Trump win in fight over 2020 USPS mail changes",
-          "users": "6836",
-          "views": "6831"
+          "users": "6849",
+          "views": "6846"
         },
         {
           "title": "House prepares to ditch daylight saving time clock changes: What to know",
-          "users": "6813",
-          "views": "7243"
+          "users": "6822",
+          "views": "7250"
         },
         {
           "title": "America’s Gulf ally goes rogue: Iran’s silent partner co-managing Hormuz",
-          "users": "6766",
-          "views": "6909"
+          "users": "6754",
+          "views": "6897"
         },
         {
           "title": "One dead after Iran attacks two tankers in Strait of Hormuz, UAE says",
-          "users": "6724",
+          "users": "6726",
           "views": "6970"
         },
         {
           "title": "Judge bars Trump from using IRS immunity deal to evade investigation over past tax filings",
-          "users": "6641",
-          "views": "6928"
+          "users": "6644",
+          "views": "6932"
         }
       ],
       "sections": [
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260715",
-      "totalUsers": 254311,
-      "newUsers": 92824,
-      "pageviews": 289008,
-      "sessions": 296004,
-      "bounceRate": 0.8999945946676396,
-      "averageSessionDuration": 166.55504589364332,
+      "totalUsers": 260406,
+      "newUsers": 103700,
+      "pageviews": 325873,
+      "sessions": 308956,
+      "bounceRate": 0.7168431750799467,
+      "averageSessionDuration": 102.1817400859022,
       "referrers": [
         {
           "source": "newsbreak.com",
-          "users": 84539
+          "users": 103355
         },
         {
           "source": "smartnews.com",
-          "users": 78334
-        },
-        {
-          "source": "(not set)",
-          "users": 57875
+          "users": 87426
         },
         {
           "source": "(direct)",
-          "users": 28252
-        },
-        {
-          "source": "(data not available)",
-          "users": 26274
+          "users": 30826
         },
         {
           "source": "google",
-          "users": 9189
+          "users": 13882
         },
         {
           "source": "newsbreak",
-          "users": 5058
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 2045
+          "users": 6542
         },
         {
           "source": "newsbreakapp.com",
-          "users": 2019
+          "users": 3002
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 2394
         },
         {
           "source": "m.facebook.com",
-          "users": 1235
+          "users": 1964
         },
         {
           "source": "facebook.com",
-          "users": 1051
-        },
-        {
-          "source": "deployer",
-          "users": 795
+          "users": 1581
         },
         {
           "source": "t.co",
-          "users": 730
+          "users": 1066
+        },
+        {
+          "source": "deployer",
+          "users": 997
         },
         {
           "source": "reddit.com",
-          "users": 548
+          "users": 903
+        },
+        {
+          "source": "msn.com",
+          "users": 862
+        },
+        {
+          "source": "msn",
+          "users": 768
         },
         {
           "source": "news.google.com",
-          "users": 543
+          "users": 722
         }
       ],
       "authors": [
         {
           "author": "Kiara Moore",
-          "users": "34589",
-          "views": "33489"
+          "users": "35772",
+          "views": "37975"
         },
         {
           "author": "Hailey Bullis",
-          "users": "23947",
-          "views": "22547"
+          "users": "24812",
+          "views": "25490"
         },
         {
           "author": "Jon Miltimore",
-          "users": "14144",
-          "views": "13003"
+          "users": "14529",
+          "views": "14917"
         },
         {
           "author": "Sydney Topf",
-          "users": "13130",
-          "views": "12817"
+          "users": "13634",
+          "views": "14221"
         },
         {
           "author": "Kaelan Deese",
-          "users": "12861",
-          "views": "12348"
+          "users": "13252",
+          "views": "13950"
         },
         {
           "author": "Claire Carter",
-          "users": "12303",
-          "views": "11977"
-        },
-        {
-          "author": "Mike Brest",
-          "users": "10450",
-          "views": "10534"
+          "users": "12722",
+          "views": "13535"
         },
         {
           "author": "David De La Paz",
-          "users": "10439",
-          "views": "9238"
+          "users": "10713",
+          "views": "10807"
+        },
+        {
+          "author": "Mike Brest",
+          "users": "10574",
+          "views": "10863"
         },
         {
           "author": "Justin Callais and Vincent Geloso",
-          "users": "5678",
-          "views": "5403"
+          "users": "5994",
+          "views": "6154"
         },
         {
           "author": "Emily Hallas",
-          "users": "5321",
-          "views": "5497"
+          "users": "5394",
+          "views": "5723"
         }
       ],
       "articles": [
         {
           "title": "August Social Security direct payment worth $994 goes out in 16 days",
-          "users": "33204",
-          "views": "32172"
+          "users": "34344",
+          "views": "36305"
         },
         {
           "title": "No. 2 House Democrat breaks with Jeffries on Israel aid vote",
-          "users": "20316",
-          "views": "19053"
+          "users": "20964",
+          "views": "21682"
         },
         {
           "title": "The Minnesota daycare fraud scandal just got bigger",
-          "users": "14086",
-          "views": "13021"
-        },
-        {
-          "title": "Seventy-seven million votes. One rule to erase them all",
-          "users": "10535",
-          "views": "9593"
+          "users": "14469",
+          "views": "14880"
         },
         {
           "title": "Three hundred fifty economists just told the poor to stop waiting for growth. They’re wrong",
-          "users": "10308",
-          "views": "9525"
+          "users": "10912",
+          "views": "11176"
+        },
+        {
+          "title": "Seventy-seven million votes. One rule to erase them all",
+          "users": "10802",
+          "views": "11157"
         },
         {
           "title": "Russian troops on Ukraine front lines have life expectancy of 20 to 30 minutes: Ratcliffe",
-          "users": "9941",
-          "views": "9997"
+          "users": "10079",
+          "views": "10301"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "8876",
-          "views": "13400"
+          "users": "8928",
+          "views": "15090"
         },
         {
           "title": "Appeals court hands Trump win in fight over 2020 USPS mail changes",
-          "users": "8366",
-          "views": "7806"
+          "users": "8572",
+          "views": "8731"
         },
         {
           "title": "Marjorie Taylor Greene eulogizes Lindsey Graham as a ‘murderer’",
-          "users": "6190",
-          "views": "5586"
+          "users": "6420",
+          "views": "6369"
         },
         {
           "title": "Trump says ‘I would’ invade Iran’s Kharg Island if ‘we degrade them’ enough",
-          "users": "5384",
-          "views": "5049"
+          "users": "5563",
+          "views": "5668"
         },
         {
           "title": "Washington Examiner | Political News and Conservative Analysis About Congress, the President, and the Federal Government",
-          "users": "5139",
-          "views": "2370"
-        },
-        {
-          "title": "Seven dead, 228 structures hit: The Iran war just exposed a broken bet",
-          "users": "4643",
-          "views": "3908"
+          "users": "5219",
+          "views": "2616"
         },
         {
           "title": "Newsom says Democrats must stop trying to ‘win an argument’ and start winning elections",
-          "users": "4521",
-          "views": "4260"
+          "users": "4777",
+          "views": "4847"
+        },
+        {
+          "title": "Seven dead, 228 structures hit: The Iran war just exposed a broken bet",
+          "users": "4714",
+          "views": "4315"
         },
         {
           "title": "Biden’s parting gift to Democrats: A rule DOJ never dared submit to Congress",
-          "users": "3907",
-          "views": "3564"
+          "users": "4095",
+          "views": "4203"
         },
         {
-          "title": "Vance admits Trump administration ‘absolutely screwed up the comms of the Epstein files’",
-          "users": "3684",
-          "views": "3686"
+          "title": "He lives in hiding in Saudi Arabia — and Trump still calls him Yemen’s president",
+          "users": "3754",
+          "views": "3811"
         }
       ],
       "sections": [
         {
           "section": "Op-Eds",
-          "users": "55018",
-          "views": "59186"
+          "users": "56554",
+          "views": "67911"
         },
         {
           "section": "Finance and Economy",
-          "users": "36823",
-          "views": "35591"
+          "users": "38076",
+          "views": "40363"
         },
         {
           "section": "House",
-          "users": "26909",
-          "views": "26009"
+          "users": "27847",
+          "views": "29265"
         },
         {
           "section": "Defense",
-          "users": "19451",
-          "views": "19743"
+          "users": "19904",
+          "views": "21249"
         },
         {
           "section": "Fairness and Justice",
-          "users": "14900",
-          "views": "13774"
+          "users": "15338",
+          "views": "15794"
         },
         {
           "section": "Justice",
-          "users": "13283",
-          "views": "12737"
+          "users": "13653",
+          "views": "14323"
         },
         {
           "section": "Senate",
-          "users": "11564",
-          "views": "11293"
+          "users": "12056",
+          "views": "12792"
         },
         {
           "section": "White House",
-          "users": "6228",
-          "views": "6235"
+          "users": "6348",
+          "views": "6618"
         },
         {
           "section": "Presidential",
-          "users": "4824",
-          "views": "4529"
+          "users": "5098",
+          "views": "5202"
         },
         {
           "section": "World",
-          "users": "4696",
-          "views": "4464"
+          "users": "4844",
+          "views": "5051"
+        }
+      ]
+    },
+    {
+      "date": "20260716",
+      "totalUsers": 228690,
+      "newUsers": 81438,
+      "pageviews": 253848,
+      "sessions": 263464,
+      "bounceRate": 0.8762829077217381,
+      "averageSessionDuration": 188.95505598569065,
+      "referrers": [
+        {
+          "source": "smartnews.com",
+          "users": 81039
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 60265
+        },
+        {
+          "source": "(not set)",
+          "users": 52833
+        },
+        {
+          "source": "(direct)",
+          "users": 25102
+        },
+        {
+          "source": "(data not available)",
+          "users": 17243
+        },
+        {
+          "source": "google",
+          "users": 10505
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 5080
+        },
+        {
+          "source": "newsbreak",
+          "users": 4175
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 2993
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 2098
+        },
+        {
+          "source": "facebook.com",
+          "users": 1657
+        },
+        {
+          "source": "msn.com",
+          "users": 1122
+        },
+        {
+          "source": "deployer",
+          "users": 1005
+        },
+        {
+          "source": "t.co",
+          "users": 955
+        },
+        {
+          "source": "lm.facebook.com",
+          "users": 945
+        }
+      ],
+      "authors": [
+        {
+          "author": "Emzari Gelashvili",
+          "users": "20979",
+          "views": "19374"
+        },
+        {
+          "author": "Mike Brest",
+          "users": "19214",
+          "views": "18183"
+        },
+        {
+          "author": "Hailey Bullis",
+          "users": "18926",
+          "views": "17828"
+        },
+        {
+          "author": "Kiara Moore",
+          "users": "16209",
+          "views": "15827"
+        },
+        {
+          "author": "Sydney Topf",
+          "users": "12241",
+          "views": "11597"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "11069",
+          "views": "10631"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "8712",
+          "views": "8300"
+        },
+        {
+          "author": "Clare Ath",
+          "users": "6619",
+          "views": "6055"
+        },
+        {
+          "author": "Rena Rowe",
+          "users": "6229",
+          "views": "5807"
+        },
+        {
+          "author": "Britta Miller",
+          "users": "5388",
+          "views": "4985"
+        }
+      ],
+      "articles": [
+        {
+          "title": "How one leak is tearing Iran apart from the inside",
+          "users": "21852",
+          "views": "19859"
+        },
+        {
+          "title": "Russian troops on Ukraine front lines have life expectancy of 20 to 30 minutes: Ratcliffe",
+          "users": "18352",
+          "views": "17452"
+        },
+        {
+          "title": "August Social Security direct payment worth $994 goes out in 16 days",
+          "users": "16052",
+          "views": "15654"
+        },
+        {
+          "title": "Over 100 House Democrats buck Jeffries and vote to cut all aid to Israel",
+          "users": "13962",
+          "views": "12991"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "9127",
+          "views": "13383"
+        },
+        {
+          "title": "Vance says reaction to UFC fighter calling Michelle Obama a man was ‘totally disproportionate’",
+          "users": "8354",
+          "views": "7872"
+        },
+        {
+          "title": "A Catholic grandmother was fired for telling the truth. America should pay attention",
+          "users": "6660",
+          "views": "6087"
+        },
+        {
+          "title": "Vance admits Trump administration ‘absolutely screwed up the comms of the Epstein files’",
+          "users": "6620",
+          "views": "6181"
+        },
+        {
+          "title": "Why Tom Cotton is a major obstacle to daylight saving time",
+          "users": "5488",
+          "views": "1610"
+        },
+        {
+          "title": "Three hundred fifty economists just told the poor to stop waiting for growth. They’re wrong",
+          "users": "4739",
+          "views": "4447"
+        },
+        {
+          "title": "Trump won Venezuela’s coup — now he’s blowing the prize",
+          "users": "4690",
+          "views": "4320"
+        },
+        {
+          "title": "Which is the party of democracy?",
+          "users": "4272",
+          "views": "3137"
+        },
+        {
+          "title": "Todd Blanche confirmation hearing turns to Smith bombshells: ‘Did Jack Smith read my emails?’",
+          "users": "4006",
+          "views": "3728"
+        },
+        {
+          "title": "US is bombing Iran at the heaviest rate since start of the war and leaning toward expanding operations further",
+          "users": "3856",
+          "views": "3581"
+        },
+        {
+          "title": "No. 2 House Democrat breaks with Jeffries on Israel aid vote",
+          "users": "3617",
+          "views": "3526"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Op-Eds",
+          "users": "51531",
+          "views": "55565"
+        },
+        {
+          "section": "House",
+          "users": "24661",
+          "views": "23802"
+        },
+        {
+          "section": "Defense",
+          "users": "20050",
+          "views": "19069"
+        },
+        {
+          "section": "Finance and Economy",
+          "users": "18345",
+          "views": "17803"
+        },
+        {
+          "section": "White House",
+          "users": "16079",
+          "views": "15180"
+        },
+        {
+          "section": "Senate",
+          "users": "11505",
+          "views": "11395"
+        },
+        {
+          "section": "Justice",
+          "users": "9868",
+          "views": "9360"
+        },
+        {
+          "section": "Entertainment",
+          "users": "8766",
+          "views": "8210"
+        },
+        {
+          "section": "State",
+          "users": "4984",
+          "views": "4693"
+        },
+        {
+          "section": "Daily on Defense",
+          "users": "3922",
+          "views": "3630"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 38,
-    "uniqueSections": 25,
+    "uniqueAuthors": 36,
+    "uniqueSections": 24,
     "sampleAuthors": [
       "Tom Rogan",
-      "Britta Miller",
-      "Michael DeSantis",
-      "Brady Knox",
-      "John Schilling"
+      "David Zimmermann",
+      "Kaelan Deese",
+      "Jay Rogers",
+      "Emily Hallas"
     ],
     "sampleSections": [
-      "In Focus",
       "Op-Eds",
-      "World",
-      "News",
-      "Immigration"
+      "In Focus",
+      "Congressional",
+      "Entertainment",
+      "Daily on Defense"
     ]
   }
 }

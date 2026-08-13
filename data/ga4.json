@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-08-12T08:37:44.995Z",
+  "updatedAt": "2026-08-13T08:41:30.677Z",
   "range": {
-    "start": "2026-08-05",
-    "end": "2026-08-11"
+    "start": "2026-08-06",
+    "end": "2026-08-12"
   },
   "rows": [
-    {
-      "date": "20260805",
-      "totalUsers": 299320,
-      "newUsers": 127757,
-      "pageviews": 356410,
-      "sessions": 348201,
-      "bounceRate": 0.7489524728533232,
-      "averageSessionDuration": 84.8742327221576,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 162352
-        },
-        {
-          "source": "smartnews.com",
-          "users": 68147
-        },
-        {
-          "source": "(direct)",
-          "users": 34235
-        },
-        {
-          "source": "google",
-          "users": 15341
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 3783
-        },
-        {
-          "source": "facebook.com",
-          "users": 3333
-        },
-        {
-          "source": "newsbreak",
-          "users": 2828
-        },
-        {
-          "source": "t.co",
-          "users": 2125
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1778
-        },
-        {
-          "source": "deployer",
-          "users": 1385
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 978
-        },
-        {
-          "source": "msn.com",
-          "users": 705
-        },
-        {
-          "source": "l.facebook.com",
-          "users": 693
-        },
-        {
-          "source": "bing",
-          "users": 666
-        },
-        {
-          "source": "duckduckgo",
-          "users": 658
-        }
-      ],
-      "authors": [
-        {
-          "author": "Brady Knox",
-          "users": "50104",
-          "views": "52104"
-        },
-        {
-          "author": "Emily Robertson",
-          "users": "33599",
-          "views": "35121"
-        },
-        {
-          "author": "Hailey Bullis, Haris Alic, James A. Downs and Mabinty Quarshie",
-          "users": "32584",
-          "views": "34001"
-        },
-        {
-          "author": "Ramsey Touchberry",
-          "users": "21883",
-          "views": "22762"
-        },
-        {
-          "author": "Charles Sauer",
-          "users": "19172",
-          "views": "19619"
-        },
-        {
-          "author": "Jamie McIntyre",
-          "users": "16822",
-          "views": "17405"
-        },
-        {
-          "author": "Jenny Beth Martin",
-          "users": "9543",
-          "views": "9809"
-        },
-        {
-          "author": "Andrea Picciotti-Bayer",
-          "users": "7884",
-          "views": "8085"
-        },
-        {
-          "author": "Gabrielle M. Etzel",
-          "users": "7744",
-          "views": "8062"
-        },
-        {
-          "author": "Jay Rogers",
-          "users": "6556",
-          "views": "6888"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Iranian experts estimate economic losses from Operation Epic Fury at $280 billion",
-          "users": "48379",
-          "views": "50966"
-        },
-        {
-          "title": "Midterm Countdown: Republicans get a glimmer of hope",
-          "users": "32645",
-          "views": "34056"
-        },
-        {
-          "title": "First round of August Social Security payments goes out in seven days",
-          "users": "30735",
-          "views": "32400"
-        },
-        {
-          "title": "Senate GOP agenda on budget bill and SAVE America Act threatened by uncertainty",
-          "users": "22003",
-          "views": "22753"
-        },
-        {
-          "title": "Republicans are panicking over $95 billion while ignoring a $1 trillion healthcare scam",
-          "users": "18881",
-          "views": "19619"
-        },
-        {
-          "title": "Trump appears ready to accept Iran’s deal with Oman to open Strait of Hormuz as his own",
-          "users": "17605",
-          "views": "18138"
-        },
-        {
-          "title": "The media said Trump was alone on Iran. A 72% landslide proves otherwise",
-          "users": "10367",
-          "views": "10577"
-        },
-        {
-          "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "9167",
-          "views": "15031"
-        },
-        {
-          "title": "The terrifying new blue-state strategy to bankrupt Christian ministries",
-          "users": "7978",
-          "views": "8171"
-        },
-        {
-          "title": "John Kennedy tells Democratic witness to ‘put down the bong’ for denying Medicaid fraud",
-          "users": "7318",
-          "views": "7518"
-        },
-        {
-          "title": "Trump talks peace while Tehran hangs protesters. Don’t sign a deal written in blood",
-          "users": "6207",
-          "views": "6473"
-        },
-        {
-          "title": "Army scraps anonymous harassment complaints after Hegseth protests weaponization",
-          "users": "4536",
-          "views": "4635"
-        },
-        {
-          "title": "What if Republicans lose both House and Senate?",
-          "users": "4170",
-          "views": "3559"
-        },
-        {
-          "title": "Obamacare approved 96% of fake applications. Why is Congress extending its subsidies?",
-          "users": "3617",
-          "views": "3707"
-        },
-        {
-          "title": "Comedian DL Hughley praises Mamdani for ‘putting Christians to shame’",
-          "users": "3472",
-          "views": "3559"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Op-Eds",
-          "users": "60670",
-          "views": "73444"
-        },
-        {
-          "section": "World",
-          "users": "50366",
-          "views": "52248"
-        },
-        {
-          "section": "Congressional",
-          "users": "38911",
-          "views": "40926"
-        },
-        {
-          "section": "News",
-          "users": "33596",
-          "views": "35144"
-        },
-        {
-          "section": "Senate",
-          "users": "23033",
-          "views": "24046"
-        },
-        {
-          "section": "Daily on Defense",
-          "users": "16822",
-          "views": "17405"
-        },
-        {
-          "section": "Healthcare",
-          "users": "9507",
-          "views": "9945"
-        },
-        {
-          "section": "Defense",
-          "users": "6438",
-          "views": "6644"
-        },
-        {
-          "section": "Entertainment",
-          "users": "4409",
-          "views": "4551"
-        },
-        {
-          "section": "White House",
-          "users": "3786",
-          "views": "3969"
-        }
-      ]
-    },
     {
       "date": "20260806",
       "totalUsers": 182850,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20260811",
-      "totalUsers": 194437,
-      "newUsers": 59139,
-      "pageviews": 216958,
-      "sessions": 228775,
-      "bounceRate": 0.8682723199650312,
-      "averageSessionDuration": 185.163807871048,
+      "totalUsers": 203264,
+      "newUsers": 68952,
+      "pageviews": 255394,
+      "sessions": 239442,
+      "bounceRate": 0.6672095956432038,
+      "averageSessionDuration": 111.73094919027571,
       "referrers": [
         {
           "source": "smartnews.com",
-          "users": 67110
+          "users": 72677
         },
         {
           "source": "newsbreak.com",
-          "users": 56740
-        },
-        {
-          "source": "(not set)",
-          "users": 39512
+          "users": 65803
         },
         {
           "source": "(direct)",
-          "users": 22475
+          "users": 24661
         },
         {
           "source": "google",
-          "users": 9459
-        },
-        {
-          "source": "(data not available)",
-          "users": 7918
+          "users": 12698
         },
         {
           "source": "realclearpolitics.com",
-          "users": 7635
+          "users": 8746
         },
         {
           "source": "t.co",
-          "users": 1767
+          "users": 2296
         },
         {
           "source": "facebook.com",
-          "users": 1449
-        },
-        {
-          "source": "deployer",
-          "users": 1266
+          "users": 1910
         },
         {
           "source": "newsbreak",
-          "users": 1264
+          "users": 1546
+        },
+        {
+          "source": "deployer",
+          "users": 1448
         },
         {
           "source": "m.facebook.com",
-          "users": 896
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 767
+          "users": 1112
         },
         {
           "source": "reddit.com",
-          "users": 747
+          "users": 947
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 905
         },
         {
           "source": "news.google.com",
-          "users": 666
+          "users": 863
+        },
+        {
+          "source": "youtube.com",
+          "users": 854
+        },
+        {
+          "source": "msn.com",
+          "users": 675
         }
       ],
       "authors": [
         {
           "author": "Brady Knox",
-          "users": "22905",
-          "views": "22695"
+          "users": "24564",
+          "views": "27114"
         },
         {
           "author": "Jamie McIntyre",
-          "users": "14249",
-          "views": "13190"
+          "users": "15152",
+          "views": "15532"
         },
         {
           "author": "Nasser Razii",
-          "users": "12321",
-          "views": "11432"
+          "users": "13362",
+          "views": "13728"
         },
         {
           "author": "Emzari Gelashvili",
-          "users": "9573",
-          "views": "8935"
+          "users": "10335",
+          "views": "10664"
         },
         {
           "author": "Park Joonhye",
-          "users": "9398",
-          "views": "8745"
+          "users": "10161",
+          "views": "10537"
         },
         {
           "author": "Jay Rogers",
-          "users": "9115",
-          "views": "8484"
+          "users": "9817",
+          "views": "10083"
         },
         {
           "author": "David W. Wang",
-          "users": "8651",
-          "views": "7881"
+          "users": "9199",
+          "views": "9411"
         },
         {
           "author": "Dennis Lennox",
-          "users": "8392",
-          "views": "7795"
+          "users": "8811",
+          "views": "9042"
         },
         {
           "author": "Shar Pourdanesh",
-          "users": "7293",
-          "views": "6643"
+          "users": "7962",
+          "views": "8069"
         },
         {
           "author": "Eric Wargotz",
-          "users": "7237",
-          "views": "6685"
+          "users": "7686",
+          "views": "7935"
         }
       ],
       "articles": [
         {
-          "title": "Trump’s Iran strategy mirrors Tehran’s: Just wait it out",
-          "users": "14164",
-          "views": "13044"
+          "title": "US forces fire on ship trying to cross through Strait of Hormuz blockade",
+          "users": "15137",
+          "views": "15636"
         },
         {
-          "title": "US forces fire on ship trying to cross through Strait of Hormuz blockade",
-          "users": "13995",
-          "views": "12977"
+          "title": "Trump’s Iran strategy mirrors Tehran’s: Just wait it out",
+          "users": "15082",
+          "views": "15381"
         },
         {
           "title": "The mullahs’ worst nightmare isn’t street protesters. It’s the underground network Washington ignores",
-          "users": "12382",
-          "views": "11432"
-        },
-        {
-          "title": "You can't erase woke",
-          "users": "10454",
-          "views": "7328"
+          "users": "13364",
+          "views": "13728"
         },
         {
           "title": "US negotiates deal for removal of nuclear material from covert Syrian site: Report",
-          "users": "10331",
-          "views": "9630"
+          "users": "10942",
+          "views": "11396"
+        },
+        {
+          "title": "You can't erase woke",
+          "users": "10513",
+          "views": "8631"
         },
         {
           "title": "Russia is giving North Korea the most dangerous gift — and it’s not missiles",
-          "users": "9445",
-          "views": "8744"
+          "users": "10165",
+          "views": "10536"
         },
         {
           "title": "The blue wave is real. Democrats are about to sink it",
-          "users": "8857",
-          "views": "8118"
+          "users": "9287",
+          "views": "9413"
         },
         {
           "title": "China won’t get lucky twice: Why Trump’s Iran war may be Xi’s worst nightmare",
-          "users": "8690",
-          "views": "7881"
+          "users": "9238",
+          "views": "9411"
         },
         {
           "title": "Washington Examiner – Conservative News, Politics & Policy",
-          "users": "8556",
-          "views": "11729"
+          "users": "8639",
+          "views": "13738"
         },
         {
           "title": "The Soviet Union spent billions infiltrating the West. Russia just bought a $20 AI subscription",
-          "users": "7462",
-          "views": "6873"
-        },
-        {
-          "title": "Why buying a sandwich can turn a law-abiding gun owner into a felon",
-          "users": "7391",
-          "views": "6803"
+          "users": "8115",
+          "views": "8294"
         },
         {
           "title": "America’s next political powerhouse is here — and Republicans are sleeping on it",
-          "users": "7351",
-          "views": "6643"
+          "users": "8001",
+          "views": "8069"
+        },
+        {
+          "title": "Why buying a sandwich can turn a law-abiding gun owner into a felon",
+          "users": "7957",
+          "views": "8120"
         },
         {
           "title": "Trump’s Iran ‘chaos’ isn’t a glitch. It’s weaponized theater designed to make Tehran blink",
-          "users": "6098",
-          "views": "5634"
+          "users": "6504",
+          "views": "6739"
         },
         {
           "title": "Trump turns Minnesota’s GOP gubernatorial primary into pillow fight with Mike Lindell endorsement",
-          "users": "5609",
-          "views": "5118"
+          "users": "5943",
+          "views": "6118"
         },
         {
           "title": "Indiana recount commission finds Trump-backed challenger victorious",
-          "users": "5146",
-          "views": "4696"
+          "users": "5349",
+          "views": "5431"
         }
       ],
       "sections": [
         {
           "section": "Op-Eds",
-          "users": "75267",
-          "views": "89931"
+          "users": "79392",
+          "views": "106409"
         },
         {
           "section": "Daily on Defense",
-          "users": "14249",
-          "views": "13190"
+          "users": "15152",
+          "views": "15532"
         },
         {
           "section": "World",
-          "users": "13941",
-          "views": "13207"
+          "users": "15144",
+          "views": "15886"
         },
         {
           "section": "State",
-          "users": "10893",
-          "views": "10140"
+          "users": "11403",
+          "views": "11911"
         },
         {
           "section": "Foreign Policy",
-          "users": "10232",
-          "views": "9495"
+          "users": "10821",
+          "views": "11236"
         },
         {
           "section": "Congressional",
-          "users": "6890",
-          "views": "6861"
+          "users": "7136",
+          "views": "7747"
         },
         {
           "section": "Healthcare",
-          "users": "2683",
-          "views": "2599"
+          "users": "2810",
+          "views": "2941"
         },
         {
           "section": "Beltway Confidential",
-          "users": "2652",
-          "views": "2493"
+          "users": "2760",
+          "views": "2876"
         },
         {
           "section": "In Focus",
-          "users": "2313",
-          "views": "2181"
+          "users": "2504",
+          "views": "2620"
         },
         {
           "section": "Defense",
-          "users": "1552",
-          "views": "1498"
+          "users": "1597",
+          "views": "1671"
+        }
+      ]
+    },
+    {
+      "date": "20260812",
+      "totalUsers": 328334,
+      "newUsers": 141483,
+      "pageviews": 337837,
+      "sessions": 367304,
+      "bounceRate": 0.9023996471587568,
+      "averageSessionDuration": 127.57253011131378,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 105320
+        },
+        {
+          "source": "(data not available)",
+          "users": 87659
+        },
+        {
+          "source": "(not set)",
+          "users": 87089
+        },
+        {
+          "source": "smartnews.com",
+          "users": 68886
+        },
+        {
+          "source": "(direct)",
+          "users": 32795
+        },
+        {
+          "source": "google",
+          "users": 9516
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 2785
+        },
+        {
+          "source": "newsbreak",
+          "users": 1751
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1000
+        },
+        {
+          "source": "t.co",
+          "users": 872
+        },
+        {
+          "source": "deployer",
+          "users": 725
+        },
+        {
+          "source": "facebook.com",
+          "users": 513
+        },
+        {
+          "source": "bing",
+          "users": 325
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 265
+        },
+        {
+          "source": "youtube.com",
+          "users": 248
+        }
+      ],
+      "authors": [
+        {
+          "author": "Britta Miller",
+          "users": "83391",
+          "views": "81793"
+        },
+        {
+          "author": "Erfan Fard",
+          "users": "40825",
+          "views": "36424"
+        },
+        {
+          "author": "Anna Giaritelli",
+          "users": "38738",
+          "views": "37638"
+        },
+        {
+          "author": "Dennis Lennox",
+          "users": "11683",
+          "views": "10927"
+        },
+        {
+          "author": "Samantha-Jo Roth",
+          "users": "7965",
+          "views": "7384"
+        },
+        {
+          "author": "Claire Carter",
+          "users": "7619",
+          "views": "7034"
+        },
+        {
+          "author": "Jay Rogers",
+          "users": "7142",
+          "views": "6669"
+        },
+        {
+          "author": "David Sivak",
+          "users": "5449",
+          "views": "5050"
+        },
+        {
+          "author": "Nasser Razii",
+          "users": "5063",
+          "views": "4677"
+        },
+        {
+          "author": "Emzari Gelashvili",
+          "users": "4937",
+          "views": "4623"
+        }
+      ],
+      "articles": [
+        {
+          "title": "September Social Security direct payment worth $994 goes out in 20 days",
+          "users": "83558",
+          "views": "81395"
+        },
+        {
+          "title": "Mojtaba Khamenei isn’t preparing for war with Israel. He’s preparing for war with Iran",
+          "users": "40469",
+          "views": "36422"
+        },
+        {
+          "title": "US airlines talking with ICE and TSA amid uptick in illegal immigrant arrests at airports",
+          "users": "38756",
+          "views": "36515"
+        },
+        {
+          "title": "US issues final approval for tunnel connecting two Great Lakes",
+          "users": "15418",
+          "views": "7686"
+        },
+        {
+          "title": "The blue wave is real. Democrats are about to sink it",
+          "users": "11766",
+          "views": "11061"
+        },
+        {
+          "title": "Washington Examiner – Conservative News, Politics & Policy",
+          "users": "8556",
+          "views": "12541"
+        },
+        {
+          "title": "Kansas Democratic governor nominee suggested Jesus could have been transgender",
+          "users": "7279",
+          "views": "6620"
+        },
+        {
+          "title": "Why buying a sandwich can turn a law-abiding gun owner into a felon",
+          "users": "5663",
+          "views": "5240"
+        },
+        {
+          "title": "The mullahs’ worst nightmare isn’t street protesters. It’s the underground network Washington ignores",
+          "users": "5063",
+          "views": "4677"
+        },
+        {
+          "title": "Fetterman pledges not to campaign against Republican Dave McCormick",
+          "users": "4974",
+          "views": "4601"
+        },
+        {
+          "title": "The Soviet Union spent billions infiltrating the West. Russia just bought a $20 AI subscription",
+          "users": "4349",
+          "views": "4052"
+        },
+        {
+          "title": "US and allies demand 24-hour notice for ballistic missile launches after Chinese test",
+          "users": "4022",
+          "views": "3559"
+        },
+        {
+          "title": "America’s next political powerhouse is here — and Republicans are sleeping on it",
+          "users": "3904",
+          "views": "3547"
+        },
+        {
+          "title": "What’s Hunter Biden up to? He’s doing what Bidens always do",
+          "users": "3556",
+          "views": "3324"
+        },
+        {
+          "title": "Russia is giving North Korea the most dangerous gift — and it’s not missiles",
+          "users": "2815",
+          "views": "2639"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Finance and Economy",
+          "users": "84868",
+          "views": "83076"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "83996",
+          "views": "87789"
+        },
+        {
+          "section": "Business",
+          "users": "39170",
+          "views": "37857"
+        },
+        {
+          "section": "Congressional",
+          "users": "14362",
+          "views": "14317"
+        },
+        {
+          "section": "State",
+          "users": "12520",
+          "views": "11888"
+        },
+        {
+          "section": "Defense",
+          "users": "5040",
+          "views": "4645"
+        },
+        {
+          "section": "Investigations",
+          "users": "3834",
+          "views": "3765"
+        },
+        {
+          "section": "Washington Secrets",
+          "users": "3703",
+          "views": "3479"
+        },
+        {
+          "section": "Courage, Strength, and Optimism",
+          "users": "3406",
+          "views": "3197"
+        },
+        {
+          "section": "Energy and Environment",
+          "users": "2788",
+          "views": "2748"
         }
       ]
     }
@@ -1776,20 +1776,20 @@
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
     "uniqueAuthors": 39,
-    "uniqueSections": 21,
+    "uniqueSections": 22,
     "sampleAuthors": [
-      "Brady Knox",
-      "Emily Robertson",
-      "Hailey Bullis, Haris Alic, James A. Downs and Mabinty Quarshie",
-      "Ramsey Touchberry",
-      "Charles Sauer"
+      "Jay Rogers",
+      "Charles Sauer",
+      "Claire Carter",
+      "Kiara Moore",
+      "Brady Knox"
     ],
     "sampleSections": [
       "Op-Eds",
-      "World",
       "Congressional",
-      "News",
-      "Senate"
+      "World",
+      "Daily on Defense",
+      "White House"
     ]
   }
 }

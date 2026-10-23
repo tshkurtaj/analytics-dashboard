@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-10-22T07:32:04.900Z",
+  "updatedAt": "2026-10-23T07:31:26.724Z",
   "range": {
-    "start": "2026-10-15",
-    "end": "2026-10-21"
+    "start": "2026-10-16",
+    "end": "2026-10-22"
   },
   "rows": [
-    {
-      "date": "20261015",
-      "totalUsers": 166723,
-      "newUsers": 85228,
-      "pageviews": 209500,
-      "sessions": 182505,
-      "bounceRate": 0.6047889098928797,
-      "averageSessionDuration": 139.21332068835375,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 55530
-        },
-        {
-          "source": "smartnews.com",
-          "users": 43398
-        },
-        {
-          "source": "(direct)",
-          "users": 24212
-        },
-        {
-          "source": "reddit.com",
-          "users": 12625
-        },
-        {
-          "source": "google",
-          "users": 11962
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 2503
-        },
-        {
-          "source": "facebook.com",
-          "users": 1737
-        },
-        {
-          "source": "(not set)",
-          "users": 1449
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1204
-        },
-        {
-          "source": "t.co",
-          "users": 1172
-        },
-        {
-          "source": "newsbreak",
-          "users": 992
-        },
-        {
-          "source": "out.reddit.com",
-          "users": 945
-        },
-        {
-          "source": "deployer",
-          "users": 901
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 692
-        },
-        {
-          "source": "news.google.com",
-          "users": 619
-        }
-      ],
-      "authors": [
-        {
-          "author": "Mackenzie Chase",
-          "users": "36184",
-          "views": "37782"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "10734",
-          "views": "10919"
-        },
-        {
-          "author": "Jack Birle",
-          "users": "7665",
-          "views": "7946"
-        },
-        {
-          "author": "Britta Miller",
-          "users": "7280",
-          "views": "7530"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "6598",
-          "views": "7304"
-        },
-        {
-          "author": "Christopher Tremoglie",
-          "users": "5400",
-          "views": "5671"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "4605",
-          "views": "4748"
-        },
-        {
-          "author": "Lauren Green",
-          "users": "3942",
-          "views": "4166"
-        },
-        {
-          "author": "Rena Rowe",
-          "users": "3426",
-          "views": "3573"
-        },
-        {
-          "author": "Tom Rogan",
-          "users": "3377",
-          "views": "3465"
-        }
-      ],
-      "articles": [
-        {
-          "title": "November Supplemental Security direct payment up to $994 goes out in 16 days",
-          "users": "29818",
-          "views": "31955"
-        },
-        {
-          "title": "Ilhan Omar investigation seeks to denaturalize member: Report",
-          "users": "16454",
-          "views": "17322"
-        },
-        {
-          "title": "Hegseth claims US will field ‘hundreds of thousands’ of one-way attack systems for first time in 2026",
-          "users": "10256",
-          "views": "10439"
-        },
-        {
-          "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "7709",
-          "views": "14482"
-        },
-        {
-          "title": "Supreme Court reverses ‘inappropriate’ ruling in FCC fight over favorable campaign ad rate rules",
-          "users": "5826",
-          "views": "5976"
-        },
-        {
-          "title": "Republican super PAC pulls out of top battleground in Texas",
-          "users": "4238",
-          "views": "4448"
-        },
-        {
-          "title": "Russian assassinations on Western soil demand violent retaliation",
-          "users": "4050",
-          "views": "4175"
-        },
-        {
-          "title": "When will Democrats recognize the brutal murder and genocide committed by Native Americans?",
-          "users": "3380",
-          "views": "3577"
-        },
-        {
-          "title": "Trump shares photos of ‘fully renovated White House facade’",
-          "users": "3313",
-          "views": "3406"
-        },
-        {
-          "title": "Trump invokes executive privilege over Kennedy Center documents in legal battle with Joyce Beatty",
-          "users": "3261",
-          "views": "3336"
-        },
-        {
-          "title": "Talarico opts out of Sanders rally in Texas as polls narrow against Paxton",
-          "users": "3075",
-          "views": "3190"
-        },
-        {
-          "title": "Vance tells James Talarico to keep his ‘freaky paws out of our schools’",
-          "users": "2713",
-          "views": "2761"
-        },
-        {
-          "title": "Mamdani discovers how hateful his supporters are",
-          "users": "2619",
-          "views": "2675"
-        },
-        {
-          "title": "Federal court bars California law requiring ICE officers to wear visible identification",
-          "users": "2412",
-          "views": "2524"
-        },
-        {
-          "title": "Largest-ever federal anti-transnational crime operation nets 1,296 Tren de Aragua arrests nationwide",
-          "users": "2376",
-          "views": "2437"
-        }
-      ],
-      "sections": [
-        {
-          "section": "News",
-          "users": "31754",
-          "views": "33266"
-        },
-        {
-          "section": "Congressional",
-          "users": "12827",
-          "views": "13888"
-        },
-        {
-          "section": "Defense",
-          "users": "12759",
-          "views": "13279"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "8383",
-          "views": "9098"
-        },
-        {
-          "section": "Supreme Court",
-          "users": "7667",
-          "views": "7947"
-        },
-        {
-          "section": "White House",
-          "users": "6691",
-          "views": "7035"
-        },
-        {
-          "section": "Immigration",
-          "users": "5731",
-          "views": "6008"
-        },
-        {
-          "section": "Justice",
-          "users": "3762",
-          "views": "3879"
-        },
-        {
-          "section": "Education",
-          "users": "3721",
-          "views": "3818"
-        },
-        {
-          "section": "In Focus",
-          "users": "3433",
-          "views": "3524"
-        }
-      ]
-    },
     {
       "date": "20261016",
       "totalUsers": 124190,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20261021",
-      "totalUsers": 223151,
-      "newUsers": 97351,
-      "pageviews": 283259,
-      "sessions": 249326,
-      "bounceRate": 0.7028548968017776,
-      "averageSessionDuration": 60.7287452501103,
+      "totalUsers": 224227,
+      "newUsers": 97873,
+      "pageviews": 284610,
+      "sessions": 248122,
+      "bounceRate": 0.699401907126333,
+      "averageSessionDuration": 100.25544406971169,
       "referrers": [
         {
-          "source": "(not set)",
-          "users": 133917
-        },
-        {
           "source": "newsbreak.com",
-          "users": 47163
-        },
-        {
-          "source": "(direct)",
-          "users": 14092
-        },
-        {
-          "source": "google",
-          "users": 12393
+          "users": 129045
         },
         {
           "source": "smartnews.com",
-          "users": 3901
+          "users": 31414
+        },
+        {
+          "source": "(direct)",
+          "users": 24808
+        },
+        {
+          "source": "google",
+          "users": 16881
         },
         {
           "source": "t.co",
-          "users": 2331
-        },
-        {
-          "source": "(other)",
-          "users": 1790
-        },
-        {
-          "source": "reddit.com",
-          "users": 1665
-        },
-        {
-          "source": "facebook.com",
-          "users": 1528
-        },
-        {
-          "source": "newsbreak",
-          "users": 1485
-        },
-        {
-          "source": "(data not available)",
-          "users": 1411
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1274
-        },
-        {
-          "source": "",
-          "users": 1242
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 952
+          "users": 3037
         },
         {
           "source": "realclearpolitics.com",
-          "users": 849
+          "users": 2445
+        },
+        {
+          "source": "reddit.com",
+          "users": 2026
+        },
+        {
+          "source": "newsbreak",
+          "users": 1931
+        },
+        {
+          "source": "facebook.com",
+          "users": 1613
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1612
+        },
+        {
+          "source": "(not set)",
+          "users": 1296
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 1029
+        },
+        {
+          "source": "deployer",
+          "users": 921
+        },
+        {
+          "source": "news.google.com",
+          "users": 716
+        },
+        {
+          "source": "bing",
+          "users": 464
         }
       ],
       "authors": [
         {
           "author": "Mia Cathell",
-          "users": "62971",
-          "views": "65928"
+          "users": "63221",
+          "views": "66252"
         },
         {
           "author": "Adisa Hargett-Robinson",
-          "users": "28675",
-          "views": "30825"
+          "users": "28744",
+          "views": "30890"
         },
         {
           "author": "W. James Antle III",
-          "users": "15083",
-          "views": "15777"
+          "users": "15138",
+          "views": "15856"
         },
         {
           "author": "Naomi Lim",
-          "users": "8312",
-          "views": "8576"
+          "users": "8353",
+          "views": "8617"
         },
         {
           "author": "Anna Giaritelli",
-          "users": "5518",
-          "views": "5734"
+          "users": "5553",
+          "views": "5769"
         },
         {
           "author": "Britta Miller",
-          "users": "4818",
-          "views": "4994"
+          "users": "4831",
+          "views": "5007"
         },
         {
           "author": "Mackenzie Chase",
-          "users": "4165",
-          "views": "4353"
+          "users": "4184",
+          "views": "4372"
         },
         {
           "author": "Rena Rowe",
-          "users": "4110",
-          "views": "4344"
+          "users": "4155",
+          "views": "4390"
         },
         {
           "author": "Molly Parks",
-          "users": "3853",
-          "views": "4001"
+          "users": "3866",
+          "views": "4013"
         },
         {
           "author": "Ian Haworth",
-          "users": "3809",
-          "views": "3900"
+          "users": "3815",
+          "views": "3907"
         }
       ],
       "articles": [
         {
           "title": "Ilhan Omar deportation case complicated by procedural factors",
-          "users": "57834",
-          "views": "59991"
+          "users": "58110",
+          "views": "60292"
         },
         {
           "title": "November Social Security direct payment worth up to $994 goes out in 9 days",
-          "users": "20881",
-          "views": "22404"
+          "users": "20903",
+          "views": "22431"
         },
         {
           "title": "New fake polling scandal riles Democrats ahead of midterm elections",
-          "users": "19890",
-          "views": "20695"
+          "users": "19963",
+          "views": "20780"
         },
         {
           "title": "Second round of October Social Security payments goes out today",
-          "users": "9409",
-          "views": "10055"
+          "users": "9452",
+          "views": "10097"
         },
         {
           "title": "Trump administration withholds $1.2 billion in federal Medicaid funding from California",
-          "users": "8045",
-          "views": "8300"
+          "users": "8091",
+          "views": "8341"
         },
         {
           "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "7481",
-          "views": "14374"
+          "users": "7516",
+          "views": "14447"
         },
         {
           "title": "Major transgender Supreme Court victory could be undone by movement’s own lawfare, experts say",
-          "users": "6158",
-          "views": "6338"
+          "users": "6180",
+          "views": "6361"
         },
         {
           "title": "Green card recipient who died in ICE custody was detained for alleged concealment of criminal history, ICE says",
-          "users": "5468",
-          "views": "5676"
+          "users": "5503",
+          "views": "5711"
         },
         {
           "title": "France has fallen. America can’t be next",
-          "users": "4038",
-          "views": "4142"
-        },
-        {
-          "title": "Ro Khanna thinks torching Jewish businesses is an ‘inspiring’ youth movement",
-          "users": "3505",
-          "views": "3664"
+          "users": "4044",
+          "views": "4149"
         },
         {
           "title": "Social Security Administration updates millions of incorrect records",
-          "users": "3503",
-          "views": "3660"
+          "users": "3547",
+          "views": "3705"
+        },
+        {
+          "title": "Ro Khanna thinks torching Jewish businesses is an ‘inspiring’ youth movement",
+          "users": "3513",
+          "views": "3672"
         },
         {
           "title": "Josh Shapiro too cowardly to denounce black man’s racism in alleged killing of white Philadelphia police officer",
-          "users": "3250",
-          "views": "3334"
+          "users": "3277",
+          "views": "3362"
         },
         {
           "title": "Descendants of tribe chief who inspired Washington Redskins image fight to restore name and logo",
-          "users": "2822",
-          "views": "2905"
+          "users": "2835",
+          "views": "2918"
         },
         {
           "title": "DHS extends deportation reprieve for over 100,000 Ukrainians and Sudanese",
-          "users": "2565",
-          "views": "2712"
+          "users": "2568",
+          "views": "2716"
         },
         {
           "title": "Elissa Slotkin faces ethics complaint over warning to young Trump staffers",
-          "users": "2102",
-          "views": "2149"
+          "users": "2103",
+          "views": "2151"
         }
       ],
       "sections": [
         {
           "section": "Immigration",
-          "users": "61583",
-          "views": "64638"
+          "users": "61869",
+          "views": "64958"
         },
         {
           "section": "News",
-          "users": "28964",
-          "views": "31102"
+          "users": "29043",
+          "views": "31167"
         },
         {
           "section": "Congressional",
-          "users": "23448",
-          "views": "24944"
+          "users": "23557",
+          "views": "25064"
         },
         {
           "section": "Op-Eds",
-          "users": "9984",
-          "views": "11097"
+          "users": "10028",
+          "views": "11146"
         },
         {
           "section": "Healthcare",
-          "users": "8119",
-          "views": "8365"
+          "users": "8160",
+          "views": "8406"
         },
         {
           "section": "Supreme Court",
-          "users": "7269",
-          "views": "7740"
+          "users": "7296",
+          "views": "7765"
         },
         {
           "section": "Crime",
-          "users": "6310",
-          "views": "6642"
+          "users": "6360",
+          "views": "6700"
         },
         {
           "section": "Sports",
-          "users": "4769",
-          "views": "4939"
+          "users": "4782",
+          "views": "4952"
         },
         {
           "section": "Beltway Confidential",
-          "users": "4513",
-          "views": "4735"
+          "users": "4540",
+          "views": "4764"
         },
         {
           "section": "Courage, Strength, and Optimism",
-          "users": "3834",
-          "views": "3925"
+          "users": "3840",
+          "views": "3932"
+        }
+      ]
+    },
+    {
+      "date": "20261022",
+      "totalUsers": 181121,
+      "newUsers": 77794,
+      "pageviews": 229425,
+      "sessions": 204016,
+      "bounceRate": 0.6772900164692965,
+      "averageSessionDuration": 68.8497013759313,
+      "referrers": [
+        {
+          "source": "(not set)",
+          "users": 109296
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 35379
+        },
+        {
+          "source": "(direct)",
+          "users": 12221
+        },
+        {
+          "source": "google",
+          "users": 10442
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 4168
+        },
+        {
+          "source": "smartnews.com",
+          "users": 2700
+        },
+        {
+          "source": "t.co",
+          "users": 1394
+        },
+        {
+          "source": "(data not available)",
+          "users": 1330
+        },
+        {
+          "source": "facebook.com",
+          "users": 1178
+        },
+        {
+          "source": "newsbreak",
+          "users": 861
+        },
+        {
+          "source": "",
+          "users": 814
+        },
+        {
+          "source": "reddit.com",
+          "users": 761
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 716
+        },
+        {
+          "source": "(other)",
+          "users": 591
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 538
+        }
+      ],
+      "authors": [
+        {
+          "author": "Mia Cathell",
+          "users": "46168",
+          "views": "48922"
+        },
+        {
+          "author": "Rena Rowe",
+          "users": "13977",
+          "views": "14858"
+        },
+        {
+          "author": "W. James Antle III",
+          "users": "10311",
+          "views": "10659"
+        },
+        {
+          "author": "Kaelan Deese",
+          "users": "8178",
+          "views": "8636"
+        },
+        {
+          "author": "Hailey Bullis",
+          "users": "8145",
+          "views": "8578"
+        },
+        {
+          "author": "Adisa Hargett-Robinson",
+          "users": "5204",
+          "views": "5538"
+        },
+        {
+          "author": "Timothy Nerozzi",
+          "users": "4522",
+          "views": "4983"
+        },
+        {
+          "author": "Christopher Tremoglie",
+          "users": "3931",
+          "views": "4066"
+        },
+        {
+          "author": "Mackenzie Chase",
+          "users": "2425",
+          "views": "2543"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "2390",
+          "views": "2491"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Ilhan Omar deportation case complicated by procedural factors",
+          "users": "44435",
+          "views": "46588"
+        },
+        {
+          "title": "Social Security Administration updates millions of incorrect records",
+          "users": "12505",
+          "views": "13084"
+        },
+        {
+          "title": "Is it too late to move the midterm needle in Michigan?",
+          "users": "11725",
+          "views": "11741"
+        },
+        {
+          "title": "New fake polling scandal riles Democrats ahead of midterm elections",
+          "users": "10401",
+          "views": "10604"
+        },
+        {
+          "title": "Washington Examiner – Congress, White House & Political News",
+          "users": "7570",
+          "views": "14173"
+        },
+        {
+          "title": "Democrats grapple with fallout from fake Wedgewood polls",
+          "users": "7221",
+          "views": "7690"
+        },
+        {
+          "title": "Democrats sue Trump administration over efforts to clean illegal registrants off voter rolls",
+          "users": "4887",
+          "views": "5030"
+        },
+        {
+          "title": "Josh Shapiro too cowardly to denounce black man’s racism in alleged killing of white Philadelphia police officer",
+          "users": "3871",
+          "views": "4003"
+        },
+        {
+          "title": "Second round of October Social Security payments goes out today",
+          "users": "3793",
+          "views": "4031"
+        },
+        {
+          "title": "Italy and Spain end border crisis sparked by Ceuta invasion, but approximately 15,000 migrants still demand asylum",
+          "users": "2723",
+          "views": "2798"
+        },
+        {
+          "title": "Major transgender Supreme Court victory could be undone by movement’s own lawfare, experts say",
+          "users": "2433",
+          "views": "2501"
+        },
+        {
+          "title": "Trump administration withholds $1.2 billion in federal Medicaid funding from California",
+          "users": "1962",
+          "views": "2025"
+        },
+        {
+          "title": "Green card recipient who died in ICE custody was detained for alleged concealment of criminal history, ICE says",
+          "users": "1828",
+          "views": "1891"
+        },
+        {
+          "title": "Democratic Virginia state Sen. Louise Lucas indicted in alleged marijuana racketeering scheme",
+          "users": "1822",
+          "views": "1921"
+        },
+        {
+          "title": "Macron returns to Paris on war footing to quash ‘illegitimate’ riots he blames on ‘organized ultra-left groups’",
+          "users": "1818",
+          "views": "1864"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Immigration",
+          "users": "44562",
+          "views": "47192"
+        },
+        {
+          "section": "Congressional",
+          "users": "26535",
+          "views": "28033"
+        },
+        {
+          "section": "Economy",
+          "users": "12210",
+          "views": "12991"
+        },
+        {
+          "section": "News",
+          "users": "5288",
+          "views": "5632"
+        },
+        {
+          "section": "Crime",
+          "users": "5257",
+          "views": "5500"
+        },
+        {
+          "section": "World",
+          "users": "5246",
+          "views": "5766"
+        },
+        {
+          "section": "Justice",
+          "users": "4495",
+          "views": "4739"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "4267",
+          "views": "4422"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "4264",
+          "views": "4575"
+        },
+        {
+          "section": "Healthcare",
+          "users": "2934",
+          "views": "3050"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 32,
-    "uniqueSections": 21,
+    "uniqueAuthors": 31,
+    "uniqueSections": 22,
     "sampleAuthors": [
       "Mackenzie Chase",
-      "Brady Knox",
-      "Jack Birle",
-      "Britta Miller",
+      "Molly Parks",
+      "Naomi Lim",
+      "Zach Halaschak",
       "Emily Hallas"
     ],
     "sampleSections": [
-      "News",
       "Congressional",
-      "Defense",
+      "Op-Eds",
       "Beltway Confidential",
-      "Supreme Court"
+      "Defense",
+      "Education"
     ]
   }
 }

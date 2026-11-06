@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-11-05T07:17:47.340Z",
+  "updatedAt": "2026-11-06T07:17:41.589Z",
   "range": {
-    "start": "2026-10-29",
-    "end": "2026-11-04"
+    "start": "2026-10-30",
+    "end": "2026-11-05"
   },
   "rows": [
-    {
-      "date": "20261029",
-      "totalUsers": 237245,
-      "newUsers": 117376,
-      "pageviews": 293166,
-      "sessions": 248882,
-      "bounceRate": 0.7195819705723998,
-      "averageSessionDuration": 92.0308580661679,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 139615
-        },
-        {
-          "source": "smartnews.com",
-          "users": 34055
-        },
-        {
-          "source": "(direct)",
-          "users": 23745
-        },
-        {
-          "source": "google",
-          "users": 13886
-        },
-        {
-          "source": "(not set)",
-          "users": 5255
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 3618
-        },
-        {
-          "source": "newsbreak",
-          "users": 2957
-        },
-        {
-          "source": "t.co",
-          "users": 2082
-        },
-        {
-          "source": "facebook.com",
-          "users": 1805
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1482
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1012
-        },
-        {
-          "source": "reddit.com",
-          "users": 710
-        },
-        {
-          "source": "newsshowcase",
-          "users": 654
-        },
-        {
-          "source": "bing",
-          "users": 571
-        },
-        {
-          "source": "news.google.com",
-          "users": 494
-        }
-      ],
-      "authors": [
-        {
-          "author": "Emily Hallas",
-          "users": "100873",
-          "views": "106378"
-        },
-        {
-          "author": "Mike Brest",
-          "users": "14486",
-          "views": "14837"
-        },
-        {
-          "author": "Mabinty Quarshie and Naomi Lim",
-          "users": "12281",
-          "views": "12605"
-        },
-        {
-          "author": "Emily Danner",
-          "users": "9182",
-          "views": "9781"
-        },
-        {
-          "author": "Lauren Green",
-          "users": "8600",
-          "views": "8861"
-        },
-        {
-          "author": "Bob Cusack",
-          "users": "6300",
-          "views": "6531"
-        },
-        {
-          "author": "Shea Carlberg",
-          "users": "3765",
-          "views": "3898"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "2607",
-          "views": "2655"
-        },
-        {
-          "author": "Zachary Faria",
-          "users": "2538",
-          "views": "2625"
-        },
-        {
-          "author": "Eric Wargotz",
-          "users": "2444",
-          "views": "2654"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Emergency declared at South Carolina nuclear site after lab fire",
-          "users": "97635",
-          "views": "101608"
-        },
-        {
-          "title": "Hegseth gifts Vietnamese counterpart declassified reports that could lead to discovery of hundreds of remains",
-          "users": "13969",
-          "views": "14222"
-        },
-        {
-          "title": "Trump warns Democrats against impeaching Pete Hegseth if they win the House",
-          "users": "12392",
-          "views": "12605"
-        },
-        {
-          "title": "November Social Security direct payment worth $994 goes out in two days",
-          "users": "9187",
-          "views": "9712"
-        },
-        {
-          "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "8482",
-          "views": "16567"
-        },
-        {
-          "title": "Meet the 26-year-old Republican set to become the youngest member of Congress",
-          "users": "8241",
-          "views": "8550"
-        },
-        {
-          "title": "Who and what Democrats will go after if they win",
-          "users": "7001",
-          "views": "7321"
-        },
-        {
-          "title": "The MAGA bubble is about to burst",
-          "users": "5474",
-          "views": "5846"
-        },
-        {
-          "title": "Netanyahu says Arab parties stole Israeli election, demands ‘immediate’ investigation",
-          "users": "5225",
-          "views": "5344"
-        },
-        {
-          "title": "Trump, Vance, and the 'jihadist' el Sayed",
-          "users": "3421",
-          "views": "3758"
-        },
-        {
-          "title": "JB Pritzker lives in an alternate Illinois reality",
-          "users": "2736",
-          "views": "2840"
-        },
-        {
-          "title": "Manufacturers are rigging the repair market",
-          "users": "2388",
-          "views": "2466"
-        },
-        {
-          "title": "Hegseth firing Sylvia isn’t office politics — he smoked out a wartime mole",
-          "users": "2171",
-          "views": "2244"
-        },
-        {
-          "title": "Manhunt underway after shooting near Republican Party HQ in Virginia",
-          "users": "2156",
-          "views": "2233"
-        },
-        {
-          "title": "Woman in custody after allegedly shooting a bystander near Republican Party HQ in Virginia",
-          "users": "2072",
-          "views": "2151"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Energy and Environment",
-          "users": "95629",
-          "views": "101123"
-        },
-        {
-          "section": "Congressional",
-          "users": "29999",
-          "views": "32212"
-        },
-        {
-          "section": "Defense",
-          "users": "14620",
-          "views": "14977"
-        },
-        {
-          "section": "News",
-          "users": "9363",
-          "views": "9983"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "7346",
-          "views": "8037"
-        },
-        {
-          "section": "Crime",
-          "users": "6203",
-          "views": "6473"
-        },
-        {
-          "section": "World",
-          "users": "5878",
-          "views": "6076"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "4698",
-          "views": "4954"
-        },
-        {
-          "section": "White House",
-          "users": "1916",
-          "views": "1948"
-        },
-        {
-          "section": "Fairness and Justice",
-          "users": "1878",
-          "views": "1917"
-        }
-      ]
-    },
     {
       "date": "20261030",
       "totalUsers": 193282,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20261104",
-      "totalUsers": 279679,
-      "newUsers": 132959,
-      "pageviews": 375391,
-      "sessions": 319857,
-      "bounceRate": 0.652275860775284,
-      "averageSessionDuration": 77.46942501878652,
+      "totalUsers": 301080,
+      "newUsers": 144830,
+      "pageviews": 401959,
+      "sessions": 332242,
+      "bounceRate": 0.6392087695113803,
+      "averageSessionDuration": 110.88669980580421,
       "referrers": [
         {
-          "source": "(not set)",
-          "users": 154301
-        },
-        {
-          "source": "google",
-          "users": 30145
-        },
-        {
           "source": "newsbreak.com",
-          "users": 28490
-        },
-        {
-          "source": "(direct)",
-          "users": 23229
+          "users": 106336
         },
         {
           "source": "smartnews.com",
-          "users": 21380
+          "users": 76955
         },
         {
-          "source": "(data not available)",
-          "users": 3834
+          "source": "google",
+          "users": 40300
+        },
+        {
+          "source": "(direct)",
+          "users": 37666
+        },
+        {
+          "source": "reddit.com",
+          "users": 4531
         },
         {
           "source": "t.co",
-          "users": 2649
+          "users": 3270
         },
         {
           "source": "facebook.com",
-          "users": 2579
+          "users": 2904
         },
         {
           "source": "newsbreak",
-          "users": 1838
+          "users": 2664
         },
         {
-          "source": "",
-          "users": 1826
-        },
-        {
-          "source": "msn.com",
-          "users": 1625
+          "source": "realclearpolitics.com",
+          "users": 2533
         },
         {
           "source": "newsbreakapp.com",
-          "users": 1470
+          "users": 1955
+        },
+        {
+          "source": "(not set)",
+          "users": 1941
+        },
+        {
+          "source": "msn.com",
+          "users": 1808
         },
         {
           "source": "m.facebook.com",
-          "users": 1468
+          "users": 1604
         },
         {
           "source": "duckduckgo",
-          "users": 1276
+          "users": 1498
         },
         {
-          "source": "(other)",
-          "users": 1180
+          "source": "bing",
+          "users": 1356
         }
       ],
       "authors": [
         {
           "author": "Christopher Tremoglie",
-          "users": "27665",
-          "views": "28910"
-        },
-        {
-          "author": "Jay Rogers",
-          "users": "26886",
-          "views": "27246"
+          "users": "30086",
+          "views": "31484"
         },
         {
           "author": "David Zimmermann",
-          "users": "26403",
-          "views": "28282"
+          "users": "27991",
+          "views": "29919"
+        },
+        {
+          "author": "Jay Rogers",
+          "users": "27327",
+          "views": "27644"
         },
         {
           "author": "Britta Miller",
-          "users": "20085",
-          "views": "21054"
+          "users": "23310",
+          "views": "24365"
         },
         {
           "author": "Mabinty Quarshie",
-          "users": "14364",
-          "views": "15378"
+          "users": "14369",
+          "views": "15393"
         },
         {
           "author": "Jack Birle",
-          "users": "11562",
-          "views": "13743"
+          "users": "11781",
+          "views": "13937"
         },
         {
           "author": "David Sivak",
-          "users": "8199",
-          "views": "8418"
+          "users": "9737",
+          "views": "9976"
+        },
+        {
+          "author": "Claire Carter",
+          "users": "4670",
+          "views": "4903"
         },
         {
           "author": "Mendi Glik",
-          "users": "4116",
-          "views": "4228"
+          "users": "4302",
+          "views": "4416"
         },
         {
           "author": "Gabrielle M. Etzel",
-          "users": "3893",
-          "views": "4084"
-        },
-        {
-          "author": "Meda Parameswara Reddy",
-          "users": "3883",
-          "views": "4005"
+          "users": "3958",
+          "views": "4157"
         }
       ],
       "articles": [
         {
           "title": "Letitia James goes quiet",
-          "users": "27295",
-          "views": "27572"
+          "users": "27671",
+          "views": "28009"
         },
         {
           "title": "Democrats campaigned on affordability. It took two hours to show it was a lie, and they just want to investigate Trump",
-          "users": "22488",
-          "views": "22824"
+          "users": "24931",
+          "views": "25306"
         },
         {
           "title": "December Social Security direct payment worth $994 goes out in 27 days",
-          "users": "19448",
-          "views": "20387"
+          "users": "22524",
+          "views": "23695"
         },
         {
           "title": "Trump signs proclamation declaring election week ‘Anti-Communism Week’",
-          "users": "17562",
-          "views": "18761"
+          "users": "17843",
+          "views": "19070"
         },
         {
           "title": "Democrats won control of the Senate. They might not give it back until 2032",
-          "users": "14699",
-          "views": "15543"
+          "users": "14725",
+          "views": "15579"
         },
         {
           "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "10558",
-          "views": "22856"
+          "users": "10862",
+          "views": "23630"
         },
         {
           "title": "Chuck Grassley, 93, won’t step down early after Democrat Rob Sand wins Iowa governorship",
-          "users": "8165",
-          "views": "8225"
+          "users": "9679",
+          "views": "9780"
         },
         {
           "title": "Ketanji Brown Jackson accuses Catholic preschools of wanting ‘special rule’ to bar LGBT families in universal prescho...",
-          "users": "7921",
-          "views": "8108"
+          "users": "8069",
+          "views": "8266"
         },
         {
           "title": "2026 Election",
-          "users": "6422",
-          "views": "10017"
-        },
-        {
-          "title": "Supreme Court appears poised to hand Colorado major loss in religious preschool case",
-          "users": "5327",
-          "views": "5494"
+          "users": "6461",
+          "views": "10084"
         },
         {
           "title": "Embattled House Democrat Jimmy Gomez loses reelection",
-          "users": "4630",
-          "views": "4790"
+          "users": "5755",
+          "views": "5971"
         },
         {
-          "title": "Michigan race ends with acrimony and funky polls — again",
-          "users": "4623",
-          "views": "4690"
+          "title": "Massie gives Hegseth ultimatum of resignation or impeachment",
+          "users": "5672",
+          "views": "6018"
         },
         {
-          "title": "If it quacks like a duck: The uncomfortable truth about Abdul el Sayed",
-          "users": "4554",
-          "views": "4751"
-        },
-        {
-          "title": "Pritzker releases ‘Day One Agenda’ for Congress, urging Democrats to move swiftly",
-          "users": "4508",
-          "views": "4577"
+          "title": "Supreme Court appears poised to hand Colorado major loss in religious preschool case",
+          "users": "5357",
+          "views": "5524"
         },
         {
           "title": "Alaska — a stain on Democrats that the blue wave can’t wash clean",
-          "users": "3957",
-          "views": "4077"
+          "users": "5062",
+          "views": "5204"
+        },
+        {
+          "title": "If it quacks like a duck: The uncomfortable truth about Abdul el Sayed",
+          "users": "4754",
+          "views": "4955"
+        },
+        {
+          "title": "Pritzker releases ‘Day One Agenda’ for Congress, urging Democrats to move swiftly",
+          "users": "4645",
+          "views": "4716"
         }
       ],
       "sections": [
         {
           "section": "Op-Eds",
-          "users": "49803",
-          "views": "53588"
+          "users": "51088",
+          "views": "54909"
         },
         {
           "section": "Beltway Confidential",
-          "users": "29812",
-          "views": "31348"
+          "users": "32340",
+          "views": "34085"
         },
         {
           "section": "Congressional",
-          "users": "29556",
-          "views": "32110"
+          "users": "31848",
+          "views": "34689"
         },
         {
           "section": "News",
-          "users": "20734",
-          "views": "21738"
+          "users": "23961",
+          "views": "25084"
         },
         {
           "section": "White House",
-          "users": "17936",
-          "views": "19316"
-        },
-        {
-          "section": "Supreme Court",
-          "users": "11550",
-          "views": "13726"
+          "users": "18216",
+          "views": "19640"
         },
         {
           "section": "Senate",
-          "users": "10288",
-          "views": "10860"
+          "users": "11917",
+          "views": "12568"
+        },
+        {
+          "section": "Supreme Court",
+          "users": "11768",
+          "views": "13920"
         },
         {
           "section": "Columnists",
-          "users": "8566",
-          "views": "8842"
+          "users": "9548",
+          "views": "9867"
         },
         {
           "section": "House",
-          "users": "4849",
-          "views": "4945"
+          "users": "5006",
+          "views": "5105"
         },
         {
           "section": "In Focus",
-          "users": "4601",
-          "views": "4778"
+          "users": "4652",
+          "views": "4831"
+        }
+      ]
+    },
+    {
+      "date": "20261105",
+      "totalUsers": 232604,
+      "newUsers": 115903,
+      "pageviews": 294493,
+      "sessions": 253090,
+      "bounceRate": 0.6272195661622347,
+      "averageSessionDuration": 69.16721229186061,
+      "referrers": [
+        {
+          "source": "(not set)",
+          "users": 123268
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 28928
+        },
+        {
+          "source": "(direct)",
+          "users": 25523
+        },
+        {
+          "source": "google",
+          "users": 17503
+        },
+        {
+          "source": "reddit.com",
+          "users": 10593
+        },
+        {
+          "source": "smartnews.com",
+          "users": 8888
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 3373
+        },
+        {
+          "source": "newsbreak",
+          "users": 3344
+        },
+        {
+          "source": "(data not available)",
+          "users": 2209
+        },
+        {
+          "source": "",
+          "users": 1884
+        },
+        {
+          "source": "facebook.com",
+          "users": 1485
+        },
+        {
+          "source": "newsshowcase",
+          "users": 1220
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 973
+        },
+        {
+          "source": "t.co",
+          "users": 890
+        },
+        {
+          "source": "old.reddit.com",
+          "users": 807
+        }
+      ],
+      "authors": [
+        {
+          "author": "Claire Carter",
+          "users": "29623",
+          "views": "31081"
+        },
+        {
+          "author": "Christopher Tremoglie",
+          "users": "17074",
+          "views": "17736"
+        },
+        {
+          "author": "Britta Miller",
+          "users": "16719",
+          "views": "17887"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "15086",
+          "views": "15486"
+        },
+        {
+          "author": "David Sivak",
+          "users": "14730",
+          "views": "14941"
+        },
+        {
+          "author": "Hugo Gurdon",
+          "users": "10860",
+          "views": "11021"
+        },
+        {
+          "author": "Sarah Kendis",
+          "users": "7218",
+          "views": "7448"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "4574",
+          "views": "4727"
+        },
+        {
+          "author": "Jay Rogers",
+          "users": "4319",
+          "views": "4393"
+        },
+        {
+          "author": "Mackenzie Chase",
+          "users": "3440",
+          "views": "3513"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Massie gives Hegseth impeachment ultimatum as GOP pins blue wave on Iran war",
+          "users": "20596",
+          "views": "21439"
+        },
+        {
+          "title": "Massie gives Hegseth ultimatum of resignation or impeachment",
+          "users": "18229",
+          "views": "19552"
+        },
+        {
+          "title": "December Social Security direct payment worth $994 goes out in 27 days",
+          "users": "16676",
+          "views": "17828"
+        },
+        {
+          "title": "Democrats campaigned on affordability. It took two hours to show it was a lie, and they just want to investigate Trump",
+          "users": "14635",
+          "views": "15031"
+        },
+        {
+          "title": "Chuck Grassley, 93, won’t step down early after Democrat Rob Sand wins Iowa governorship",
+          "users": "14482",
+          "views": "14855"
+        },
+        {
+          "title": "Alaska — a stain on Democrats that the blue wave can’t wash clean",
+          "users": "13545",
+          "views": "13865"
+        },
+        {
+          "title": "Suicidal saviorism: Why 60% of Michigan Jews voted for an antisemite",
+          "users": "8204",
+          "views": "8588"
+        },
+        {
+          "title": "Washington Examiner – Congress, White House & Political News",
+          "users": "7753",
+          "views": "15204"
+        },
+        {
+          "title": "Democrat-turned-Republican ousted from New Jersey seat likens blue tsunami to Watergate",
+          "users": "6158",
+          "views": "6383"
+        },
+        {
+          "title": "Grassley won't retire early after Democrat wins Iowa governorship",
+          "users": "6104",
+          "views": "6474"
+        },
+        {
+          "title": "Trump signs proclamation declaring election week ‘Anti-Communism Week’",
+          "users": "4836",
+          "views": "4962"
+        },
+        {
+          "title": "Letitia James goes quiet",
+          "users": "4701",
+          "views": "4816"
+        },
+        {
+          "title": "Brooke Pinto calls on five Democratic governors-elect to pull National Guard troops from DC",
+          "users": "3693",
+          "views": "3763"
+        },
+        {
+          "title": "2026 Election",
+          "users": "3412",
+          "views": "5061"
+        },
+        {
+          "title": "Ron DeSantis bashes Vivek Ramaswamy as Ohio candidate, calling him out of touch",
+          "users": "3161",
+          "views": "3212"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Defense",
+          "users": "25629",
+          "views": "26784"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "19233",
+          "views": "20356"
+        },
+        {
+          "section": "Congressional",
+          "users": "18996",
+          "views": "20654"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "18100",
+          "views": "19063"
+        },
+        {
+          "section": "News",
+          "users": "16902",
+          "views": "18145"
+        },
+        {
+          "section": "Senate",
+          "users": "16759",
+          "views": "17280"
+        },
+        {
+          "section": "Columnists",
+          "users": "11966",
+          "views": "12158"
+        },
+        {
+          "section": "White House",
+          "users": "5838",
+          "views": "6028"
+        },
+        {
+          "section": "State",
+          "users": "3534",
+          "views": "3605"
+        },
+        {
+          "section": "House",
+          "users": "3148",
+          "views": "3246"
         }
       ]
     }
@@ -1775,20 +1775,20 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 37,
+    "uniqueAuthors": 39,
     "uniqueSections": 21,
     "sampleAuthors": [
       "Emily Hallas",
-      "Mike Brest",
+      "David Zimmermann",
       "Mabinty Quarshie and Naomi Lim",
-      "Emily Danner",
+      "Mike Brest",
       "Lauren Green"
     ],
     "sampleSections": [
       "Energy and Environment",
       "Congressional",
       "Defense",
-      "News",
+      "World",
       "Op-Eds"
     ]
   }

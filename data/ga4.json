@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-11-14T07:16:31.437Z",
+  "updatedAt": "2026-11-15T07:16:39.130Z",
   "range": {
-    "start": "2026-11-07",
-    "end": "2026-11-13"
+    "start": "2026-11-08",
+    "end": "2026-11-14"
   },
   "rows": [
-    {
-      "date": "20261107",
-      "totalUsers": 262960,
-      "newUsers": 135173,
-      "pageviews": 328014,
-      "sessions": 278727,
-      "bounceRate": 0.6331930527003125,
-      "averageSessionDuration": 106.42829383137263,
-      "referrers": [
-        {
-          "source": "smartnews.com",
-          "users": 72284
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 67413
-        },
-        {
-          "source": "(direct)",
-          "users": 55901
-        },
-        {
-          "source": "google",
-          "users": 22077
-        },
-        {
-          "source": "reddit.com",
-          "users": 11814
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 7150
-        },
-        {
-          "source": "newsbreak",
-          "users": 2321
-        },
-        {
-          "source": "t.co",
-          "users": 2151
-        },
-        {
-          "source": "facebook.com",
-          "users": 1999
-        },
-        {
-          "source": "(not set)",
-          "users": 1613
-        },
-        {
-          "source": "msn.com",
-          "users": 1289
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1198
-        },
-        {
-          "source": "newsshowcase",
-          "users": 1163
-        },
-        {
-          "source": "deployer",
-          "users": 1144
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 852
-        }
-      ],
-      "authors": [
-        {
-          "author": "Rena Rowe",
-          "users": "24773",
-          "views": "25803"
-        },
-        {
-          "author": "Britta Miller",
-          "users": "22732",
-          "views": "24089"
-        },
-        {
-          "author": "Jose Lev Alvarez",
-          "users": "15476",
-          "views": "16101"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "14396",
-          "views": "14868"
-        },
-        {
-          "author": "Mark Whittington",
-          "users": "12345",
-          "views": "12531"
-        },
-        {
-          "author": "Naomi Lim",
-          "users": "9035",
-          "views": "9390"
-        },
-        {
-          "author": "Anna Giaritelli",
-          "users": "8619",
-          "views": "8996"
-        },
-        {
-          "author": "Conn Carroll",
-          "users": "5890",
-          "views": "6092"
-        },
-        {
-          "author": "David Sivak",
-          "users": "5858",
-          "views": "6036"
-        },
-        {
-          "author": "Washington Examiner",
-          "users": "5060",
-          "views": "5221"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Chris Murphy discharged from hospital after stroke but will miss ‘next several weeks of votes’",
-          "users": "23065",
-          "views": "24022"
-        },
-        {
-          "title": "December Social Security direct payment worth $994 goes out in 24 days",
-          "users": "22079",
-          "views": "23465"
-        },
-        {
-          "title": "Trump offers White House press secretary position to Dana White",
-          "users": "16702",
-          "views": "18026"
-        },
-        {
-          "title": "Trump must give independence to Puerto Rico before Democrats add five members of Congress",
-          "users": "14052",
-          "views": "14326"
-        },
-        {
-          "title": "Talarico reaches out to Elon Musk — but he’s no born-again MAGA",
-          "users": "12297",
-          "views": "12531"
-        },
-        {
-          "title": "CENTCOM announces task force to blockade Iranian ground transit routes",
-          "users": "11229",
-          "views": "11716"
-        },
-        {
-          "title": "Navy admiral fired by Hegseth wins election to Congress",
-          "users": "9026",
-          "views": "9302"
-        },
-        {
-          "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "7293",
-          "views": "14648"
-        },
-        {
-          "title": "Greg Abbott spent years fortifying the Texas border. Gina Hinojosa could undo it all",
-          "users": "7111",
-          "views": "7310"
-        },
-        {
-          "title": "2026 Election",
-          "users": "6309",
-          "views": "9392"
-        },
-        {
-          "title": "A $34 million monument to California’s decline",
-          "users": "6159",
-          "views": "6460"
-        },
-        {
-          "title": "Fetterman to get rare filibuster backup with new crop of Senate Democrats",
-          "users": "5249",
-          "views": "5401"
-        },
-        {
-          "title": "In the GOP, a new 2028 race",
-          "users": "5029",
-          "views": "5540"
-        },
-        {
-          "title": "Democrats could target Trump tariffs after midterm sweep with some GOP aid",
-          "users": "4346",
-          "views": "4554"
-        },
-        {
-          "title": "Hinojosa’s Californication of Texas will have national implications",
-          "users": "3901",
-          "views": "4071"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Op-Eds",
-          "users": "34493",
-          "views": "38411"
-        },
-        {
-          "section": "Healthcare",
-          "users": "23368",
-          "views": "24160"
-        },
-        {
-          "section": "News",
-          "users": "22721",
-          "views": "24078"
-        },
-        {
-          "section": "Congressional",
-          "users": "17238",
-          "views": "18302"
-        },
-        {
-          "section": "Defense",
-          "users": "13347",
-          "views": "13786"
-        },
-        {
-          "section": "Immigration",
-          "users": "9002",
-          "views": "9428"
-        },
-        {
-          "section": "Senate",
-          "users": "6267",
-          "views": "6532"
-        },
-        {
-          "section": "Magazine - Your Land",
-          "users": "5910",
-          "views": "6115"
-        },
-        {
-          "section": "Business",
-          "users": "5777",
-          "views": "5987"
-        },
-        {
-          "section": "Editorials",
-          "users": "5060",
-          "views": "5221"
-        }
-      ]
-    },
     {
       "date": "20261108",
       "totalUsers": 256384,
@@ -1015,6 +763,258 @@
     },
     {
       "date": "20261111",
+      "totalUsers": 234252,
+      "newUsers": 123413,
+      "pageviews": 289875,
+      "sessions": 250673,
+      "bounceRate": 0.6558105579779234,
+      "averageSessionDuration": 91.37093013342881,
+      "referrers": [
+        {
+          "source": "newsbreak.com",
+          "users": 71475
+        },
+        {
+          "source": "smartnews.com",
+          "users": 65520
+        },
+        {
+          "source": "(direct)",
+          "users": 52983
+        },
+        {
+          "source": "google",
+          "users": 19537
+        },
+        {
+          "source": "t.co",
+          "users": 4602
+        },
+        {
+          "source": "(not set)",
+          "users": 2313
+        },
+        {
+          "source": "facebook.com",
+          "users": 1942
+        },
+        {
+          "source": "deployer",
+          "users": 1695
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1632
+        },
+        {
+          "source": "newsbreak",
+          "users": 1558
+        },
+        {
+          "source": "newsshowcase",
+          "users": 1199
+        },
+        {
+          "source": "reddit.com",
+          "users": 1176
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 905
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 838
+        },
+        {
+          "source": "news.google.com",
+          "users": 670
+        }
+      ],
+      "authors": [
+        {
+          "author": "Mackenzie Chase",
+          "users": "47227",
+          "views": "50334"
+        },
+        {
+          "author": "Rena Rowe",
+          "users": "39201",
+          "views": "39774"
+        },
+        {
+          "author": "Claire Carter and Rena Rowe",
+          "users": "6933",
+          "views": "7448"
+        },
+        {
+          "author": "Callie Patteson",
+          "users": "6816",
+          "views": "7102"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "6477",
+          "views": "6580"
+        },
+        {
+          "author": "Anna Giaritelli",
+          "users": "6256",
+          "views": "6540"
+        },
+        {
+          "author": "Leonid Baratz",
+          "users": "5293",
+          "views": "5387"
+        },
+        {
+          "author": "Zachary Faria",
+          "users": "4317",
+          "views": "4507"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "3308",
+          "views": "3369"
+        },
+        {
+          "author": "Brady Knox",
+          "users": "2760",
+          "views": "2836"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Second round of November Social Security payments goes out in 7 days",
+          "users": "39402",
+          "views": "42282"
+        },
+        {
+          "title": "Bessent moves to military base due to Iranian assassination threat",
+          "users": "34202",
+          "views": "35253"
+        },
+        {
+          "title": "Washington Examiner – Congress, White House & Political News",
+          "users": "8003",
+          "views": "16476"
+        },
+        {
+          "title": "Mississippi is still counting votes over a week after Election Day: What to know",
+          "users": "7691",
+          "views": "8239"
+        },
+        {
+          "title": "The 24 Democrats and one Republican who voted against advancing the Senate permitting bill",
+          "users": "6818",
+          "views": "7054"
+        },
+        {
+          "title": "Trump asks Supreme Court to end White House ballroom legal battle",
+          "users": "6212",
+          "views": "6288"
+        },
+        {
+          "title": "Ukraine handed the West a list of 500,000 Russian soldiers. Washington hasn’t read it",
+          "users": "5293",
+          "views": "5387"
+        },
+        {
+          "title": "Colorado Democrats plot to overturn the will of their voters",
+          "users": "5180",
+          "views": "5405"
+        },
+        {
+          "title": "Habeas corpus cases near 100,000 as ICE detainees seize on new way to fight detention",
+          "users": "4819",
+          "views": "5084"
+        },
+        {
+          "title": "Aggressive rhetoric around Elon Musk could lead to another ‘Charlie Kirk situation’: Joe Concha",
+          "users": "4452",
+          "views": "4559"
+        },
+        {
+          "title": "December Supplemental Security direct payment up to $994 goes out in 20 days",
+          "users": "3733",
+          "views": "3957"
+        },
+        {
+          "title": "2026 Election",
+          "users": "3428",
+          "views": "5044"
+        },
+        {
+          "title": "An ode to Harmeet Dhillon",
+          "users": "3174",
+          "views": "3307"
+        },
+        {
+          "title": "Scott Bessent becomes the fifth Trump official to move on to a military base. Here’s who else has moved",
+          "users": "2956",
+          "views": "3058"
+        },
+        {
+          "title": "South Yemeni leaders to US: Cut your losses in Yemen and support an independent south",
+          "users": "2391",
+          "views": "2451"
+        }
+      ],
+      "sections": [
+        {
+          "section": "News",
+          "users": "45928",
+          "views": "48852"
+        },
+        {
+          "section": "National Security",
+          "users": "37403",
+          "views": "37933"
+        },
+        {
+          "section": "Congressional",
+          "users": "11590",
+          "views": "12287"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "9409",
+          "views": "10006"
+        },
+        {
+          "section": "Energy and Environment",
+          "users": "7119",
+          "views": "7412"
+        },
+        {
+          "section": "Supreme Court",
+          "users": "6253",
+          "views": "6350"
+        },
+        {
+          "section": "Crime",
+          "users": "5171",
+          "views": "5451"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "4734",
+          "views": "4935"
+        },
+        {
+          "section": "Senate",
+          "users": "2807",
+          "views": "2925"
+        },
+        {
+          "section": "Justice",
+          "users": "2659",
+          "views": "2791"
+        }
+      ]
+    },
+    {
+      "date": "20261112",
       "totalUsers": 0,
       "newUsers": 0,
       "pageviews": 0,
@@ -1027,313 +1027,61 @@
       "sections": []
     },
     {
-      "date": "20261112",
-      "totalUsers": 234617,
-      "newUsers": 127260,
-      "pageviews": 294320,
-      "sessions": 259760,
-      "bounceRate": 0.6462927317523868,
-      "averageSessionDuration": 58.46901066501386,
-      "referrers": [
-        {
-          "source": "(not set)",
-          "users": 112925
-        },
-        {
-          "source": "(direct)",
-          "users": 57700
-        },
-        {
-          "source": "newsbreak.com",
-          "users": 25371
-        },
-        {
-          "source": "google",
-          "users": 10017
-        },
-        {
-          "source": "(data not available)",
-          "users": 7067
-        },
-        {
-          "source": "smartnews.com",
-          "users": 6499
-        },
-        {
-          "source": "facebook.com",
-          "users": 3002
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 2510
-        },
-        {
-          "source": "t.co",
-          "users": 1535
-        },
-        {
-          "source": "newsbreak",
-          "users": 1346
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 1296
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 1214
-        },
-        {
-          "source": "deployer",
-          "users": 771
-        },
-        {
-          "source": "msn",
-          "users": 771
-        },
-        {
-          "source": "duckduckgo",
-          "users": 753
-        }
-      ],
-      "authors": [
-        {
-          "author": "Molly Parks",
-          "users": "25416",
-          "views": "26315"
-        },
-        {
-          "author": "Mackenzie Chase",
-          "users": "23039",
-          "views": "24513"
-        },
-        {
-          "author": "Hailey Bullis and Molly Parks",
-          "users": "19056",
-          "views": "19598"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "16523",
-          "views": "17444"
-        },
-        {
-          "author": "Mia Cathell",
-          "users": "7235",
-          "views": "7537"
-        },
-        {
-          "author": "David Sivak",
-          "users": "6901",
-          "views": "7170"
-        },
-        {
-          "author": "Timothy Nerozzi",
-          "users": "4589",
-          "views": "4704"
-        },
-        {
-          "author": "Jack Birle",
-          "users": "3548",
-          "views": "3638"
-        },
-        {
-          "author": "Rena Rowe",
-          "users": "3391",
-          "views": "3505"
-        },
-        {
-          "author": "Gabrielle M. Etzel",
-          "users": "2662",
-          "views": "2834"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Democrats’ midterm honeymoon over as they suffer quick-fire double voting blunder",
-          "users": "18983",
-          "views": "19598"
-        },
-        {
-          "title": "December Supplemental Security direct payment up to $994 goes out in 20 days",
-          "users": "17106",
-          "views": "18200"
-        },
-        {
-          "title": "This House Republican just lost reelection. He plans to keep doing the job for another two years anyway",
-          "users": "15603",
-          "views": "15834"
-        },
-        {
-          "title": "Texas legislature takes action on Hinojosa proposal for $1,500 checks for Texans",
-          "users": "12288",
-          "views": "12744"
-        },
-        {
-          "title": "Jeffries says Democrats will back the return of proxy voting next Congress",
-          "users": "9500",
-          "views": "9867"
-        },
-        {
-          "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "8221",
-          "views": "17503"
-        },
-        {
-          "title": "Rick Scott takes swipe at Ron DeSantis after midterm victory lap in Florida",
-          "users": "6825",
-          "views": "7069"
-        },
-        {
-          "title": "Wes Moore’s military record under renewed scrutiny after Army supervisor disputes his Afghanistan combat claims",
-          "users": "6257",
-          "views": "6421"
-        },
-        {
-          "title": "Second round of November Social Security payments goes out in 7 days",
-          "users": "5003",
-          "views": "5339"
-        },
-        {
-          "title": "French novelist who wrote about Muslim-leftist takeover charged with hate speech for ‘Great Replacement’ comments",
-          "users": "4541",
-          "views": "4653"
-        },
-        {
-          "title": "Trump asks Supreme Court to end White House ballroom legal battle",
-          "users": "3241",
-          "views": "3320"
-        },
-        {
-          "title": "2026 Election",
-          "users": "2899",
-          "views": "4219"
-        },
-        {
-          "title": "Trump and Netanyahu, again",
-          "users": "2835",
-          "views": "3090"
-        },
-        {
-          "title": "Victorious Democrats prepare for a Palestinian purity-test purge of members",
-          "users": "2725",
-          "views": "2902"
-        },
-        {
-          "title": "Doctors group calls for firearm makers to pay costs of gun violence",
-          "users": "2607",
-          "views": "2779"
-        }
-      ],
-      "sections": [
-        {
-          "section": "House",
-          "users": "29668",
-          "views": "31449"
-        },
-        {
-          "section": "Congressional",
-          "users": "23591",
-          "views": "24584"
-        },
-        {
-          "section": "News",
-          "users": "22928",
-          "views": "24363"
-        },
-        {
-          "section": "Finance and Economy",
-          "users": "12754",
-          "views": "13360"
-        },
-        {
-          "section": "Immigration",
-          "users": "8570",
-          "views": "8992"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "7108",
-          "views": "7532"
-        },
-        {
-          "section": "Investigations",
-          "users": "7107",
-          "views": "7356"
-        },
-        {
-          "section": "Supreme Court",
-          "users": "3273",
-          "views": "3343"
-        },
-        {
-          "section": "Healthcare",
-          "users": "3248",
-          "views": "3434"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "2856",
-          "views": "2972"
-        }
-      ]
-    },
-    {
       "date": "20261113",
-      "totalUsers": 302917,
-      "newUsers": 164333,
-      "pageviews": 375970,
-      "sessions": 332703,
-      "bounceRate": 0.6358764423524885,
-      "averageSessionDuration": 60.03783053793023,
+      "totalUsers": 323672,
+      "newUsers": 174092,
+      "pageviews": 403999,
+      "sessions": 356626,
+      "bounceRate": 0.6419610460258085,
+      "averageSessionDuration": 59.00155712102034,
       "referrers": [
         {
           "source": "(not set)",
-          "users": 149016
+          "users": 160768
         },
         {
           "source": "google",
-          "users": 49529
-        },
-        {
-          "source": "(direct)",
-          "users": 42802
+          "users": 50266
         },
         {
           "source": "newsbreak.com",
-          "users": 42717
+          "users": 47375
+        },
+        {
+          "source": "(direct)",
+          "users": 44733
         },
         {
           "source": "smartnews.com",
-          "users": 8680
-        },
-        {
-          "source": "t.co",
-          "users": 2029
+          "users": 9768
         },
         {
           "source": "facebook.com",
-          "users": 1996
+          "users": 2201
+        },
+        {
+          "source": "t.co",
+          "users": 2101
         },
         {
           "source": "duckduckgo",
-          "users": 1515
+          "users": 1605
         },
         {
           "source": "newsbreak",
-          "users": 1381
+          "users": 1543
         },
         {
           "source": "",
-          "users": 1145
+          "users": 1225
         },
         {
           "source": "m.facebook.com",
-          "users": 870
+          "users": 934
         },
         {
           "source": "news.google.com",
-          "users": 753
+          "users": 781
         },
         {
           "source": "(other)",
@@ -1341,192 +1089,444 @@
         },
         {
           "source": "chatgpt.com",
-          "users": 659
+          "users": 680
         },
         {
           "source": "deployer",
-          "users": 515
+          "users": 573
         }
       ],
       "authors": [
         {
           "author": "Mia Cathell",
-          "users": "73106",
-          "views": "76379"
+          "users": "77646",
+          "views": "81031"
         },
         {
           "author": "Emily Hallas",
-          "users": "25322",
-          "views": "26337"
+          "users": "28049",
+          "views": "29219"
         },
         {
           "author": "Barry Angeline",
-          "users": "12387",
-          "views": "12676"
+          "users": "12911",
+          "views": "13169"
         },
         {
           "author": "Molly Parks",
-          "users": "11451",
-          "views": "11797"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "10322",
-          "views": "10641"
-        },
-        {
-          "author": "Britta Miller",
-          "users": "7296",
-          "views": "7513"
+          "users": "11952",
+          "views": "12311"
         },
         {
           "author": "David Zimmermann",
-          "users": "6331",
-          "views": "6525"
+          "users": "11596",
+          "views": "11919"
+        },
+        {
+          "author": "Brady Knox",
+          "users": "10623",
+          "views": "10958"
+        },
+        {
+          "author": "Britta Miller",
+          "users": "8690",
+          "views": "8949"
         },
         {
           "author": "Tiana Lowe Doescher",
-          "users": "5207",
-          "views": "5376"
+          "users": "5536",
+          "views": "5722"
         },
         {
           "author": "Rena Rowe",
-          "users": "4002",
-          "views": "4239"
+          "users": "4746",
+          "views": "5028"
         },
         {
           "author": "Hailey Bullis and Molly Parks",
-          "users": "3799",
-          "views": "3859"
+          "users": "3954",
+          "views": "4019"
         }
       ],
       "articles": [
         {
           "title": "Ilhan Omar’s Somali bodyguard was indicted amid DOJ investigation of congresswoman, lawyer claims",
-          "users": "64678",
-          "views": "67817"
+          "users": "67997",
+          "views": "71617"
         },
         {
           "title": "FAA imposes nationwide ground stop on all flights",
-          "users": "52254",
-          "views": "61580"
+          "users": "52417",
+          "views": "62046"
         },
         {
           "title": "Sen. John Kennedy slams White House for blaming economic pain on Biden: ‘The economy belongs to President Trump’",
-          "users": "15325",
-          "views": "15672"
+          "users": "16886",
+          "views": "17371"
         },
         {
           "title": "The Justice Department says lying under oath is part of the job",
-          "users": "11898",
-          "views": "12229"
+          "users": "12401",
+          "views": "12722"
         },
         {
           "title": "Wes Moore’s military record under renewed scrutiny after Army supervisor disputes his Afghanistan combat claims",
-          "users": "8275",
-          "views": "8561"
+          "users": "9133",
+          "views": "9413"
         },
         {
           "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "7818",
-          "views": "15996"
-        },
-        {
-          "title": "Texas legislature takes action on Hinojosa proposal for $1,500 checks for Texans",
-          "users": "7432",
-          "views": "7834"
-        },
-        {
-          "title": "Sailor assigned to Congress’s medical office had to cut lawmaker’s toenails",
-          "users": "7337",
-          "views": "7650"
-        },
-        {
-          "title": "Jeffries says Democrats will back the return of proxy voting next Congress",
-          "users": "6848",
-          "views": "7117"
+          "users": "8257",
+          "views": "17153"
         },
         {
           "title": "If you’re going to cheat on your wife, ‘definitely don’t do it with a Chinese spy’: Tiana Lowe Doescher",
-          "users": "6626",
-          "views": "6823"
+          "users": "7924",
+          "views": "8167"
         },
         {
-          "title": "I’m sure it’s a coincidence that Howard Lutnick’s sons have $362 million in Nvidia",
-          "users": "4696",
-          "views": "4815"
+          "title": "Texas legislature takes action on Hinojosa proposal for $1,500 checks for Texans",
+          "users": "7781",
+          "views": "8212"
+        },
+        {
+          "title": "Sailor assigned to Congress’s medical office had to cut lawmaker’s toenails",
+          "users": "7407",
+          "views": "7727"
+        },
+        {
+          "title": "Stephen Miller clamps down on lobbyist meetings for White House staff",
+          "users": "7266",
+          "views": "7418"
+        },
+        {
+          "title": "Jeffries says Democrats will back the return of proxy voting next Congress",
+          "users": "6936",
+          "views": "7222"
         },
         {
           "title": "This House Republican just lost reelection. He plans to keep doing the job for another two years anyway",
-          "users": "4592",
-          "views": "4705"
+          "users": "4987",
+          "views": "5108"
         },
         {
-          "title": "Democrats’ midterm honeymoon over as they suffer quick-fire double voting blunder",
-          "users": "3799",
-          "views": "3859"
+          "title": "I’m sure it’s a coincidence that Howard Lutnick’s sons have $362 million in Nvidia",
+          "users": "4935",
+          "views": "5061"
         },
         {
           "title": "Don’t worry, Democrats will blow it",
-          "users": "3601",
-          "views": "3751"
+          "users": "4030",
+          "views": "4200"
         },
         {
-          "title": "I'm sure it's a coincidence that Lutnick's sons have $362 million in Nvidia",
-          "users": "3060",
-          "views": "3400"
+          "title": "Democrats’ midterm honeymoon over as they suffer quick-fire double voting blunder",
+          "users": "3954",
+          "views": "4019"
         }
       ],
       "sections": [
         {
           "section": "Investigations",
-          "users": "68140",
-          "views": "71122"
+          "users": "72768",
+          "views": "75829"
         },
         {
           "section": "Op-Eds",
-          "users": "19248",
-          "views": "20209"
+          "users": "20259",
+          "views": "21316"
         },
         {
           "section": "House",
-          "users": "19146",
-          "views": "20067"
+          "users": "19774",
+          "views": "20744"
         },
         {
           "section": "Economy",
-          "users": "15401",
-          "views": "15672"
+          "users": "17116",
+          "views": "17371"
         },
         {
           "section": "Congressional",
-          "users": "9077",
-          "views": "9350"
-        },
-        {
-          "section": "Finance and Economy",
-          "users": "8924",
-          "views": "9540"
+          "users": "9613",
+          "views": "9925"
         },
         {
           "section": "Technology",
-          "users": "7923",
-          "views": "8202"
+          "users": "9568",
+          "views": "9924"
         },
         {
-          "section": "Defense",
-          "users": "7899",
-          "views": "8065"
-        },
-        {
-          "section": "Columnists",
-          "users": "4915",
-          "views": "5038"
+          "section": "Finance and Economy",
+          "users": "9294",
+          "views": "9942"
         },
         {
           "section": "White House",
-          "users": "4225",
-          "views": "4316"
+          "users": "9241",
+          "views": "9343"
+        },
+        {
+          "section": "Defense",
+          "users": "8043",
+          "views": "8225"
+        },
+        {
+          "section": "Columnists",
+          "users": "5161",
+          "views": "5291"
+        }
+      ]
+    },
+    {
+      "date": "20261114",
+      "totalUsers": 231114,
+      "newUsers": 106912,
+      "pageviews": 280269,
+      "sessions": 249116,
+      "bounceRate": 0.6896626471202171,
+      "averageSessionDuration": 48.20339326172546,
+      "referrers": [
+        {
+          "source": "(not set)",
+          "users": 126608
+        },
+        {
+          "source": "(direct)",
+          "users": 37476
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 29613
+        },
+        {
+          "source": "smartnews.com",
+          "users": 11273
+        },
+        {
+          "source": "google",
+          "users": 8971
+        },
+        {
+          "source": "facebook.com",
+          "users": 2503
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1598
+        },
+        {
+          "source": "(data not available)",
+          "users": 1539
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1373
+        },
+        {
+          "source": "",
+          "users": 1362
+        },
+        {
+          "source": "newsbreak",
+          "users": 1263
+        },
+        {
+          "source": "t.co",
+          "users": 1146
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 821
+        },
+        {
+          "source": "linkedin.com",
+          "users": 509
+        },
+        {
+          "source": "newsshowcase",
+          "users": 489
+        }
+      ],
+      "authors": [
+        {
+          "author": "Emily Hallas",
+          "users": "28238",
+          "views": "29336"
+        },
+        {
+          "author": "Mackenzie Chase",
+          "users": "23887",
+          "views": "25357"
+        },
+        {
+          "author": "Mia Cathell",
+          "users": "18934",
+          "views": "19651"
+        },
+        {
+          "author": "Britta Miller",
+          "users": "12807",
+          "views": "13035"
+        },
+        {
+          "author": "David Zimmermann",
+          "users": "10475",
+          "views": "10716"
+        },
+        {
+          "author": "Dominic Green",
+          "users": "7138",
+          "views": "7279"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "5792",
+          "views": "5918"
+        },
+        {
+          "author": "Claire Carter",
+          "users": "4955",
+          "views": "5281"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "4846",
+          "views": "5000"
+        },
+        {
+          "author": "Barry Angeline",
+          "users": "4494",
+          "views": "4619"
+        }
+      ],
+      "articles": [
+        {
+          "title": "December Supplemental Security direct payment up to $994 goes out in 17 days",
+          "users": "20169",
+          "views": "21591"
+        },
+        {
+          "title": "Ilhan Omar’s Somali bodyguard was indicted amid DOJ investigation of congresswoman, lawyer claims",
+          "users": "16833",
+          "views": "17581"
+        },
+        {
+          "title": "Sen. John Kennedy slams White House for blaming economic pain on Biden: ‘The economy belongs to President Trump’",
+          "users": "13934",
+          "views": "14051"
+        },
+        {
+          "title": "If you’re going to cheat on your wife, ‘definitely don’t do it with a Chinese spy’: Tiana Lowe Doescher",
+          "users": "10610",
+          "views": "11003"
+        },
+        {
+          "title": "SpaceX’s $24 billion data center outside Texas city would circumvent moratorium",
+          "users": "9546",
+          "views": "9675"
+        },
+        {
+          "title": "We blew it",
+          "users": "7119",
+          "views": "7279"
+        },
+        {
+          "title": "Washington Examiner – Congress, White House & Political News",
+          "users": "6909",
+          "views": "13188"
+        },
+        {
+          "title": "Stephen Miller clamps down on lobbyist meetings for White House staff",
+          "users": "6792",
+          "views": "6962"
+        },
+        {
+          "title": "Federal judge grills Trump administration on sudden upcoming closure of East Potomac Park",
+          "users": "5682",
+          "views": "5797"
+        },
+        {
+          "title": "Rubio’s Federalist Society speech stirs 2028 speculation",
+          "users": "4884",
+          "views": "5461"
+        },
+        {
+          "title": "The Justice Department says lying under oath is part of the job",
+          "users": "4494",
+          "views": "4619"
+        },
+        {
+          "title": "This House Republican just lost reelection. He plans to keep doing the job for another two years anyway",
+          "users": "3929",
+          "views": "4003"
+        },
+        {
+          "title": "Second round of November Social Security payments goes out in four days",
+          "users": "3708",
+          "views": "3956"
+        },
+        {
+          "title": "Page not found",
+          "users": "3634",
+          "views": "3730"
+        },
+        {
+          "title": "Don’t worry, Democrats will blow it",
+          "users": "3415",
+          "views": "3542"
+        }
+      ],
+      "sections": [
+        {
+          "section": "News",
+          "users": "25420",
+          "views": "26966"
+        },
+        {
+          "section": "Technology",
+          "users": "20179",
+          "views": "20767"
+        },
+        {
+          "section": "Investigations",
+          "users": "19256",
+          "views": "20031"
+        },
+        {
+          "section": "Economy",
+          "users": "13871",
+          "views": "14051"
+        },
+        {
+          "section": "White House",
+          "users": "10804",
+          "views": "11011"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "8581",
+          "views": "8891"
+        },
+        {
+          "section": "House",
+          "users": "7808",
+          "views": "8258"
+        },
+        {
+          "section": "Magazine - Columnists",
+          "users": "7198",
+          "views": "7336"
+        },
+        {
+          "section": "Justice",
+          "users": "5705",
+          "views": "5822"
+        },
+        {
+          "section": "Congressional",
+          "users": "5323",
+          "views": "5496"
         }
       ]
     }
@@ -1537,20 +1537,20 @@
     "totalArticleEntries": 90,
     "totalSectionEntries": 60,
     "uniqueAuthors": 29,
-    "uniqueSections": 24,
+    "uniqueSections": 25,
     "sampleAuthors": [
-      "Rena Rowe",
       "Britta Miller",
       "Jose Lev Alvarez",
       "David Zimmermann",
+      "Molly Parks",
       "Mark Whittington"
     ],
     "sampleSections": [
-      "Op-Eds",
-      "Healthcare",
       "News",
+      "Op-Eds",
       "Congressional",
-      "Defense"
+      "Defense",
+      "Immigration"
     ]
   }
 }

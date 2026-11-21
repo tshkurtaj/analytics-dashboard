@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-11-20T07:18:35.888Z",
+  "updatedAt": "2026-11-21T07:16:30.587Z",
   "range": {
-    "start": "2026-11-13",
-    "end": "2026-11-19"
+    "start": "2026-11-14",
+    "end": "2026-11-20"
   },
   "rows": [
-    {
-      "date": "20261113",
-      "totalUsers": 323672,
-      "newUsers": 174092,
-      "pageviews": 403999,
-      "sessions": 339785,
-      "bounceRate": 0.6192798387215445,
-      "averageSessionDuration": 103.1059085557426,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 129827
-        },
-        {
-          "source": "google",
-          "users": 54428
-        },
-        {
-          "source": "(direct)",
-          "users": 54381
-        },
-        {
-          "source": "smartnews.com",
-          "users": 52960
-        },
-        {
-          "source": "t.co",
-          "users": 2541
-        },
-        {
-          "source": "(not set)",
-          "users": 2421
-        },
-        {
-          "source": "facebook.com",
-          "users": 2323
-        },
-        {
-          "source": "newsbreak",
-          "users": 2073
-        },
-        {
-          "source": "duckduckgo",
-          "users": 1762
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 1458
-        },
-        {
-          "source": "deployer",
-          "users": 1061
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 991
-        },
-        {
-          "source": "news.google.com",
-          "users": 934
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 802
-        },
-        {
-          "source": "reddit.com",
-          "users": 729
-        }
-      ],
-      "authors": [
-        {
-          "author": "Mia Cathell",
-          "users": "77646",
-          "views": "81031"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "28049",
-          "views": "29219"
-        },
-        {
-          "author": "Barry Angeline",
-          "users": "12911",
-          "views": "13169"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "11952",
-          "views": "12311"
-        },
-        {
-          "author": "David Zimmermann",
-          "users": "11596",
-          "views": "11919"
-        },
-        {
-          "author": "Brady Knox",
-          "users": "10623",
-          "views": "10958"
-        },
-        {
-          "author": "Britta Miller",
-          "users": "8690",
-          "views": "8949"
-        },
-        {
-          "author": "Tiana Lowe Doescher",
-          "users": "5536",
-          "views": "5722"
-        },
-        {
-          "author": "Rena Rowe",
-          "users": "4746",
-          "views": "5028"
-        },
-        {
-          "author": "Hailey Bullis and Molly Parks",
-          "users": "3954",
-          "views": "4019"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Ilhan Omar’s Somali bodyguard was indicted amid DOJ investigation of congresswoman, lawyer claims",
-          "users": "67997",
-          "views": "71617"
-        },
-        {
-          "title": "FAA imposes nationwide ground stop on all flights",
-          "users": "52417",
-          "views": "62046"
-        },
-        {
-          "title": "Sen. John Kennedy slams White House for blaming economic pain on Biden: ‘The economy belongs to President Trump’",
-          "users": "16886",
-          "views": "17371"
-        },
-        {
-          "title": "The Justice Department says lying under oath is part of the job",
-          "users": "12401",
-          "views": "12722"
-        },
-        {
-          "title": "Wes Moore’s military record under renewed scrutiny after Army supervisor disputes his Afghanistan combat claims",
-          "users": "9133",
-          "views": "9413"
-        },
-        {
-          "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "8257",
-          "views": "17153"
-        },
-        {
-          "title": "If you’re going to cheat on your wife, ‘definitely don’t do it with a Chinese spy’: Tiana Lowe Doescher",
-          "users": "7924",
-          "views": "8167"
-        },
-        {
-          "title": "Texas legislature takes action on Hinojosa proposal for $1,500 checks for Texans",
-          "users": "7781",
-          "views": "8212"
-        },
-        {
-          "title": "Sailor assigned to Congress’s medical office had to cut lawmaker’s toenails",
-          "users": "7407",
-          "views": "7727"
-        },
-        {
-          "title": "Stephen Miller clamps down on lobbyist meetings for White House staff",
-          "users": "7266",
-          "views": "7418"
-        },
-        {
-          "title": "Jeffries says Democrats will back the return of proxy voting next Congress",
-          "users": "6936",
-          "views": "7222"
-        },
-        {
-          "title": "This House Republican just lost reelection. He plans to keep doing the job for another two years anyway",
-          "users": "4987",
-          "views": "5108"
-        },
-        {
-          "title": "I’m sure it’s a coincidence that Howard Lutnick’s sons have $362 million in Nvidia",
-          "users": "4935",
-          "views": "5061"
-        },
-        {
-          "title": "Don’t worry, Democrats will blow it",
-          "users": "4030",
-          "views": "4200"
-        },
-        {
-          "title": "Democrats’ midterm honeymoon over as they suffer quick-fire double voting blunder",
-          "users": "3954",
-          "views": "4019"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Investigations",
-          "users": "72768",
-          "views": "75829"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "20259",
-          "views": "21316"
-        },
-        {
-          "section": "House",
-          "users": "19774",
-          "views": "20744"
-        },
-        {
-          "section": "Economy",
-          "users": "17116",
-          "views": "17371"
-        },
-        {
-          "section": "Congressional",
-          "users": "9613",
-          "views": "9925"
-        },
-        {
-          "section": "Technology",
-          "users": "9568",
-          "views": "9924"
-        },
-        {
-          "section": "Finance and Economy",
-          "users": "9294",
-          "views": "9942"
-        },
-        {
-          "section": "White House",
-          "users": "9241",
-          "views": "9343"
-        },
-        {
-          "section": "Defense",
-          "users": "8043",
-          "views": "8225"
-        },
-        {
-          "section": "Columnists",
-          "users": "5161",
-          "views": "5291"
-        }
-      ]
-    },
     {
       "date": "20261114",
       "totalUsers": 239216,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20261119",
-      "totalUsers": 213721,
-      "newUsers": 94034,
-      "pageviews": 262079,
-      "sessions": 221756,
-      "bounceRate": 0.725229531557207,
-      "averageSessionDuration": 55.417028516026626,
+      "totalUsers": 227363,
+      "newUsers": 100726,
+      "pageviews": 279822,
+      "sessions": 246091,
+      "bounceRate": 0.7309247392224827,
+      "averageSessionDuration": 104.7994850293428,
       "referrers": [
         {
-          "source": "(not set)",
-          "users": 123347
-        },
-        {
           "source": "newsbreak.com",
-          "users": 47311
-        },
-        {
-          "source": "(direct)",
-          "users": 15785
-        },
-        {
-          "source": "google",
-          "users": 7265
+          "users": 124808
         },
         {
           "source": "smartnews.com",
-          "users": 5585
+          "users": 36592
         },
         {
-          "source": "(data not available)",
-          "users": 2217
+          "source": "(direct)",
+          "users": 27054
+        },
+        {
+          "source": "google",
+          "users": 13141
         },
         {
           "source": "realclearpolitics.com",
-          "users": 1766
+          "users": 4705
         },
         {
           "source": "newsbreak",
-          "users": 1640
+          "users": 2337
         },
         {
           "source": "t.co",
-          "users": 1427
-        },
-        {
-          "source": "facebook.com",
-          "users": 1209
-        },
-        {
-          "source": "",
-          "users": 1173
+          "users": 2101
         },
         {
           "source": "deployer",
-          "users": 1034
+          "users": 1613
+        },
+        {
+          "source": "facebook.com",
+          "users": 1427
+        },
+        {
+          "source": "(not set)",
+          "users": 1296
         },
         {
           "source": "m.facebook.com",
-          "users": 714
+          "users": 805
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 586
         },
         {
           "source": "bing",
-          "users": 352
+          "users": 582
         },
         {
           "source": "revolver.news",
-          "users": 328
+          "users": 505
+        },
+        {
+          "source": "news.google.com",
+          "users": 435
         }
       ],
       "authors": [
         {
           "author": "David Sivak",
-          "users": "33522",
-          "views": "34898"
+          "users": "41654",
+          "views": "43308"
         },
         {
           "author": "Sophia Bangura",
-          "users": "30542",
-          "views": "32526"
+          "users": "31236",
+          "views": "33171"
         },
         {
           "author": "Callie Patteson and Maydeen Merino",
-          "users": "17925",
-          "views": "18210"
+          "users": "18467",
+          "views": "18822"
         },
         {
           "author": "Emily Hallas",
-          "users": "16961",
-          "views": "18362"
+          "users": "17259",
+          "views": "18679"
         },
         {
           "author": "Emily Danner",
-          "users": "8370",
-          "views": "9223"
+          "users": "8509",
+          "views": "9357"
         },
         {
           "author": "Mackenzie Chase",
-          "users": "7302",
-          "views": "7752"
+          "users": "8325",
+          "views": "8872"
         },
         {
           "author": "Claire Carter",
-          "users": "6912",
-          "views": "7179"
+          "users": "7204",
+          "views": "7484"
         },
         {
           "author": "Ramsey Touchberry",
-          "users": "6354",
-          "views": "6473"
+          "users": "6517",
+          "views": "6636"
         },
         {
           "author": "Erfan Fard",
-          "users": "3651",
-          "views": "3738"
+          "users": "3753",
+          "views": "3844"
         },
         {
-          "author": "Naomi Lim",
-          "users": "3437",
-          "views": "3624"
+          "author": "Jack Birle",
+          "users": "3517",
+          "views": "3618"
         }
       ],
       "articles": [
         {
           "title": "Senate Republicans reject Iran war rebuke in first unity test since election",
-          "users": "32738",
-          "views": "33876"
+          "users": "40857",
+          "views": "42227"
         },
         {
           "title": "Thousands of users report Wells Fargo services are down in latest outage",
-          "users": "29425",
-          "views": "31258"
+          "users": "29485",
+          "views": "31324"
         },
         {
           "title": "Here’s why gas and diesel prices declined after the midterm elections, not before",
-          "users": "18049",
-          "views": "18199"
+          "users": "18676",
+          "views": "18811"
         },
         {
           "title": "Americans stockpile doomsday supplies following outages across industries",
-          "users": "10124",
-          "views": "11030"
+          "users": "10197",
+          "views": "11105"
         },
         {
           "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "7499",
-          "views": "14631"
+          "users": "7677",
+          "views": "15096"
         },
         {
           "title": "The 11 House Democrats who voted against Hakeem Jeffries for speaker",
-          "users": "6403",
-          "views": "6721"
+          "users": "6634",
+          "views": "6962"
         },
         {
           "title": "December Supplemental Security direct payment worth up to $994 goes out in 13 days",
-          "users": "4510",
-          "views": "4832"
+          "users": "4575",
+          "views": "4901"
         },
         {
           "title": "Second round of November Social Security payments goes out today",
-          "users": "4255",
-          "views": "4593"
-        },
-        {
-          "title": "House Democrats signal investigation targets",
-          "users": "3966",
-          "views": "4299"
-        },
-        {
-          "title": "Forget Trump’s diplomatic mirage — Abdanan just proved Iranians will decide their own fate",
-          "users": "3575",
-          "views": "3658"
+          "users": "4334",
+          "views": "4679"
         },
         {
           "title": "Mamdani signs legislation ending 150-year tradition of horse-drawn carriages in NYC",
-          "users": "3277",
-          "views": "3350"
+          "users": "4025",
+          "views": "4119"
+        },
+        {
+          "title": "House Democrats signal investigation targets",
+          "users": "4000",
+          "views": "4343"
+        },
+        {
+          "title": "Forget Trump’s diplomatic mirage — Abdanan just proved Iranians will decide their own fate",
+          "users": "3678",
+          "views": "3764"
         },
         {
           "title": "FBI issues warning that cybercriminals are exploiting ARTEX: What is it and is it tied to worldwide outages?",
-          "users": "2888",
-          "views": "3072"
-        },
-        {
-          "title": "White House won’t comply with oversight requests while Democrats still in the minority: Letter",
-          "users": "2846",
-          "views": "2994"
+          "users": "2975",
+          "views": "3162"
         },
         {
           "title": "Trump optimistic for ‘unbelievably productive’ final two years with Democratic Congress",
-          "users": "2796",
-          "views": "2957"
+          "users": "2913",
+          "views": "3083"
+        },
+        {
+          "title": "White House won’t comply with oversight requests while Democrats still in the minority: Letter",
+          "users": "2889",
+          "views": "3038"
         },
         {
           "title": "Trump’s HIPAA overhaul makes patients the CEOs of their health — not file clerks",
-          "users": "2359",
-          "views": "2440"
+          "users": "2559",
+          "views": "2647"
         }
       ],
       "sections": [
         {
           "section": "Senate",
-          "users": "36506",
-          "views": "37777"
+          "users": "44865",
+          "views": "46323"
         },
         {
           "section": "Technology",
-          "users": "32609",
-          "views": "34686"
+          "users": "33413",
+          "views": "35428"
         },
         {
           "section": "Energy and Environment",
-          "users": "18048",
-          "views": "18386"
+          "users": "18806",
+          "views": "19176"
         },
         {
           "section": "News",
-          "users": "13904",
-          "views": "14845"
+          "users": "14320",
+          "views": "15246"
         },
         {
           "section": "Op-Eds",
-          "users": "13459",
-          "views": "14895"
+          "users": "13953",
+          "views": "15495"
         },
         {
           "section": "National Security",
-          "users": "10393",
-          "views": "11229"
+          "users": "10460",
+          "views": "11307"
         },
         {
           "section": "House",
-          "users": "9063",
-          "views": "9895"
+          "users": "9555",
+          "views": "10483"
         },
         {
           "section": "Presidential",
-          "users": "5888",
-          "views": "6179"
+          "users": "6156",
+          "views": "6407"
         },
         {
           "section": "Beltway Confidential",
-          "users": "4312",
-          "views": "4482"
+          "users": "4340",
+          "views": "4513"
         },
         {
           "section": "Business",
-          "users": "3334",
-          "views": "3409"
+          "users": "4083",
+          "views": "4179"
+        }
+      ]
+    },
+    {
+      "date": "20261120",
+      "totalUsers": 546302,
+      "newUsers": 256299,
+      "pageviews": 671437,
+      "sessions": 627244,
+      "bounceRate": 0.8345843084987661,
+      "averageSessionDuration": 39.14326907879391,
+      "referrers": [
+        {
+          "source": "(not set)",
+          "users": 318154
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 196589
+        },
+        {
+          "source": "(direct)",
+          "users": 16016
+        },
+        {
+          "source": "newsbreak",
+          "users": 11118
+        },
+        {
+          "source": "smartnews.com",
+          "users": 7683
+        },
+        {
+          "source": "google",
+          "users": 5881
+        },
+        {
+          "source": "(data not available)",
+          "users": 1912
+        },
+        {
+          "source": "realclearpolitics.com",
+          "users": 1845
+        },
+        {
+          "source": "",
+          "users": 1677
+        },
+        {
+          "source": "(other)",
+          "users": 1667
+        },
+        {
+          "source": "t.co",
+          "users": 1327
+        },
+        {
+          "source": "facebook.com",
+          "users": 1254
+        },
+        {
+          "source": "news.google.com",
+          "users": 1190
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 961
+        },
+        {
+          "source": "flipboard",
+          "users": 793
+        }
+      ],
+      "authors": [
+        {
+          "author": "Callie Patteson",
+          "users": "352004",
+          "views": "377840"
+        },
+        {
+          "author": "David Sivak",
+          "users": "78692",
+          "views": "85253"
+        },
+        {
+          "author": "Mackenzie Chase",
+          "users": "17420",
+          "views": "18534"
+        },
+        {
+          "author": "Sophia Bangura",
+          "users": "10380",
+          "views": "10819"
+        },
+        {
+          "author": "Callie Patteson and Maydeen Merino",
+          "users": "9557",
+          "views": "9715"
+        },
+        {
+          "author": "Robert Cherry",
+          "users": "6545",
+          "views": "6811"
+        },
+        {
+          "author": "Jack Birle",
+          "users": "6003",
+          "views": "6167"
+        },
+        {
+          "author": "Emily Hallas",
+          "users": "5771",
+          "views": "6018"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "5429",
+          "views": "5655"
+        },
+        {
+          "author": "Leonid Baratz",
+          "users": "4381",
+          "views": "4494"
+        }
+      ],
+      "articles": [
+        {
+          "title": "The 31 Democrats and two Republicans who voted against permitting reform in the Senate",
+          "users": "353192",
+          "views": "377780"
+        },
+        {
+          "title": "Senate Republicans reject Iran war rebuke in first unity test since election",
+          "users": "78480",
+          "views": "85096"
+        },
+        {
+          "title": "Hakeem Jeffries plans to ‘relentlessly’ and ‘aggressively’ pursue Democratic agendas in January",
+          "users": "9841",
+          "views": "10266"
+        },
+        {
+          "title": "Here’s why gas and diesel prices declined after the midterm elections, not before",
+          "users": "9537",
+          "views": "9707"
+        },
+        {
+          "title": "Washington Examiner – Congress, White House & Political News",
+          "users": "7215",
+          "views": "13950"
+        },
+        {
+          "title": "Think the Mamdani joke was offensive? Stop ignoring child marriage in Gaza",
+          "users": "6816",
+          "views": "6961"
+        },
+        {
+          "title": "Mamdani signs legislation ending 150-year tradition of horse-drawn carriages in NYC",
+          "users": "6331",
+          "views": "6456"
+        },
+        {
+          "title": "The 11 House Democrats who voted against Hakeem Jeffries for speaker",
+          "users": "6068",
+          "views": "6574"
+        },
+        {
+          "title": "Becerra suggests he will criminally prosecute companies over rogue AI",
+          "users": "5654",
+          "views": "5823"
+        },
+        {
+          "title": "Appeals court halts bid to revive Venezuelan temporary protected status after Trump goes to Supreme Court",
+          "users": "5611",
+          "views": "5753"
+        },
+        {
+          "title": "Beijing ranked its guests in Shenzhen. Putin came second, and so does his bluff",
+          "users": "5227",
+          "views": "5384"
+        },
+        {
+          "title": "What Democrats are saying about the possibility of a government shutdown in December",
+          "users": "4789",
+          "views": "4961"
+        },
+        {
+          "title": "France is making Michel Houellebecq’s satire look prophetic",
+          "users": "4070",
+          "views": "4514"
+        },
+        {
+          "title": "Why Kamala Harris will never again be the Democratic nominee",
+          "users": "3788",
+          "views": "3910"
+        },
+        {
+          "title": "Mamdani announces plan to close Rikers Island prison ‘once and for all’",
+          "users": "3421",
+          "views": "3559"
+        }
+      ],
+      "sections": [
+        {
+          "section": "Energy and Environment",
+          "users": "359531",
+          "views": "387788"
+        },
+        {
+          "section": "Senate",
+          "users": "82206",
+          "views": "89446"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "18703",
+          "views": "20606"
+        },
+        {
+          "section": "News",
+          "users": "12494",
+          "views": "13138"
+        },
+        {
+          "section": "House",
+          "users": "8538",
+          "views": "9170"
+        },
+        {
+          "section": "Technology",
+          "users": "6958",
+          "views": "7117"
+        },
+        {
+          "section": "Crime",
+          "users": "6840",
+          "views": "7278"
+        },
+        {
+          "section": "Justice",
+          "users": "6698",
+          "views": "6917"
+        },
+        {
+          "section": "Business",
+          "users": "6461",
+          "views": "6492"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "3333",
+          "views": "3477"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 33,
-    "uniqueSections": 26,
+    "uniqueAuthors": 32,
+    "uniqueSections": 24,
     "sampleAuthors": [
-      "Mia Cathell",
       "Emily Hallas",
-      "Barry Angeline",
-      "Molly Parks",
+      "Mackenzie Chase",
+      "Mia Cathell",
+      "Britta Miller",
       "David Zimmermann"
     ],
     "sampleSections": [
+      "News",
+      "Technology",
       "Investigations",
-      "Op-Eds",
-      "House",
       "Economy",
-      "Congressional"
+      "White House"
     ]
   }
 }

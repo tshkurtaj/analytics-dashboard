@@ -1,262 +1,10 @@
 {
-  "updatedAt": "2026-11-23T07:20:27.878Z",
+  "updatedAt": "2026-11-24T07:18:48.709Z",
   "range": {
-    "start": "2026-11-16",
-    "end": "2026-11-22"
+    "start": "2026-11-17",
+    "end": "2026-11-23"
   },
   "rows": [
-    {
-      "date": "20261116",
-      "totalUsers": 158059,
-      "newUsers": 73568,
-      "pageviews": 203304,
-      "sessions": 170713,
-      "bounceRate": 0.6343629366246273,
-      "averageSessionDuration": 126.42282170516013,
-      "referrers": [
-        {
-          "source": "newsbreak.com",
-          "users": 59818
-        },
-        {
-          "source": "smartnews.com",
-          "users": 33365
-        },
-        {
-          "source": "(direct)",
-          "users": 26708
-        },
-        {
-          "source": "google",
-          "users": 13950
-        },
-        {
-          "source": "t.co",
-          "users": 2921
-        },
-        {
-          "source": "reddit.com",
-          "users": 2621
-        },
-        {
-          "source": "facebook.com",
-          "users": 2343
-        },
-        {
-          "source": "(not set)",
-          "users": 1486
-        },
-        {
-          "source": "realclearpolitics.com",
-          "users": 1425
-        },
-        {
-          "source": "newsbreak",
-          "users": 1148
-        },
-        {
-          "source": "newsbreakapp.com",
-          "users": 1134
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 857
-        },
-        {
-          "source": "newsshowcase",
-          "users": 809
-        },
-        {
-          "source": "deployer",
-          "users": 663
-        },
-        {
-          "source": "bing",
-          "users": 612
-        }
-      ],
-      "authors": [
-        {
-          "author": "Mackenzie Chase",
-          "users": "28347",
-          "views": "29388"
-        },
-        {
-          "author": "Jack Birle",
-          "users": "9030",
-          "views": "9449"
-        },
-        {
-          "author": "Claire Carter",
-          "users": "7813",
-          "views": "8212"
-        },
-        {
-          "author": "Jose Lev Alvarez",
-          "users": "7198",
-          "views": "7389"
-        },
-        {
-          "author": "Molly Parks",
-          "users": "7039",
-          "views": "7547"
-        },
-        {
-          "author": "Christopher Tremoglie",
-          "users": "6596",
-          "views": "6766"
-        },
-        {
-          "author": "Emily Hallas",
-          "users": "5783",
-          "views": "6546"
-        },
-        {
-          "author": "Mike Brest",
-          "users": "3682",
-          "views": "3934"
-        },
-        {
-          "author": "Peter Tonguette",
-          "users": "2105",
-          "views": "2132"
-        },
-        {
-          "author": "Rena Rowe",
-          "users": "2016",
-          "views": "2173"
-        }
-      ],
-      "articles": [
-        {
-          "title": "Gov. Sanders says she’s ‘not sure’ her father, a former presidential candidate, would want her to run for the Oval Of...",
-          "users": "15969",
-          "views": "16470"
-        },
-        {
-          "title": "December Supplemental Security direct payment up to $994 goes out in 16 days",
-          "users": "9487",
-          "views": "9958"
-        },
-        {
-          "title": "Thune notes $8 billion in unspent air traffic control funds in pushback to Duffy",
-          "users": "9261",
-          "views": "9498"
-        },
-        {
-          "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "8274",
-          "views": "16141"
-        },
-        {
-          "title": "Justices Thomas and Alito slam high court for rejecting challenge to ‘implicit bias’ training for doctors",
-          "users": "7908",
-          "views": "8129"
-        },
-        {
-          "title": "Trump’s highway of death: The 10 days that could create a Saddam 2.0",
-          "users": "7584",
-          "views": "7820"
-        },
-        {
-          "title": "New study shows the latest harms connected to cannabis and marijuana use",
-          "users": "6599",
-          "views": "6767"
-        },
-        {
-          "title": "Ashley Moody suggests NYPD officers from disbanded unit join Florida’s law enforcement agencies",
-          "users": "4752",
-          "views": "4900"
-        },
-        {
-          "title": "Sen. John Kennedy slams White House for blaming economic pain on Biden: ‘The economy belongs to President Trump’",
-          "users": "3615",
-          "views": "3705"
-        },
-        {
-          "title": "Army seeks hardened bunkers for Middle East bases quickly with lingering Iran threat",
-          "users": "2732",
-          "views": "2888"
-        },
-        {
-          "title": "Fox News anchor Martha MacCallum talks about her new book",
-          "users": "2159",
-          "views": "2197"
-        },
-        {
-          "title": "Second round of November Social Security payments goes out in three days",
-          "users": "2094",
-          "views": "2232"
-        },
-        {
-          "title": "America 250",
-          "users": "1728",
-          "views": "2009"
-        },
-        {
-          "title": "Pennsylvania bids for the US Space Academy",
-          "users": "1632",
-          "views": "1813"
-        },
-        {
-          "title": "FEMA to test nationwide Emergency Alert System on Tuesday: What to know",
-          "users": "1629",
-          "views": "1849"
-        }
-      ],
-      "sections": [
-        {
-          "section": "Presidential",
-          "users": "18524",
-          "views": "19040"
-        },
-        {
-          "section": "News",
-          "users": "12079",
-          "views": "12744"
-        },
-        {
-          "section": "Op-Eds",
-          "users": "10883",
-          "views": "11639"
-        },
-        {
-          "section": "Healthcare",
-          "users": "8348",
-          "views": "8618"
-        },
-        {
-          "section": "Beltway Confidential",
-          "users": "6808",
-          "views": "6986"
-        },
-        {
-          "section": "Crime",
-          "users": "6388",
-          "views": "6684"
-        },
-        {
-          "section": "Infrastructure",
-          "users": "6341",
-          "views": "6533"
-        },
-        {
-          "section": "Defense",
-          "users": "4909",
-          "views": "5812"
-        },
-        {
-          "section": "Congressional",
-          "users": "3664",
-          "views": "3821"
-        },
-        {
-          "section": "In Focus",
-          "users": "3629",
-          "views": "3791"
-        }
-      ]
-    },
     {
       "date": "20261117",
       "totalUsers": 216110,
@@ -1519,253 +1267,505 @@
     },
     {
       "date": "20261122",
-      "totalUsers": 109829,
-      "newUsers": 48729,
-      "pageviews": 149606,
-      "sessions": 117644,
-      "bounceRate": 0.6257947706640372,
-      "averageSessionDuration": 64.92770620907993,
+      "totalUsers": 116369,
+      "newUsers": 52897,
+      "pageviews": 158218,
+      "sessions": 125987,
+      "bounceRate": 0.6029987220903744,
+      "averageSessionDuration": 177.33784109620834,
       "referrers": [
         {
-          "source": "(not set)",
-          "users": 64513
-        },
-        {
-          "source": "(direct)",
-          "users": 14774
-        },
-        {
           "source": "newsbreak.com",
-          "users": 11307
-        },
-        {
-          "source": "google",
-          "users": 5296
+          "users": 36755
         },
         {
           "source": "smartnews.com",
-          "users": 4042
+          "users": 26100
         },
         {
-          "source": "(data not available)",
-          "users": 1771
+          "source": "(direct)",
+          "users": 25503
         },
         {
-          "source": "",
-          "users": 1419
-        },
-        {
-          "source": "facebook",
-          "users": 1343
+          "source": "google",
+          "users": 11179
         },
         {
           "source": "realclearpolitics.com",
-          "users": 1300
+          "users": 3488
+        },
+        {
+          "source": "(not set)",
+          "users": 1487
+        },
+        {
+          "source": "facebook",
+          "users": 1403
         },
         {
           "source": "facebook.com",
-          "users": 953
-        },
-        {
-          "source": "m.facebook.com",
-          "users": 683
+          "users": 1143
         },
         {
           "source": "t.co",
-          "users": 578
-        },
-        {
-          "source": "reddit.com",
-          "users": 556
+          "users": 859
         },
         {
           "source": "newsbreak",
-          "users": 519
+          "users": 775
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 771
+        },
+        {
+          "source": "reddit.com",
+          "users": 678
         },
         {
           "source": "news.google.com",
-          "users": 432
+          "users": 573
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 487
+        },
+        {
+          "source": "newsshowcase",
+          "users": 450
         }
       ],
       "authors": [
         {
           "author": "Emily Danner",
-          "users": "15521",
-          "views": "16749"
+          "users": "15808",
+          "views": "17078"
         },
         {
           "author": "David Zimmermann",
-          "users": "5516",
-          "views": "5766"
+          "users": "5655",
+          "views": "5914"
         },
         {
           "author": "Callie Patteson",
-          "users": "5428",
-          "views": "5565"
+          "users": "5454",
+          "views": "5594"
         },
         {
           "author": "Molly Parks",
-          "users": "4996",
-          "views": "5260"
+          "users": "5431",
+          "views": "5723"
         },
         {
           "author": "Timothy Nerozzi",
-          "users": "4402",
-          "views": "4482"
+          "users": "4614",
+          "views": "4696"
         },
         {
           "author": "Mackenzie Chase",
-          "users": "2608",
-          "views": "2712"
+          "users": "2695",
+          "views": "2806"
         },
         {
           "author": "Emily Hallas",
-          "users": "2486",
-          "views": "2546"
+          "users": "2606",
+          "views": "2671"
         },
         {
           "author": "Carlos Durán",
-          "users": "2277",
-          "views": "2335"
+          "users": "2366",
+          "views": "2429"
         },
         {
           "author": "Gabe Einhorn",
-          "users": "2061",
-          "views": "2120"
+          "users": "2148",
+          "views": "2209"
         },
         {
           "author": "David Harsanyi",
-          "users": "1819",
-          "views": "1882"
+          "users": "1852",
+          "views": "1915"
         }
       ],
       "articles": [
         {
           "title": "December Supplemental Security direct payment up to $994 goes out in 10 days",
-          "users": "10410",
-          "views": "11257"
-        },
-        {
-          "title": "Washington Examiner – Congress, White House & Political News",
-          "users": "6288",
-          "views": "11574"
+          "users": "10575",
+          "views": "11426"
         },
         {
           "title": "December Social Security direct payment worth up to $994 goes out in 9 days",
-          "users": "5617",
-          "views": "6267"
+          "users": "8417",
+          "views": "9424"
+        },
+        {
+          "title": "Washington Examiner – Congress, White House & Political News",
+          "users": "6523",
+          "views": "12120"
         },
         {
           "title": "The 31 Democrats and two Republicans who voted against permitting reform in the Senate",
-          "users": "5424",
-          "views": "5561"
+          "users": "5450",
+          "views": "5590"
         },
         {
           "title": "US, Russia, and China can all agree on one thing: The UN should stay out of its business",
-          "users": "4723",
-          "views": "4837"
+          "users": "4941",
+          "views": "5062"
         },
         {
           "title": "Third round of November Social Security payments goes out in four days",
-          "users": "3754",
-          "views": "4066"
+          "users": "3787",
+          "views": "4102"
         },
         {
           "title": "Why Kamala Harris will never again be the Democratic nominee",
-          "users": "2650",
-          "views": "2770"
+          "users": "2671",
+          "views": "2797"
         },
         {
           "title": "An election wake-up call for people of faith",
-          "users": "2400",
-          "views": "2491"
+          "users": "2489",
+          "views": "2585"
         },
         {
           "title": "A national popular vote would destroy the US",
-          "users": "2337",
-          "views": "2537"
+          "users": "2372",
+          "views": "2582"
         },
         {
           "title": "Why does ESPN allow Stephen A. Smith to make racist and bigoted comments about white athletes?",
-          "users": "2302",
-          "views": "2377"
-        },
-        {
-          "title": "Delaware unlikely to win back its lost second House seat",
-          "users": "2260",
-          "views": "2328"
+          "users": "2366",
+          "views": "2446"
         },
         {
           "title": "A man yelled Holocaust jokes in my face in New York. I’m not taking off my kippah",
-          "users": "2253",
-          "views": "2350"
+          "users": "2345",
+          "views": "2444"
         },
         {
-          "title": "A national popular vote would destroy the United States",
-          "users": "1819",
-          "views": "1882"
+          "title": "Delaware unlikely to win back its lost second House seat",
+          "users": "2303",
+          "views": "2375"
+        },
+        {
+          "title": "Clayton says public should expect tech disruptions amid upgrades but remain ‘resilient’",
+          "users": "2030",
+          "views": "2136"
         },
         {
           "title": "Third round of November Social Security payments goes out in 3 days",
-          "users": "1744",
-          "views": "1971"
+          "users": "1857",
+          "views": "2099"
         },
         {
-          "title": "Masked immigration officers cause ‘distressing’ scene after detaining two people at Seattle airport",
-          "users": "1685",
-          "views": "1802"
+          "title": "A national popular vote would destroy the United States",
+          "users": "1852",
+          "views": "1915"
         }
       ],
       "sections": [
         {
           "section": "Finance and Economy",
-          "users": "14165",
-          "views": "15200"
+          "users": "14339",
+          "views": "15392"
         },
         {
           "section": "Op-Eds",
-          "users": "9986",
-          "views": "10605"
+          "users": "10378",
+          "views": "11038"
         },
         {
           "section": "Energy and Environment",
-          "users": "7251",
-          "views": "7528"
+          "users": "7337",
+          "views": "7622"
         },
         {
           "section": "World",
-          "users": "4442",
-          "views": "4527"
+          "users": "4690",
+          "views": "4779"
         },
         {
           "section": "White House",
-          "users": "3748",
-          "views": "3873"
+          "users": "3949",
+          "views": "4079"
         },
         {
           "section": "Beltway Confidential",
-          "users": "2866",
-          "views": "2959"
+          "users": "2941",
+          "views": "3038"
         },
         {
           "section": "News",
-          "users": "2679",
-          "views": "2826"
+          "users": "2815",
+          "views": "2974"
         },
         {
           "section": "Justice",
-          "users": "2483",
-          "views": "2570"
+          "users": "2535",
+          "views": "2628"
         },
         {
           "section": "House",
-          "users": "2143",
-          "views": "2240"
+          "users": "2260",
+          "views": "2364"
         },
         {
           "section": "In Focus",
-          "users": "2095",
-          "views": "2175"
+          "users": "2134",
+          "views": "2215"
+        }
+      ]
+    },
+    {
+      "date": "20261123",
+      "totalUsers": 182420,
+      "newUsers": 86412,
+      "pageviews": 235173,
+      "sessions": 192573,
+      "bounceRate": 0.6061857061997269,
+      "averageSessionDuration": 70.33324117748074,
+      "referrers": [
+        {
+          "source": "(not set)",
+          "users": 101128
+        },
+        {
+          "source": "(direct)",
+          "users": 26642
+        },
+        {
+          "source": "newsbreak.com",
+          "users": 22312
+        },
+        {
+          "source": "google",
+          "users": 14916
+        },
+        {
+          "source": "smartnews.com",
+          "users": 4287
+        },
+        {
+          "source": "(data not available)",
+          "users": 1614
+        },
+        {
+          "source": "deployer",
+          "users": 1590
+        },
+        {
+          "source": "t.co",
+          "users": 1353
+        },
+        {
+          "source": "newsbreakapp.com",
+          "users": 1311
+        },
+        {
+          "source": "",
+          "users": 1229
+        },
+        {
+          "source": "newsbreak",
+          "users": 1016
+        },
+        {
+          "source": "facebook.com",
+          "users": 928
+        },
+        {
+          "source": "m.facebook.com",
+          "users": 705
+        },
+        {
+          "source": "facebook",
+          "users": 657
+        },
+        {
+          "source": "news.google.com",
+          "users": 655
+        }
+      ],
+      "authors": [
+        {
+          "author": "Emily Danner",
+          "users": "27842",
+          "views": "29382"
+        },
+        {
+          "author": "Molly Parks",
+          "users": "12767",
+          "views": "13749"
+        },
+        {
+          "author": "Mary Marslender",
+          "users": "8541",
+          "views": "8785"
+        },
+        {
+          "author": "Christopher Tremoglie",
+          "users": "8217",
+          "views": "8507"
+        },
+        {
+          "author": "Christian Datoc",
+          "users": "8096",
+          "views": "8334"
+        },
+        {
+          "author": "Gabrielle M. Etzel",
+          "users": "7388",
+          "views": "7542"
+        },
+        {
+          "author": "Sean Durns",
+          "users": "6662",
+          "views": "6843"
+        },
+        {
+          "author": "Timothy Nerozzi",
+          "users": "4431",
+          "views": "4580"
+        },
+        {
+          "author": "Rusty Wright",
+          "users": "2705",
+          "views": "2757"
+        },
+        {
+          "author": "Zachary Faria",
+          "users": "2641",
+          "views": "2730"
+        }
+      ],
+      "articles": [
+        {
+          "title": "December Social Security direct payment worth up to $994 goes out in 9 days",
+          "users": "27285",
+          "views": "30623"
+        },
+        {
+          "title": "December Social Security direct payment worth up to $994 goes out in nine days",
+          "users": "25811",
+          "views": "27650"
+        },
+        {
+          "title": "Clayton says public should expect tech disruptions amid upgrades but remain ‘resilient’",
+          "users": "12110",
+          "views": "12947"
+        },
+        {
+          "title": "So much for affordability: Spanberger just betrayed the people she vowed to help",
+          "users": "9741",
+          "views": "9860"
+        },
+        {
+          "title": "Vermont’s failed single-payer experiment haunts Democrats",
+          "users": "8094",
+          "views": "8394"
+        },
+        {
+          "title": "Washington Examiner – Congress, White House & Political News",
+          "users": "7570",
+          "views": "14810"
+        },
+        {
+          "title": "Rep. Sarah McBride isn’t banned from bathrooms. He’s just a man who must use the men’s room",
+          "users": "7510",
+          "views": "7695"
+        },
+        {
+          "title": "Florida just asked the question Washington won’t: Who is funding the far Left’s foreign trips?",
+          "users": "6638",
+          "views": "6843"
+        },
+        {
+          "title": "Keep an eye on these six Republican candidates to launch 2028 campaigns sooner rather than later",
+          "users": "6078",
+          "views": "6406"
+        },
+        {
+          "title": "Trump donates $5,000 to Trump Account of granddaughter of slain police officer, whose killer had sentence commuted by...",
+          "users": "3075",
+          "views": "3149"
+        },
+        {
+          "title": "Why does ESPN allow Stephen A. Smith to make racist and bigoted comments about white athletes?",
+          "users": "2916",
+          "views": "3096"
+        },
+        {
+          "title": "Nobody wanted him, now Trump wants to be him: The ‘I Play Rocky’ movie rocked",
+          "users": "2745",
+          "views": "2808"
+        },
+        {
+          "title": "Kim Jong Un says North Korea will expand its diplomacy with foreign nations after denying Trump meeting",
+          "users": "2548",
+          "views": "2585"
+        },
+        {
+          "title": "Texas voters will learn how financially irresponsible Democrats are",
+          "users": "2106",
+          "views": "2183"
+        },
+        {
+          "title": "Third round of November Social Security payments goes out in 3 days",
+          "users": "1900",
+          "views": "2154"
+        }
+      ],
+      "sections": [
+        {
+          "section": "News",
+          "users": "26604",
+          "views": "28101"
+        },
+        {
+          "section": "Op-Eds",
+          "users": "23295",
+          "views": "25864"
+        },
+        {
+          "section": "National Security",
+          "users": "11389",
+          "views": "12367"
+        },
+        {
+          "section": "Beltway Confidential",
+          "users": "10686",
+          "views": "11373"
+        },
+        {
+          "section": "In Focus",
+          "users": "7921",
+          "views": "8116"
+        },
+        {
+          "section": "World",
+          "users": "6068",
+          "views": "6372"
+        },
+        {
+          "section": "White House",
+          "users": "5950",
+          "views": "6227"
+        },
+        {
+          "section": "Presidential",
+          "users": "5310",
+          "views": "5474"
+        },
+        {
+          "section": "Justice",
+          "users": "2019",
+          "views": "2113"
+        },
+        {
+          "section": "Congressional",
+          "users": "1936",
+          "views": "2016"
         }
       ]
     }
@@ -1775,21 +1775,21 @@
     "totalAuthorEntries": 70,
     "totalArticleEntries": 105,
     "totalSectionEntries": 70,
-    "uniqueAuthors": 31,
-    "uniqueSections": 24,
+    "uniqueAuthors": 33,
+    "uniqueSections": 23,
     "sampleAuthors": [
-      "Mackenzie Chase",
-      "Jack Birle",
       "Claire Carter",
-      "Jose Lev Alvarez",
-      "Molly Parks"
+      "Derek S. Maltz",
+      "Christopher Tremoglie",
+      "Mackenzie Chase",
+      "Ani Chkhikvadze"
     ],
     "sampleSections": [
-      "Presidential",
-      "News",
+      "Technology",
       "Op-Eds",
-      "Healthcare",
-      "Beltway Confidential"
+      "Fairness and Justice",
+      "Beltway Confidential",
+      "In Focus"
     ]
   }
 }
